@@ -6,12 +6,14 @@ import Work from "./components/Work";
 import Mousefollower from "./components/Mousefollower";
 import Magneticeffect from "./components/Magneticeffect";
 
+
 function App() {
   return (
     <>
       {/* <Mousefollower/> */}
 
       <Hero />
+      
       <Work />
 
       <Connectfooter />

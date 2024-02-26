@@ -38,6 +38,16 @@ const Magneticeffect = () => {
   }, []);
 
   return (
+    <>
+    
+    
+    <div
+    ref={magnetRef}
+    className="sm:w-6/6 
+    h-16 font-semibold z-9 rounded-full flex justify-center items-center border-2 border-[#3A606E] hover:bg-[#AAAE8E] sm:text-lg xl:w-1/4 sm:rounded-full sm:h-16 sm:flex sm:justify-center sm:items-center"
+     >
+    yashadoke@gmail.com
+  </div>
     <div
       ref={magnetRef}
       className="sm:w-6/6 
@@ -46,6 +56,7 @@ const Magneticeffect = () => {
       +91 9324781464
     </div>
     
+    </>
   );
 };
 

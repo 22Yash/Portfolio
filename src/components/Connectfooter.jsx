@@ -4,33 +4,35 @@ import Magneticeffect from "./Magneticeffect";
 import GetInTouch from "./GetInTouch";
 
 function Connectfooter() {
-  const linkdeinRef = useRef(null);
-  const githubRef = useRef(null);
-  const instaRef  = useRef(null);
+  const liRef= useRef([]);
 
+  useEffect(()=>{
+    const liElements = liRef.current;
 
-  const handleMouseEnter = (ref) => {
-    gsap.to(ref.current,{
-    borderBottomWidth: "3px",
-    borderColor: "#3A606E",
-    duration: 0.5,
-    y: -10,
-    })
+    liElements.forEach((li)=>{
+
+      li.addEventListener('mouseenter',() => {
+        gsap.to(li,{
+          borderBottomWidth: "3px",
+          borderColor: "#3A606E",
+          duration: 0.5,
+          y: -10,
+        })
+      })
+
+      li.addEventListener('mouseleave',() => {
+        gsap.to(li,{
+          borderBottomWidth: '0',
+          duration: 0.3,
+          y:0
+        });
+      });
+
+    });
+
+  },[]);
   
-
-  }
   
-  const handleMouseLeave = (ref) => {
-    gsap.to(ref.current,{
-      borderBottomWidth: "0px",
-      duration: 0.5,
-      y: 0,
-    })
- 
-  
-
-
-  }
 
   
   
@@ -74,7 +76,7 @@ function Connectfooter() {
         
         
         <Magneticeffect/>
-        <Magneticeffect/>
+        
 
       </div>
 
@@ -82,27 +84,18 @@ function Connectfooter() {
         <div id="links">
           <ul className=" flex gap-5 m-5 font-semibold mt-16  sm:static sm:flex sm:justify-end sm:gap-10 sm:m-10 sm:mt-36 sm:font-semibold  ">
             <li
-              ref={linkdeinRef}
-              className="sm: border-[#3A606E]"
-              onMouseEnter={() => handleMouseEnter(linkdeinRef)}
-              onMouseLeave={() => handleMouseLeave(linkdeinRef)}
+             ref={(el) => (liRef.current[0] = el)}
             >
               LinkedIn
             </li>
 
             <li 
-            ref={githubRef} 
-            className="sm: border-[#3A606E]"
-            onMouseEnter={() => handleMouseEnter(githubRef)}
-            onMouseLeave={() => handleMouseLeave(githubRef)}
+            ref={(el) => (liRef.current[1] = el)}
             >
               <a href="">Github</a>
             </li>
             <li 
-              ref={instaRef}
-              className="sm: border-[#3A606E]"
-              onMouseEnter={() => handleMouseEnter(instaRef)}
-              onMouseLeave={() => handleMouseLeave(instaRef)}>
+              ref={(el) => (liRef.current[2] = el)}>
               <a href="">Instagram</a>
             </li>
           </ul>
