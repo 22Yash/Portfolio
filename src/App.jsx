@@ -5,18 +5,22 @@ import Hero from "./components/Hero";
 import Work from "./components/Work";
 import Mousefollower from "./components/Mousefollower";
 import Magneticeffect from "./components/Magneticeffect";
+import Contact from "./components/Contact";
+
 
 
 function App() {
   return (
     <>
-      {/* <Mousefollower/> */}
+      {/* <Mousefollower />
 
       <Hero />
       
       <Work />
 
-      <Connectfooter />
+      <Connectfooter /> */}
+      <Contact/>
+      
     </>
   );
 }

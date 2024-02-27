@@ -45,6 +45,7 @@ function Work() {
 
   return (
     <>
+    <Mousefollower/>
       <div id="work" ref={workRef}>
         <div
           ref={mousefollowerRef}

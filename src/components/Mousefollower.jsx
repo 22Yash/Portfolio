@@ -31,7 +31,7 @@ function Mousefollower() {
   
 
   return (
-    <div className='sm:w-8 sm:h-8 sm:fixed sm:bg-black  sm:rounded-full' 
+    <div className='sm:w-8 z-30 sm:h-8 sm:fixed sm:bg-black  sm:rounded-full' 
     ref={Mousefollower}>
       
     </div>

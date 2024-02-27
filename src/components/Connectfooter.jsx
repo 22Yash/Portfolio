@@ -2,6 +2,7 @@ import React, { useEffect, useRef, } from "react";
 import { gsap } from "gsap";
 import Magneticeffect from "./Magneticeffect";
 import GetInTouch from "./GetInTouch";
+import Mousefollower from "./Mousefollower";
 
 function Connectfooter() {
   const liRef= useRef([]);
@@ -42,6 +43,7 @@ function Connectfooter() {
 
   return (
     <div className="bg-[#828E82] w-full h-screen font-sans relative">
+      <Mousefollower/>
       <div
         id="heading "
         className=" p-12 sm:text-sm sm:leading-1 sm:space-x-0 lg:opacity-70  
