@@ -53,10 +53,10 @@ function GetInTouch() {
   <div id="circle" className='flex justify-around z-10 '>
     <div id="getInTouch" 
       ref={circleRef}
-      className=" w-32 h-32 bg-[#3A606E] text-white rounded-full ml-64  flex justify-center items-center  p-0
+      className=" w-32 h-32 bg-[#3A606E] text-white rounded-full   flex justify-center items-center  p-0
                  lg:w-44 lg:h-44 lg:bg-[#3A606E]lg:rounded-full lg:flex  lg:items-center lg:absolute
-                  -mt-28 text-xl
-                 sm:w-40 sm:h-40 sm:bg-[#3A606E]       ">
+                  mt-0  absolute ml-24 text-sm
+                 sm:w-40 sm:h-40 sm:bg-[#3A606E] sm:absolute  sm:-mt-9      ">
         Get in touch
       </div></div>
     

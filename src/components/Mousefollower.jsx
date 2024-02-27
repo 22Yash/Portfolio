@@ -2,7 +2,7 @@ import React , {useEffect,useRef} from 'react'
 import { gsap } from 'gsap'
 
 
-function Mousefollower() {
+function Mousefollower({mouseVisibility}) {
 
   const Mousefollower = useRef(null)
  useEffect(()=> {
@@ -31,7 +31,9 @@ function Mousefollower() {
   
 
   return (
-    <div className='sm:w-8 z-30 sm:h-8 sm:fixed sm:bg-black  sm:rounded-full' 
+    <div className={`sm:w-8 z-30 
+    sm:h-8 sm:fixed sm:bg-black  sm:rounded-full
+    ${mouseVisibility ? "hidden" : "" }`} 
     ref={Mousefollower}>
       
     </div>

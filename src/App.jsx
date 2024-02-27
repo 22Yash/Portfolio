@@ -17,9 +17,9 @@ function App() {
       <Hero />
       
       <Work />
-
-      <Connectfooter /> */}
-      <Contact/>
+<Contact/> */}
+      <Connectfooter />
+      
       
     </>
   );

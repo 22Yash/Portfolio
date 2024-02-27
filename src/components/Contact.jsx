@@ -1,5 +1,6 @@
 import React from 'react'
 import Connectfooter from './Connectfooter'
+import Links from './Links'
 
 function Contact() {
   return (
@@ -89,6 +90,11 @@ function Contact() {
           <h3>yashadoke@gmial.com</h3>
           <h3>+91 9324781464</h3>
         </div>
+        <div id="socials" flexDirection="column">
+           <Links columnDirection={true} />
+        </div>
+       
+
 
 
 
