@@ -1,8 +1,16 @@
-import React from 'react'
+import React, { useState } from 'react';
+
 import Connectfooter from './Connectfooter'
 import Links from './Links'
+import Contactform from './Contactform';
 
 function Contact() {
+ 
+  
+
+
+
+
   return (
     <>
     <div id="contact" className='bg-[#828E82] w-full h-2screen 
@@ -23,59 +31,7 @@ function Contact() {
                       xl:w-3/4 xl:ml-36 xl:m-10 xl:mt-20
                       "
       ></div>
-      <div id="name" className='h-32 w-5/6 bg-gray-300
-       xl:ml-36 xl:flex xl:gap-5 xl:p-10 xl:text-lg '>
-        <h3>01 </h3>
-        <h3 className='font-semibold'>What's your name?</h3>
-      </div>
-      <div
-        id="divider"
-        className="border border-[#3A606E] w-5/6  ml-10 
-                      -mt-24
-                      sm:w-4/4 sm:ml-16 sm:m-10 sm:-mt-32
-                      xl:w-3/4 xl:ml-36 xl:m-10 xl:mt-20
-                      "
-      ></div>
-      <div id="name" className='h-32 w-5/6 bg-gray-300 xl:ml-36'>
-        <h3>02 </h3>
-        <h3>What's your name?</h3>
-      </div>
-      <div
-        id="divider"
-        className="border border-[#3A606E] w-5/6  ml-10 
-                      -mt-24
-                      sm:w-4/4 sm:ml-16 sm:m-10 sm:-mt-32
-                      xl:w-3/4 xl:ml-36 xl:m-10 xl:mt-20
-                      "
-      ></div>
-      <div id="name" className='h-32 w-5/6 bg-gray-300 xl:ml-36'>
-        <h3>01 </h3>
-        <h3>What's your name?</h3>
-      </div>
-      <div
-        id="divider"
-        className="border border-[#3A606E] w-5/6  ml-10 
-                      -mt-24
-                      sm:w-4/4 sm:ml-16 sm:m-10 sm:-mt-32
-                      xl:w-3/4 xl:ml-36 xl:m-10 xl:mt-20
-                      "
-      ></div>
-      <div id="name" className='h-32 w-5/6 bg-gray-300 xl:ml-36'>
-        <h3>01 </h3>
-        <h3>What's your name?</h3>
-      </div>
-      <div
-        id="divider"
-        className="border border-[#3A606E] w-5/6  ml-10 
-                      -mt-24
-                      sm:w-4/4 sm:ml-16 sm:m-10 sm:-mt-32
-                      xl:w-3/4 xl:ml-36 xl:m-10 xl:mt-20
-                      "
-      ></div>
-      <div id="name" className='h-32 w-5/6 bg-gray-300 xl:ml-36'>
-        <h3>01 </h3>
-        <h3>What's your name?</h3>
-      </div>
+      <Contactform/>
        
 
       </div>
