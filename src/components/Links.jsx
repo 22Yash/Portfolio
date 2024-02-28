@@ -29,7 +29,7 @@ function Links({ columnDirection }) {
 
   return (
     <>
-      <div id="links">
+      <div id="links" className="translate-y-full mt-24 xl:-mt-60">
         <ul
           className={`flex gap-5 m-5 font-semibold mt-16 
           sm:static sm:flex sm:justify-end sm:gap-10 sm:m-10 sm:mt-36 sm:font-semibold 
