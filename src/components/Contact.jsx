@@ -9,11 +9,11 @@ function Contact() {
     <>
       <div
         id="contact"
-        className="bg-[#828E82] w-full h-screen
+        className="bg-[#828E82] w-full xl:h-lvh
     grid grid-cols-1 
     xl:grid xl:grid-cols-3 "
       >
-        <div id="leftDiv" className=" col-span-1 xl:col-span-2  ">
+        <div id="leftDiv" className=" h-screen col-span-1 xl:col-span-2  ">
           <div
             id="contactHeading"
             className=" text-3xl flex flex-col 
@@ -26,9 +26,9 @@ function Contact() {
           <div
             id="divider"
             className="border-2 border-black w-5/6  ml-10 
-                      mt-20 opacity-0 xl:opacity-1
+                      mt-20 opacity-0 xl:opacity-100
                       sm:w-4/4 sm:ml-16 sm:m-10 sm:-mt-32
-                      xl:w-3/4 xl:ml-36 xl:m-10 xl:mt-20
+                      xl:w-3/4 xl:ml-36 xl:m-10 xl:mt-10
                       "
           ></div>
           <div id="form" className=" mt-36 absolute xl:w-6/12">
@@ -37,7 +37,7 @@ function Contact() {
           
         </div>
 
-        <div id="rightdiv" className=" xl:col-span-1">
+        <div id="rightdiv" className=" h-screen bg-[#828E82]  xl:col-span-1">
           <div id="img" className="bg-red-200 opacity-0
           w-10 h-10 -mt-28  ml-4 rounded-full 
           xl:w-36 xl:h-36 xl:mt-36 xl:rounded-full  ">

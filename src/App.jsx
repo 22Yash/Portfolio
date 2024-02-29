@@ -9,6 +9,7 @@ import Contact from "./components/Contact";
 
 
 
+
 function App() {
   return (
     <>
@@ -17,9 +18,12 @@ function App() {
       <Hero />
       
       <Work />
-
+    
       <Connectfooter /> */}
       <Contact/>
+      
+      
+
       
     </>
   );
