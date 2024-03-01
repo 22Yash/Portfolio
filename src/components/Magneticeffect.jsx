@@ -41,7 +41,7 @@ const Magneticeffect = () => {
     <>
     
     
-    <div
+    <div 
     ref={magnetRef}
     className="sm:w-6/6 
     h-16 font-semibold z-9 

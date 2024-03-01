@@ -1,5 +1,6 @@
 import React, { useRef, useEffect } from 'react';
 import { gsap } from 'gsap';
+import { Link } from 'react-router-dom';
 
 function GetInTouch() {
   const circleRef = useRef(null);
@@ -50,7 +51,11 @@ function GetInTouch() {
 
   return (
   <>
-  <div id="circle" className='flex justify-around z-10 '>
+  
+  <div id="circle" 
+  
+  className='flex justify-around z-10 '>
+   
     <div id="getInTouch" 
       ref={circleRef}
       className=" w-32 h-32 bg-[#3A606E] text-white rounded-full   flex justify-center items-center  p-0

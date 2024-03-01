@@ -1,5 +1,7 @@
 import { useState } from "react";
 import "./App.css";
+import { BrowserRouter as Router, Route } from 'react-router-dom';
+
 import Connectfooter from "./components/Connectfooter";
 import Hero from "./components/Hero";
 import Work from "./components/Work";
@@ -17,11 +19,12 @@ function App() {
 
       <Hero />
       
-      <Work />
+      <Work /> */}
     
-      <Connectfooter /> */}
-      <Contact/>
+      <Connectfooter />
+      {/* <Contact/> */}
       
+     
       
 
       

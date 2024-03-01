@@ -33,7 +33,7 @@ function Contactform() {
      xl:space-y-5 '>
       <form ref={form} onSubmit={sendEmail}>
         <div id="name" className='
-        w-full h-20  ml-8 text-lg -mt-7
+        w-full h-20  ml-8 text-lg -mt-36 
         xl:w-full xl:h-15 xl:ml-32 xl:text-2xl xl:-mt-32 '>
           <label htmlFor="name" 
           className='
@@ -89,8 +89,8 @@ function Contactform() {
         </div>
         <div
             id="divider"
-            className="border-2 border-black w-5/6  ml-10 
-                      mt-20 opacity-0 xl:opacity-50
+            className="border-2 border-black w-full  ml-10 
+                      -mt-5 opacity-70 xl:opacity-50
                       sm:w-4/4 sm:ml-16 sm:m-10 sm:-mt-32
                       xl:w-full xl:ml-36  xl:mt-10
                       "
@@ -98,11 +98,15 @@ function Contactform() {
 
         
 
-        
-          <input type="submit" value="Send" 
+        <div id="sendCircle" 
+        className='w-40 h-40 ml-10 mt-10 bg-black rounded-full justify-center items-center
+        xl:ml-32'>
+<input type="submit" value="Send" 
           className='
-          mt-5 bg-black text-white ml-32 p-5
-          xl:mt-20  ' />
+           text-red-400 xl:justify-center xl:i
+            ' />
+        </div>
+          
        
        
       
