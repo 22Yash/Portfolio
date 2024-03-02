@@ -2,27 +2,17 @@ import { useState } from "react";
 import "./App.css";
 import { BrowserRouter as Router, Route } from 'react-router-dom';
 
-import Connectfooter from "./components/Connectfooter";
-import Hero from "./components/Hero";
-import Work from "./components/Work";
-import Mousefollower from "./components/Mousefollower";
-import Magneticeffect from "./components/Magneticeffect";
-import Contact from "./components/Contact";
-
-
+import Hero from "./components/Header/Hero";
+import Work from "./components/Work/Work";
+import Connectfooter from "./components/Contact/Connectfooter";
+import Mousefollower from "./components/Animation/Mousefollower";
 
 
 function App() {
   return (
     <>
-      {/* <Mousefollower />
-
-      <Hero />
-      
-      <Work /> */}
     
-      <Connectfooter />
-      {/* <Contact/> */}
+
       
      
       

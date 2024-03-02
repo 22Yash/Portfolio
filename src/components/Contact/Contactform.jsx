@@ -99,12 +99,10 @@ function Contactform() {
         
 
         <div id="sendCircle" 
-        className='w-40 h-40 ml-10 mt-10 bg-black rounded-full justify-center items-center
+        className='w-44 h-44 text-white  mt-10 bg-black rounded-full
+         justify-center items-center
         xl:ml-32'>
-<input type="submit" value="Send" 
-          className='
-           text-red-400 xl:justify-center xl:i
-            ' />
+               <input type="submit" value="send" className=' pl-12 p-20 text-2xl' />
         </div>
           
        

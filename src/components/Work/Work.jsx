@@ -1,6 +1,7 @@
 import React, { useRef, useEffect } from "react";
 import gsap from "gsap";
-import Mousefollower from "./Mousefollower";
+
+import Mousefollower from "../Animation/Mousefollower";
 
 function Work() {
   const mousefollowerRef = useRef(null);

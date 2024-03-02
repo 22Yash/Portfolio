@@ -1,8 +1,8 @@
 import React, { useEffect, useRef } from "react";
 import { gsap } from "gsap";
-import Magneticeffect from "./Magneticeffect";
+import Magneticeffect from "../Animation/Magneticeffect";
 import GetInTouch from "./GetInTouch";
-import Mousefollower from "./Mousefollower";
+import Mousefollower from "../Animation/Mousefollower";
 import Links from "./Links";
 
 function Connectfooter() {

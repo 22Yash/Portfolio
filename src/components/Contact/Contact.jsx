@@ -56,6 +56,9 @@ function Contact() {
           </div>
         </div>
       </div>
+      <div id="lastDiv" className="w-full h-screen bg-[#828E82]">
+
+      </div>
     </>
   );
 }
