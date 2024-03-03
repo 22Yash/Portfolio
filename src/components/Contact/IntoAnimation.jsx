@@ -6,26 +6,26 @@ function IntoAnimation() {
     const contactinfoRef = useRef();
   
     useEffect(() => {
-        const el = contactinfoRef.current;
+      const tl = gsap.timeline();
 
-        
-        
-        // gsap.from(el,{
-        //     y:-700,
-        //     duration:.5,
-        //     ease:"power2.out",
-            
-            
+  
+      tl.to(contactinfoRef.current, {
+        y: -1 ,
+        duration: 2,
+        ease: 'power2.in',
+      });   
 
 
-        // })
-
-        gsap.to(el,{
-          y:-1400,
-          duration:5,
-          ease:"power.in",
+        tl.to(contactinfoRef.current,{
+          opacity: 1,
+          y: -800, // Change the distance as needed
+          duration: 2,
+          ease: 'power2.inOut',
+           
 
         })
+
+       
 
 
     },[])
@@ -42,12 +42,14 @@ function IntoAnimation() {
     <>
     <div id="contactIntro" 
     ref={contactinfoRef}
-    className='w-full  fixed z-40 h-screen
+    className='w-full  fixed z-10 h-screen
     rounded-b-3xl 
      bg-black text-white font-semibold text-6xl flex justify-center items-center'>
 
         <h4>Contact</h4>
+        
     </div>
+
     
     </>
   )

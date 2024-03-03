@@ -4,11 +4,14 @@ import Connectfooter from "./Connectfooter";
 import Links from "./Links";
 import Contactform from "./Contactform";
 import IntoAnimation from "./IntoAnimation";
+import Navbar from "../Header/Navbar";
 
-function Contact() {
+function Maincontact() {
   return (
     <>
+    
     <IntoAnimation/>
+    <Navbar/>
       <div
         id="contact"
         className="bg-[#828E82] w-full xl:h-lvh 
@@ -63,4 +66,4 @@ function Contact() {
   );
 }
 
-export default Contact;
+export default Maincontact;
