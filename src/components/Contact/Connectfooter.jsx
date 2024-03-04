@@ -32,7 +32,7 @@ function Connectfooter() {
           together
         </h4>
       </div>
-      <GetInTouch />  
+      <GetInTouch />
       <div
         id="divider"
         className="border border-[#3A606E] w-5/6  ml-10 
@@ -41,7 +41,7 @@ function Connectfooter() {
                       xl:w-3/4 xl:ml-36 xl:m-10 xl:mt-16 
                       "
       ></div>
-      
+
       <div
         id="button"
         className=" mt-20 m-10 grid grid-cols-1 gap-10 

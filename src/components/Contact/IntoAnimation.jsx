@@ -11,7 +11,7 @@ function IntoAnimation() {
   
       tl.to(contactinfoRef.current, {
         y: -1 ,
-        duration: 2,
+        duration: 0.2,
         ease: 'power2.in',
       });   
 

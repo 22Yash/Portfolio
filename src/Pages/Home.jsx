@@ -3,14 +3,17 @@ import Navbar from '../components/Header/Navbar'
 import Hero from '../components/Header/Hero'
 import Work from '../components/Work/Work'
 import Connectfooter from '../components/Contact/Connectfooter'
+import Hamburger from '../components/Header/Hamburger'
 
 function Home() {
   return (
     <div>
-      <Navbar/>
+      {/* <Navbar/>
+      
       <Hero/>
       <Work/>
-      <Connectfooter/>
+      <Connectfooter/> */}
+      <Hamburger/>
     </div>
   )
 }
