@@ -1,17 +1,59 @@
-import React, { useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 
-import Connectfooter from "./Connectfooter";
+
 import Links from "./Links";
 import Contactform from "./Contactform";
 import IntoAnimation from "./IntoAnimation";
 import Navbar from "../Header/Navbar";
+import Hamburger from "../Header/Hamburger";
+import { gsap } from 'gsap';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
+
+gsap.registerPlugin(ScrollTrigger);
 
 function Maincontact() {
+  const hideNav = useRef();
+  const visibleMenu = useRef();
+
+
+  useEffect(() => {
+  //  gsap.to(hideNav.current,{
+  //   opacity: 1,
+  //     scrollTrigger: {
+  //       trigger: 'hideNav.current',
+  //       start: 'top 40%',
+  //       end: 'bottom 60%',
+  //       scrub: true, // Adjust as needed
+  //       markers:true
+  //     },
+    
+  //  });
+
+  },[])
+
+  
+
+
+
+
+
+
+
+
+
+
   return (
     <>
     
     <IntoAnimation/>
-    <Navbar/>
+    <div id="navBar" ref={hideNav}>
+      <Navbar />
+    </div>
+    <div id="hamBurger" ref={visibleMenu}>
+      <Hamburger/>
+    </div>
+
+    
       <div
         id="contact"
         className="bg-[#828E82] w-full xl:h-lvh 
