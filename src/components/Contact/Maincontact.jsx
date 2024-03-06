@@ -6,30 +6,17 @@ import Contactform from "./Contactform";
 import IntoAnimation from "./IntoAnimation";
 import Navbar from "../Header/Navbar";
 import Hamburger from "../Header/Hamburger";
-import { gsap } from 'gsap';
-import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import gsap from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
 
-gsap.registerPlugin(ScrollTrigger);
+gsap.registerPlugin(ScrollTrigger)
 
 function Maincontact() {
-  const hideNav = useRef();
-  const visibleMenu = useRef();
+  
+ 
 
 
-  useEffect(() => {
-  //  gsap.to(hideNav.current,{
-  //   opacity: 1,
-  //     scrollTrigger: {
-  //       trigger: 'hideNav.current',
-  //       start: 'top 40%',
-  //       end: 'bottom 60%',
-  //       scrub: true, // Adjust as needed
-  //       markers:true
-  //     },
-    
-  //  });
-
-  },[])
+ 
 
   
 
@@ -46,10 +33,10 @@ function Maincontact() {
     <>
     
     <IntoAnimation/>
-    <div id="navBar" ref={hideNav}>
+    <div id="navBar" >
       <Navbar />
     </div>
-    <div id="hamBurger" ref={visibleMenu}>
+    <div id="hamBurger" className="opacity-1"  >
       <Hamburger/>
     </div>
 

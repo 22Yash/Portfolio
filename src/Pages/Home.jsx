@@ -8,11 +8,11 @@ import Hamburger from '../components/Header/Hamburger'
 function Home() {
   return (
     <div>
-      {/* <Navbar/>
+      <Navbar/>
       
       <Hero/>
       <Work/>
-      <Connectfooter/> */}
+      <Connectfooter/>
       <Hamburger/>
     </div>
   )

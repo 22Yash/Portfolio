@@ -36,10 +36,10 @@ function Hamburger() {
 
   return (
     <>
-      <div id="div" className="xl:w-full  relative opacity-0">
-        <div id="button" ref={buttonRef} className="">
-          <button className=" xl:w-24  xl:h-24 m-5 w-12 h-12  bg-red-500 fixed rounded-full">
-            <div id="icon" className="text-3xl xl:ml-8 ml-3  ">
+      <div id="div" className="xl:w-full  relative  ">
+        <div id="button" ref={buttonRef} className="ml-80 bg-[#828E82] w-32  float-end">
+          <button className=" xl:w-24  xl:h-24 xl:m-5 ml-5 mt-5 w-12 h-12  bg-red-500 fixed rounded-full">
+            <div id="icon" className="text-3xl xl:ml-8 ml-2  ">
               <FiAlignJustify />
             </div>
           </button>
@@ -55,7 +55,7 @@ function Hamburger() {
           <div
             id="second"
             className="xl:bg-red-500 xl:w-3/4 xl:translate-x-full  
-            bg-blue-400 h-screen w-full translate-x-3/4  text-3xl   "
+            bg-blue-400 h-screen w-full translate-x-3/4 mt-20 xl:mt-8 text-3xl   "
           >
             <div
               id="upperDiv"
