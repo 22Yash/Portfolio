@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState} from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { FiAlignJustify } from "react-icons/fi";
 import gsap from "gsap";
 import { FiX } from "react-icons/fi";
@@ -31,13 +31,16 @@ function Hamburger() {
       duration: 1,
     });
     setMenuOpen(false);
-    
   };
 
   return (
     <>
-      <div id="div" className="xl:w-full  relative  ">
-        <div id="button" ref={buttonRef} className="ml-80 bg-[#828E82] w-32  float-end">
+      <div id="div" className="xl:w-full  relative opacity-1  ">
+        <div
+          id="button"
+          ref={buttonRef}
+          className="ml-80 bg-[#828E82] w-32  float-end"
+        >
           <button className=" xl:w-24  xl:h-24 xl:m-5 ml-5 mt-5 w-12 h-12  bg-red-500 fixed rounded-full">
             <div id="icon" className="text-3xl xl:ml-8 ml-2  ">
               <FiAlignJustify />
@@ -50,8 +53,6 @@ function Hamburger() {
           onClick={openMenu}
           className="grid xl:grid-cols-1 xl:w-5/6 z-20 -mt-20 h-screen w-full gri-cols-1 opacity-0 fixed  "
         >
-          
-
           <div
             id="second"
             className="xl:bg-red-500 xl:w-3/4 xl:translate-x-full  
@@ -79,7 +80,7 @@ function Hamburger() {
                       `block py-2 pr-4 pl-3 duration-200 ${
                         isActive ? "text-orange-700" : "text-gray-700"
                       } 
-                                         border-b border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 hover:text-orange-700 lg:p-0 `
+                      border-b border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 hover:text-orange-700 lg:p-0 `
                     }
                   >
                     Home
