@@ -44,7 +44,7 @@ function Maincontact() {
     <IntoAnimation />
       <Navbar />
     
-        <Hamburger />
+        {/* <Hamburger /> */}
       
 
       <div
