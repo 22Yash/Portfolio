@@ -12,12 +12,12 @@ function Connectfooter() {
 
       <div
         id="heading"
-        className="  flex flex-col 
+        className="  flex flex-col md:text-6xl 
       xl:text-7xl xl:font-semibold sm:text-5xl  "
       >
         <h4
           className=" mt-10  ml-10 text-4xl font-semibold
-          xl:mt-28 xl:ml-36 
+          xl:mt-28 xl:ml-36  md:mt-28
         sm:text-6xl sm:p-1 
         xl:text-7xl "
         >

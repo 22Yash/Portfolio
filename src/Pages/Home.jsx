@@ -25,11 +25,11 @@ function Home() {
     };
   }, []);
   return (
-    <div ref={scrollContainerRef}>
+    <div ref={scrollContainerRef} className='h-screen'>
       <Navbar/>
       
       <Hero/>
-      <section data-scroll data-scroll-speed="1">
+      <section data-scroll data-scroll-speed="0">
        <Work/> 
       </section>
       

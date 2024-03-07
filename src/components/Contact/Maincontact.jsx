@@ -40,7 +40,7 @@ function Maincontact() {
     <>
     <div id="parent" 
     ref={scrollContainerRef}
-    className=" xl:w-full  overflow-x-hidden">
+    className=" xl:w-full h-screen overflow-x-hidden">
     <IntoAnimation />
       <Navbar />
     
