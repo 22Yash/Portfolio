@@ -4,8 +4,8 @@ import { Link, NavLink } from 'react-router-dom'
 function Navbar() {
   return (
     <>
-    <div id='navBar' className=' hidden xl:flex xl:justify-between
-    z-40  xl:h-12 bg-[#828E82]' >
+    <div id='navBar' className=' hidden xl:flex xl:justify-between 
+    z-44   xl:h-12 bg-[#828E82]' >
       <div id="leftNav">
         <Link>
         <img src="https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.freepik.com%2Fpremium-vector%2Fyd-logo-design_32973513.htm&psig=AOvVaw1ue4_sY1Oooh2Zs5wAxfBA&ust=1709466461636000&source=images&cd=vfe&opi=89978449&ved=0CBEQjRxqFwoTCLDJ1f7A1YQDFQAAAAAdAAAAABAD" alt="" />

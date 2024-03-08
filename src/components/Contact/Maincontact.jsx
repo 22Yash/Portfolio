@@ -30,10 +30,10 @@ function Maincontact() {
       <div
         id="parent"
         ref={scrollContainerRef}
-        className=" xl:w-full h-screen overflow-x-hidden"
+        className=" xl:w-full h-screen z-12 overflow-x-hidden"
       >
         <IntoAnimation />
-        <Navbar />
+        <Navbar  />
 
         <Hamburger />
 
@@ -86,7 +86,9 @@ function Maincontact() {
             </div>
           </div>
         </div>
-        <div id="lastDiv" className="w-full xl:h-3/4  bg-[#828E82]"></div>
+        <div id="lastDiv" className="w-full xl:h-3/4  bg-[#828E82]">
+
+        </div>
       </div>
     </>
   );

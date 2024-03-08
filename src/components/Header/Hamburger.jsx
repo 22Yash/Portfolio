@@ -15,7 +15,7 @@ function Hamburger() {
     gsap.to(menuRef.current, {
       opacity: 1,
       ease: "power4.Out",
-      x: -150,
+      x: 700,
       duration: 0.5,
     });
     setMenuOpen(true);
@@ -25,9 +25,9 @@ function Hamburger() {
     console.log("closed");
     e.stopPropagation();
     gsap.to(menuRef.current, {
-      opacity: 1,
+      opacity: 0,
       ease: "power2.out",
-      x: 650,
+      x: 1150,
       duration: 1,
     });
     setMenuOpen(false);
@@ -43,7 +43,7 @@ function Hamburger() {
   return (
     <>
       <div id="div" className="xl:w-full  relative opacity-1  ">
-        <div id="button" className=" bg-blue-500   mr-40 float-end">
+        <div id="button" className=" mr-40 float-end">
           <button
             ref={buttonRef}
             onClick={openMenu}
@@ -56,14 +56,16 @@ function Hamburger() {
         </div>
         <div
           id="menu"
-          ref={menuRef}
-          onClick={openMenu}
-          className="grid xl:grid-cols-1 xl:w-5/6 z-20 -mt-20 h-screen w-full gri-cols-1  fixed  "
+          
+          
+          className="grid xl:grid-cols-1 -mt-3  xl:w-5/6 z-20 opacity-1 h-screen w-full grid-cols-1  fixed  "
         >
           <div
             id="second"
-            className="xl:bg-red-500 xl:w-3/4 xl:translate-x-full  
-            bg-blue-400 h-screen w-full translate-x-3/4 mt-20 xl:mt-8 text-3xl   "
+            ref={menuRef}
+            onClick={openMenu}
+            className="xl:bg-red-500 xl:w-2/5  grid-cols-1 opacity-0 xl:ml-96
+            bg-blue-400 h-screen w-3/4 translate-x-3/4 mt-20 xl:mt-8 text-3xl   "
           >
             <div
               id="upperDiv"
