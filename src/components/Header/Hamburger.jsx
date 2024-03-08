@@ -8,7 +8,7 @@ function Hamburger() {
   const menuRef = useRef(null);
   const buttonRef = useRef(null);
   const closeRef = useRef(null);
-  const [isMenuOpen, setMenuOpen] = useState(false);
+  
 
   const openMenu = () => {
     console.log("hii");
@@ -33,15 +33,22 @@ function Hamburger() {
     setMenuOpen(false);
   };
 
+  const mouseclick = () =>{
+    console.log("hii");
+  }
+
+  
+
+
   return (
     <>
       <div id="div" className="xl:w-full  relative opacity-1  ">
-        <div
-          id="button"
-          ref={buttonRef}
-          className="ml-80 bg-[#828E82] w-32  float-end"
-        >
-          <button className=" xl:w-24  xl:h-24 xl:m-5 ml-5 mt-5 w-12 h-12  bg-red-500 fixed rounded-full">
+        <div id="button" className=" bg-blue-500   mr-40 float-end">
+          <button
+            ref={buttonRef}
+            onClick={openMenu}
+            className=" xl:w-24  xl:h-24 xl:m-5 ml-20 mt-10 w-12 h-12 bg-red-400  fixed rounded-full"
+          >
             <div id="icon" className="text-3xl xl:ml-8 ml-2  ">
               <FiAlignJustify />
             </div>
@@ -51,7 +58,7 @@ function Hamburger() {
           id="menu"
           ref={menuRef}
           onClick={openMenu}
-          className="grid xl:grid-cols-1 xl:w-5/6 z-20 -mt-20 h-screen w-full gri-cols-1 opacity-0 fixed  "
+          className="grid xl:grid-cols-1 xl:w-5/6 z-20 -mt-20 h-screen w-full gri-cols-1  fixed  "
         >
           <div
             id="second"

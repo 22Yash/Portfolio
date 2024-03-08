@@ -51,7 +51,7 @@ function Connectfooter() {
         <Magneticeffect />
       </div>
 
-      <div id="socials">
+      <div id="socials" className="">
         <Links />
       </div>
     </div>

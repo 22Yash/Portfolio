@@ -1,6 +1,5 @@
-import React, { useRef } from "react";
+import React, { useRef, useEffect } from "react";
 import emailjs from "emailjs-com";
-import GetInTouch from "./GetInTouch";
 
 function Contactform() {
   const form = useRef();
@@ -32,7 +31,6 @@ function Contactform() {
      xl:space-y-5 "
     >
       <form ref={form} onSubmit={sendEmail}>
-     
         <div
           id="name"
           className="
@@ -147,15 +145,16 @@ function Contactform() {
            
         xl:ml-32"
         >
-          <input type="submit" value="send" 
-          className=" pl-12 p-20 text-2xl -mt-8 -ml-2
+          <input
+            type="submit"
+            value="send"
+            className=" pl-12 p-20 text-2xl -mt-8 -ml-2
                       sm:-mt-4 sm:-ml-2
-          " />
+          "
+          />
         </div>
       </form>
-      
     </div>
-    
   );
 }
 
