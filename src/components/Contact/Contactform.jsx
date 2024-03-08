@@ -37,7 +37,7 @@ function Contactform() {
           id="name"
           className="
         w-full h-20  ml-8 text-lg -mt-36 
-        sm:w-full sm:h-10 sm:-ml-12 sm:text-3xl sm:-mt-16
+        sm:w-full sm:h-10 sm:-ml-12 sm:text-3xl sm:-mt-52
         xl:w-full xl:h-15 xl:ml-32 xl:text-2xl xl:-mt-32 "
         >
           <label
@@ -140,8 +140,8 @@ function Contactform() {
         <div
           id="sendCircle"
           className="
-          w-32 h-32 ml-12 mt-2
-          sm:w-40 sm:h-40 sm:-mt-2 sm:ml-12
+          w-32 h-32 ml-12 mt-10
+          sm:w-36 sm:h-36 sm:-mt-2 sm:ml-16
           xl:w-44 xl:h-44 text-white  xl:mt-8 bg-black rounded-full
          justify-center items-center 
            
@@ -149,11 +149,13 @@ function Contactform() {
         >
           <input type="submit" value="send" 
           className=" pl-12 p-20 text-2xl -mt-8 -ml-2
-                      sm:-mt-4 sm:ml-2
+                      sm:-mt-4 sm:-ml-2
           " />
         </div>
       </form>
+      
     </div>
+    
   );
 }
 

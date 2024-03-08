@@ -1,5 +1,6 @@
 import React, { useEffect, useRef } from "react";
 import { gsap } from "gsap";
+import { Link } from "react-router-dom";
 
 function Links({ columnDirection }) {
   const liRef = useRef([]);
@@ -29,21 +30,26 @@ function Links({ columnDirection }) {
 
   return (
     <>
-      <div id="links" className="translate-y-full mt-24 xl:-mt-60">
+      <div id="links" className="translate-y-full mt-24 sm:-mt-16 xl:-mt-64">
+       
         <ul
-          className={`flex gap-5 m-5 font-semibold mt-16 
+          className={`flex gap-5 m-5 font-semibold mt-12   xl:mt-16 
+          
           sm:static sm:flex sm:justify-end sm:gap-10 sm:m-10 sm:mt-36 sm:font-semibold 
-          ${
+         xl:${
             columnDirection ? "flex-col" : ""
           }`}
         >
-          <li ref={(el) => (liRef.current[0] = el)}>LinkedIn</li>
+          <h4 className="opacity-50    ">Socials</h4>
+           
+          <li ref={(el) => (liRef.current[0] = el)}>
+           <Link > LinkedIn </Link></li>
 
           <li ref={(el) => (liRef.current[1] = el)}>
-            <a href="">Github</a>
+            <Link>Github</Link>
           </li>
           <li ref={(el) => (liRef.current[2] = el)}>
-            <a href="">Instagram</a>
+            <Link>Instagram</Link>
           </li>
         </ul>
       </div>

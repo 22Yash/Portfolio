@@ -71,7 +71,7 @@ function Maincontact() {
             id="divider"
             className="border-2 border-black w-5/6  ml-10 
                       mt-8 opacity-50 xl:opacity-100
-                      sm:w-4/4 sm:ml-16 sm:m-10 sm:-mt-32
+                      sm:w-4/4 sm:ml-12 sm:m-10 sm:mt-12
                       xl:w-3/4 xl:ml-36 xl:m-10 xl:mt-10
                       "
           ></div>
@@ -91,18 +91,19 @@ function Maincontact() {
           </div>
           <div
             id="contactDetails "
-            className="  absolute  xl:mt-0 font-semibold p-10"
+            className="  absolute mt-16 sm:mt-60  sm:ml-12 xl:ml-0
+             xl:mt-0 font-semibold p-10"
           >
             <h3 className="opacity-40">CONTACT DETAILS </h3>
             <h3>yashadoke@gmial.com</h3>
             <h3>+91 9324781464</h3>
           </div>
-          <div id="socials" className="translate-y-full ">
+          <div id="socials" className=" flex translate-y-full ">
             <Links columnDirection={true} />
           </div>
         </div>
       </div>
-      <div id="lastDiv" className="w-full xl:h-96  bg-[#828E82]"></div>
+      <div id="lastDiv" className="w-full xl:h-3/4  bg-[#828E82]"></div>
     </div>
       
     </>
