@@ -70,19 +70,19 @@ function Maincontact() {
             </div>
           </div>
 
-          <div id="rightdiv" className=" h-screen  mt-22 xl:col-span-1">
+          <div id="rightdiv" className=" h-screen p-5 mt-22 xl:col-span-1">
             <div
               id="contactDetails "
               className="  absolute mt-16  font-semibold p-10
             sm:mt-72  sm:ml-12
-            xl:ml-0 xl:mt-44 "
+            xl:ml-0 xl:mt-64"
             >
-              <h3 className="opacity-40">CONTACT DETAILS </h3>
+              <h3 className="opacity-40 ">CONTACT DETAILS </h3>
               <h3>yashadoke@gmial.com</h3>
               <h3>+91 9324781464</h3>
             </div>
-            <div id="socials" className=" flex xl:mt-10 mt-36 ">
-              <Links columnDirection={true} />
+            <div id="socials" className=" flex xl:mt-64 mt-36 xl:col-span-1">
+              <Links  columnDirection={true}/>
             </div>
           </div>
         </div>

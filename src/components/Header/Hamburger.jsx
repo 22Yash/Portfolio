@@ -15,7 +15,7 @@ function Hamburger() {
     gsap.to(menuRef.current, {
       opacity: 1,
       ease: "power4.Out",
-      x: 700,
+      x: 800,
       duration: 0.5,
     });
     setMenuOpen(true);
@@ -64,7 +64,7 @@ function Hamburger() {
             id="second"
             ref={menuRef}
             onClick={openMenu}
-            className="xl:bg-red-500 xl:w-2/5  grid-cols-1 opacity-0 xl:ml-96
+            className="xl:bg-red-500 xl:w-2/5  -ml-20 grid-cols-1 opacity-0 xl:ml-96
             bg-blue-400 h-screen w-3/4 translate-x-3/4 mt-20 xl:mt-8 text-3xl   "
           >
             <div
