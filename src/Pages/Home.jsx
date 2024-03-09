@@ -5,6 +5,8 @@ import Work from '../components/Work/Work'
 import Connectfooter from '../components/Contact/Connectfooter'
 import Hamburger from '../components/Header/Hamburger'
 import LocomotiveScroll from 'locomotive-scroll';
+import RevealOnScroll from '../components/Work/RevealOnScroll'
+
 
 function Home() {
   const scrollContainerRef = useRef(null);
@@ -25,13 +27,16 @@ function Home() {
     };
   }, []);
   return (
-    <div ref={scrollContainerRef} className='h-screen'>
+    <div ref={scrollContainerRef}
+     className='h-screen'>
       <Navbar/>
       
       <Hero/>
-      <section data-scroll data-scroll-speed="0">
+      {/* <section data-scroll data-scroll-speed="0" data-scroll-horizontal>
        <Work/> 
-      </section>
+      </section> */}
+      <RevealOnScroll/>
+      
       
       <Connectfooter/>
       

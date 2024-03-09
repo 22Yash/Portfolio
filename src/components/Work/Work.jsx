@@ -73,6 +73,8 @@ function Work() {
             id="firstproject"
             className="lg:bg-red-400 lg:w-1/4 lg:h-2/4 lg:p-5 lg:m-10 "
           ></div>
+          
+
         </div>
       </div>
     </>
