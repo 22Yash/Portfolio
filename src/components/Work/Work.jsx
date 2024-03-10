@@ -47,7 +47,7 @@ function Work() {
   return (
     <>
     <Mousefollower/>
-      <div id="work" ref={workRef}>
+      <div id="work" ref={workRef} className="z-40">
         <div
           ref={mousefollowerRef}
           id="view"
