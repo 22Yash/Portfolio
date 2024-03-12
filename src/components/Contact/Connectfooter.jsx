@@ -7,7 +7,7 @@ import Links from "./Links";
 
 function Connectfooter() {
   return (
-    <div className="bg-[#828E82] w-full h-screen font-sans relative">
+    <div className="bg-[#828E82] w-full h-screen font-sans ">
       <Mousefollower mouseVisibility={true} />
 
       <div
@@ -51,7 +51,7 @@ function Connectfooter() {
         <Magneticeffect />
       </div>
 
-      <div id="socials" className="">
+      <div id="socials" className="-mt-10">
         <Links />
       </div>
     </div>

@@ -5,7 +5,7 @@ import Work from '../components/Work/Work'
 import Connectfooter from '../components/Contact/Connectfooter'
 import Hamburger from '../components/Header/Hamburger'
 import LocomotiveScroll from 'locomotive-scroll';
-import ScrollParallaxExample from '../components/Work/ScrollParallaxExample'
+
 
 
 
@@ -30,7 +30,7 @@ function Home() {
   return (
     <div ref={scrollContainerRef}
      className='h-screen'>
-      {/* <Navbar/>
+      <Navbar/>
       
       <Hero/>
       <section data-scroll data-scroll-speed="0" data-scroll-horizontal>
@@ -39,8 +39,8 @@ function Home() {
       
       
       
-      <Connectfooter/> */}
-      <ScrollParallaxExample/>
+      <Connectfooter/>
+      
       
     </div>
    
