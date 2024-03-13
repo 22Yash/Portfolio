@@ -5,7 +5,7 @@ import Contactform from "./Contactform";
 import IntoAnimation from "./IntoAnimation";
 import Navbar from "../Header/Navbar";
 import Hamburger from "../Header/Hamburger";
-import LocomotiveScroll from "locomotive-scroll";
+
 
 function Maincontact() {
   const scrollContainerRef = useRef(null);
