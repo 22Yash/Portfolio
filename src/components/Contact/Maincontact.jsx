@@ -5,37 +5,68 @@ import Contactform from "./Contactform";
 import IntoAnimation from "./IntoAnimation";
 import Navbar from "../Header/Navbar";
 import Hamburger from "../Header/Hamburger";
+import LocomotiveScroll from 'locomotive-scroll';
+import gsap from "gsap";
+import ScrollTrigger from "gsap/ScrollTrigger";
+gsap.registerPlugin(ScrollTrigger);
 
 
 function Maincontact() {
-  const scrollContainerRef = useRef(null);
+  // const scrollContainerRef = useRef(null);
 
+
+  // useEffect(() => {
+  //   const scroll = new LocomotiveScroll({
+  //     el: scrollContainerRef.current,
+  //     smooth: true, // Enable smooth scrolling
+  //     // Add more options as needed
+  //   });
+
+  //   // Ensure to destroy the scroll instance when the component unmounts
+  //   return () => {
+  //     if (scroll) {
+  //       scroll.destroy();
+  //     }
+  //   };
+  // }, []);
+
+  const ref= useRef(null);
   useEffect(() => {
-    const scroll = new LocomotiveScroll({
-      el: scrollContainerRef.current,
-      smooth: true, // Enable smooth scrolling
-      // Add more options as needed
-    });
-
-    // Ensure to destroy the scroll instance when the component unmounts
-    return () => {
-      if (scroll) {
-        scroll.destroy();
+    const el =ref.current;
+    gsap.fromTo(el,{
+      y:100,
+      opacity:1
+    },{
+      opacity:1,
+      y:-90,
+      duration:2,
+      scrollTrigger:{
+        trigger:el,
+        markers:true,
+        start:"top=90",
+        end:"bottom-=50",
+        toggleActions:"play none none reverse"
       }
-    };
-  }, []);
+    })
+
+
+  } ,[])
+
+
 
   return (
     <>
-      <div
+      {/* <div
         id="parent"
         ref={scrollContainerRef}
         className=" xl:w-full h-screen z-12 overflow-x-hidden"
       >
         <IntoAnimation />
         <Navbar  />
-
-        <Hamburger />
+         <div id="hamburger">
+          <Hamburger />
+         </div>
+        
 
         <div
           id="contact"
@@ -89,7 +120,12 @@ function Maincontact() {
         <div id="lastDiv" className="w-full xl:h-3/4  bg-[#828E82]">
 
         </div>
-      </div>
+      </div> */}
+
+<div className='App'>
+            
+            <h2 className="text-3xl" ref={ref}>hii ia ma yahs</h2>
+        </div>
     </>
   );
 }

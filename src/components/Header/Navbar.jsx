@@ -4,7 +4,7 @@ import { Link, NavLink } from 'react-router-dom'
 function Navbar() {
   return (
     <>
-    <div id='navBar' className=' hidden xl:flex xl:justify-between 
+    <div id='navBar' className='  xl:flex xl:justify-between 
     z-44   xl:h-12 bg-[#828E82]' >
       <div id="leftNav">
         <Link>
