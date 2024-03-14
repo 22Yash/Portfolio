@@ -5,30 +5,14 @@ import Contactform from "./Contactform";
 import IntoAnimation from "./IntoAnimation";
 import Navbar from "../Header/Navbar";
 import Hamburger from "../Header/Hamburger";
-import LocomotiveScroll from 'locomotive-scroll';
+
 import gsap from "gsap";
 import ScrollTrigger from "gsap/ScrollTrigger";
 gsap.registerPlugin(ScrollTrigger);
 
 
 function Maincontact() {
-  // const scrollContainerRef = useRef(null);
-
-
-  // useEffect(() => {
-  //   const scroll = new LocomotiveScroll({
-  //     el: scrollContainerRef.current,
-  //     smooth: true, // Enable smooth scrolling
-  //     // Add more options as needed
-  //   });
-
-  //   // Ensure to destroy the scroll instance when the component unmounts
-  //   return () => {
-  //     if (scroll) {
-  //       scroll.destroy();
-  //     }
-  //   };
-  // }, []);
+  
 
   const ref= useRef(null);
   useEffect(() => {
@@ -56,9 +40,9 @@ function Maincontact() {
 
   return (
     <>
-      {/* <div
+      <div
         id="parent"
-        ref={scrollContainerRef}
+        
         className=" xl:w-full h-screen z-12 overflow-x-hidden"
       >
         <IntoAnimation />
@@ -96,9 +80,7 @@ function Maincontact() {
                       xl:w-3/4 xl:ml-36 xl:m-10 xl:mt-10
                       "
             ></div>
-            <div id="form" className=" mt-40 xl:mt-36 absolute xl:w-6/12">
-              <Contactform />
-            </div>
+            <Contactform/>
           </div>
 
           <div id="rightdiv" className=" h-screen p-5 mt-22 xl:col-span-1">
@@ -120,12 +102,9 @@ function Maincontact() {
         <div id="lastDiv" className="w-full xl:h-3/4  bg-[#828E82]">
 
         </div>
-      </div> */}
+      </div>
 
-<div className='App'>
-            
-            <h2 className="text-3xl" ref={ref}>hii ia ma yahs</h2>
-        </div>
+
     </>
   );
 }

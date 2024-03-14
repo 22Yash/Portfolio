@@ -27,14 +27,14 @@ function Contactform() {
 
   return (
     <div
-      className="flex flex-col lg:space-y-5
+      className="flex flex-col lg:space-y-5 h-screen overflow-x-hidden  overflow-y-hidden bg-yellow-400
      xl:space-y-5 "
     >
       <form ref={form} onSubmit={sendEmail}>
         <div
           id="name"
           className="
-        w-full h-20  ml-8 text-lg -mt-36 
+        w-full h-20  ml-8 text-lg mt-36 
         sm:w-full sm:h-10 sm:-ml-12 sm:text-3xl sm:-mt-52
         xl:w-full xl:h-15 xl:ml-32 xl:text-2xl xl:-mt-32 "
         >
