@@ -6,16 +6,20 @@ import { Routes, BrowserRouter, Route } from "react-router-dom";
 import Home from "./Pages/Home";
 import Skills from "./Pages/Skills";
 import Contact from "./Pages/Contact";
+import Work from "./components/Work/Work";
 
 function App() {
   return (
     <>
       <BrowserRouter>
-        <Routes>
+        {/* <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="/skills" element={<Skills />} />
+          <Route path="/Work" element={<Skills />} />
           <Route path="/contact" element={<Contact />} />
-        </Routes>
+          
+        </Routes> */}
+        <Home/>
+        <Work/>
       </BrowserRouter>
     </>
   );

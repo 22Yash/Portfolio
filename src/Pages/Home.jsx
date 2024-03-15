@@ -4,6 +4,7 @@ import Hero from '../components/Header/Hero'
 import Work from '../components/Work/Work'
 import Connectfooter from '../components/Contact/Connectfooter'
 import Hamburger from '../components/Header/Hamburger'
+import Resume from '../components/Work/Resume'
 
 
 
@@ -18,12 +19,13 @@ function Home() {
       <Navbar/>
       
       <Hero/>
-      <section >
+      <section id='Work'>
        <Work/> 
       </section>
+     
       
       
-      
+      <Resume/>
       <Connectfooter/>
       
       
