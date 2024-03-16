@@ -1,47 +1,49 @@
-import React , { useRef , useEffect }from 'react'
-import Navbar from '../components/Header/Navbar'
-import Hero from '../components/Header/Hero'
-import Work from '../components/Work/Work'
-import Connectfooter from '../components/Contact/Connectfooter'
-import Hamburger from '../components/Header/Hamburger'
-import Resume from '../components/Work/Resume'
-import { Parallax } from 'react-parallax';
-
-
-
+import React, { useRef, useEffect } from "react";
+import Navbar from "../components/Header/Navbar";
+import Hero from "../components/Header/Hero";
+import Work from "../components/Work/Work";
+import Connectfooter from "../components/Contact/Connectfooter";
+import Hamburger from "../components/Header/Hamburger";
+import Resume from "../components/Work/Resume";
+// import LocomotiveScroll from 'locomotive-scroll';
 
 function Home() {
-  const scrollContainerRef = useRef(null);
-  
+  // const scrollRef = useRef(null);
 
-  
+  // useEffect(() => {
+  //   console.log("hii");
+  //   const scroll = new LocomotiveScroll({
+  //     el: scrollRef.current,
+  //     smooth: true, 
+  //     tablet:{smooth:true},
+  //     smartphone:{smooth:true}
+      
+  //   });
+
+    
+  //   return () => {
+  //     scroll.destroy();
+  //   };
+  // }, []);
+
   return (
-    <div ref={scrollContainerRef}
-     className='h-screen'>
-      <Navbar/>
+    <div  className="h-screen" >
+      <Navbar />
+
+      <Hero />
       
-    <Parallax  strength={200}>
-        <Hero/>
-    </Parallax>
-    <Parallax  strength={500} blur={0.5}>
         <Work/>
-    </Parallax>
-      
-      
-      
-      <Resume/>
-      <Connectfooter/>
         
 
+      
+        
+      
+      
 
-      
-      
-     
-     
-      
+      <Resume />
+      <Connectfooter />
     </div>
-   
-  )
+  );
 }
 
-export default Home
+export default Home;
