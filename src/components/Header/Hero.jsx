@@ -4,84 +4,91 @@ import gsap from "gsap";
 
 function Hero() {
   const heroHeadingRef = useRef(null);
-  
-
   const roleHeadingOneRef = useRef(null);
   const roleHeadingTwoRef = useRef(null);
   const roleHeadingOnePartRef = useRef(null);
+  const infoRef = useRef(null);
   const tl = gsap.timeline();
 
-  useEffect(() => {
-    tl.fromTo(
-      heroHeadingRef.current,
-      {
-        y: 80,
-        opacity: 0,
-        duration: 1,
-      },
-      {
-        y: 10,
-        opacity: 1,
-        duration: 1,
-        repeat: 0,
-      }
-    );
+  // useEffect(() => {
+  //   tl.fromTo(
+  //     heroHeadingRef.current,
+  //     {
+  //       y: 80,
+  //       opacity: 0,
+  //       duration: 1,
+  //     },
+  //     {
+  //       y: 10,
+  //       opacity: 1,
+  //       duration: 1,
+  //       repeat: 0,
+  //     }
+  //   );
 
     
 
 
-    tl.fromTo(
-      roleHeadingOneRef.current,
-      {
-        y: 80,
-        opacity: 0,
-        duration: 1,
-        stagger: 1,
-      },
-      {
-        y: 10,
-        opacity: 1,
-        duration: 1,
-        stagger: 1,
-      }
-    );
+  //   tl.fromTo(
+  //     roleHeadingOneRef.current,
+  //     {
+  //       y: 80,
+  //       opacity: 0,
+  //       duration: 1,
+  //       stagger: 1,
+  //     },
+  //     {
+  //       y: 10,
+  //       opacity: 1,
+  //       duration: 1,
+  //       stagger: 1,
+  //     }
+  //   );
 
-    tl.fromTo(
-      roleHeadingOnePartRef.current,
-      {
-        y: 80,
-        opacity: 0,
-        duration: 1,
-        stagger: 1,
-      },
-      {
-        y: 10,
-        opacity: 1,
-        duration: 1,
-        stagger: 1,
-      }
-    );
-
-
-
-    tl.fromTo(
-      roleHeadingTwoRef.current,
-      {
-        y: 80,
-        opacity: 0,
-        duration: 1,
-        stagger: 1,
-      },
-      {
-        y: -10,
-        opacity: 1,
-        duration: 1,
-        stagger: 1,
-      }
-    );
+  //   tl.fromTo(
+  //     roleHeadingOnePartRef.current,
+  //     {
+  //       y: 80,
+  //       opacity: 0,
+  //       duration: 1,
+  //       stagger: 1,
+  //     },
+  //     {
+  //       y: 10,
+  //       opacity: 1,
+  //       duration: 1,
+  //       stagger: 1,
+  //     }
+  //   );
 
 
-  });
+
+  //   tl.fromTo(
+  //     roleHeadingTwoRef.current,
+  //     {
+  //       y: 80,
+  //       opacity: 0,
+  //       duration: 1,
+  //       stagger: 1,
+  //     },
+  //     {
+  //       y: -10,
+  //       opacity: 1,
+  //       duration: 1,
+  //       stagger: 1,
+  //     }
+  //   );
+
+  //   tl.fromTo(infoRef.current,{
+  //     opacity:0,
+  //     stagger:1
+  //   },{
+  //     opacity:1,
+  //     stagger:1
+  //   })
+
+
+  // });
 
   
 
@@ -124,8 +131,17 @@ function Hero() {
             </div>
             <div 
             ref={roleHeadingTwoRef}
-            className="h1 mt-5 sm:ml-5">Developer.</div>
+            className="h1 mt-3 sm:ml-5 sm:-mt-2 xl:-ml-2">Developer.</div>
           </h1>
+
+        </div>
+        <div id="info" 
+        className="
+        text-2sm -mt-16 w-2/3 text-center ml-16 font-medium
+        sm:mt-5 sm:ml-32 
+        xl:text-2xl xl:ml-96 xl:mt-10 xl:font-medium xl:w-2/5 xl:text-center text-[#6e6760]">
+          <h4  ref={infoRef} className="xl:ml-44">I like to  develop  responsive, interactive, and animated websites.</h4>
+          
         </div>
       </div>
     </>
