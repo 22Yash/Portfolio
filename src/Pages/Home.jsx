@@ -7,6 +7,7 @@ import Hamburger from "../components/Header/Hamburger";
 import Resume from "../components/Work/Resume";
 import Horizontal from "../components/Work/HorizontalSlides";
 // import LocomotiveScroll from 'locomotive-scroll';
+import { ReactLenis, useLenis } from '@studio-freight/react-lenis'
 
 function Home() {
   // const scrollRef = useRef(null);
@@ -27,9 +28,16 @@ function Home() {
   //   };
   // }, []);
 
+  const lenis = useLenis(({ scroll }) => {
+    // called every scroll
+    console.log("jii");
+  })
+
   return (
-    <div  className="h-screen" >
-      <Navbar />
+    <ReactLenis root>
+      { /* content */ }
+      <div  className="h-screen" >
+      
 
       <Hero />
       
@@ -44,7 +52,14 @@ function Home() {
       {/* <Resume />
       <Connectfooter /> */}
     </div>
+    </ReactLenis>
+    
   );
 }
 
 export default Home;
+
+
+
+
+

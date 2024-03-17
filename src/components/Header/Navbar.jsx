@@ -10,7 +10,9 @@ function Navbar() {
     <>
       <div
         id="navBar"
-        className="  xl:flex xl:justify-between 
+        className=" 
+        hidden 
+        xl:flex xl:justify-between 
     z-44   xl:h-12 bg-[#d6d6d0]"
       >
         <div id="leftNav">

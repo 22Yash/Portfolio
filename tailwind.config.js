@@ -11,10 +11,13 @@ export default {
         helvetica: ['Helvetica'],
          
       },
+      scrollbar: ['rounded']
       
     },
     
   },
-  plugins: [],
+  plugins: [
+    require('tailwind-scrollbar')
+  ],
 }
 
