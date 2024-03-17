@@ -5,6 +5,7 @@ import Work from "../components/Work/Work";
 import Connectfooter from "../components/Contact/Connectfooter";
 import Hamburger from "../components/Header/Hamburger";
 import Resume from "../components/Work/Resume";
+import Horizontal from "../components/Work/HorizontalSlides";
 // import LocomotiveScroll from 'locomotive-scroll';
 
 function Home() {
@@ -32,16 +33,16 @@ function Home() {
 
       <Hero />
       
-        <Work/>
+        {/* <Work/> */}
         
-
+          <Horizontal/>
       
         
       
       
 
-      <Resume />
-      <Connectfooter />
+      {/* <Resume />
+      <Connectfooter /> */}
     </div>
   );
 }
