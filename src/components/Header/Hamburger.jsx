@@ -12,11 +12,14 @@ function Hamburger() {
 
   const openMenu = () => {
     console.log("hii");
-    gsap.to(menuRef.current, {
+    gsap.fromTo(menuRef.current, {
       opacity: 1,
       ease: "power4.Out",
-      x: 800,
+      x: 0,
       duration: 0.5,
+    },{
+      x:650,
+      opacity:1
     });
     setMenuOpen(true);
   };
@@ -27,7 +30,7 @@ function Hamburger() {
     gsap.to(menuRef.current, {
       opacity: 0,
       ease: "power2.out",
-      x: 1150,
+      x: -100,
       duration: 1,
     });
     setMenuOpen(false);
@@ -58,7 +61,7 @@ function Hamburger() {
           id="menu"
           
           
-          className="grid xl:grid-cols-1 -mt-3  xl:w-5/6 z-20 opacity-1 h-screen w-full grid-cols-1  fixed  "
+          className="grid xl:grid-cols-1 -mt-3  xl:w-3/6  xl:translate-x-44 z-20 opacity-1 h-screen w-full grid-cols-1  fixed  "
         >
           <div
             id="second"
