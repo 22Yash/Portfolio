@@ -19,129 +19,154 @@ function Hero() {
 
   const tl = gsap.timeline();
 
+  // useEffect(() => {
+  //   //   tl.fromTo(
+  //   //     heroHeadingRef.current,
+  //   //     {
+  //   //       y: 80,
+  //   //       opacity: 0,
+  //   //       duration: 1,
+  //   //     },
+  //   //     {
+  //   //       y: 10,
+  //   //       opacity: 1,
+  //   //       duration: 1,
+  //   //       repeat: 0,
+  //   //     }
+  //   //   );
+
+  //   //   tl.fromTo(
+  //   //     roleHeadingOneRef.current,
+  //   //     {
+  //   //       y: 80,
+  //   //       opacity: 0,
+  //   //       duration: 1,
+  //   //       stagger: 1,
+  //   //     },
+  //   //     {
+  //   //       y: 10,
+  //   //       opacity: 1,
+  //   //       duration: 1,
+  //   //       stagger: 1,
+  //   //     }
+  //   //   );
+
+  //   //   tl.fromTo(
+  //   //     roleHeadingOnePartRef.current,
+  //   //     {
+  //   //       y: 80,
+  //   //       opacity: 0,
+  //   //       duration: 1,
+  //   //       stagger: 1,
+  //   //     },
+  //   //     {
+  //   //       y: 10,
+  //   //       opacity: 1,
+  //   //       duration: 1,
+  //   //       stagger: 1,
+  //   //     }
+  //   //   );
+
+  //   //   tl.fromTo(
+  //   //     roleHeadingTwoRef.current,
+  //   //     {
+  //   //       y: 80,
+  //   //       opacity: 0,
+  //   //       duration: 1,
+  //   //       stagger: 1,
+  //   //     },
+  //   //     {
+  //   //       y: -10,
+  //   //       opacity: 1,
+  //   //       duration: 1,
+  //   //       stagger: 1,
+  //   //     }
+  //   //   );
+
+  //   //   tl.fromTo(infoRef.current,{
+  //   //     opacity:0,
+  //   //     stagger:1
+  //   //   },{
+  //   //     opacity:1,
+  //   //     stagger:1
+  //   //   })
+
+  //   const el = hamburgerRef.current;
+
+  //   const nr = navbarRef.current;
+
+  //   tl.fromTo(
+  //     el,
+  //     {
+  //       opacity: 0,
+  //       y: -30,
+  //       duration: 4,
+  //     },
+  //     {
+  //       opacity: 1,
+  //       y: 50,
+
+  //       scrollTrigger: {
+  //         trigger: nr,
+  //         start: "90% 0%",
+  //         end: " bottom ",
+
+  //         scrub: true,
+  //       },
+  //     }
+  //   );
+  // });
+
+   const tlDesktop = useRef(null);
+  const tlMobile = useRef(null);
+
   useEffect(() => {
-    //   tl.fromTo(
-    //     heroHeadingRef.current,
-    //     {
-    //       y: 80,
-    //       opacity: 0,
-    //       duration: 1,
-    //     },
-    //     {
-    //       y: 10,
-    //       opacity: 1,
-    //       duration: 1,
-    //       repeat: 0,
-    //     }
-    //   );
-
-    //   tl.fromTo(
-    //     roleHeadingOneRef.current,
-    //     {
-    //       y: 80,
-    //       opacity: 0,
-    //       duration: 1,
-    //       stagger: 1,
-    //     },
-    //     {
-    //       y: 10,
-    //       opacity: 1,
-    //       duration: 1,
-    //       stagger: 1,
-    //     }
-    //   );
-
-    //   tl.fromTo(
-    //     roleHeadingOnePartRef.current,
-    //     {
-    //       y: 80,
-    //       opacity: 0,
-    //       duration: 1,
-    //       stagger: 1,
-    //     },
-    //     {
-    //       y: 10,
-    //       opacity: 1,
-    //       duration: 1,
-    //       stagger: 1,
-    //     }
-    //   );
-
-    //   tl.fromTo(
-    //     roleHeadingTwoRef.current,
-    //     {
-    //       y: 80,
-    //       opacity: 0,
-    //       duration: 1,
-    //       stagger: 1,
-    //     },
-    //     {
-    //       y: -10,
-    //       opacity: 1,
-    //       duration: 1,
-    //       stagger: 1,
-    //     }
-    //   );
-
-    //   tl.fromTo(infoRef.current,{
-    //     opacity:0,
-    //     stagger:1
-    //   },{
-    //     opacity:1,
-    //     stagger:1
-    //   })
-
     const el = hamburgerRef.current;
-
     const nr = navbarRef.current;
 
-    tl.fromTo(
-      el,
-      {
-        opacity: 0,
-        y: -30,
-        duration: 4,
-      },
-      {
+    // Check if the screen width is greater than the mobile breakpoint (e.g., 768px)
+    const isLaptopScreen = window.innerWidth > 768;
+
+    if (isLaptopScreen) {
+      // Animation for desktop/laptop screens
+      tlDesktop.current = gsap.timeline();
+
+      tlDesktop.current.fromTo(el,
+        {
+          opacity:0,
+          y:-30,
+          scale:0,
+        },
+         {
         opacity: 1,
         y: 50,
-
+        duration: 0.5,
+        scale:1,
         scrollTrigger: {
           trigger: nr,
           start: "90% 0%",
-          end:" bottom ",
-
-          markers: "true ",
+          end: "bottom",
           scrub: true,
         },
-      }
-    );
+      });
+    } else {
+      // Animation for mobile screens
+      tlMobile.current = gsap.timeline();
 
-
-    
-
-
-
-  });
-
-
-
-
-
-
-
-
-
-
+      tlMobile.current.to(el, {
+        opacity: 1,
+        duration: 0.5,
+      });
+    }
+  }, []);
   return (
     <>
       <div id="hero" className="w-full h-screen bg-[#d6d6d0]">
-        <div id="navbar" ref={navbarRef} >
+        <div id="navbar" ref={navbarRef}>
           <Navbar />
         </div>
-          
-        
-        <div id="hamburger" ref={hamburgerRef}>
+
+        <div id="hamburger" ref={hamburgerRef} className="visible">
           <Hamburger />
         </div>
 
