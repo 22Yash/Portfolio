@@ -8,6 +8,7 @@ import Resume from "../components/Work/Resume";
 import Horizontal from "../components/Work/HorizontalSlides";
 // import LocomotiveScroll from 'locomotive-scroll';
 import { ReactLenis, useLenis } from '@studio-freight/react-lenis'
+import Parallax from "../components/Header/Parallax";
 
 function Home() {
   // const scrollRef = useRef(null);
@@ -34,16 +35,17 @@ function Home() {
   })
 
   return (
-    <ReactLenis root>
+    <>
+    
       { /* content */ }
-      <div  className="h-screen" >
+      <div  className="h-screen " >
       
-
-      <Hero />
+       <Parallax/>
+      {/* <Hero /> */}
       
         {/* <Work/> */}
         
-          <Horizontal/>
+          {/* <Horizontal/> */}
       
         
       
@@ -52,7 +54,7 @@ function Home() {
       {/* <Resume />
       <Connectfooter /> */}
     </div>
-    </ReactLenis>
+    </>
     
   );
 }
