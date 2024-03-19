@@ -11,6 +11,7 @@ function Work() {
   const scrollRef = useRef(null);
 
   const projectRef = useRef(null);
+  const tl = gsap.timeline();
 
   useEffect(() => {
     const el = mousefollowerRef.current;
@@ -48,18 +49,42 @@ function Work() {
     });
   };
 
+  const tlDesktop = useRef(null);
+  const tlMobile = useRef(null);
+
+
   useEffect(() => {
-    gsap.to(".slide", {
-      scrollTrigger: {
-        trigger: ".project",
-        start: "top top ",
-        end: "bottom bottom ",
-        scrub: 2,
-        markers: true,
-      },
-      xPercent: -100,
-    });
-  });
+    
+
+    // Check if the screen width is greater than the mobile breakpoint (e.g., 768px)
+    const isLaptopScreen = window.innerWidth > 768;
+
+    if (isLaptopScreen) {
+      // Animation for desktop/laptop screens
+      tlDesktop.current = gsap.timeline();
+
+      tlDesktop.current.to(".slide", {
+        scrollTrigger: {
+          trigger: ".project",
+          start: "top top ",
+          end: "bottom bottom ",
+          scrub: 2,
+          markers: true,
+        },
+        xPercent: -100,
+      });
+    } else {
+      // Animation for mobile screens
+      tlMobile.current = gsap.timeline();
+
+      tlMobile.current.to(".slide",{
+        y:0,
+        opacity:1
+      }
+
+      );
+    }
+  }, []);
 
   return (
     <>
@@ -75,18 +100,18 @@ function Work() {
           </div>
           <div id="projects" className="project w-full  ">
             <div className="cont h-[400vh] bg-green-500">
-              <div className="slides sticky top-0 left-0  w-full flex h-screen bg-[#0a0a09]">
-                <div className="  w-10/12 sticky h-screen  flex-shrink-0 bg-[#0a0a09] ">
-                  <div id="project" className=" slide flex m-10  gap-10">
-                    <div className="projecttext w-6/12 flex-shrink-0">
-                    <h2 className="text-7xl m-10  font-bold w-12 text-center p-10 text-[#bebeb0]">
+              <div className="slides grid  xl:sticky xl:top-0 xl:left-0  xl:w-full xl:flex h-screen bg-[#0a0a09]">
+                <div className="  grid-cols-1 xl:w-10/12 xl:sticky xl:h-screen  xl:flex-shrink-0 bg-[#0a0a09] ">
+                  <div id="project" className=" slide col-span-1 xl:flex xl:m-10  xl:gap-10">
+                    <div className="projecttext xl:w-6/12 xl:flex-shrink-0">
+                    <h2 className="xl:text-7xl xl:m-10  xl:font-bold xl:w-12 xl:text-center xl:p-10 text-[#bebeb0]">
                     My Work
                   </h2>
-                  <p className="text-[#7b736a] m-10 text-3xl w-2/4 text-center">"Bringing ideas to life through creativity and code."</p>
+                  <p className="text-[#7b736a] xl:m-10 xl:text-3xl xl:w-2/4 xl:text-center">"Bringing ideas to life through creativity and code."</p>
 
                     </div>
                   
-                  <div id="project1" className=" slide w-6/12   text-white flex-shrink-0 bg-[#bebeb0] p-20 m-10 -ml-24 rounded-3xl" >project1</div>
+                  <div id="project1" className=" slide w-3/4 h-4/5 xl:w-6/12   text-white xl:flex-shrink-0 bg-[#bebeb0] xl:p-20 xl:m-10 xl:-ml-24 xl:rounded-3xl" >project1</div>
                   <div id="project2" className=" slide w-6/12 flex-shrink-0  bg-[#bebeb0] rounded-3xl"> project2</div>
                 <div id="project3" className=" slide w-6/12  flex-shrink-0  bg-[#bebeb0] rounded-3xl"> project3</div>
                 <div id="project4" className=" slide w-6/12  flex-shrink-0  bg-[#bebeb0] rounded-3xl"> project4</div>
