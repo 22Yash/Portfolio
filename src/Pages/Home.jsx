@@ -38,21 +38,21 @@ function Home() {
     <>
     
       { /* content */ }
-      <div  className="h-screen " >
+      <div  className="h-screen w-full " >
       
-       <Parallax/>
-      {/* <Hero /> */}
+       
+      <Hero /> 
       
-        {/* <Work/> */}
+      <Work/>
         
-          {/* <Horizontal/> */}
+         
       
         
       
       
 
-      {/* <Resume />
-      <Connectfooter /> */}
+      <Resume />
+      <Connectfooter />
     </div>
     </>
     
