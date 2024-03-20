@@ -69,7 +69,7 @@ function Work() {
           start: "top top ",
           end: "bottom bottom ",
           scrub: 2,
-          markers: true,
+          
         },
         xPercent: -100,
       });
@@ -85,11 +85,27 @@ function Work() {
     }
   }, []);
 
+  useEffect(() => {
+    console.log("work is target");
+    gsap.to(".work",{
+      scrollTrigger:{
+        trigger:".work",
+        start:"-670 top",
+        end:"bottom top",
+        // markers:true,
+        
+        scrub:2
+      },
+      yPercent:-100,
+        zIndex:2
+    })
+  })
+
   
 
   return (
     <>
-      <section id="Work" className="w-full relavtive">
+      <section id="Work" className="work w-full relavtive">
         {/* <Mousefollower /> */}
         <div id="work" ref={workRef} className="overflo-x-hiddden">
           <div

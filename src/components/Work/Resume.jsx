@@ -1,8 +1,11 @@
-import React from 'react'
+import React ,{useEffect} from 'react'
+import gsap from 'gsap'
 
 function Resume() {
+ 
+
   return (
-    <div className='h-screen w-full bg-yellow-300' id='Resume'>
+    <div className='resume h-screen w-full bg-yellow-300' id='Resume'>
       my resume
     </div>
   )

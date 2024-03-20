@@ -22,80 +22,99 @@ function Hero() {
   const tl = gsap.timeline();
 
   useEffect(() => {
-      tl.fromTo(
-        heroHeadingRef.current,
-        {
-          y: 80,
-          opacity: 0,
-          duration: 1,
-        },
-        {
-          y: 10,
-          opacity: 1,
-          duration: 1,
-          repeat: 0,
-        }
-      );
+      // tl.fromTo(
+      //   heroHeadingRef.current,
+      //   {
+      //     y: 80,
+      //     opacity: 0,
+      //     duration: 1,
+      //   },
+      //   {
+      //     y: 10,
+      //     opacity: 1,
+      //     duration: 1,
+      //     repeat: 0,
+      //   }
+      // );
 
-      tl.fromTo(
-        roleHeadingOneRef.current,
-        {
-          y: 80,
-          opacity: 0,
-          duration: 1,
-          stagger: 1,
-        },
-        {
-          y: 10,
-          opacity: 1,
-          duration: 1,
-          stagger: 1,
-        }
-      );
+      // tl.fromTo(
+      //   roleHeadingOneRef.current,
+      //   {
+      //     y: 80,
+      //     opacity: 0,
+      //     duration: 1,
+      //     stagger: 1,
+      //   },
+      //   {
+      //     y: -10,
+      //     opacity: 1,
+      //     duration: 1,
+      //     stagger: 1,
+      //   }
+      // );
 
-      tl.fromTo(
-        roleHeadingOnePartRef.current,
-        {
-          y: 80,
-          opacity: 0,
-          duration: 1,
-          stagger: 1,
-        },
-        {
-          y: 10,
-          opacity: 1,
-          duration: 1,
-          stagger: 1,
-        }
-      );
+      // tl.fromTo(
+      //   roleHeadingOnePartRef.current,
+      //   {
+      //     y: 80,
+      //     opacity: 0,
+      //     duration: 1,
+      //     stagger: 1,
+      //   },
+      //   {
+      //     y: 10,
+      //     opacity: 1,
+      //     duration: 1,
+      //     stagger: 1,
+      //   }
+      // );
 
-      tl.fromTo(
-        roleHeadingTwoRef.current,
-        {
-          y: 80,
-          opacity: 0,
-          duration: 1,
-          stagger: 1,
-        },
-        {
-          y: -10,
-          opacity: 1,
-          duration: 1,
-          stagger: 1,
-        }
-      );
+      // tl.fromTo(
+      //   roleHeadingTwoRef.current,
+      //   {
+      //     y: 80,
+      //     opacity: 0,
+      //     duration: 1,
+      //     stagger: 1,
+      //   },
+      //   {
+      //     y: -10,
+      //     opacity: 1,
+      //     duration: 1,
+      //     stagger: 1,
+      //   }
+      // );
 
-      tl.fromTo(infoRef.current,{
-        opacity:0,
-        stagger:1
-      },{
-        opacity:1,
-        stagger:1
-      });
+      // tl.fromTo(infoRef.current,{
+      //   opacity:0,
+      //   stagger:1
+      // },{
+      //   opacity:1,
+      //   stagger:1
+      // });
 
 
-       const el = hamburgerRef.current;
+      const el = hamburgerRef.current;
     const nr = navbarRef.current;
+
+      gsap.set(".hero",{scale:1})
+
+      tl.to(".hero",{
+        scrollTrigger:{
+          trigger:el,
+          start:"top 10",
+          end: "bottom top",
+          
+          pin:true,
+          scrub:2
+        },
+        scale:0.9,
+        
+
+      })
+
+
+       
 
     // Check if the screen width is greater than the mobile breakpoint (e.g., 768px)
     const isLaptopScreen = window.innerWidth > 768;
@@ -141,7 +160,7 @@ function Hero() {
  
   return (
     <>
-      <div id="hero" className="w-full  h-screen bg-[#d6d6d0]">
+      <div id="hero" className="w-full sticky   h-screen bg-[#d6d6d0]">
         <div id="navbar" ref={navbarRef}>
           <Navbar />
         </div>
@@ -152,7 +171,7 @@ function Hero() {
 
         <div
           id="heroHeading"
-          className="
+          className="hero
          sm:ml-28
          xl:ml-10 xl:tracking-wide xl:pt-20"
         >
@@ -166,7 +185,7 @@ function Hero() {
             I'm Yash
           </h1>
         </div>
-        <div id="heroRole" className="xl:tracking-wide">
+        <div id="heroRole" className="hero xl:tracking-wide">
           <h1
             className="
           text-6xl font-bold  text-center font-helvetica p-20 flex flex-col
@@ -191,7 +210,7 @@ function Hero() {
         </div>
         <div
           id="info"
-          className="
+          className="hero
         text-2sm -mt-16 w-2/3 text-center ml-16 font-medium
         sm:mt-5 sm:ml-32 
         xl:text-2xl xl:ml-96 xl:mt-10 xl:font-medium xl:w-2/5 xl:text-center text-[#6e6760]"
