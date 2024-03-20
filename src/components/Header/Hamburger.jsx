@@ -64,7 +64,7 @@ function Hamburger() {
 
   return (
     <>
-      <div id="div" className="xl:w-full  relative opacity-1  ">
+      <div id="div" className="xl:w-full  relative opacity-1  xl:z-40 ">
         <div id="button" className=" mr-40 float-end">
           <button
             ref={buttonRef}
@@ -80,7 +80,7 @@ function Hamburger() {
           id="menu"
           
           
-          className="grid xl:grid-cols-1 -mt-3 xl:flex  xl:justify-end xl:w-3/6 xl:ml-72 xl:translate-x-44 z-20 opacity-1 h-screen w-full  fixed  "
+          className="grid xl:grid-cols-1 -mt-10 xl:flex  xl:justify-end xl:w-3/6 xl:ml-72 xl:translate-x-44 z-20 opacity-1 h-screen w-full  fixed  "
         >
           <div
             id="second"
@@ -112,7 +112,7 @@ function Hamburger() {
                       `block py-2 pr-4 pl-3 duration-200 ${
                         isActive ? "text-[#e1e1dc]" : "text-[#e1e1dc]"
                       } 
-                       hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 hover:text-[#babaad] xl:-ml-9 lg:p-0 `
+                       hover:bg-gray-50 -ml-8 lg:hover:bg-transparent lg:border-0 hover:text-[#babaad] xl:-ml-9 lg:p-0 `
                     }
                   >
                     Home
@@ -124,7 +124,7 @@ function Hamburger() {
                     className={({ isActive }) =>
                       `block py-2 pr-4 pl-3 duration-200 ${
                         isActive ? "text-[#e1e1dc]" : "text-[#e1e1dc]"
-                      }  hover:bg-gray-50 xl:-ml-16 lg:hover:bg-transparent lg:border-0 hover:text-[#babaad] lg:p-0`
+                      }  hover:bg-gray-50 -ml-8 xl:-ml-16 lg:hover:bg-transparent lg:border-0 hover:text-[#babaad] lg:p-0`
                     }
                   >
                     Work
@@ -136,7 +136,7 @@ function Hamburger() {
                     className={({ isActive }) =>
                       `block py-2 pr-4 pl-3 duration-200 ${
                         isActive ? "text-[#e1e1dc]" : "text-[#e1e1dc]"
-                      }  hover:bg-gray-50 xl:-ml-16 lg:hover:bg-transparent lg:border-0 hover:text-[#babaad] lg:p-0`
+                      }  hover:bg-gray-50 -ml-8 xl:-ml-16 lg:hover:bg-transparent lg:border-0 hover:text-[#babaad] lg:p-0`
                     }
                   >
                     Skills
@@ -148,7 +148,7 @@ function Hamburger() {
                     className={({ isActive }) =>
                       `block py-2 pr-4 pl-3 duration-200 ${
                         isActive ? "text-[#e1e1dc]" : "text-[#e1e1dc]"
-                      } hover:bg-gray-50 xl:-ml-16 lg:hover:bg-transparent lg:border-0 hover:text-[#babaad] lg:p-0`
+                      } hover:bg-gray-50 -ml-8 xl:-ml-16 lg:hover:bg-transparent lg:border-0 hover:text-[#babaad] lg:p-0`
                     }
                   >
                     Experince
@@ -160,7 +160,7 @@ function Hamburger() {
                     className={({ isActive }) =>
                       `block py-2 pr-4 pl-3 duration-200 ${
                         isActive ? "text-[#e1e1dc]" : "text-[#e1e1dc]"
-                      }  hover:bg-gray-50 xl:-ml-16 lg:hover:bg-transparent lg:border-0 hover:text-[#babaad] lg:p-0`
+                      }  hover:bg-gray-50 -ml-8 xl:-ml-16 lg:hover:bg-transparent lg:border-0 hover:text-[#babaad] lg:p-0`
                     }
                   >
                     Resume
@@ -172,7 +172,7 @@ function Hamburger() {
                     className={({ isActive }) =>
                       `block py-2 pr-4 pl-3 duration-200 ${
                         isActive ? "text-[#e1e1dc]" : "text-[#e1e1dc]"
-                      }  hover:bg-gray-50 xl:-ml-16 lg:hover:bg-transparent lg:border-0 hover:text-[#babaad] lg:p-0`
+                      }  hover:bg-gray-50 -ml-8 xl:-ml-16 lg:hover:bg-transparent lg:border-0 hover:text-[#babaad] lg:p-0`
                     }
                   >
                     Contact
