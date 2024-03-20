@@ -5,8 +5,7 @@ import Work from "../components/Work/Work";
 import Connectfooter from "../components/Contact/Connectfooter";
 import Hamburger from "../components/Header/Hamburger";
 import Resume from "../components/Work/Resume";
-import Horizontal from "../components/Work/HorizontalSlides";
-// import LocomotiveScroll from 'locomotive-scroll';
+
 import { ReactLenis, useLenis } from '@studio-freight/react-lenis'
 import Parallax from "../components/Header/Parallax";
 
@@ -36,12 +35,8 @@ function Home() {
 
   return (
     <>
-    
-      { /* content */ }
-      <div  className="h-screen w-full " >
-      
-       
-      <Hero /> 
+     <ReactLenis root>
+     <Hero /> 
       
       <Work/>
         
@@ -53,7 +48,8 @@ function Home() {
 
       <Resume />
       <Connectfooter />
-    </div>
+    </ReactLenis>
+      
     </>
     
   );

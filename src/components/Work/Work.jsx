@@ -66,9 +66,10 @@ function Work() {
       tlDesktop.current.to(".slide", {
         scrollTrigger: {
           trigger: ".project",
-          start: "top top ",
+          start: "-567 top ",
           end: "bottom bottom ",
           scrub: 2,
+          markers:true
           
         },
         xPercent: -100,
@@ -90,14 +91,16 @@ function Work() {
     gsap.to(".work",{
       scrollTrigger:{
         trigger:".work",
-        start:"-670 top",
-        end:"bottom top",
-        // markers:true,
+        start:"-570 top",
+        end:"-570 top",
+        markers:true,
         
         scrub:2
       },
       yPercent:-100,
-        zIndex:2
+        zIndex:2,
+        ease:"power0.out",
+        duration:10
     })
   })
 
@@ -116,7 +119,7 @@ function Work() {
             view
           </div>
           <div id="projects" className="project w-full  ">
-            <div className="cont  h-[400vh] bg-[#0a0a09]">
+            <div className="cont  h-[120vh] bg-[#0a0a09]">
               <div 
               className="slides grid 
               xl:sticky xl:top-0 xl:left-0  xl:w-full xl:flex h-screen bg-[#0a0a09]">
