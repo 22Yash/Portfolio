@@ -91,7 +91,7 @@ function Work() {
     <>
       <section id="Work" className="w-full relavtive">
         {/* <Mousefollower /> */}
-        <div id="work" ref={workRef} className="">
+        <div id="work" ref={workRef} className="overflo-x-hiddden">
           <div
             ref={mousefollowerRef}
             id="view"
@@ -122,13 +122,13 @@ function Work() {
 
                     </div>
                   
-                  <div id="project1" className=" slide  w-[350px]  h-[400px] ml-10 m-10   rounded-3xl
+                  <div id="project1" className=" slide  w-[330px]  h-[400px] ml-10 m-10   rounded-3xl
                   xl:w-6/12 xl:h-[400px] text-white xl:flex-shrink-0 bg-[#bebeb0] xl:p-20 xl:mt-32 xl:-ml-24 xl:rounded-3xl" >project1</div>
-                  <div id="project2" className=" slide w-[350px]  h-[400px] ml-10 m-10 xl:mt-32    rounded-3xl
+                  <div id="project2" className=" slide w-[330px]  h-[400px] ml-10 m-10 xl:mt-32    rounded-3xl
                   xl:w-6/12 xl:flex-shrink-0  bg-[#bebeb0] xl:rounded-3xl"> project2</div>
-                <div id="project3" className=" slide w-[350px]  h-[400px] ml-10 m-10 xl:mt-32  rounded-3xl
+                <div id="project3" className=" slide w-[330px]  h-[400px] ml-10 m-10 xl:mt-32  rounded-3xl
                  xl:w-6/12  xl:flex-shrink-0  bg-[#bebeb0] xl:rounded-3xl"> project3</div>
-                <div id="project4" className=" slide w-[350px]  h-[400px] ml-10 xl:mt-32   rounded-3xl
+                <div id="project4" className=" slide w-[330px]  h-[400px] ml-10 xl:mt-32   rounded-3xl
                 xl:w-6/12  xl:flex-shrink-0  bg-[#bebeb0] xl:rounded-3xl"> project4</div>
                 
 
