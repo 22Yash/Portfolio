@@ -100,7 +100,7 @@ function Work() {
             view
           </div>
           <div id="projects" className="project w-full  ">
-            <div className="cont h-[350vh] xl:h-[400vh] bg-[#0a0a09]">
+            <div className="cont  h-[400vh] bg-[#0a0a09]">
               <div 
               className="slides grid 
               xl:sticky xl:top-0 xl:left-0  xl:w-full xl:flex h-screen bg-[#0a0a09]">
