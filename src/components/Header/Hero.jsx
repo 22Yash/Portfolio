@@ -126,6 +126,25 @@ function Hero() {
         },
       });
 
+      // gsap.set(".hero",{scale:1})
+
+      // tlDesktop.current.to(".hero",{
+      //   scrollTrigger:{
+      //     trigger:"nr",
+      //     start:" 10 top",
+      //     end: "15 top",
+      //     markers:true,
+      //     pin:true,
+      //     scrub:2
+      //   },
+      //   scale:0.9,
+      //   marginTop:-10
+        
+        
+
+      // })
+
+
       
     } else {
       // Animation for mobile screens
@@ -148,9 +167,9 @@ function Hero() {
 
     //   tlDesktop.current.to(".hero",{
     //     scrollTrigger:{
-    //       trigger:".main",
+    //       trigger:".hero",
     //       start:" 10 top",
-    //       end: "bottom top",
+    //       end: "15 top",
     //       markers:true,
     //       pin:true,
     //       scrub:2
@@ -184,6 +203,9 @@ function Hero() {
     // }
     },)
 
+
+    
+
     
 
    
@@ -208,7 +230,7 @@ function Hero() {
         >
           <h1
             ref={heroHeadingRef}
-            className="
+            className="hero
           text-6xl font-bold  text-center  pt-20  
           sm:text-8xl sm:font-bold sm:font-helvetica sm:text-left sm:ml-20
           xl:text-9xl xl:font-bold xl:text-left xl:p-0 xl:ml-72 font-helvetica"

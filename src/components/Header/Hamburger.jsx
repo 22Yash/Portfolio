@@ -3,6 +3,7 @@ import { FiAlignJustify } from "react-icons/fi";
 import gsap from "gsap";
 import { FiX } from "react-icons/fi";
 import { NavLink } from "react-router-dom";
+import { HashLink as Link } from "react-router-hash-link";
 
 function Hamburger() {
   const menuRef = useRef(null);
@@ -69,7 +70,7 @@ function Hamburger() {
             ref={buttonRef}
             onClick={openMenu}
            
-            className=" xl:w-24   xl:h-24 xl:m-5 
+            className=" xl:w-24   xl:h-24 xl:m-5  
             ml-20 mt-5 w-16 h-16 bg-[#5f5c57]  fixed rounded-full"
           >
             <div id="icon" className="text-3xl xl:ml-8 ml-4  text-white ">
@@ -88,7 +89,7 @@ function Hamburger() {
             ref={menuRef}
             onClick={openMenu}
             className="xl:bg-[#605d58] xl:w-4/5 xl:rounded-l-3xl xl:relative  xl:ml-24 xl:mt-8  opacity-0
-            bg-[#605d58] h-screen w-3/4 translate-x-3/4 mt-10 ml-32 text-3xl rounded-l-3xl   "
+            bg-[#605d58] h-screen w-3/4 translate-x-3/4  z-30 mt-10 ml-32 text-3xl rounded-l-3xl   "
           >
             <div
               id="upperDiv"
@@ -107,7 +108,7 @@ function Hamburger() {
             <div id="bottomDiv" className="flex gap-10 h-4/5  w-full xl:text-7xl xl:-mt-24 text-5xl -mt-20">
               <ul className="flex xl:flex-col p-10 xl:mt-4 xl:mr-10 xl:text-[#e1e1dc] xl:ml-20 font-medium flex-col lg:flex-row lg:space-x-8 lg:mt-0">
                 <li>
-                  <NavLink
+                  <Link
                     to="/"
                     className={({ isActive }) =>
                       `block py-2 pr-4 pl-3 duration-200 ${
@@ -117,11 +118,11 @@ function Hamburger() {
                     }
                   >
                     Home
-                  </NavLink>
+                  </Link>
                 </li>
                 <li>
-                  <NavLink
-                    to="/Work"
+                  <Link
+                    to="#Work"
                     className={({ isActive }) =>
                       `block py-2 pr-4 pl-3 duration-200 ${
                         isActive ? "text-[#e1e1dc]" : "text-[#e1e1dc]"
@@ -129,11 +130,11 @@ function Hamburger() {
                     }
                   >
                     Work
-                  </NavLink>
+                  </Link>
                 </li>
                 <li>
-                  <NavLink
-                    to="/Contact"
+                  <Link
+                    to="#Skills"
                     className={({ isActive }) =>
                       `block py-2 pr-4 pl-3 duration-200 ${
                         isActive ? "text-[#e1e1dc]" : "text-[#e1e1dc]"
@@ -141,23 +142,13 @@ function Hamburger() {
                     }
                   >
                     Skills
-                  </NavLink>
+                  </Link>
                 </li>
+                
+                
                 <li>
-                  <NavLink
-                    to="/Contact"
-                    className={({ isActive }) =>
-                      `block py-2 pr-4 pl-3 duration-200 ${
-                        isActive ? "text-[#e1e1dc]" : "text-[#e1e1dc]"
-                      } hover:bg-gray-50 -ml-8 xl:-ml-16 lg:hover:bg-transparent lg:border-0 hover:text-[#babaad] lg:p-0`
-                    }
-                  >
-                    Experince
-                  </NavLink>
-                </li>
-                <li>
-                  <NavLink
-                    to="/Contact"
+                  <Link
+                    to="#Resume"
                     className={({ isActive }) =>
                       `block py-2 pr-4 pl-3 duration-200 ${
                         isActive ? "text-[#e1e1dc]" : "text-[#e1e1dc]"
@@ -165,11 +156,11 @@ function Hamburger() {
                     }
                   >
                     Resume
-                  </NavLink>
+                  </Link>
                 </li>
                 <li>
-                  <NavLink
-                    to="/Contact"
+                  <Link
+                    to="#Contact"
                     className={({ isActive }) =>
                       `block py-2 pr-4 pl-3 duration-200 ${
                         isActive ? "text-[#e1e1dc]" : "text-[#e1e1dc]"
@@ -177,7 +168,7 @@ function Hamburger() {
                     }
                   >
                     Contact
-                  </NavLink>
+                  </Link>
                 </li>
               </ul>
             </div>

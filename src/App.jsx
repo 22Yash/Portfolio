@@ -7,6 +7,7 @@ import Home from "./Pages/Home";
 import Skills from "./Pages/Skills";
 import Contact from "./Pages/Contact";
 import Work from "./components/Work/Work";
+import Contactform from "./components/Contact/Contactform";
 
 function App() {
   return (
@@ -14,12 +15,12 @@ function App() {
       <BrowserRouter>
         {/* <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="/Work" element={<Skills />} />
-          <Route path="/contact" element={<Contact />} />
+          
+          <Route path="/contactform" element={<Contactform />} />
           
         </Routes> */}
         <Home/>
-        <Work/>
+        
       </BrowserRouter>
     </>
   );

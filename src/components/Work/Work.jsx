@@ -69,15 +69,38 @@ function Work() {
       tlDesktop.current.to(".slide", {
         scrollTrigger: {
           trigger: ".project",
-          start: "-50 top ",
+          start: "-540 top ",
           end: "300 top ",
           scrub: 2,
           markers:true
           
         },
         xPercent: -100,
-        duration:5
+        duration:2
       });
+
+      
+
+      tlDesktop.current.to(".work", {
+        scrollTrigger: {
+          trigger: ".work",
+          start: "-550 top ",
+          end: "-540 top ",
+          scrub: 2,
+          markers:true,
+          
+          
+        },
+        
+        yPercent: -80,
+        duration:5,
+        
+        
+        
+        
+      });
+
+
 
     
         
@@ -112,7 +135,7 @@ function Work() {
 
   return (
     <>
-      <section id="Work" className="work w-full relavtive">
+      <section id="Work" className="work w-full relavtive rounded-t-3xl">
         {/* <Mousefollower /> */}
         <div id="work" ref={workRef} className="overflo-x-hiddden">
           <div
@@ -172,8 +195,11 @@ function Work() {
             className="lg:bg-red-400 lg:w-1/4 lg:h-2/4 lg:p-5 lg:m-10 "
           ></div> */}
           </div>
+          
         </div>
+        
       </section>
+      
       
     </>
   );
