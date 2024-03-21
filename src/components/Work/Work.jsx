@@ -69,36 +69,23 @@ function Work() {
       tlDesktop.current.to(".slide", {
         scrollTrigger: {
           trigger: ".project",
-          start: "-550 top ",
-          end: "-100 top ",
+          start: "-50 top ",
+          end: "300 top ",
           scrub: 2,
           markers:true
           
         },
         xPercent: -100,
+        duration:5
       });
-       
-      tlDesktop.current.to(".work", {
-        scrollTrigger: {
-          trigger: ".work",
-          start: "-550 top ",
-          end: "-550 top ",
-          scrub: 2,
-          markers:true
-          
-        },
-        yPercent: -80,
-        onComplete: function() {
-                  console.log("fum");
-                  
-                  gsap.set(".work", { // Fix the position of the element
-                    y: -80, // Set the final position
-                    position: "fixed" // Set the position to fixed
-                  });
+
+    
         
-                  
-                }
-      });
+      
+
+
+       
+      
 
     } else {
       // Animation for mobile screens
@@ -117,33 +104,7 @@ function Work() {
  
   
 
-  // useEffect(() => {
-  //   console.log("work is target");
-  //   gsap.to(".work",{
-  //     scrollTrigger:{
-  //       trigger:".work",
-  //       start:"-570 top",
-  //       end:"-550 top",
-  //       markers:true,
-        
-  //       scrub:1
-  //     },
-  //     yPercent:-80,
-  //       zIndex:2,
-  //       ease:"power0.out",
-  //       onComplete: function() {
-  //         console.log("fum");
-          
-  //         gsap.set(".work", { // Fix the position of the element
-  //           y: -80, // Set the final position
-  //           position: "fixed" // Set the position to fixed
-  //         });
-
-          
-  //       }
-        
-  //   })
-  // })
+  
 
   
 
@@ -162,7 +123,7 @@ function Work() {
             view
           </div>
           <div id="projects" className="project w-full  ">
-            <div className="cont  h-[120vh] bg-[#0a0a09]">
+            <div className="cont  h-[400vh] xl:h-[120vh] bg-[#0a0a09]">
               <div 
               className="slides grid 
               xl:sticky xl:top-0 xl:left-0  xl:w-full xl:flex h-screen bg-[#0a0a09]">

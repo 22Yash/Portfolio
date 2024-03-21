@@ -1,4 +1,4 @@
-import React, { useRef, useEffect } from "react";
+import React from "react";
 import Navbar from "../components/Header/Navbar";
 import Hero from "../components/Header/Hero";
 import Work from "../components/Work/Work";
@@ -10,24 +10,6 @@ import { ReactLenis, useLenis } from '@studio-freight/react-lenis'
 import Parallax from "../components/Header/Parallax";
 
 function Home() {
-  // const scrollRef = useRef(null);
-
-  // useEffect(() => {
-  //   console.log("hii");
-  //   const scroll = new LocomotiveScroll({
-  //     el: scrollRef.current,
-  //     smooth: true, 
-  //     tablet:{smooth:true},
-  //     smartphone:{smooth:true}
-      
-  //   });
-
-    
-  //   return () => {
-  //     scroll.destroy();
-  //   };
-  // }, []);
-
   const lenis = useLenis(({ scroll }) => {
     // called every scroll
     console.log("jii");
@@ -37,15 +19,7 @@ function Home() {
     <>
      <ReactLenis root>
      <Hero /> 
-      
       <Work/>
-        
-         
-      
-        
-      
-      
-
       <Resume/>
       <Connectfooter />
     </ReactLenis>
@@ -56,8 +30,3 @@ function Home() {
 }
 
 export default Home;
-
-
-
-
-

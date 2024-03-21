@@ -12,6 +12,7 @@ function Hamburger() {
 
   const openMenu = () => {
     console.log("hii");
+    
     if (window.innerWidth > 768) {
       // Animation for laptops
       gsap.fromTo(menuRef.current, {
@@ -55,21 +56,21 @@ function Hamburger() {
     setMenuOpen(false);
   };
 
-  const mouseclick = () =>{
-    console.log("hii");
-  }
+ 
 
   
 
 
   return (
     <>
-      <div id="div" className="xl:w-full  relative opacity-1  xl:z-40 ">
+      <div id="div" className="xl:w-full  xl:relative opacity-1  xl:z-40 ">
         <div id="button" className=" mr-40 float-end">
           <button
             ref={buttonRef}
             onClick={openMenu}
-            className=" xl:w-24 xl:fixed  xl:h-24 xl:m-5 ml-20 mt-5 w-16 h-16 bg-[#5f5c57]  fixed rounded-full"
+           
+            className=" xl:w-24   xl:h-24 xl:m-5 
+            ml-20 mt-5 w-16 h-16 bg-[#5f5c57]  fixed rounded-full"
           >
             <div id="icon" className="text-3xl xl:ml-8 ml-4  text-white ">
               <FiAlignJustify />
@@ -86,8 +87,8 @@ function Hamburger() {
             id="second"
             ref={menuRef}
             onClick={openMenu}
-            className="xl:bg-[#605d58] xl:w-4/5 xl:rounded-l-3xl  xl:ml-24 xl:mt-8  opacity-0
-            bg-[#605d58] h-screen w-3/4 translate-x-3/4 mt-2 ml-32 text-3xl rounded-l-3xl   "
+            className="xl:bg-[#605d58] xl:w-4/5 xl:rounded-l-3xl xl:relative  xl:ml-24 xl:mt-8  opacity-0
+            bg-[#605d58] h-screen w-3/4 translate-x-3/4 mt-10 ml-32 text-3xl rounded-l-3xl   "
           >
             <div
               id="upperDiv"

@@ -97,24 +97,7 @@ function Hero() {
       const el = hamburgerRef.current;
     const nr = navbarRef.current;
 
-      gsap.set(".hero",{scale:1})
-
-      tl.to(".hero",{
-        scrollTrigger:{
-          trigger:el,
-          start:"top 10",
-          end: "bottom top",
-          
-          pin:true,
-          scrub:2
-        },
-        scale:0.9,
-       
-        
-        
-
-      })
-
+     
 
        
 
@@ -128,8 +111,7 @@ function Hero() {
       tlDesktop.current.fromTo(el,
         {
           opacity:0,
-          y:-30,
-          scale:0,
+          
         },
          {
         opacity: 1,
@@ -143,6 +125,8 @@ function Hero() {
           scrub: true,
         },
       });
+
+      
     } else {
       // Animation for mobile screens
       tlMobile.current = gsap.timeline();
@@ -153,6 +137,51 @@ function Hero() {
       });
     }
 
+
+
+
+    // if (isLaptopScreen) {
+    //   // Animation for desktop/laptop screens
+    //   tlDesktop.current = gsap.timeline();
+
+    //   gsap.set(".hero",{scale:1})
+
+    //   tlDesktop.current.to(".hero",{
+    //     scrollTrigger:{
+    //       trigger:".main",
+    //       start:" 10 top",
+    //       end: "bottom top",
+    //       markers:true,
+    //       pin:true,
+    //       scrub:2
+    //     },
+    //     scale:0.9,
+    //     marginTop:-10
+        
+        
+
+    //   })
+
+    // }else{
+    //   tlMobile.current = gsap.timeline();
+
+    //   gsap.set(".hero",{scale:1})
+
+    //   tlMobile.current.to(".hero",{
+    //     scrollTrigger:{
+    //       trigger:el,
+    //       start:"50 top",
+    //       end: "40 top",
+    //       markers:true,
+    //       pin:true,
+    //       scrub:2
+    //     },
+    //     scale:0.9,
+    //     marginTop:-10
+        
+
+    //   })
+    // }
     },)
 
     
@@ -217,7 +246,7 @@ function Hero() {
         sm:mt-5 sm:ml-32 
         xl:text-2xl xl:ml-96 xl:mt-10 xl:font-medium xl:w-2/5 xl:text-center text-[#6e6760]"
         >
-          <h4 ref={infoRef} className="xl:ml-44">
+          <h4 ref={infoRef} className=" -mt-16 xl:ml-44 xl:mt-16">
             I like to develop responsive, interactive, and animated websites.
           </h4>
         </div>
