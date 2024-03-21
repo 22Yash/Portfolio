@@ -109,6 +109,8 @@ function Hero() {
           scrub:2
         },
         scale:0.9,
+       
+        
         
 
       })
@@ -160,7 +162,7 @@ function Hero() {
  
   return (
     <>
-      <div id="hero" className="w-full sticky   h-screen bg-[#d6d6d0]">
+      <div id="hero" className="main w-full sticky   h-screen bg-[#d6d6d0]">
         <div id="navbar" ref={navbarRef}>
           <Navbar />
         </div>

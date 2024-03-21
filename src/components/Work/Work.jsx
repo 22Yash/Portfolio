@@ -3,6 +3,7 @@ import gsap from "gsap";
 
 import Mousefollower from "../Animation/Mousefollower";
 import LocomotiveScroll from "locomotive-scroll";
+import Resume from "./Resume";
 
 function Work() {
   const mousefollowerRef = useRef(null);
@@ -49,7 +50,9 @@ function Work() {
     });
   };
 
-  const tlDesktop = useRef(null);
+
+  
+    const tlDesktop = useRef(null);
   const tlMobile = useRef(null);
 
 
@@ -66,19 +69,43 @@ function Work() {
       tlDesktop.current.to(".slide", {
         scrollTrigger: {
           trigger: ".project",
-          start: "-567 top ",
-          end: "bottom bottom ",
+          start: "-550 top ",
+          end: "-100 top ",
           scrub: 2,
           markers:true
           
         },
         xPercent: -100,
       });
+       
+      tlDesktop.current.to(".work", {
+        scrollTrigger: {
+          trigger: ".work",
+          start: "-550 top ",
+          end: "-550 top ",
+          scrub: 2,
+          markers:true
+          
+        },
+        yPercent: -80,
+        onComplete: function() {
+                  console.log("fum");
+                  
+                  gsap.set(".work", { // Fix the position of the element
+                    y: -80, // Set the final position
+                    position: "fixed" // Set the position to fixed
+                  });
+        
+                  
+                }
+      });
+
     } else {
       // Animation for mobile screens
       tlMobile.current = gsap.timeline();
           
       tlMobile.current.to(".slide",{
+
         
       }
 
@@ -86,23 +113,39 @@ function Work() {
     }
   }, []);
 
-  useEffect(() => {
-    console.log("work is target");
-    gsap.to(".work",{
-      scrollTrigger:{
-        trigger:".work",
-        start:"-570 top",
-        end:"-570 top",
-        markers:true,
+  
+ 
+  
+
+  // useEffect(() => {
+  //   console.log("work is target");
+  //   gsap.to(".work",{
+  //     scrollTrigger:{
+  //       trigger:".work",
+  //       start:"-570 top",
+  //       end:"-550 top",
+  //       markers:true,
         
-        scrub:2
-      },
-      yPercent:-100,
-        zIndex:2,
-        ease:"power0.out",
-        duration:10
-    })
-  })
+  //       scrub:1
+  //     },
+  //     yPercent:-80,
+  //       zIndex:2,
+  //       ease:"power0.out",
+  //       onComplete: function() {
+  //         console.log("fum");
+          
+  //         gsap.set(".work", { // Fix the position of the element
+  //           y: -80, // Set the final position
+  //           position: "fixed" // Set the position to fixed
+  //         });
+
+          
+  //       }
+        
+  //   })
+  // })
+
+  
 
   
 
@@ -170,6 +213,7 @@ function Work() {
           </div>
         </div>
       </section>
+      
     </>
   );
 }
