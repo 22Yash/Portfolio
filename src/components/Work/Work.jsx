@@ -6,6 +6,9 @@ import LocomotiveScroll from "locomotive-scroll";
 import Resume from "./Resume";
 
 function Work() {
+
+  
+
   const mousefollowerRef = useRef(null);
   const viewRef = useRef(null);
   const workRef = useRef(null);
@@ -69,10 +72,14 @@ function Work() {
       tlDesktop.current.to(".slide", {
         scrollTrigger: {
           trigger: ".project",
-          start: "-540 top ",
-          end: "300 top ",
-          scrub: 2,
-          markers:true
+          start: "-300 top ",
+          end: "100 top ",
+          scrub: 1,
+          markers:true,
+          
+          
+          
+          
           
         },
         xPercent: -100,
@@ -80,25 +87,31 @@ function Work() {
       });
 
       
-
-      tlDesktop.current.to(".work", {
-        scrollTrigger: {
-          trigger: ".work",
-          start: "-550 top ",
-          end: "-540 top ",
-          scrub: 2,
-          markers:true,
+      
+        tlDesktop.current.to(".work", {
+          scrollTrigger: {
+            trigger: ".work",
+            start: "-580 top ",
+            end: "-570 top ",
+            scrub: 2,
+            markers:true,
+            pin:true,
+            
+            
+          },
+          
+          y: -150,
+          duration:5,
+     
+  
           
           
-        },
-        
-        yPercent: -80,
-        duration:5,
-        
-        
-        
-        
-      });
+          
+          
+          
+        });
+      
+      
 
 
 
@@ -134,7 +147,8 @@ function Work() {
   
 
   return (
-    <>
+    
+      <>
       <section id="Work" className="work w-full relavtive rounded-t-3xl">
         {/* <Mousefollower /> */}
         <div id="work" ref={workRef} className="overflo-x-hiddden">
@@ -202,6 +216,8 @@ function Work() {
       
       
     </>
+    
+    
   );
 }
 
