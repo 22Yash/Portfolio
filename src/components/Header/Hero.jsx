@@ -22,84 +22,85 @@ function Hero() {
   const tl = gsap.timeline();
 
   useEffect(() => {
-      // tl.fromTo(
-      //   heroHeadingRef.current,
-      //   {
-      //     y: 80,
-      //     opacity: 0,
-      //     duration: 1,
-      //   },
-      //   {
-      //     y: 10,
-      //     opacity: 1,
-      //     duration: 1,
-      //     repeat: 0,
-      //   }
-      // );
+    tl.fromTo(
+      heroHeadingRef.current,
+      {
+        y: 80,
+        opacity: 0,
+        duration: 1,
+      },
+      {
+        y: 10,
+        opacity: 1,
+        duration: 1,
+        repeat: 0,
+        delay:10
+      }
+    );
 
-      // tl.fromTo(
-      //   roleHeadingOneRef.current,
-      //   {
-      //     y: 80,
-      //     opacity: 0,
-      //     duration: 1,
-      //     stagger: 1,
-      //   },
-      //   {
-      //     y: -10,
-      //     opacity: 1,
-      //     duration: 1,
-      //     stagger: 1,
-      //   }
-      // );
+    tl.fromTo(
+      roleHeadingOneRef.current,
+      {
+        y: 80,
+        opacity: 0,
+        duration: 1,
+        stagger: 1,
+        
+      },
+      {
+        y: -10,
+        opacity: 1,
+        duration: 1,
+        stagger: 1,
+        
+      }
+    );
 
-      // tl.fromTo(
-      //   roleHeadingOnePartRef.current,
-      //   {
-      //     y: 80,
-      //     opacity: 0,
-      //     duration: 1,
-      //     stagger: 1,
-      //   },
-      //   {
-      //     y: 10,
-      //     opacity: 1,
-      //     duration: 1,
-      //     stagger: 1,
-      //   }
-      // );
+    tl.fromTo(
+      roleHeadingOnePartRef.current,
+      {
+        y: 80,
+        opacity: 0,
+        duration: 1,
+        stagger: 1,
+      },
+      {
+        y: 10,
+        opacity: 1,
+        duration: 1,
+        stagger: 1,
+        
+      }
+    );
 
-      // tl.fromTo(
-      //   roleHeadingTwoRef.current,
-      //   {
-      //     y: 80,
-      //     opacity: 0,
-      //     duration: 1,
-      //     stagger: 1,
-      //   },
-      //   {
-      //     y: -10,
-      //     opacity: 1,
-      //     duration: 1,
-      //     stagger: 1,
-      //   }
-      // );
+    tl.fromTo(
+      roleHeadingTwoRef.current,
+      {
+        y: 80,
+        opacity: 0,
+        duration: 1,
+        stagger: 1,
+      },
+      {
+        y: -10,
+        opacity: 1,
+        duration: 1,
+        stagger: 1,
+        
+      }
+    );
 
-      // tl.fromTo(infoRef.current,{
-      //   opacity:0,
-      //   stagger:1
-      // },{
-      //   opacity:1,
-      //   stagger:1
-      // });
+    tl.fromTo(infoRef.current,{
+      opacity:0,
+      stagger:1
+    },{
+      opacity:1,
+      stagger:1,
+      
+    });
 
-
-      const el = hamburgerRef.current;
+    const el = hamburgerRef.current;
     const nr = navbarRef.current;
-
-     
-
-       
 
     // Check if the screen width is greater than the mobile breakpoint (e.g., 768px)
     const isLaptopScreen = window.innerWidth > 768;
@@ -108,23 +109,24 @@ function Hero() {
       // Animation for desktop/laptop screens
       tlDesktop.current = gsap.timeline();
 
-      tlDesktop.current.fromTo(el,
+      tlDesktop.current.fromTo(
+        el,
         {
-          opacity:0,
-          
+          opacity: 0,
         },
-         {
-        opacity: 1,
-        y: 50,
-        duration: 0.5,
-        scale:1,
-        scrollTrigger: {
-          trigger: nr,
-          start: "90% 0%",
-          end: "bottom",
-          scrub: true,
-        },
-      });
+        {
+          opacity: 1,
+          y: 50,
+          duration: 0.5,
+          scale: 1,
+          scrollTrigger: {
+            trigger: nr,
+            start: "90% 0%",
+            end: "bottom",
+            scrub: true,
+          },
+        }
+      );
 
       // gsap.set(".hero",{scale:1})
 
@@ -139,13 +141,8 @@ function Hero() {
       //   },
       //   scale:0.9,
       //   marginTop:-10
-        
-        
 
       // })
-
-
-      
     } else {
       // Animation for mobile screens
       tlMobile.current = gsap.timeline();
@@ -155,9 +152,6 @@ function Hero() {
         duration: 0.5,
       });
     }
-
-
-
 
     // if (isLaptopScreen) {
     //   // Animation for desktop/laptop screens
@@ -176,8 +170,6 @@ function Hero() {
     //     },
     //     scale:0.9,
     //     marginTop:-10
-        
-        
 
     //   })
 
@@ -197,20 +189,11 @@ function Hero() {
     //     },
     //     scale:0.9,
     //     marginTop:-10
-        
 
     //   })
     // }
-    },)
+  });
 
-
-    
-
-    
-
-   
-
- 
   return (
     <>
       <div id="hero" className="main w-full sticky   h-screen bg-[#d6d6d0]">

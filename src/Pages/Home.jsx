@@ -6,7 +6,7 @@ import Connectfooter from "../components/Contact/Connectfooter";
 import Hamburger from "../components/Header/Hamburger";
 import Resume from "../components/Work/Resume";
 
-import { ReactLenis, useLenis } from '@studio-freight/react-lenis'
+import { ReactLenis, useLenis } from "@studio-freight/react-lenis";
 import Parallax from "../components/Header/Parallax";
 import Preloader from "../components/Header/Preloader";
 
@@ -14,20 +14,18 @@ function Home() {
   const lenis = useLenis(({ scroll }) => {
     // called every scroll
     console.log("jii");
-  })
+  });
 
   return (
     <>
-     <ReactLenis root>
-      <Preloader/>
-     <Hero /> 
-      <Work/>
-      <Resume/>
-      <Connectfooter />
-    </ReactLenis>
-      
+      <ReactLenis root>
+        <Preloader />
+        <Hero />
+        <Work />
+        <Resume />
+        <Connectfooter />
+      </ReactLenis>
     </>
-    
   );
 }
 

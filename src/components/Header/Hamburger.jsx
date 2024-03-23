@@ -9,33 +9,40 @@ function Hamburger() {
   const menuRef = useRef(null);
   const buttonRef = useRef(null);
   const closeRef = useRef(null);
-  
 
   const openMenu = () => {
     console.log("hii");
-    
+
     if (window.innerWidth > 768) {
       // Animation for laptops
-      gsap.fromTo(menuRef.current, {
-        opacity: 1,
-        ease: "power4.Out",
-        x: 300,
-        duration: 0.5,
-      },{
-        x:350,
-        opacity:1
-      });
+      gsap.fromTo(
+        menuRef.current,
+        {
+          opacity: 1,
+          ease: "power4.Out",
+          x: 300,
+          duration: 0.5,
+        },
+        {
+          x: 350,
+          opacity: 1,
+        }
+      );
     } else {
       // Animation for mobile devices
-      gsap.fromTo(menuRef.current, {
-        opacity: 1,
-        ease: "power4.Out",
-        x: 50,
-        duration: 0.5,
-      },{
-        x: 0,
-        opacity:1
-      });
+      gsap.fromTo(
+        menuRef.current,
+        {
+          opacity: 1,
+          ease: "power4.Out",
+          x: 50,
+          duration: 0.5,
+        },
+        {
+          x: 0,
+          opacity: 1,
+        }
+      );
     }
     setMenuOpen(true);
   };
@@ -43,24 +50,21 @@ function Hamburger() {
   const closeMenu = (e) => {
     console.log("closed");
     e.stopPropagation();
-    gsap.fromTo(menuRef.current, {
-      opacity: 1,
-      ease: "power2.out",
-      x: 350,
-      duration: 1,
-    },{
-      opacity:0,
-      x:300,
-
-
-    });
+    gsap.fromTo(
+      menuRef.current,
+      {
+        opacity: 1,
+        ease: "power2.out",
+        x: 350,
+        duration: 1,
+      },
+      {
+        opacity: 0,
+        x: 300,
+      }
+    );
     setMenuOpen(false);
   };
-
- 
-
-  
-
 
   return (
     <>
@@ -69,7 +73,6 @@ function Hamburger() {
           <button
             ref={buttonRef}
             onClick={openMenu}
-           
             className=" xl:w-24   xl:h-24 xl:m-5  
             ml-20 mt-5 w-16 h-16 bg-[#5f5c57]  fixed rounded-full"
           >
@@ -80,8 +83,6 @@ function Hamburger() {
         </div>
         <div
           id="menu"
-          
-          
           className="grid xl:grid-cols-1 -mt-10 xl:flex  xl:justify-end xl:w-3/6 xl:ml-72 xl:translate-x-44 z-20 opacity-1 h-screen w-full  fixed  "
         >
           <div
@@ -96,8 +97,7 @@ function Hamburger() {
               className=" w-full xl:h-1/5    h-1/4 flex justify-centre -ml-44 xl:-ml-28"
             >
               <button
-                className=
-                "bg-white mt-20 ml-52  w-12 h-12  rounded-full  -translate-y-3/4 text-5xl xl:ml-32 xl:w-24 xl:h-24 xl:flex xl:justify-center xl:items-center "
+                className="bg-white mt-20 ml-52  w-12 h-12  rounded-full  -translate-y-3/4 text-5xl xl:ml-32 xl:w-24 xl:h-24 xl:flex xl:justify-center xl:items-center "
                 ref={closeRef}
                 onClick={(e) => closeMenu(e)}
               >
@@ -105,7 +105,10 @@ function Hamburger() {
               </button>
             </div>
 
-            <div id="bottomDiv" className="flex gap-10 h-4/5  w-full xl:text-7xl xl:-mt-24 text-5xl -mt-20">
+            <div
+              id="bottomDiv"
+              className="flex gap-10 h-4/5  w-full xl:text-7xl xl:-mt-24 text-5xl -mt-20"
+            >
               <ul className="flex xl:flex-col p-10 xl:mt-4 xl:mr-10 xl:text-white xl:ml-20 font-medium flex-col lg:flex-row lg:space-x-8 lg:mt-0">
                 <li>
                   <Link
@@ -144,8 +147,7 @@ function Hamburger() {
                     Skills
                   </Link>
                 </li>
-                
-                
+
                 <li>
                   <Link
                     to="#Resume"
