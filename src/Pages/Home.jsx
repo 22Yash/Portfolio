@@ -8,6 +8,7 @@ import Resume from "../components/Work/Resume";
 
 import { ReactLenis, useLenis } from '@studio-freight/react-lenis'
 import Parallax from "../components/Header/Parallax";
+import Preloader from "../components/Header/Preloader";
 
 function Home() {
   const lenis = useLenis(({ scroll }) => {
@@ -18,6 +19,7 @@ function Home() {
   return (
     <>
      <ReactLenis root>
+      <Preloader/>
      <Hero /> 
       <Work/>
       <Resume/>
