@@ -82,8 +82,8 @@ function Preloader() {
       
           tl.fromTo(
                 thirdtext.current.children,
-                { opacity: 0, y: '+=50' },
-                { opacity: 1, y: '-50', stagger: 0.5}
+                { opacity: 0, y: '+=10' },
+                { opacity: 1, y: '-50', stagger: 0.4}
               )
       
               tl.to(preloaderRef.current, {
@@ -120,7 +120,7 @@ function Preloader() {
         <div className="first w-full h-[120px]   ">
           <h1
             ref={textRef}
-            className="firsttext  text-6xl xl:text-[100px]  mt-40  xl:flex  xl:flex-row  xl:justify-center xl:items-center"
+            className="firsttext ml-20 mt-20 text-[50px] text-[#d0d0c6]   xl:text-[100px]  xl:mt-40  xl:flex  xl:flex-row   xl:justify-center xl:items-center"
           >
             
             <span>U</span>
@@ -133,9 +133,9 @@ function Preloader() {
             <span>n</span>
             <span>g</span>
             
+            <br className="hidden md:block" /> {/* Add line break for mobile screens */}
            
-           
-           <span className=" xl:ml-10">C</span>
+           <span className=" ml-0 xl:ml-10">C</span>
             <span>r</span>
             <span>e</span>
             <span>a</span>
@@ -154,26 +154,27 @@ function Preloader() {
           </h1>
         </div>
         <div id="second" className=" h-[100px]">
-          <h2 className="second  text-[50px] xl:text-[70px]  flex mt-10 items-center justify-center">
+          <h2 className="second text-[#cecec4]  ml-0 xl:ml-0 text-[50px] xl:text-[70px]  flex mt-10 items-center justify-center">
             Welcome to{" "}
           </h2>
         </div>
         <div id="third">
           <h2 
           ref={thirdtext}
-          className="third  text-[60px] xl:text-[100px] xl:flex xl:justify-center xl:mt-10 uppercase font-bold">
+          className="third text-[#bdbdb0] ml-28 -mt-20 xl:ml-0 text-[60px] xl:text-[100px] xl:flex xl:justify-center xl:mt-10 uppercase font-bold">
             
             <span>y</span>
             <span>A</span>
             <span>S</span>
             <span>h</span>
-            <span className=" ml-5 xl:ml-10">d</span>
+            <br className=" md:block" />
+            <span className=" ml-0 xl:ml-10">d</span>
             <span>o</span>
             <span>k</span>
             <span>e</span>
-            
+            <br className=" md:block" />
            
-           <span className=" ml-24  xl:ml-10 ">p</span>
+           <span className=" -ml-20 xl:ml-10 ">p</span>
             <span>o</span>
             <span>r</span>
             <span>t</span>

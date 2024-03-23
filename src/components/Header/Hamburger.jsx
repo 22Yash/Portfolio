@@ -88,8 +88,8 @@ function Hamburger() {
             id="second"
             ref={menuRef}
             onClick={openMenu}
-            className="xl:bg-[#605d58] xl:w-4/5 xl:rounded-l-3xl xl:relative  xl:ml-24 xl:mt-8  opacity-0
-            bg-[#605d58] h-screen w-3/4 translate-x-3/4  z-30 mt-10 ml-32 text-3xl rounded-l-3xl   "
+            className=" xl:w-4/5 xl:rounded-l-3xl xl:relative  xl:ml-24 xl:mt-8  opacity-0
+            bg-[#3b3834] h-screen w-3/4 translate-x-3/4  z-30 mt-10 ml-32 text-3xl rounded-l-3xl   "
           >
             <div
               id="upperDiv"
@@ -106,7 +106,7 @@ function Hamburger() {
             </div>
 
             <div id="bottomDiv" className="flex gap-10 h-4/5  w-full xl:text-7xl xl:-mt-24 text-5xl -mt-20">
-              <ul className="flex xl:flex-col p-10 xl:mt-4 xl:mr-10 xl:text-[#e1e1dc] xl:ml-20 font-medium flex-col lg:flex-row lg:space-x-8 lg:mt-0">
+              <ul className="flex xl:flex-col p-10 xl:mt-4 xl:mr-10 xl:text-white xl:ml-20 font-medium flex-col lg:flex-row lg:space-x-8 lg:mt-0">
                 <li>
                   <Link
                     to="/"

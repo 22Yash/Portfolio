@@ -225,7 +225,7 @@ function Hero() {
         <div
           id="heroHeading"
           className="hero
-         sm:ml-28
+         sm:ml-28 text-[#3b3834]
          xl:ml-10 xl:tracking-wide xl:pt-20"
         >
           <h1
@@ -238,7 +238,7 @@ function Hero() {
             I'm Yash
           </h1>
         </div>
-        <div id="heroRole" className="hero xl:tracking-wide">
+        <div id="heroRole" className="hero xl:tracking-wide text-[#3b3834]">
           <h1
             className="
           text-6xl font-bold  text-center font-helvetica p-20 flex flex-col
