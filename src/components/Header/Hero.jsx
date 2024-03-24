@@ -21,178 +21,178 @@ function Hero() {
 
   const tl = gsap.timeline();
 
-  useEffect(() => {
-    tl.fromTo(
-      heroHeadingRef.current,
-      {
-        y: 80,
-        opacity: 0,
-        duration: 1,
-      },
-      {
-        y: 10,
-        opacity: 1,
-        duration: 1,
-        repeat: 0,
-        delay:10
-      }
-    );
+  // useEffect(() => {
+  //   tl.fromTo(
+  //     heroHeadingRef.current,
+  //     {
+  //       y: 80,
+  //       opacity: 0,
+  //       duration: 1,
+  //     },
+  //     {
+  //       y: 10,
+  //       opacity: 1,
+  //       duration: 1,
+  //       repeat: 0,
+  //       delay:10
+  //     }
+  //   );
 
-    tl.fromTo(
-      roleHeadingOneRef.current,
-      {
-        y: 80,
-        opacity: 0,
-        duration: 1,
-        stagger: 1,
+  //   tl.fromTo(
+  //     roleHeadingOneRef.current,
+  //     {
+  //       y: 80,
+  //       opacity: 0,
+  //       duration: 1,
+  //       stagger: 1,
         
-      },
-      {
-        y: -10,
-        opacity: 1,
-        duration: 1,
-        stagger: 1,
+  //     },
+  //     {
+  //       y: -10,
+  //       opacity: 1,
+  //       duration: 1,
+  //       stagger: 1,
         
-      }
-    );
+  //     }
+  //   );
 
-    tl.fromTo(
-      roleHeadingOnePartRef.current,
-      {
-        y: 80,
-        opacity: 0,
-        duration: 1,
-        stagger: 1,
-      },
-      {
-        y: 10,
-        opacity: 1,
-        duration: 1,
-        stagger: 1,
+  //   tl.fromTo(
+  //     roleHeadingOnePartRef.current,
+  //     {
+  //       y: 80,
+  //       opacity: 0,
+  //       duration: 1,
+  //       stagger: 1,
+  //     },
+  //     {
+  //       y: 10,
+  //       opacity: 1,
+  //       duration: 1,
+  //       stagger: 1,
         
-      }
-    );
+  //     }
+  //   );
 
-    tl.fromTo(
-      roleHeadingTwoRef.current,
-      {
-        y: 80,
-        opacity: 0,
-        duration: 1,
-        stagger: 1,
-      },
-      {
-        y: -10,
-        opacity: 1,
-        duration: 1,
-        stagger: 1,
+  //   tl.fromTo(
+  //     roleHeadingTwoRef.current,
+  //     {
+  //       y: 80,
+  //       opacity: 0,
+  //       duration: 1,
+  //       stagger: 1,
+  //     },
+  //     {
+  //       y: -10,
+  //       opacity: 1,
+  //       duration: 1,
+  //       stagger: 1,
         
-      }
-    );
+  //     }
+  //   );
 
-    tl.fromTo(infoRef.current,{
-      opacity:0,
-      stagger:1
-    },{
-      opacity:1,
-      stagger:1,
+  //   tl.fromTo(infoRef.current,{
+  //     opacity:0,
+  //     stagger:1
+  //   },{
+  //     opacity:1,
+  //     stagger:1,
       
-    });
+  //   });
 
-    const el = hamburgerRef.current;
-    const nr = navbarRef.current;
+  //   const el = hamburgerRef.current;
+  //   const nr = navbarRef.current;
 
-    // Check if the screen width is greater than the mobile breakpoint (e.g., 768px)
-    const isLaptopScreen = window.innerWidth > 768;
+  //   // Check if the screen width is greater than the mobile breakpoint (e.g., 768px)
+  //   const isLaptopScreen = window.innerWidth > 768;
 
-    if (isLaptopScreen) {
-      // Animation for desktop/laptop screens
-      tlDesktop.current = gsap.timeline();
+  //   if (isLaptopScreen) {
+  //     // Animation for desktop/laptop screens
+  //     tlDesktop.current = gsap.timeline();
 
-      tlDesktop.current.fromTo(
-        el,
-        {
-          opacity: 0,
-        },
-        {
-          opacity: 1,
-          y: 50,
-          duration: 0.5,
-          scale: 1,
-          scrollTrigger: {
-            trigger: nr,
-            start: "90% 0%",
-            end: "bottom",
-            scrub: true,
-          },
-        }
-      );
+  //     tlDesktop.current.fromTo(
+  //       el,
+  //       {
+  //         opacity: 0,
+  //       },
+  //       {
+  //         opacity: 1,
+  //         y: 50,
+  //         duration: 0.5,
+  //         scale: 1,
+  //         scrollTrigger: {
+  //           trigger: nr,
+  //           start: "90% 0%",
+  //           end: "bottom",
+  //           scrub: true,
+  //         },
+  //       }
+  //     );
 
-      // gsap.set(".hero",{scale:1})
+  //     // gsap.set(".hero",{scale:1})
 
-      // tlDesktop.current.to(".hero",{
-      //   scrollTrigger:{
-      //     trigger:"nr",
-      //     start:" 10 top",
-      //     end: "15 top",
-      //     markers:true,
-      //     pin:true,
-      //     scrub:2
-      //   },
-      //   scale:0.9,
-      //   marginTop:-10
+  //     // tlDesktop.current.to(".hero",{
+  //     //   scrollTrigger:{
+  //     //     trigger:"nr",
+  //     //     start:" 10 top",
+  //     //     end: "15 top",
+  //     //     markers:true,
+  //     //     pin:true,
+  //     //     scrub:2
+  //     //   },
+  //     //   scale:0.9,
+  //     //   marginTop:-10
 
-      // })
-    } else {
-      // Animation for mobile screens
-      tlMobile.current = gsap.timeline();
+  //     // })
+  //   } else {
+  //     // Animation for mobile screens
+  //     tlMobile.current = gsap.timeline();
 
-      tlMobile.current.to(el, {
-        opacity: 1,
-        duration: 0.5,
-      });
-    }
+  //     tlMobile.current.to(el, {
+  //       opacity: 1,
+  //       duration: 0.5,
+  //     });
+  //   }
 
-    // if (isLaptopScreen) {
-    //   // Animation for desktop/laptop screens
-    //   tlDesktop.current = gsap.timeline();
+  //   // if (isLaptopScreen) {
+  //   //   // Animation for desktop/laptop screens
+  //   //   tlDesktop.current = gsap.timeline();
 
-    //   gsap.set(".hero",{scale:1})
+  //   //   gsap.set(".hero",{scale:1})
 
-    //   tlDesktop.current.to(".hero",{
-    //     scrollTrigger:{
-    //       trigger:".hero",
-    //       start:" 10 top",
-    //       end: "15 top",
-    //       markers:true,
-    //       pin:true,
-    //       scrub:2
-    //     },
-    //     scale:0.9,
-    //     marginTop:-10
+  //   //   tlDesktop.current.to(".hero",{
+  //   //     scrollTrigger:{
+  //   //       trigger:".hero",
+  //   //       start:" 10 top",
+  //   //       end: "15 top",
+  //   //       markers:true,
+  //   //       pin:true,
+  //   //       scrub:2
+  //   //     },
+  //   //     scale:0.9,
+  //   //     marginTop:-10
 
-    //   })
+  //   //   })
 
-    // }else{
-    //   tlMobile.current = gsap.timeline();
+  //   // }else{
+  //   //   tlMobile.current = gsap.timeline();
 
-    //   gsap.set(".hero",{scale:1})
+  //   //   gsap.set(".hero",{scale:1})
 
-    //   tlMobile.current.to(".hero",{
-    //     scrollTrigger:{
-    //       trigger:el,
-    //       start:"50 top",
-    //       end: "40 top",
-    //       markers:true,
-    //       pin:true,
-    //       scrub:2
-    //     },
-    //     scale:0.9,
-    //     marginTop:-10
+  //   //   tlMobile.current.to(".hero",{
+  //   //     scrollTrigger:{
+  //   //       trigger:el,
+  //   //       start:"50 top",
+  //   //       end: "40 top",
+  //   //       markers:true,
+  //   //       pin:true,
+  //   //       scrub:2
+  //   //     },
+  //   //     scale:0.9,
+  //   //     marginTop:-10
 
-    //   })
-    // }
-  });
+  //   //   })
+  //   // }
+  // });
 
   return (
     <>
@@ -201,7 +201,7 @@ function Hero() {
           <Navbar />
         </div>
 
-        <div id="hamburger" ref={hamburgerRef} className="visible">
+        <div id="hamburger" ref={hamburgerRef} className="visible mt-10">
           <Hamburger />
         </div>
 

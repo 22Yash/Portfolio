@@ -68,7 +68,7 @@ function Hamburger() {
 
   return (
     <>
-      <div id="div" className="xl:w-full  xl:relative opacity-1  xl:z-40 ">
+      <div id="div" className="xl:w-full  xl:relative opacity-1  z-90 ">
         <div id="button" className=" mr-40 float-end">
           <button
             ref={buttonRef}

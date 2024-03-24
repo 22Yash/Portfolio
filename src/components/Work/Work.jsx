@@ -110,7 +110,8 @@ function Work() {
 
   return (
     <>
-      <section id="Work" className="work w-full z-99  relavtive rounded-t-full">
+      <section id="Work" className="work w-full z-0 rounded-t-full">
+        
         {/* <Mousefollower /> */}
         <div id="work" ref={workRef} className="overflo-x-hiddden">
           <div
