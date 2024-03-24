@@ -9,6 +9,7 @@ import Resume from "../components/Work/Resume";
 import { ReactLenis, useLenis } from "@studio-freight/react-lenis";
 import Parallax from "../components/Header/Parallax";
 import Preloader from "../components/Header/Preloader";
+import SlideMenu from "../components/Header/SlideMenu";
 
 function Home() {
   const lenis = useLenis(({ scroll }) => {
@@ -24,6 +25,7 @@ function Home() {
         <Work />
         <Resume />
         <Connectfooter />
+        
       </ReactLenis>
     </>
   );

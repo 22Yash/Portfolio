@@ -4,6 +4,8 @@ import gsap from "gsap";
 import Mousefollower from "../Animation/Mousefollower";
 import LocomotiveScroll from "locomotive-scroll";
 import Resume from "./Resume";
+import Hamburger from "../Header/Hamburger";
+import SlideMenu from "../Header/SlideMenu";
 
 function Work() {
   const mousefollowerRef = useRef(null);
@@ -13,6 +15,8 @@ function Work() {
 
   const projectRef = useRef(null);
   const tl = gsap.timeline();
+  const hamburgerRef = useRef(null);
+  const navbarRef = useRef(null);
 
   useEffect(() => {
     const el = mousefollowerRef.current;
@@ -52,9 +56,12 @@ function Work() {
 
   const tlDesktop = useRef(null);
   const tlMobile = useRef(null);
+  const el = hamburgerRef.current;
+  
+   
 
   useEffect(() => {
-    // Check if the screen width is greater than the mobile breakpoint (e.g., 768px)
+    
     const isLaptopScreen = window.innerWidth > 768;
 
     if (isLaptopScreen) {
@@ -87,6 +94,12 @@ function Work() {
         duration: 5,
         borderRadius: "20px",
       });
+
+
+      
+
+
+
     } else {
       // Animation for mobile screens
       tlMobile.current = gsap.timeline();
@@ -106,44 +119,54 @@ function Work() {
         borderRadius: "20px",
       });
     }
+
+    
+
+    
+
+    
   }, []);
 
   return (
     <>
-      <section id="Work" className="work w-full z-0 rounded-t-full">
+    <div id="hamburger" ref={hamburgerRef} className=" ">
+          <SlideMenu/>
+        </div>
+      <section id="Work" className="work w-full  rounded-t-full">
         
         {/* <Mousefollower /> */}
-        <div id="work" ref={workRef} className="overflo-x-hiddden">
+        <div id="work" ref={workRef} className="overflo-x-hiddden ">
           <div
             ref={mousefollowerRef}
             id="view"
-            className="w-12 h-12 justify-center opacity-0 text-sm flex items-center absolute bg-black text-white rounded-full"
+            className="w-12 h-12 justify-center  opacity-0 text-sm flex items-center absolute bg-black text-white rounded-full"
           >
             view
           </div>
           <div id="projects" className="project w-full  ">
             <div className="cont  h-[400vh] xl:h-[120vh] bg-[#0a0a09]">
               <div
-                className="slides grid 
-              xl:sticky xl:top-0 xl:left-0  xl:w-full xl:flex h-screen bg-[#0a0a09]"
+                className="slides grid  
+               xl:top-0 xl:left-0  xl:w-full xl:flex h-screen bg-[#0a0a09]"
               >
+                
                 <div
-                  className="  grid-cols-1 w-10/12 h-screen
-                xl:w-10/12 xl:sticky xl:h-screen  xl:flex-shrink-0 bg-[#0a0a09] "
+                  className="  grid-cols-1 w-1/12 h-screen
+                xl:w-10/12  xl:h-screen  xl:flex-shrink-0 "
                 >
                   <div
                     id="project"
                     className=" slide 
-                  col-span-1 
+                  col-span-1  
                   xl:flex xl:m-10  xl:gap-10"
                   >
                     <div
-                      className="projecttext w-6/12 text-center flex-none
+                      className="projecttext w-6/12 text-center   flex-none
                     xl:w-6/12 xl:flex-shrink-0"
                     >
                       <h2
                         className="
-                    text-6xl w-11/12 font-bold p-8 text-left
+                    text-6xl w-11/12 font-bold p-8 text-left b
                     xl:text-7xl xl:m-10  xl:font-bold xl:w-12 xl:text-center xl:p-10 text-[#bebeb0]"
                       >
                         My Work
@@ -158,7 +181,7 @@ function Work() {
 
                     <div
                       id="project1"
-                      className=" slide  w-[330px]  h-[400px] ml-10 m-10   rounded-3xl
+                      className=" slide  w-[330px]  h-[400px] ml-10 m-10   rounded-3xl 
                   xl:w-6/12 xl:h-[400px] text-white xl:flex-shrink-0 bg-[#bebeb0] xl:p-20 xl:mt-32 xl:-ml-24 xl:rounded-3xl"
                     >
                       project1
@@ -176,7 +199,7 @@ function Work() {
                       className=" slide w-[330px]  h-[400px] ml-10 m-10 xl:mt-32  rounded-3xl
                  xl:w-6/12  xl:flex-shrink-0  bg-[#bebeb0] xl:rounded-3xl"
                     >
-                      {" "}
+                     
                       project3
                     </div>
                     <div
