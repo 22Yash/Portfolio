@@ -71,8 +71,8 @@ function Work() {
       tlDesktop.current.to(".slide", {
         scrollTrigger: {
           trigger: ".project",
-          start: "-300 top ",
-          end: "100 top ",
+          start: "-200 top ",
+          end: "0 top ",
           scrub: 1,
           markers: true,
         },
@@ -114,7 +114,7 @@ function Work() {
           pin: true,
         },
 
-        y: -450,
+        y: -250,
         duration: 5,
         borderRadius: "20px",
       });
@@ -129,9 +129,7 @@ function Work() {
 
   return (
     <>
-    <div id="hamburger" ref={hamburgerRef} className=" ">
-          <SlideMenu/>
-        </div>
+   
       <section id="Work" className="work w-full  rounded-t-full">
         
         {/* <Mousefollower /> */}
@@ -166,13 +164,13 @@ function Work() {
                     >
                       <h2
                         className="
-                    text-6xl w-11/12 font-bold p-8 text-left b
+                    text-6xl w-[500px] font-bold p-8 text-left  
                     xl:text-7xl xl:m-10  xl:font-bold xl:w-12 xl:text-center xl:p-10 text-[#bebeb0]"
                       >
                         My Work
                       </h2>
                       <p
-                        className="text-[#7b736a] text-2xl text-balance ml-5 font-semibold w-full
+                        className="text-[#7b736a] text-2xl text-balance ml-5 font-semibold w-72
                   xl:m-10 xl:text-3xl xl:w-2/4 xl:text-center"
                       >
                         "Bringing ideas to life through creativity and code."

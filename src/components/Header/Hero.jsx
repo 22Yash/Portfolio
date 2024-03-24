@@ -103,44 +103,7 @@ function Hero() {
     const nr = navbarRef.current;
 
     // Check if the screen width is greater than the mobile breakpoint (e.g., 768px)
-    const isLaptopScreen = window.innerWidth > 768;
-
-    if (isLaptopScreen) {
-      // Animation for desktop/laptop screens
-      tlDesktop.current = gsap.timeline();
-
-      tlDesktop.current.fromTo(
-        el,
-        {
-          opacity: 0,
-        },
-        {
-          opacity: 1,
-          y: 50,
-          duration: 0.5,
-          scale: 1,
-          scrollTrigger: {
-            trigger: nr,
-            start: "90% 0%",
-            end: "bottom",
-            scrub: true,
-          },
-        }
-      );
-
-      // gsap.set(".hero",{scale:1})
-
-     
-    } else {
-      // Animation for mobile screens
-      tlMobile.current = gsap.timeline();
-
-      tlMobile.current.to(el, {
-        opacity: 1,
-        duration: 0.5,
-      });
-    }
-
+    
     
   });
 
@@ -149,6 +112,9 @@ function Hero() {
       <div id="hero" className="main w-full sticky   h-screen bg-[#d6d6d0]">
         <div id="navbar" ref={navbarRef}>
           <Navbar />
+        </div>
+        <div id="hamburger" ref={hamburgerRef} className=" visible ">
+          <SlideMenu/>
         </div>
 
         
