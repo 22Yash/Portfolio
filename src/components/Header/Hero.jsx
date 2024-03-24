@@ -109,7 +109,7 @@ function Hero() {
 
   return (
     <>
-      <div id="hero" className="main w-full sticky   h-screen bg-[#d6d6d0]">
+      <div id="hero" className="main  w-[500px] xl:w-full sticky   h-screen bg-[#d6d6d0]">
         <div id="navbar" ref={navbarRef}>
           <Navbar />
         </div>

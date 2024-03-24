@@ -129,11 +129,11 @@ function Work() {
 
   return (
     <>
-   
-      <section id="Work" className="work w-full  rounded-t-full">
+   <SlideMenu/>
+      <section id="Work" className="work  w-[500px] xl:w-full  rounded-t-full">
         
         {/* <Mousefollower /> */}
-        <div id="work" ref={workRef} className="overflo-x-hiddden ">
+        <div id="work" ref={workRef} className="">
           <div
             ref={mousefollowerRef}
             id="view"
