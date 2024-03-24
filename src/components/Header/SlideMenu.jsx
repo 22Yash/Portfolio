@@ -47,7 +47,7 @@ function SlideMenu() {
       </button>
       <div
         ref={menuRef}
-        className="fixed top-0 right-0 h-full bg-[#3b3834] xl:w-4/12 flex flex-col text-5xl justify-center"
+        className="fixed top-0 right-0 h-full bg-[#3b3834] sm:w-4/12 xl:w-4/12 flex flex-col text-5xl justify-center"
         style={{ transform: isOpen ? "translateX(0)" : "translateX(600px)" }}
       >
         {isOpen && (
@@ -55,7 +55,7 @@ function SlideMenu() {
             <FiX className="text-black xl:ml-5 ml-4 text-3xl xl:text-5xl" />
           </button>
         )}
-        <ul className="flex xl:flex-col p-10 xl:mt-4 xl:mr-10 text-white xl:text-white xl:ml-20 font-medium flex-col lg:flex-row lg:space-x-8 lg:mt-0">
+        <ul className=" xl:flex-col p-10 xl:mt-4 xl:mr-10 text-white xl:text-white xl:text-7xl xl:ml-20 font-medium flex-col lg:flex-row lg:space-x-8 lg:mt-0">
                 <li>
                   <Link
                     to="/"
@@ -75,7 +75,7 @@ function SlideMenu() {
                     className={({ isActive }) =>
                       `block py-2 pr-4 pl-3 duration-200 ${
                         isActive ? "text-[#e1e1dc]" : "text-[#e1e1dc]"
-                      }  hover:bg-gray-50 -ml-8 xl:ml-16 lg:hover:bg-transparent lg:border-0 hover:text-[#babaad] lg:p-0`
+                      }  hover:bg-gray-50 -ml-8 xl:-ml-16 lg:hover:bg-transparent lg:border-0 hover:text-[#babaad] lg:p-0`
                     }
                   >
                     Work

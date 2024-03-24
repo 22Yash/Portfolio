@@ -130,10 +130,10 @@ function Work() {
   return (
     <>
    <SlideMenu/>
-      <section id="Work" className="work  w-[500px] xl:w-full  rounded-t-full">
+      <section id="Work" className="work  w-[500px] xl:w-full sm:w-full rounded-t-full">
         
         {/* <Mousefollower /> */}
-        <div id="work" ref={workRef} className="">
+        <div id="work" ref={workRef} className="overflow-x-hidden">
           <div
             ref={mousefollowerRef}
             id="view"
@@ -142,7 +142,7 @@ function Work() {
             view
           </div>
           <div id="projects" className="project w-full  ">
-            <div className="cont  h-[400vh] xl:h-[120vh] bg-[#0a0a09]">
+            <div className="cont  h-[400vh] sm:h-[350vh] xl:h-[120vh] bg-[#0a0a09]">
               <div
                 className="slides grid  
                xl:top-0 xl:left-0  xl:w-full xl:flex h-screen bg-[#0a0a09]"
@@ -159,18 +159,20 @@ function Work() {
                   xl:flex xl:m-10  xl:gap-10"
                   >
                     <div
-                      className="projecttext w-6/12 text-center   flex-none
+                      className="projecttext w-6/12 text-center ml-20 xl:ml-0  flex-none
                     xl:w-6/12 xl:flex-shrink-0"
                     >
                       <h2
                         className="
                     text-6xl w-[500px] font-bold p-8 text-left  
-                    xl:text-7xl xl:m-10  xl:font-bold xl:w-12 xl:text-center xl:p-10 text-[#bebeb0]"
+                    sm:w-[600px] sm:text-7xl sm:ml-28
+                    xl:text-7xl xl:m-10  xl:font-bold xl:w-76 xl:-ml-10 xl:text-center xl:p-10 text-[#bebeb0]"
                       >
-                        My Work
+                        My Work.
                       </h2>
                       <p
                         className="text-[#7b736a] text-2xl text-balance ml-5 font-semibold w-72
+                        sm:w-[800px] sm:-ml-24
                   xl:m-10 xl:text-3xl xl:w-2/4 xl:text-center"
                       >
                         "Bringing ideas to life through creativity and code."
@@ -179,14 +181,16 @@ function Work() {
 
                     <div
                       id="project1"
-                      className=" slide  w-[330px]  h-[400px] ml-10 m-10   rounded-3xl 
+                      className=" slide  w-[400px]  h-[400px] ml-12 m-10   rounded-3xl 
+                      sm:w-[680px]
                   xl:w-6/12 xl:h-[400px] text-white xl:flex-shrink-0 bg-[#bebeb0] xl:p-20 xl:mt-32 xl:-ml-24 xl:rounded-3xl"
                     >
                       project1
                     </div>
                     <div
                       id="project2"
-                      className=" slide w-[330px]  h-[400px] ml-10 m-10 xl:mt-32    rounded-3xl
+                      className=" slide w-[400px]  h-[400px] ml-12 m-10 xl:mt-32 
+                      sm:w-[680px]   rounded-3xl
                   xl:w-6/12 xl:flex-shrink-0  bg-[#bebeb0] xl:rounded-3xl"
                     >
                       {" "}
@@ -194,7 +198,8 @@ function Work() {
                     </div>
                     <div
                       id="project3"
-                      className=" slide w-[330px]  h-[400px] ml-10 m-10 xl:mt-32  rounded-3xl
+                      className=" slide w-[400px]  h-[400px] ml-12 m-10 xl:mt-32 
+                      sm:w-[680px] rounded-3xl
                  xl:w-6/12  xl:flex-shrink-0  bg-[#bebeb0] xl:rounded-3xl"
                     >
                      
@@ -202,7 +207,8 @@ function Work() {
                     </div>
                     <div
                       id="project4"
-                      className=" slide w-[330px]  h-[400px] ml-10 xl:mt-32   rounded-3xl
+                      className=" slide w-[400px]  h-[400px] ml-12 xl:mt-32  
+                      sm:w-[680px] rounded-3xl
                 xl:w-6/12  xl:flex-shrink-0  bg-[#bebeb0] xl:rounded-3xl"
                     >
                       {" "}

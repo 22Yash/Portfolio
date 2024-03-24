@@ -8,7 +8,7 @@ import Links from "./Links";
 function Connectfooter() {
   return (
     <section id="Contact">
-      <div className="bg-[#828E82] w-[500px] xl:w-full h-screen font-sans ">
+      <div className="bg-[#828E82] w-[500px] sm:w-full xl:w-full h-screen font-sans ">
       <Mousefollower mouseVisibility={true} />
 
       <div

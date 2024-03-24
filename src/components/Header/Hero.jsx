@@ -23,81 +23,81 @@ function Hero() {
   const tl = gsap.timeline();
 
   useEffect(() => {
-    // tl.fromTo(
-    //   heroHeadingRef.current,
-    //   {
-    //     y: 80,
-    //     opacity: 0,
-    //     duration: 1,
-    //   },
-    //   {
-    //     y: 10,
-    //     opacity: 1,
-    //     duration: 1,
-    //     repeat: 0,
-    //     delay: 10,
-    //   }
-    // );
+    tl.fromTo(
+      heroHeadingRef.current,
+      {
+        y: 80,
+        opacity: 0,
+        duration: 1,
+      },
+      {
+        y: 10,
+        opacity: 1,
+        duration: 1,
+        repeat: 0,
+        delay: 10,
+      }
+    );
 
-    // tl.fromTo(
-    //   roleHeadingOneRef.current,
-    //   {
-    //     y: 80,
-    //     opacity: 0,
-    //     duration: 1,
-    //     stagger: 1,
-    //   },
-    //   {
-    //     y: -10,
-    //     opacity: 1,
-    //     duration: 1,
-    //     stagger: 1,
-    //   }
-    // );
+    tl.fromTo(
+      roleHeadingOneRef.current,
+      {
+        y: 80,
+        opacity: 0,
+        duration: 1,
+        stagger: 1,
+      },
+      {
+        y: -10,
+        opacity: 1,
+        duration: 1,
+        stagger: 1,
+      }
+    );
 
-    // tl.fromTo(
-    //   roleHeadingOnePartRef.current,
-    //   {
-    //     y: 80,
-    //     opacity: 0,
-    //     duration: 1,
-    //     stagger: 1,
-    //   },
-    //   {
-    //     y: 10,
-    //     opacity: 1,
-    //     duration: 1,
-    //     stagger: 1,
-    //   }
-    // );
+    tl.fromTo(
+      roleHeadingOnePartRef.current,
+      {
+        y: 80,
+        opacity: 0,
+        duration: 1,
+        stagger: 1,
+      },
+      {
+        y: 10,
+        opacity: 1,
+        duration: 1,
+        stagger: 1,
+      }
+    );
 
-    // tl.fromTo(
-    //   roleHeadingTwoRef.current,
-    //   {
-    //     y: 80,
-    //     opacity: 0,
-    //     duration: 1,
-    //     stagger: 1,
-    //   },
-    //   {
-    //     y: -10,
-    //     opacity: 1,
-    //     duration: 1,
-    //     stagger: 1,
-    //   }
-    // );
+    tl.fromTo(
+      roleHeadingTwoRef.current,
+      {
+        y: 80,
+        opacity: 0,
+        duration: 1,
+        stagger: 1,
+      },
+      {
+        y: -10,
+        opacity: 1,
+        duration: 1,
+        stagger: 1,
+      }
+    );
 
-    // tl.fromTo(
-    //   infoRef.current,
-    //   {
-    //     opacity: 0,
-    //     stagger: 1,
-    //   },
-    //   {
-    //     opacity: 1,
-    //     stagger: 1,
-    //   }
-    // );
+    tl.fromTo(
+      infoRef.current,
+      {
+        opacity: 0,
+        stagger: 1,
+      },
+      {
+        opacity: 1,
+        stagger: 1,
+      }
+    );
 
     const el = hamburgerRef.current;
     const nr = navbarRef.current;
@@ -109,7 +109,7 @@ function Hero() {
 
   return (
     <>
-      <div id="hero" className="main  w-[500px] xl:w-full sticky   h-screen bg-[#d6d6d0]">
+      <div id="hero" className="main  w-[500px] xl:w-full sm:w-full sticky   h-screen bg-[#d6d6d0]">
         <div id="navbar" ref={navbarRef}>
           <Navbar />
         </div>
@@ -129,7 +129,7 @@ function Hero() {
             ref={heroHeadingRef}
             className="hero
           text-6xl font-bold  text-center  pt-20  
-          sm:text-8xl sm:font-bold sm:font-helvetica sm:text-left sm:ml-20
+          sm:text-8xl sm:font-bold sm:font-helvetica sm:text-left sm:-ml-10
           xl:text-9xl xl:font-bold xl:text-left xl:p-0 xl:ml-72 font-helvetica"
           >
             I'm Yash
@@ -165,7 +165,7 @@ function Hero() {
         sm:mt-5 sm:ml-32 
         xl:text-2xl xl:ml-96 xl:mt-10 xl:font-medium xl:w-2/5 xl:text-center text-[#6e6760]"
         >
-          <h4 ref={infoRef} className=" -mt-16 xl:ml-44 xl:mt-16">
+          <h4 ref={infoRef} className=" -mt-16 sm:mt-10 xl:ml-44 xl:mt-16">
             I like to develop responsive, interactive, and animated websites.
           </h4>
         </div>
