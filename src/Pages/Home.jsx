@@ -10,6 +10,7 @@ import { ReactLenis, useLenis } from "@studio-freight/react-lenis";
 import Parallax from "../components/Header/Parallax";
 import Preloader from "../components/Header/Preloader";
 import SlideMenu from "../components/Header/SlideMenu";
+import Contactform from "../components/Contact/Contactform";
 
 function Home() {
   const lenis = useLenis(({ scroll }) => {
@@ -21,10 +22,11 @@ function Home() {
     <>
       <ReactLenis root>
         {/* <Preloader /> */}
-        <Hero />
-        <Work />
-        <Resume />
-        <Connectfooter />
+        {/* <Hero />
+        <Work /> */}
+        <Contactform/>
+        {/* <Resume />
+        <Connectfooter /> */}
         
       </ReactLenis>
     </>

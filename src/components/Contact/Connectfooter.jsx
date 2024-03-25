@@ -4,6 +4,8 @@ import Magneticeffect from "../Animation/Magneticeffect";
 import GetInTouch from "./GetInTouch";
 import Mousefollower from "../Animation/Mousefollower";
 import Links from "./Links";
+import { Link } from "react-router-dom";
+
 
 function Connectfooter() {
   return (
@@ -34,6 +36,7 @@ function Connectfooter() {
         </h4>
       </div>
       <GetInTouch />
+      
       <div
         id="divider"
         className="border border-[#3A606E] w-5/6  ml-10 

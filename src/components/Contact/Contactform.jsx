@@ -27,23 +27,23 @@ function Contactform() {
 
   return (
     <div
-      className="flex flex-col lg:space-y-5 h-screen overflow-x-hidden  overflow-y-hidden bg-yellow-400
+      className="xl:w-[900px] xl:bg-red-300 bg-red-500 w-[700px]
      xl:space-y-5 "
     >
       <form ref={form} onSubmit={sendEmail}>
         <div
           id="name"
           className="
-        w-full h-20  ml-8 text-lg mt-36 
+        w-full h-20  ml-8 text-2xl mt-0 pt-10 
         sm:w-full sm:h-10 sm:-ml-12 sm:text-3xl sm:-mt-52
-        xl:w-full xl:h-15 xl:ml-32 xl:text-2xl xl:-mt-32 "
+        xl:w-full xl:h-15 xl:ml-16 xl:text-4xl xl:-mt-10 "
         >
           <label
             htmlFor="name"
             className="
           block p-1 font-semibold 
           sm:w-full sm:h-10 sm:ml-28 sm:text-3xl sm:mt-12 
-          xl:block xl:p-0 xl:ml-4 xl:font-semibold"
+          xl:block xl:pt-10 xl:ml-4 xl:font-semibold"
           >
             {" "}
             What's your name?
@@ -52,9 +52,9 @@ function Contactform() {
             type="text"
             name="user_name"
             className="
-          w-5/6 ml-2 focus:outline-none bg-red-500 
+          w-5/6 ml-2 focus:outline-none bg-red-500 pt-8 pb-8 pl-10 
           sm:w-full sm:h-10 sm:ml-28 sm:text-3xl  sm:mt-4 sm:bg-yellow-300
-           xl:w-5/6  xl:ml-5 xl:focus:outline-none xl:bg-blue-400"
+           xl:w-5/6  xl:ml-5 xl:mt-12 xl:border xl:border-red-900 xl:focus:outline-none"
           />
         </div>
         <div
@@ -63,7 +63,7 @@ function Contactform() {
                       mt-5 opacity-70 
                       sm:w-4/4 sm:ml-16 sm:m-10 sm:mt-24 
                       
-                      xl:w-full xl:ml-36 xl:m-10 xl:mt-24 xl:opacity-50
+                      xl:w-5/6 xl:ml-24  xl:m-10 xl:mt-36 xl:opacity-50
                       "
         ></div>
         <div
@@ -71,14 +71,14 @@ function Contactform() {
           className="
         w-full  h-20  ml-8 text-lg mt-4
         sm:w-full sm:h-10 sm:ml-16 sm:text-3xl sm:mt-12 
-        xl:w-5/6 xl:h-15 xl:ml-32 xl:mt-5 xl:text-2xl"
+        xl:w-5/6 xl:h-15 xl:ml-16 xl:mt-5 xl:text-2xl"
         >
           <label
             htmlFor="email"
             className="
           block p-1 font-semibold 
           sm:w-full sm:h-10 sm:ml-2 sm:text-3xl sm:-mt-8 
-          xl:block xl:p-4 xl:ml-4 xl:font-semibold"
+          xl:block xl:p-4 xl:ml-0 xl:font-semibold"
           >
             What's your email?
           </label>
@@ -86,9 +86,9 @@ function Contactform() {
             type="email"
             name="user_name"
             className="
-            ml-4 focus:outline-none bg-red-300
+            ml-4 focus:outline-none pt-8 pb-8 pl-10 
             sm:w-full sm:h-10 sm:ml-2 sm:text-3xl  sm:mt-4
-            xl:w-5/6 xl:mt-8  xl:ml-5 xl:focus:outline-none"
+             xl:mt-8  xl:ml-5 xl:focus:outline-none"
           />
         </div>
         <div
@@ -97,7 +97,7 @@ function Contactform() {
                       mt-2 opacity-70
                       sm:w-4/4 sm:ml-16 sm:m-10 sm:mt-24 
                       
-                      xl:w-full xl:ml-36 xl:m-10 xl:mt-28 xl:opacity-50
+                      xl:w-5/6 xl:ml-24 xl:m-10 xl:mt-32 xl:opacity-50
                       "
         ></div>
 
@@ -106,14 +106,14 @@ function Contactform() {
           className="
         w-full h-28  ml-8 text-lg mt-2 
         sm:w-full sm:h-10 sm:ml-16 sm:text-3xl sm:-mt-5
-        xl:w-5/6 xl:h-15 xl:ml-32 xl:mt-5 xl:text-2xl"
+        xl:w-5/6 xl:h-15 xl:ml-32 xl:-mt-5 xl:text-2xl"
         >
           <label
             htmlFor="message"
             className="
           block p-1 font-semibold
           md:p-2
-          xl:block xl:p-4 xl:ml-4 xl:font-semibold"
+          xl:block xl:p-4 xl:-ml-16 xl:font-semibold"
           >
             Your message
           </label>
@@ -122,7 +122,7 @@ function Contactform() {
             className="
           w-5/6 ml-4 h-10 focus:outline-none bg-red-700
           sm:w-full sm:h-10 sm:ml-2 sm:text-3xl  sm:mt-4
-           xl:w-5/6  xl:ml-5 xl:focus:outline-none"
+           xl:w-5/6  xl:-ml-10 xl:focus:outline-none"
           />
         </div>
         <div
@@ -131,7 +131,7 @@ function Contactform() {
                       -mt-5 opacity-70 xl:opacity-50
                       sm:w-4/4 sm:ml-16 sm:m-10 sm:mt-24
                       
-                      xl:w-full xl:ml-36  xl:mt-32
+                      xl:w-5/6 xl:ml-28  xl:mt-32
                       "
         ></div>
 

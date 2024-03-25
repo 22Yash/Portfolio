@@ -23,81 +23,81 @@ function Hero() {
   const tl = gsap.timeline();
 
   useEffect(() => {
-    tl.fromTo(
-      heroHeadingRef.current,
-      {
-        y: 80,
-        opacity: 0,
-        duration: 1,
-      },
-      {
-        y: 10,
-        opacity: 1,
-        duration: 1,
-        repeat: 0,
-        delay: 10,
-      }
-    );
+    // tl.fromTo(
+    //   heroHeadingRef.current,
+    //   {
+    //     y: 80,
+    //     opacity: 0,
+    //     duration: 1,
+    //   },
+    //   {
+    //     y: 10,
+    //     opacity: 1,
+    //     duration: 1,
+    //     repeat: 0,
+    //     delay: 10,
+    //   }
+    // );
 
-    tl.fromTo(
-      roleHeadingOneRef.current,
-      {
-        y: 80,
-        opacity: 0,
-        duration: 1,
-        stagger: 1,
-      },
-      {
-        y: -10,
-        opacity: 1,
-        duration: 1,
-        stagger: 1,
-      }
-    );
+    // tl.fromTo(
+    //   roleHeadingOneRef.current,
+    //   {
+    //     y: 80,
+    //     opacity: 0,
+    //     duration: 1,
+    //     stagger: 1,
+    //   },
+    //   {
+    //     y: -10,
+    //     opacity: 1,
+    //     duration: 1,
+    //     stagger: 1,
+    //   }
+    // );
 
-    tl.fromTo(
-      roleHeadingOnePartRef.current,
-      {
-        y: 80,
-        opacity: 0,
-        duration: 1,
-        stagger: 1,
-      },
-      {
-        y: 10,
-        opacity: 1,
-        duration: 1,
-        stagger: 1,
-      }
-    );
+    // tl.fromTo(
+    //   roleHeadingOnePartRef.current,
+    //   {
+    //     y: 80,
+    //     opacity: 0,
+    //     duration: 1,
+    //     stagger: 1,
+    //   },
+    //   {
+    //     y: 10,
+    //     opacity: 1,
+    //     duration: 1,
+    //     stagger: 1,
+    //   }
+    // );
 
-    tl.fromTo(
-      roleHeadingTwoRef.current,
-      {
-        y: 80,
-        opacity: 0,
-        duration: 1,
-        stagger: 1,
-      },
-      {
-        y: -10,
-        opacity: 1,
-        duration: 1,
-        stagger: 1,
-      }
-    );
+    // tl.fromTo(
+    //   roleHeadingTwoRef.current,
+    //   {
+    //     y: 80,
+    //     opacity: 0,
+    //     duration: 1,
+    //     stagger: 1,
+    //   },
+    //   {
+    //     y: -10,
+    //     opacity: 1,
+    //     duration: 1,
+    //     stagger: 1,
+    //   }
+    // );
 
-    tl.fromTo(
-      infoRef.current,
-      {
-        opacity: 0,
-        stagger: 1,
-      },
-      {
-        opacity: 1,
-        stagger: 1,
-      }
-    );
+    // tl.fromTo(
+    //   infoRef.current,
+    //   {
+    //     opacity: 0,
+    //     stagger: 1,
+    //   },
+    //   {
+    //     opacity: 1,
+    //     stagger: 1,
+    //   }
+    // );
 
     const el = hamburgerRef.current;
     const nr = navbarRef.current;
