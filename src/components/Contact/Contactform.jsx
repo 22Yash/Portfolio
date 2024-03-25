@@ -1,5 +1,6 @@
 import React, { useRef, useEffect } from "react";
 import emailjs from "emailjs-com";
+import Links from "./Links"
 
 function Contactform() {
   const form = useRef();
@@ -28,7 +29,7 @@ function Contactform() {
   return (
     <div id="contactform" className="xl:grid xl:grid-cols-2 xl:gap-4">
       <div
-        className="xl:w-[900px] bg-[#d6d6d0] w-[800px] pt-28 text-[#3a3733] h-[200vh]
+        className="xl:w-[900px] bg-[#d6d6d0] w-[800px] sm:w-[900px] pt-28 text-[#3a3733] h-[200vh]
       font-helvetica xl:col-span-1
      xl:space-y-5  xl:h-[200vh]"
       >
@@ -37,14 +38,14 @@ function Contactform() {
             id="name"
             className="
         w-full h-20  ml-8 text-5xl mt-0 pt-20  
-        sm:w-full sm:h-10 sm:-ml-12 sm:text-3xl sm:-mt-52
+        sm:w-5/6 sm:h-10 sm:-ml-12 sm:text-3xl sm:pt-0 sm:-mt-20
         xl:w-full xl:h-15 xl:ml-16 xl:text-4xl xl:-mt-20 xl:pt-0 "
           >
             <label
               htmlFor="name"
               className="
           block p-1 font-semibold
-          sm:w-full sm:h-10 sm:ml-28 sm:text-3xl sm:mt-12 
+          sm:w-5/6 sm:h-10 sm:ml-28 sm:text-3xl sm:mt-12 
           xl:block xl:pt-10 xl:ml-4 xl:font-semibold"
             >
               {" "}
@@ -55,7 +56,7 @@ function Contactform() {
               name="user_name"
               className="
           w-5/6 ml-2 focus:outline-none bg-[#e6e6e1] border-4 rounded-lg border-[#989893] pt-10 mt-5 pb-8 pl-10  h-3/4
-          sm:w-full sm:h-10 sm:ml-28 sm:text-3xl  sm:mt-4 
+          sm:w-5/6 sm:h-10 sm:ml-28 sm:text-3xl  sm:mt-4 
            xl:w-5/6  xl:ml-5 xl:mt-12  xl:focus:outline-none xl:bg-[#d6d6d0]"
             />
           </div>
@@ -64,7 +65,7 @@ function Contactform() {
             id="email"
             className="
         w-full  h-20  ml-8 text-5xl mt-52
-        sm:w-full sm:h-10 sm:ml-16 sm:text-3xl sm:mt-12 
+        sm:w-5/6 sm:h-10 sm:ml-16 sm:text-3xl sm:mt-44 
         xl:w-5/6 xl:h-15 xl:ml-16 xl:mt-48 xl:text-3xl"
           >
             <label
@@ -81,7 +82,7 @@ function Contactform() {
               name="user_name"
               className="
             ml-4 focus:outline-none mt-5 pt-8  border-4 rounded-lg bg-[#e6e6e1] border-[#989893] pb-8 pl-10  w-5/6 h-20
-            sm:w-full sm:h-10 sm:ml-2 sm:text-3xl  sm:mt-4
+            sm:w-5/6 sm:h-10 sm:ml-2 sm:text-3xl  sm:mt-4
              xl:mt-8  xl:ml-5 xl:focus:outline-none xl:bg-[#d6d6d0]"
             />
           </div>
@@ -90,7 +91,7 @@ function Contactform() {
             id="message"
             className="
         w-full h-28  ml-8 text-5xl mt-32 
-        sm:w-full sm:h-10 sm:ml-16 sm:text-3xl sm:-mt-5
+        sm:w-5/6 sm:h-10 sm:ml-16 sm:text-3xl sm:mt-32
         xl:w-5/6 xl:h-15 xl:ml-32 xl:mt-32 xl:text-3xl"
           >
             <label
@@ -106,7 +107,7 @@ function Contactform() {
               name="message"
               className="
           w-5/6 ml-4 h-20 mt-6 focus:outline-none border-4 rounded-lg bg-[#e6e6e1] border-[#989893]
-          sm:w-full sm:h-10 sm:ml-2 sm:text-3xl  sm:mt-4
+          sm:w-5/6 sm:h-20 sm:ml-2 sm:text-3xl  sm:mt-4
            xl:w-5/6  xl:-ml-10 xl:focus:outline-none xl:h-20"
             />
           </div>
@@ -115,7 +116,7 @@ function Contactform() {
             id="sendCircle"
             className="
           w-1/4 h-2/4 ml-12 mt-20
-          sm:w-36 sm:h-36 sm:-mt-2 sm:ml-16
+          sm:w-40 sm:h-40 sm:mt-32 sm:ml-16 
           xl:w-44 xl:h-44 text-white   bg-black rounded-full
          justify-center items-center xl:mt-44
            
@@ -125,14 +126,27 @@ function Contactform() {
               type="submit"
               value="send"
               className=" pl-12 p-20 text-5xl mt-0 -ml-2
-                      sm:-mt-4 sm:-ml-2
+                      sm:-mt-7 sm:ml- sm:text-3xl
           "
             />
           </div>
         </form>
       </div>
-      <div id="second" className=" bg-[#d6d6d0] w-[620px] xl:col-span-1 xl:ml-32">
-
+      <div id="second" className=" bg-[#d6d6d0] xl:bg-red-400 xl:w-[620px] w-[800px]  xl:col-span-1 xl:ml-32">
+         <div id="info" className=" 
+         pt-0 ml-10
+         xl:ml-20 xl:pt-48 font-helvetica ">
+          <h3 className=" font-semibold text-[45px] xl:text-2xl  opacity-60 border-b-4 border-black w-2/4">Contact details</h3>
+          <h3 className="xl:text-[20px] p-1 text-[30px] ">yashadoke@gmail.com</h3>
+          <h3 className="xl:text-[18px] text-[30px]">+91 93247871464</h3>
+         </div>
+         
+         <div id="link" className="
+         mt-20 text-3xl  h-28  xl:text-2xl
+         xl:w-1/4 xl:ml-20 xl:-mt-40" >
+         <Links columnDirection={true}/>
+         </div>
+          
       </div>
     </div>
   );
