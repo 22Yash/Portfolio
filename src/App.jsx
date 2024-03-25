@@ -19,7 +19,7 @@ function App() {
           <Route path="/contact" element={<Contactform />} />
           
         </Routes>
-        <Home/>
+        
         
       </BrowserRouter>
     </>

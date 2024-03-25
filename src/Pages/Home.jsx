@@ -11,6 +11,7 @@ import Parallax from "../components/Header/Parallax";
 import Preloader from "../components/Header/Preloader";
 import SlideMenu from "../components/Header/SlideMenu";
 import Contactform from "../components/Contact/Contactform";
+import Skills from "./Skills";
 
 function Home() {
   const lenis = useLenis(({ scroll }) => {
@@ -24,7 +25,7 @@ function Home() {
         {/* <Preloader /> */}
         <Hero />
         <Work />
-        
+        <Skills/>
         <Resume />
         <Connectfooter />
         

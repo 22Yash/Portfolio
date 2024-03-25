@@ -6,3 +6,23 @@
     font-family: 'Helvetica';
     src: url(./Fonts/Helvetica.woff2) format(woff2);
 }
+
+/* index.css (or any global CSS file) */
+@layer base {
+    /* Create a grain texture background */
+    .grain-background {
+      /* Set the size of the background */
+      width: 100vw;
+      height: 100vh;
+  
+      /* Apply the grain texture background */
+      background-image: url('./components/Header/graintexture.avif');
+      background-size: cover;
+      background-position: center;
+      background-repeat: repeat; /* or "no-repeat" if you don't want repetition */
+  
+      /* Adjust opacity of the grain texture */
+      opacity: 0.5; /* Adjust as needed */
+    }
+  }
+  
