@@ -22,11 +22,11 @@ function Home() {
     <>
       <ReactLenis root>
         {/* <Preloader /> */}
-        {/* <Hero />
-        <Work /> */}
-        <Contactform/>
-        {/* <Resume />
-        <Connectfooter /> */}
+        <Hero />
+        <Work />
+        
+        <Resume />
+        <Connectfooter />
         
       </ReactLenis>
     </>

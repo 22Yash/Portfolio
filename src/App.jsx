@@ -13,12 +13,12 @@ function App() {
   return (
     <>
       <BrowserRouter>
-        {/* <Routes>
+        <Routes>
           <Route path="/" element={<Home />} />
           
-          <Route path="/contactform" element={<Contactform />} />
+          <Route path="/contact" element={<Contactform />} />
           
-        </Routes> */}
+        </Routes>
         <Home/>
         
       </BrowserRouter>
