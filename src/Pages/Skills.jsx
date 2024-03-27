@@ -11,39 +11,56 @@ function Skills() {
   const techstackRef = useRef(null);
   const [hoveredCard, setHoveredCard] = useState(null);
 
+  useEffect(() => {
+    const menuItems = document.querySelectorAll(".techstack");
+
+    gsap.defaults({
+      duration: 0.55,
+      ease: "expo.out",
+    });
+
+    menuItems.forEach((item) => {
+      const imageWrapper = item.querySelector("img");
+      const itemBounds = item.getBoundingClientRect();
+
+      const onMouseEnter = () => {
+        gsap.set(imageWrapper, { scale: 0.8, yPercent: 50, rotation: -15 });
+        gsap.to(imageWrapper, { opacity: 1, scale: 1, yPercent: 0, rotation: 0 });
+      };
+
+      const onMouseLeave = () => {
+        gsap.to(imageWrapper, { opacity: 0, yPercent: -50, scale: 0.8, rotation: -15 });
+      };
+
+      const onMouseMove = ({ clientX, clientY }) => {
+        const imageWrapperBounds = imageWrapper.getBoundingClientRect();
+        let yOffset = itemBounds.top / imageWrapperBounds.height;
+        yOffset = gsap.utils.mapRange(0, 1.5, -150, 150, yOffset);
+        gsap.to(imageWrapper, {
+          duration: 1.25,
+          x: Math.abs(clientX - itemBounds.left) - imageWrapperBounds.width / 1.55,
+          y: Math.abs(clientY - itemBounds.top) - imageWrapperBounds.height / 2 - yOffset,
+        });
+      };
+
+      item.addEventListener("mouseenter", onMouseEnter);
+      item.addEventListener("mouseleave", onMouseLeave);
+      item.addEventListener("mousemove", onMouseMove);
+
+      return () => {
+        item.removeEventListener("mouseenter", onMouseEnter);
+        item.removeEventListener("mouseleave", onMouseLeave);
+        item.removeEventListener("mousemove", onMouseMove);
+      };
+    });
+  }, []); // Empty dependency array to run only once when the component mounts
+
   const handleMouseOver = (card) => {
-    const el = techstackRef.current;
     setHoveredCard(card);
-    if (window.innerWidth > 768) {
-      gsap.fromTo(
-        el,
-        {
-          opacity: 0,
-          y: 100, // Initial position on the y-axis
-          scale: 0
-        },
-        {
-          opacity: 1,
-          y: 0, // Move element to its final position on the y-axis
-          ease: "power2.in",
-          scale: 1
-        }
-      );
-    }
   };
 
   const handleMouseLeave = () => {
     setHoveredCard(null);
-    if (window.innerWidth > 768) {
-      gsap.to(
-        techstackRef.current,
-        {
-          opacity: 0,
-          y: 100, // Move element back down on the y-axis
-          ease: "power1.out",
-        }
-      );
-    }
   };
 
   return (
@@ -84,27 +101,25 @@ function Skills() {
         text-[40px] font-helvetica font-semibold pl-5 -pt-10
         xl:text-[65px] xl:font-helvetica xl:font-semibold xl:p-10"
           >
-            <div
-              onMouseEnter={() => handleMouseOver("JavaScript")}
-              onMouseLeave={handleMouseLeave}
-              className=" border-b-2 border-b-[#bebeb0] w-[440px] xl:w-full"
-            >
-              <h2>JavaScript</h2>
-              {hoveredCard === "JavaScript" && (
-                <div 
+              <div
+            onMouseEnter={() => handleMouseOver("JavaScript")}
+            onMouseLeave={handleMouseLeave}
+            className="border-b-2 border-b-[#bebeb0] w-[440px] xl:w-full"
+          >
+            <h2>JavaScript</h2>
+            {hoveredCard === "JavaScript" && (
+              <div
                 ref={techstackRef}
-                className="techstack  bg-[#deded0] gap-5 h-[140px] opacity-1 rounded-3xl p-5 
-                transform xl:translate-x-[-50%] xl:translate-y-[-30%]  translate-y-[-20%] absolute z-90 flex ">
-                  <img src={image1} alt="" className="w-28 h-28" />
-                  <h3 className=" w-[400px] text-xl h-[100px] text-[#3b3834] p-1 font-semibold ">
-                    I bring a website to life with JavaScript, adding
-                    interactive features and optimizing performance with clean
-                    and efficient code.
-                  </h3>
-                </div>
-              )}
-            </div>
-            <div
+                className="techstack bg-[#deded0] gap-5 h-[140px] opacity-1 rounded-3xl p-5 transform xl:translate-x-[-50%] xl:translate-y-[-30%] translate-y-[-20%] absolute z-90 flex"
+              >
+                <img src={image1} alt="" className="w-28 h-28" />
+                <h3 className="w-[400px] text-xl h-[100px] text-[#3b3834] p-1 font-semibold">
+                  I bring a website to life with JavaScript, adding interactive features and optimizing performance with clean and efficient code.
+                </h3>
+              </div>
+            )}
+          </div>
+            {/* <div
               onMouseEnter={() => handleMouseOver("HTML")}
               onMouseLeave={handleMouseLeave}
               className=" border-b-2 border-b-[#bebeb0] w-[440px] xl:w-full"
@@ -189,7 +204,7 @@ function Skills() {
                   </h3>
                 </div>
               )}
-            </div>
+            </div> */}
             <div className="skiils"></div>
             <div className="skiils"></div>
           </div>

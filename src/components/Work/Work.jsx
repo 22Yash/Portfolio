@@ -132,7 +132,7 @@ function Work() {
    <SlideMenu/>
       <section id="Work" className="work  w-[500px] xl:w-full sm:w-full rounded-t-full">
         
-        {/* <Mousefollower /> */}
+        
         <div id="work" ref={workRef} className="overflow-x-hidden">
           <div
             ref={mousefollowerRef}

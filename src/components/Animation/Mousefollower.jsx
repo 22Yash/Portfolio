@@ -32,7 +32,7 @@ function Mousefollower({mouseVisibility}) {
 
   return (
     <div className={`sm:w-8 z-30 
-    sm:h-8 sm:fixed sm:bg-black  sm:rounded-full
+    sm:h-8 sm:fixed sm:bg-[#5f5c57]  sm:rounded-full
     ${mouseVisibility ? "hidden" : "" }`} 
     ref={Mousefollower}>
       
