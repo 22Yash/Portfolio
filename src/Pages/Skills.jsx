@@ -7,37 +7,43 @@ import image5 from "./react.png";
 import gsap from "gsap";
 
 function Skills() {
-  const tl = gsap.timeline();
-
+  
+  const techstackRef = useRef(null);
   const [hoveredCard, setHoveredCard] = useState(null);
 
   const handleMouseOver = (card) => {
+    const el = techstackRef.current;
     setHoveredCard(card);
-    tl.fromTo(
-      ".skills",
-      {
-        opacity: 0,
-        y: 50,
-      },
-      {
-        opacity: 1,
-        y: -150,
-        ease: "power2.in",
-      }
-    );
+    if (window.innerWidth > 768) {
+      gsap.fromTo(
+        el,
+        {
+          opacity: 0,
+          y: 100, // Initial position on the y-axis
+          scale: 0
+        },
+        {
+          opacity: 1,
+          y: 0, // Move element to its final position on the y-axis
+          ease: "power2.in",
+          scale: 1
+        }
+      );
+    }
   };
+
   const handleMouseLeave = () => {
     setHoveredCard(null);
-    tl.fromTo(
-      ".skills",
-      {
-        opacity: 1,
-        ease: "power1.out",
-      },
-      {
-        opacity: 0,
-      }
-    );
+    if (window.innerWidth > 768) {
+      gsap.to(
+        techstackRef.current,
+        {
+          opacity: 0,
+          y: 100, // Move element back down on the y-axis
+          ease: "power1.out",
+        }
+      );
+    }
   };
 
   return (
@@ -45,7 +51,7 @@ function Skills() {
       <div
         id="skills"
         className="
-    w-[500px] h-[100vh] text-[#cecec5]
+    w-[500px] h-[150vh] text-[#cecec5]
     xl:w-full xl:h-[100vh] grid xl:grid-cols-2"
       >
         <div id="col1" className="bg-black ">
@@ -67,7 +73,7 @@ function Skills() {
           </h4>
           <div
             id="border"
-            className="xl:hidden w-3/4 ml-10 mt-5 border-2  border-black"
+            className="xl:hidden w-[420px] ml-10 mt-5 border-2  border-[#bebeb0]"
           ></div>
         </div>
 
@@ -75,17 +81,20 @@ function Skills() {
           <div
             id="stack"
             className="
-        text-[30px] font-helvetica font-semibold pl-10 pt-5
+        text-[40px] font-helvetica font-semibold pl-5 -pt-10
         xl:text-[65px] xl:font-helvetica xl:font-semibold xl:p-10"
           >
             <div
               onMouseEnter={() => handleMouseOver("JavaScript")}
               onMouseLeave={handleMouseLeave}
-              className=" border-b-2 border-b-[#bebeb0] "
+              className=" border-b-2 border-b-[#bebeb0] w-[440px] xl:w-full"
             >
               <h2>JavaScript</h2>
               {hoveredCard === "JavaScript" && (
-                <div className="skills  bg-[#deded0] gap-5 h-[140px] opacity-1 rounded-3xl p-5 transform translate-x-[-50%] translate-y-[-30%] absolute z-90 flex ">
+                <div 
+                ref={techstackRef}
+                className="techstack  bg-[#deded0] gap-5 h-[140px] opacity-1 rounded-3xl p-5 
+                transform xl:translate-x-[-50%] xl:translate-y-[-30%]  translate-y-[-20%] absolute z-90 flex ">
                   <img src={image1} alt="" className="w-28 h-28" />
                   <h3 className=" w-[400px] text-xl h-[100px] text-[#3b3834] p-1 font-semibold ">
                     I bring a website to life with JavaScript, adding
@@ -98,13 +107,16 @@ function Skills() {
             <div
               onMouseEnter={() => handleMouseOver("HTML")}
               onMouseLeave={handleMouseLeave}
-              className=" border-b-2 border-b-[#bebeb0] "
+              className=" border-b-2 border-b-[#bebeb0] w-[440px] xl:w-full"
             >
               <h2>HTML</h2>
               {hoveredCard === "HTML" && (
-                <div className="skills  bg-[#deded0] gap-5 h-[140px] opacity-1 rounded-3xl p-5 transform translate-x-[-50%] translate-y-[-30%] absolute z-90 flex ">
+                <div 
+                ref={techstackRef}
+                className="techstack  bg-[#deded0] gap-5 h-[220px] xl:h-[140px] opacity-1 rounded-3xl p-5 transform 
+                xl:translate-x-[-50%] xl:translate-y-[-30%]  absolute z-90 flex ">
                   <img src={image2} alt="" className="w-28 h-28" />
-                  <h3 className=" w-[420px] text-xl h-[100px] text-[#3b3834] p-1 font-normal ">
+                  <h3 className="  w-[400px] xl:w-[420px]  text-xl xl:h-[100px] text-[#3b3834] p-1 font-normal ">
                     I craft the foundation of web pages, structuring content in
                     a clear and logical manner to ensure accessibility and
                     compatibility across different devices and platforms.
@@ -112,22 +124,21 @@ function Skills() {
                 </div>
               )}
             </div>
-            <div className="skiils border-b-2 border-b-[#bebeb0] opacity-0 absolute z-90 ">
-              <h2>CSS</h2>
-            </div>
+           
             <div
               onMouseEnter={() => handleMouseOver("Tailwindcss")}
               onMouseLeave={handleMouseLeave}
-              className=" border-b-2 border-b-[#bebeb0] "
+              className=" border-b-2 border-b-[#bebeb0] w-[440px] xl:w-full "
             >
               <h2>TailwindCSS</h2>
               {hoveredCard === "Tailwindcss" && (
                 <div
-                  id="js"
-                  className="skills  bg-[#deded0] gap-5 h-[140px] rounded-3xl  opacity-0 p-5 transform translate-x-[-50%] translate-y-[-30%] opacity-1 absolute z-90 flex "
+                  ref={techstackRef}
+                  className="techstack  bg-[#deded0] gap-5 h-[220px] xl:h-[140px] rounded-3xl 
+                   opacity-1 p-5 transform xl:translate-x-[-50%] xl:translate-y-[-30%] opacity-1 absolute z-90 flex "
                 >
                   <img src={image3} alt="" className="w-28 h-28" />
-                  <h3 className=" w-[420px] text-xl h-[100px] text-[#3b3834] p-1 font-normal ">
+                  <h3 className=" w-[400px] xl:w-[420px] text-xl h-[100px] text-[#3b3834] p-1 font-normal ">
                     I leverage a utility-first approach to rapidly style and
                     design web interfaces, facilitating responsive layouts and
                     consistent design systems with minimal CSS code
@@ -138,16 +149,17 @@ function Skills() {
             <div
               onMouseEnter={() => handleMouseOver("GSAP")}
               onMouseLeave={handleMouseLeave}
-              className=" border-b-2 border-b-[#bebeb0] "
+              className=" border-b-2 border-b-[#bebeb0] w-[440px] xl:w-full "
             >
               <h2>GSAP</h2>
               {hoveredCard === "GSAP" && (
                 <div
-                  id="js"
-                  className="skills  bg-[#deded0] gap-5 h-[165px]   opacity-0 rounded-3xl p-5 transform translate-x-[-50%] translate-y-[-30%] opacity-1 absolute z-90 flex "
+                  ref={techstackRef}
+                  className="techstack  bg-[#deded0] gap-5  h-[220px] xl:h-[165px]   opacity-1 rounded-3xl p-5 
+                  transform xl:translate-x-[-50%] xl:translate-y-[-30%] opacity-1 absolute z-90 flex "
                 >
                   <img src={image4} alt="" className="w-28 h-28" />
-                  <h3 className=" w-[420px] text-xl  text-[#3b3834] p-1 font-normal ">
+                  <h3 className="w-[420px] xl:w-[420px] text-xl  text-[#3b3834] p-1 font-normal ">
                     I craft captivating animations and dynamic visual effects,
                     enhancing user experience and engagement on web pages by
                     seamlessly animating elements and creating immersive
@@ -159,15 +171,16 @@ function Skills() {
             <div 
             onMouseEnter={() => handleMouseOver("Reactjs")}
             onMouseLeave={handleMouseLeave}
-            className=" border-b-2 border-b-[#bebeb0] ">
-              <h2>ReactJS</h2>
+            className=" border-b-2 border-b-[#bebeb0] w-[440px] xl:w-full ">
+              <h2 >ReactJS</h2>
               {hoveredCard === "Reactjs" && (
                 <div
-                  id="js"
-                  className="skills  bg-[#deded0] gap-5 h-[190px] rounded-3xl p-5 transform translate-x-[-50%] translate-y-[-30%] opacity-1 absolute z-90 flex "
+                  ref={techstackRef}
+                  className="techstack  bg-[#deded0] gap-5 xl:h-[190px] rounded-3xl p-5 transform 
+                  xl:translate-x-[-50%] xl:translate-y-[-160%] opacity-1 absolute z-90 flex "
                 >
                   <img src={image5} alt="" className="w-28 h-28" />
-                  <h3 className=" w-[460px] text-xl  text-[#3b3834] p-1 font-normal ">
+                  <h3 className="  w-[410px] xl:w-[460px] text-xl  text-[#3b3834] p-1 font-normal ">
                     I architect dynamic and responsive user interfaces,
                     leveraging modular components and state management to build
                     scalable and interactive web applications, ensuring seamless
