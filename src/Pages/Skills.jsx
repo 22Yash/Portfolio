@@ -8,18 +8,8 @@ import gsap from "gsap";
 
 function Skills() {
   useEffect(() => {
-    const tl = gsap.timeline({ defaults: { duration: 0.5 } });
-
-    const images = [
-      image1,
-      image2,
-      image3,
-      image4,
-      image5
-    ];
-
+    const images = [image1, image2, image3, image4, image5];
     const techstacks = document.querySelectorAll(".techstack");
-    
 
     techstacks.forEach((stack, index) => {
       const image = stack.querySelector("img");
@@ -27,6 +17,7 @@ function Skills() {
 
       stack.addEventListener("mouseenter", () => {
         gsap.to(name, { opacity: 0, duration: 0.3 });
+        gsap.fromTo(image, { scale: 0 }, { attr: { src: images[index] }, duration: 0.3, scale: 1 });
         gsap.to(image, { opacity: 1, duration: 0.3 });
       });
 
@@ -89,14 +80,17 @@ function Skills() {
           >
             
             <div className="border-b-2 border-b-[#bebeb0] w-[440px] xl:h-[130px]  xl:w-full xl:flex xl:gap-32">
-              <h2 className="techstackname xl:-mt-5 text-[#bdbdaf] hover:opacity-0 transition-opacity duration-500 ">JavaScript</h2>
-              <h3 className="w-[400px] text-xl h-[100px] text-[#9d9995] p-1 font-semibold">
+              <h2 className="techstackname  bg-red-300 
+              xl:h-[80px] 
+              xl:-mt-5 text-[#bdbdaf] hover:opacity-0 transition-opacity duration-500 ">
+                JavaScript</h2>
+              <h3 className="w-[400px] text-xl  h-[100px] text-[#9d9995] p-1 font-semibold">
                   I bring a website to life with JavaScript, adding interactive
                   features and optimizing performance with clean and efficient
                   code.
                 </h3>
               <div
-                className="techstack  gap-5 w-[400px] h-[100px] xl:w-[420px] 
+                className="techstack bg-red-400 gap-5 w-[400px] h-[100px] xl:w-[300px] xl:-translate-y-10
                 opacity-0 rounded-3xl p-5 absolute  z-10 flex"
               >
                 <img src={image1} alt="" className="w-28 h-28 -mt-10 ml-72" />
