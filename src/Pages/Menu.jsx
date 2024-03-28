@@ -63,8 +63,8 @@ const Menu = () => {
 
   return (
     <main>
-      <nav ref={menuRef} className="menu opacity-0 pointer-events-none">
-        <a className="menu__item bg-red-400 w-[200px] h-[200px]">
+      <nav ref={menuRef} className="menu opacity-0 pointer-events-none bg-black w-full h-screen">
+        <a className="menu__item bg-red-400 w-[200px] h-6/12">
           <div className="menu__item-image_wrapper ">
             <div className="menu__item-image_inner" >
               <img className="menu__item-image" src="https://source.unsplash.com/tLKOj6cNwe0/280x400" alt="" />

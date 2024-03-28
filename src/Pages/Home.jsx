@@ -28,7 +28,7 @@ function Home() {
         
         <Hero />
         <Work />
-        <Menu/>
+        <Skills/>
         <Resume />
         <Connectfooter />
         

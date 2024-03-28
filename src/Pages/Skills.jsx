@@ -7,71 +7,57 @@ import image5 from "./react.png";
 import gsap from "gsap";
 
 function Skills() {
-  
-  const techstackRef = useRef(null);
-  const [hoveredCard, setHoveredCard] = useState(null);
-
   useEffect(() => {
-    const menuItems = document.querySelectorAll(".techstack");
+    const tl = gsap.timeline({ defaults: { duration: 0.5 } });
 
-    gsap.defaults({
-      duration: 0.55,
-      ease: "expo.out",
+    const images = [
+      image1,
+      image2,
+      image3,
+      image4,
+      image5
+    ];
+
+    const techstacks = document.querySelectorAll(".techstack");
+    
+
+    techstacks.forEach((stack, index) => {
+      const image = stack.querySelector("img");
+      const name = stack.querySelector(".techstackname");
+
+      stack.addEventListener("mouseenter", () => {
+        gsap.to(name, { opacity: 0, duration: 0.3 });
+        gsap.to(image, { opacity: 1, duration: 0.3 });
+      });
+
+      stack.addEventListener("mouseleave", () => {
+        gsap.to(name, { opacity: 1, duration: 0.3 });
+        gsap.to(image, { opacity: 0, duration: 0.3 });
+      });
     });
 
-    menuItems.forEach((item) => {
-      const imageWrapper = item.querySelector("img");
-      const itemBounds = item.getBoundingClientRect();
+    return () => {
+      techstacks.forEach((stack) => {
+        stack.removeEventListener("mouseenter", () => {});
+        stack.removeEventListener("mouseleave", () => {});
+      });
+    };
+  }, []);
 
-      const onMouseEnter = () => {
-        gsap.set(imageWrapper, { scale: 0.8, yPercent: 50, rotation: -15 });
-        gsap.to(imageWrapper, { opacity: 1, scale: 1, yPercent: 0, rotation: 0 });
-      };
+  
+  
 
-      const onMouseLeave = () => {
-        gsap.to(imageWrapper, { opacity: 0, yPercent: -50, scale: 0.8, rotation: -15 });
-      };
-
-      const onMouseMove = ({ clientX, clientY }) => {
-        const imageWrapperBounds = imageWrapper.getBoundingClientRect();
-        let yOffset = itemBounds.top / imageWrapperBounds.height;
-        yOffset = gsap.utils.mapRange(0, 1.5, -150, 150, yOffset);
-        gsap.to(imageWrapper, {
-          duration: 1.25,
-          x: Math.abs(clientX - itemBounds.left) - imageWrapperBounds.width / 1.55,
-          y: Math.abs(clientY - itemBounds.top) - imageWrapperBounds.height / 2 - yOffset,
-        });
-      };
-
-      item.addEventListener("mouseenter", onMouseEnter);
-      item.addEventListener("mouseleave", onMouseLeave);
-      item.addEventListener("mousemove", onMouseMove);
-
-      return () => {
-        item.removeEventListener("mouseenter", onMouseEnter);
-        item.removeEventListener("mouseleave", onMouseLeave);
-        item.removeEventListener("mousemove", onMouseMove);
-      };
-    });
-  }, []); // Empty dependency array to run only once when the component mounts
-
-  const handleMouseOver = (card) => {
-    setHoveredCard(card);
-  };
-
-  const handleMouseLeave = () => {
-    setHoveredCard(null);
-  };
+  
 
   return (
     <>
       <div
         id="skills"
         className="
-    w-[500px] h-[150vh] text-[#cecec5]
-    xl:w-full xl:h-[100vh] grid xl:grid-cols-2"
+    w-[500px] h-[150vh] text-[#cecec5] 
+    xl:w-full xl:h-[130vh] grid xl:flex xl:justify-between"
       >
-        <div id="col1" className="bg-black ">
+        <div id="col1" className="bg-black xl:w-[700px] ">
           <h2
             className="
            pt-10 pl-10 text-5xl font-semibold w-3/4
@@ -94,117 +80,96 @@ function Skills() {
           ></div>
         </div>
 
-        <div id="col2" className="bg-black">
+        <div id="col2" className="bg-black xl:w-[1000px]">
           <div
             id="stack"
             className="
         text-[40px] font-helvetica font-semibold pl-5 -pt-10
         xl:text-[65px] xl:font-helvetica xl:font-semibold xl:p-10"
           >
-              <div
-            onMouseEnter={() => handleMouseOver("JavaScript")}
-            onMouseLeave={handleMouseLeave}
-            className="border-b-2 border-b-[#bebeb0] w-[440px] xl:w-full"
-          >
-            <h2>JavaScript</h2>
-            {hoveredCard === "JavaScript" && (
-              <div
-                ref={techstackRef}
-                className="techstack bg-[#deded0] gap-5 h-[140px] opacity-1 rounded-3xl p-5 transform xl:translate-x-[-50%] xl:translate-y-[-30%] translate-y-[-20%] absolute z-90 flex"
-              >
-                <img src={image1} alt="" className="w-28 h-28" />
-                <h3 className="w-[400px] text-xl h-[100px] text-[#3b3834] p-1 font-semibold">
-                  I bring a website to life with JavaScript, adding interactive features and optimizing performance with clean and efficient code.
+            
+            <div className="border-b-2 border-b-[#bebeb0] w-[440px] xl:h-[130px]  xl:w-full xl:flex xl:gap-32">
+              <h2 className="techstackname xl:-mt-5 text-[#bdbdaf] hover:opacity-0 transition-opacity duration-500 ">JavaScript</h2>
+              <h3 className="w-[400px] text-xl h-[100px] text-[#9d9995] p-1 font-semibold">
+                  I bring a website to life with JavaScript, adding interactive
+                  features and optimizing performance with clean and efficient
+                  code.
                 </h3>
+              <div
+                className="techstack  gap-5 w-[400px] h-[100px] xl:w-[420px] 
+                opacity-0 rounded-3xl p-5 absolute  z-10 flex"
+              >
+                <img src={image1} alt="" className="w-28 h-28 -mt-10 ml-72" />
+               
               </div>
-            )}
-          </div>
-            {/* <div
-              onMouseEnter={() => handleMouseOver("HTML")}
-              onMouseLeave={handleMouseLeave}
-              className=" border-b-2 border-b-[#bebeb0] w-[440px] xl:w-full"
-            >
-              <h2>HTML</h2>
-              {hoveredCard === "HTML" && (
-                <div 
-                ref={techstackRef}
-                className="techstack  bg-[#deded0] gap-5 h-[220px] xl:h-[140px] opacity-1 rounded-3xl p-5 transform 
-                xl:translate-x-[-50%] xl:translate-y-[-30%]  absolute z-90 flex ">
-                  <img src={image2} alt="" className="w-28 h-28" />
-                  <h3 className="  w-[400px] xl:w-[420px]  text-xl xl:h-[100px] text-[#3b3834] p-1 font-normal ">
+              
+            </div>
+            <div className="border-b-2 border-b-[#bebeb0] w-[440px] 
+            xl:h-[130px] xl:mt-5  xl:w-full xl:flex xl:gap-64">
+              <h2 className="techstackname xl:-mt-5 text-[#bdbdaf]">HTML</h2>
+              <h3 className="  w-[400px] xl:w-[420px]  text-xl xl:h-[100px] text-[#9d9995] p-1 font-normal ">
                     I craft the foundation of web pages, structuring content in
                     a clear and logical manner to ensure accessibility and
                     compatibility across different devices and platforms.
                   </h3>
-                </div>
-              )}
+                  <div
+                className="techstack  gap-5 w-[400px] h-[100px] xl:w-[420px] opacity-0 rounded-3xl p-5 absolute z-10 flex"
+              >
+                <img src={image2} alt="" className="w-32 h-32 ml-48 -mt-5" />
+               
+              </div>
             </div>
-           
-            <div
-              onMouseEnter={() => handleMouseOver("Tailwindcss")}
-              onMouseLeave={handleMouseLeave}
-              className=" border-b-2 border-b-[#bebeb0] w-[440px] xl:w-full "
-            >
-              <h2>TailwindCSS</h2>
-              {hoveredCard === "Tailwindcss" && (
-                <div
-                  ref={techstackRef}
-                  className="techstack  bg-[#deded0] gap-5 h-[220px] xl:h-[140px] rounded-3xl 
-                   opacity-1 p-5 transform xl:translate-x-[-50%] xl:translate-y-[-30%] opacity-1 absolute z-90 flex "
-                >
-                  <img src={image3} alt="" className="w-28 h-28" />
-                  <h3 className=" w-[400px] xl:w-[420px] text-xl h-[100px] text-[#3b3834] p-1 font-normal ">
+            <div className="border-b-2 border-b-[#bebeb0] w-[440px] 
+            xl:h-[130px] xl:mt-5  xl:w-full xl:flex xl:gap-16">
+              <h2 className="techstackname xl:-mt-5 text-[#bdbdaf] ">TailwindCSS</h2>
+              <h3 className=" w-[400px] xl:w-[420px] xl:pl-2 text-xl h-[100px] text-[#9d9995] p-1 font-normal ">
                     I leverage a utility-first approach to rapidly style and
                     design web interfaces, facilitating responsive layouts and
                     consistent design systems with minimal CSS code
                   </h3>
-                </div>
-              )}
+                  <div
+                className="techstack  gap-5 w-[400px] h-[100px] xl:w-[420px] opacity-0 rounded-3xl p-5 absolute z-10 flex"
+              >
+                <img src={image3} alt="" className="w-32 h-32" />
+               
+              </div>
             </div>
-            <div
-              onMouseEnter={() => handleMouseOver("GSAP")}
-              onMouseLeave={handleMouseLeave}
-              className=" border-b-2 border-b-[#bebeb0] w-[440px] xl:w-full "
-            >
-              <h2>GSAP</h2>
-              {hoveredCard === "GSAP" && (
-                <div
-                  ref={techstackRef}
-                  className="techstack  bg-[#deded0] gap-5  h-[220px] xl:h-[165px]   opacity-1 rounded-3xl p-5 
-                  transform xl:translate-x-[-50%] xl:translate-y-[-30%] opacity-1 absolute z-90 flex "
-                >
-                  <img src={image4} alt="" className="w-28 h-28" />
-                  <h3 className="w-[420px] xl:w-[420px] text-xl  text-[#3b3834] p-1 font-normal ">
+            <div className="border-b-2 border-b-[#bebeb0] w-[440px] 
+            xl:h-[160px] xl:mt-5  xl:w-full xl:flex  xl:gap-60">
+              <h2 className="techstackname xl:-mt-5 text-[#bdbdaf]">GSAP</h2>
+              <h3 className="w-[420px] xl:w-[480px]  text-xl xl:pl-5 oapcity-90  text-[#9d9995] p-1 font-normal ">
                     I craft captivating animations and dynamic visual effects,
                     enhancing user experience and engagement on web pages by
                     seamlessly animating elements and creating immersive
                     transitions with precision and creativity.
                   </h3>
-                </div>
-              )}
+                  <div
+                className="techstack  gap-5 w-[400px] h-[100px] xl:w-[420px] opacity-0 rounded-3xl p-5 absolute z-10 flex"
+              >
+                <img src={image4} alt="" className="w-32 h-32" />
+               
+              </div>
             </div>
-            <div 
-            onMouseEnter={() => handleMouseOver("Reactjs")}
-            onMouseLeave={handleMouseLeave}
-            className=" border-b-2 border-b-[#bebeb0] w-[440px] xl:w-full ">
-              <h2 >ReactJS</h2>
-              {hoveredCard === "Reactjs" && (
-                <div
-                  ref={techstackRef}
-                  className="techstack  bg-[#deded0] gap-5 xl:h-[190px] rounded-3xl p-5 transform 
-                  xl:translate-x-[-50%] xl:translate-y-[-160%] opacity-1 absolute z-90 flex "
-                >
-                  <img src={image5} alt="" className="w-28 h-28" />
-                  <h3 className="  w-[410px] xl:w-[460px] text-xl  text-[#3b3834] p-1 font-normal ">
+            <div className="border-b-2 border-b-[#bebeb0] w-[440px] 
+            xl:h-[180px] xl:mt-5  xl:w-full xl:flex xl:gap-44">
+              <h2 className="techstackname xl:-mt-5 text-[#bdbdaf]">ReactJS</h2>
+              <h3 className="  w-[410px] xl:w-[460px] xl:pl-5  text-xl  text-[#9d9995] p-1 font-normal ">
                     I architect dynamic and responsive user interfaces,
                     leveraging modular components and state management to build
                     scalable and interactive web applications, ensuring seamless
                     navigation and enhanced user experience through efficient
                     rendering and data handling.
                   </h3>
-                </div>
-              )}
-            </div> */}
+                  <div
+                className="techstack  gap-5 w-[400px] h-[100px] xl:w-[420px] opacity-0 rounded-3xl p-5 absolute z-10 flex"
+              >
+                <img src={image5} alt="" className="w-32 h-32" />
+               
+              </div>
+            </div>
+
+
+            
             <div className="skiils"></div>
             <div className="skiils"></div>
           </div>
