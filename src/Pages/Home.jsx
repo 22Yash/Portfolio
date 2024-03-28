@@ -14,6 +14,8 @@ import Contactform from "../components/Contact/Contactform";
 import Skills from "./Skills";
 import Mousefollower from "../components/Animation/Mousefollower";
 import Menu from "./Menu";
+import Hover from "./Hover";
+
 
 function Home() {
   const lenis = useLenis(({ scroll }) => {
@@ -26,11 +28,12 @@ function Home() {
       <ReactLenis root>
         {/* <Preloader /> */}
         
-        <Hero />
-        <Work />
-        <Skills/>
-        <Resume />
-        <Connectfooter />
+        {/* <Hero />
+        <Work /> */}
+       <Skills/>
+       
+        {/* <Resume />
+        <Connectfooter /> */}
         
       </ReactLenis>
     </>
