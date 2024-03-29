@@ -26,14 +26,14 @@ function Home() {
   return (
     <>
       <ReactLenis root>
-        {/* <Preloader /> */}
+        <Preloader />
         
-        {/* <Hero />
-        <Work /> */}
+        <Hero />
+        <Work />
        <Skills/>
        
-        {/* <Resume />
-        <Connectfooter /> */}
+        <Resume />
+        <Connectfooter />
         
       </ReactLenis>
     </>

@@ -7,7 +7,7 @@ import image5 from "./react.png";
 import gsap from "gsap";
 
 function Skills() {
-  const [images] = useState([image1, image2, image3]);
+  const [images] = useState([image1, image2, image3, image4, image5]);
 
   useEffect(() => {
     const cursor = document.querySelector(".cursor");
@@ -82,7 +82,8 @@ function Skills() {
       <div
         id="skills"
         className="
-    w-[500px] h-[150vh] text-[#cecec5] 
+    w-[500px] h-[160vh] text-[#cecec5]
+    sm:w-[766px] lg:w-full
     xl:w-full xl:h-[130vh] grid xl:flex xl:justify-between"
       >
         <div id="col1" className="bg-black xl:w-[700px] ">
@@ -95,7 +96,8 @@ function Skills() {
           </h2>
           <h4
             className="
-           pl-10 w-3/4 text-[20px] font-normal pt-5
+           pl-10 w-[500px] text-[20px] font-normal pt-5
+           sm:w-[700px] sm:text-center xl:text-normal
            xl:pl-20 xl:w-3/4 xl:text-3xl xl:pt-10"
           >
             These are my go to tech stack to make any projects happen. I am
@@ -104,17 +106,17 @@ function Skills() {
           </h4>
           <div
             id="border"
-            className="xl:hidden w-[420px] ml-10 mt-5 border-2  border-[#bebeb0]"
+            className="xl:hidden w-[420px] ml-10 mt-5 sm:w-[680px] border-2  border-[#bebeb0]"
           ></div>
         </div>
 
         <div id="col2" className="bg-black xl:w-[1000px]">
-          <div className="fixed top-0 left-0 w-12 h-12 pointer-events-none opacity-0 cursor">
+          <div className="fixed top-0 left-0 w-32 h-32 pointer-events-none opacity-0 z-30 cursor">
             {images.map((image, index) => (
               <img
                 key={index}
                 src={image}
-                className="absolute inset-0 object-cover w-full h-full cursor__media z-20"
+                className="absolute inset-0 object-cover w-full h-full cursor__media "
                 alt=""
               />
             ))}
@@ -125,100 +127,143 @@ function Skills() {
         text-[40px] font-helvetica font-semibold pl-5 -pt-10
         xl:text-[65px] xl:font-helvetica xl:font-semibold xl:p-10"
           >
-            <div className="border-b-2 border-b-[#bebeb0] w-[440px] xl:h-[130px]  xl:w-full xl:flex xl:gap-32">
+            <div
+              className="border-b-2 border-b-[#bebeb0]   p-3 w-[440px] 
+              sm:flex sm:justify-end sm:w-[700px] sm:gap-10 xl:h-[115px] 
+             xl:w-full xl:flex xl:gap-28 xl:p-5"
+            >
               <a
                 href="#"
                 className="relative text-2.6rem font-semibold flex gap-32 text-gray-800 nav__link"
               >
                 <span className="text">
                   <h2
-                    className="name bg-red-300 
-              xl:h-[80px] 
+                    className="name 
+              xl:h-[80px] ml-3 
               xl:-mt-5 text-[#bdbdaf] z-10 "
                   >
                     JavaScript
                   </h2>
                 </span>
-                <h3 className="w-[400px] text-xl  h-[100px] text-[#9d9995] p-1 font-semibold">
-                  I bring a website to life with JavaScript, adding interactive
-                  features and optimizing performance with clean and efficient
-                  code.
-                </h3>
+
                 <span className="absolute bottom-[-1.3rem] left-0 right-0 w-2 h-2 bg-gray-600 mx-auto"></span>
               </a>
-              {/* <h2 className="name bg-red-300 
-              xl:h-[80px] 
-              xl:-mt-5 text-[#bdbdaf]  ">
-                JavaScript</h2>
-              <h3 className="w-[400px] text-xl  h-[100px] text-[#9d9995] p-1 font-semibold">
-                  I bring a website to life with JavaScript, adding interactive
-                  features and optimizing performance with clean and efficient
-                  code.
-                </h3> */}
+              <h3 className="xl:w-[400px] text-xl ml-3 h-[100px] text-[#d1d1d7] p-1 font-normal">
+                I bring a website to life with JavaScript, adding interactive
+                features and optimizing performance with clean and efficient
+                code.
+              </h3>
             </div>
-            {/* <div className="border-b-2 border-b-[#bebeb0] w-[440px] 
-            xl:h-[130px] xl:mt-5  xl:w-full xl:flex xl:gap-64">
-              <h2 className="name xl:-mt-5 text-[#bdbdaf]">HTML</h2>
-              <h3 className="  w-[400px] xl:w-[420px]  text-xl xl:h-[100px] text-[#9d9995] p-1 font-normal ">
-                    I craft the foundation of web pages, structuring content in
-                    a clear and logical manner to ensure accessibility and
-                    compatibility across different devices and platforms.
-                  </h3>
-                  <div
-                className="techstack  gap-5 w-[400px] h-[100px] xl:w-[420px] opacity-0 rounded-3xl p-5 absolute z-10 flex"
+
+            <div
+              className="border-b-2 border-b-[#bebeb0] p-3 w-[440px] xl:pt-5
+            xl:h-[140px] sm:flex sm:gap-32 sm:w-[720px] xl:p-5 xl:w-full xl:flex xl:gap-32"
+            >
+              <a
+                href="#"
+                className="relative text-2.6rem font-semibold flex gap-32 text-gray-800 nav__link"
               >
-                <img src={image2} alt="" className="w-32 h-32 ml-48 -mt-5" />
-               
-              </div>
+                <span className="text">
+                  <h2
+                    className="name 
+              xl:h-[80px] ml-3
+              xl:mt-0 text-[#bdbdaf]  "
+                  >
+                    HTML
+                  </h2>
+                </span>
+
+                <span className="absolute bottom-[-1.3rem] left-0 right-0 w-2 h-2 bg-gray-600 mx-auto"></span>
+              </a>
+              <h3
+                className="  w-[440px] xl:w-[420px]  text-xl ml-3 
+              xl:h-[100px] text-[#d1d1d7] p-1 font-normal xl:ml-32 "
+              >
+                I craft the foundation of web pages, structuring content in a
+                clear and logical manner to ensure accessibility and
+                compatibility across different devices and platforms.
+              </h3>
             </div>
-            <div className="border-b-2 border-b-[#bebeb0] w-[440px] 
-            xl:h-[130px] xl:mt-5  xl:w-full xl:flex xl:gap-16">
-              <h2 className="name xl:-mt-5 text-[#bdbdaf] ">TailwindCSS</h2>
-              <h3 className=" w-[400px] xl:w-[420px] xl:pl-2 text-xl h-[100px] text-[#9d9995] p-1 font-normal ">
-                    I leverage a utility-first approach to rapidly style and
-                    design web interfaces, facilitating responsive layouts and
-                    consistent design systems with minimal CSS code
-                  </h3>
-                  <div
-                className="techstack  gap-5 w-[400px] h-[100px] xl:w-[420px] opacity-0 rounded-3xl p-5 absolute z-10 flex"
+
+            <div className="border-b-2 border-b-[#bebeb0] xl:p-5 sm:flex sm:gap-32 sm:w-[720px]  p-3 w-[440px] xl:h-[150px]  xl:w-full xl:flex xl:gap-32">
+              <a
+                href="#"
+                className="relative text-2.6rem font-semibold flex gap-32 text-gray-800 nav__link"
               >
-                <img src={image3} alt="" className="w-32 h-32" />
-               
-              </div>
+                <span className="text">
+                  <h2
+                    className="name 
+              xl:h-[80px] ml-3
+              xl:mt-2 text-[#bdbdaf] z-10 "
+                  >
+                    TailwindCSS
+                  </h2>
+                </span>
+
+                <span className="absolute bottom-[-1.3rem] left-0 right-0 w-2 h-2 bg-gray-600 mx-auto"></span>
+              </a>
+              <h3 className=" w-[440px] xl:w-[600px] sm:-ml-24 xl:pl-2 ml-3 text-xl xl:mt-2 xl:-ml-16  h-[120px] text-[#d1d1d7] p-1 font-normal ">
+                I leverage a utility-first approach to rapidly style and design
+                web interfaces, facilitating responsive layouts and consistent
+                design systems with minimal CSS code .
+              </h3>
             </div>
-            <div className="border-b-2 border-b-[#bebeb0] w-[440px] 
-            xl:h-[160px] xl:mt-5  xl:w-full xl:flex  xl:gap-60">
-              <h2 className="name xl:-mt-5 text-[#bdbdaf]">GSAP</h2>
-              <h3 className="w-[420px] xl:w-[480px]  text-xl xl:pl-5 oapcity-90  text-[#9d9995] p-1 font-normal ">
-                    I craft captivating animations and dynamic visual effects,
-                    enhancing user experience and engagement on web pages by
-                    seamlessly animating elements and creating immersive
-                    transitions with precision and creativity.
-                  </h3>
-                  <div
-                className="techstack  gap-5 w-[400px] h-[100px] xl:w-[420px] opacity-0 rounded-3xl p-5 absolute z-10 flex"
+
+            <div className="border-b-2 border-b-[#bebeb0] w-[440px]
+            sm:flex sm:gap-32 sm:w-[720px] 
+            p-3 xl:h-[180px]  xl:w-full xl:flex xl:gap-32">
+              <a
+                href="#"
+                className="relative text-2.6rem font-semibold flex gap-32 text-gray-800 nav__link"
               >
-                <img src={image4} alt="" className="w-32 h-32" />
-               
-              </div>
+                <span className="text">
+                  <h2
+                    className="name  
+              xl:h-[80px] ml-3
+              xl:mt-2 text-[#bdbdaf] z-10 "
+                  >
+                    GSAP
+                  </h2>
+                </span>
+
+                <span className="absolute bottom-[-1.3rem] left-0 right-0 w-2 h-2 bg-gray-600 mx-auto"></span>
+              </a>
+              <h3 className="w-[440px] xl:w-[500px] xl:mt-2 xl:ml-28 ml-3 text-xl xl:pl-5 oapcity-90  text-[#d1d1d7] p-1 font-normal ">
+                I craft captivating animations and dynamic visual effects,
+                enhancing user experience and engagement on web pages by
+                seamlessly animating elements and creating immersive transitions
+                with precision and creativity.
+              </h3>
             </div>
-            <div className="border-b-2 border-b-[#bebeb0] w-[440px] 
-            xl:h-[180px] xl:mt-5  xl:w-full xl:flex xl:gap-44">
-              <h2 className="name xl:-mt-5 text-[#bdbdaf]">ReactJS</h2>
-              <h3 className="  w-[410px] xl:w-[460px] xl:pl-5  text-xl  text-[#9d9995] p-1 font-normal ">
-                    I architect dynamic and responsive user interfaces,
-                    leveraging modular components and state management to build
-                    scalable and interactive web applications, ensuring seamless
-                    navigation and enhanced user experience through efficient
-                    rendering and data handling.
-                  </h3>
-                  <div
-                className="techstack  gap-5 w-[400px] h-[100px] xl:w-[420px] opacity-0 rounded-3xl p-5 absolute z-10 flex"
+
+            <div className="border-b-2 border-b-[#bebeb0] p-3 w-[440px] 
+            sm:flex sm:gap-32 sm:w-[720px] 
+            lg:w-full
+            xl:h-[190px]  xl:w-full xl:flex xl:gap-32">
+              <a
+                href="#"
+                className="relative text-2.6rem font-semibold flex gap-32 text-gray-800 nav__link"
               >
-                <img src={image5} alt="" className="w-32 h-32" />
-               
-              </div>
-            </div> */}
+                <span className="text">
+                  <h2
+                    className="name 
+              xl:h-[80px] ml-3
+              xl:mt-5 text-[#bdbdaf] z-10 "
+                  >
+                    ReactJS
+                  </h2>
+                </span>
+
+                <span className="absolute bottom-[-1.3rem] left-0 right-0 w-2 h-2 bg-gray-600 mx-auto"></span>
+              </a>
+              <h3 className="  w-[440px] xl:w-[600px]  sm:-ml-5 ml-3 xl:pl-5 xl:ml-10  text-xl  text-[#d1d1d7] p-1 font-normal ">
+                I architect dynamic and responsive user interfaces, leveraging
+                modular components and state management to build scalable and
+                interactive web applications, ensuring seamless navigation and
+                enhanced user experience through efficient rendering and data
+                handling.
+              </h3>
+            </div>
 
             <div className="skiils"></div>
             <div className="skiils"></div>
