@@ -55,9 +55,7 @@ function Connectfooter() {
         <Magneticeffect />
       </div>
 
-      <div id="socials" className="-mt-10">
-        <Links />
-      </div>
+      
     </div>
     </section>
     

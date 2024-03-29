@@ -1,6 +1,9 @@
 import React, { useRef, useEffect } from "react";
 import emailjs from "emailjs-com";
 import Links from "./Links"
+import Connectfooter from "./Connectfooter";
+import GetInTouch from "./GetInTouch";
+import heroSVG from "./nnnoise.svg"
 
 function Contactform() {
   const form = useRef();
@@ -27,7 +30,13 @@ function Contactform() {
   };
 
   return (
-    <div id="contactform" className="xl:grid xl:grid-cols-2 xl:gap-4">
+    <div id="Contact" style={{ backgroundImage: `url(${heroSVG})`, backgroundSize: "cover" }}>
+
+      <div id="contactHeading" className="bg-[#d6d6d0]">
+        <h1 className="text-[75px] font-helvetica xl:w-[400px] font-semibold xl:ml-20 xl:pt-10 ">Let's work </h1>
+        <h1  className="text-[75px] font-helvetica xl:w-[400px] font-semibold xl:ml-20 xl:-mt-10 ">together.</h1>
+      </div>
+      <div id="conactform" className="xl:grid xl:grid-cols-2 xl:gap-4">
       <div
         className="xl:w-[900px] bg-[#d6d6d0] w-[800px] sm:w-[900px] pt-28 text-[#3a3733] h-[200vh]
       font-helvetica xl:col-span-1
@@ -55,9 +64,9 @@ function Contactform() {
               type="text"
               name="user_name"
               className="
-          w-5/6 ml-2 focus:outline-none bg-[#e6e6e1] border-4 rounded-lg border-[#989893] pt-10 mt-5 pb-8 pl-10  h-3/4
+          w-5/6 ml-2 focus:outline-none bg-[#e6e6e1] border-4 rounded-l-full rounded-r-full border-[#989893] pt-10 mt-5 pb-8 pl-10  h-3/4
           sm:w-5/6 sm:h-10 sm:ml-28 sm:text-3xl  sm:mt-4 
-           xl:w-5/6  xl:ml-5 xl:mt-12  xl:focus:outline-none xl:bg-[#d6d6d0]"
+           xl:w-[620px]  xl:ml-0 xl:mt-12  xl:focus:outline-none xl:bg-[#d6d6d0]"
             />
           </div>
 
@@ -81,9 +90,9 @@ function Contactform() {
               type="email"
               name="user_name"
               className="
-            ml-4 focus:outline-none mt-5 pt-8  border-4 rounded-lg bg-[#e6e6e1] border-[#989893] pb-8 pl-10  w-5/6 h-20
+            ml-4 focus:outline-none mt-5 pt-8  border-4 rounded-l-full rounded-r-full bg-[#e6e6e1] border-[#989893] pb-8 pl-10  w-5/6 h-20
             sm:w-5/6 sm:h-10 sm:ml-2 sm:text-3xl  sm:mt-4
-             xl:mt-8  xl:ml-5 xl:focus:outline-none xl:bg-[#d6d6d0]"
+             xl:mt-8  xl:ml-2 xl:focus:outline-none xl:bg-[#d6d6d0]"
             />
           </div>
 
@@ -106,9 +115,9 @@ function Contactform() {
             <textarea
               name="message"
               className="
-          w-5/6 ml-4 h-20 mt-6 focus:outline-none border-4 rounded-lg bg-[#e6e6e1] border-[#989893]
+          w-5/6 ml-4 h-20 mt-6 focus:outline-none border-4 rounded-l-full rounded-r-full bg-[#e6e6e1] border-[#989893]
           sm:w-5/6 sm:h-20 sm:ml-2 sm:text-3xl  sm:mt-4
-           xl:w-5/6  xl:-ml-10 xl:focus:outline-none xl:h-20"
+           xl:w-5/6  xl:-ml-16 xl:focus:outline-none xl:h-20 xl:bg-[#d6d6d0]"
             />
           </div>
 
@@ -129,6 +138,8 @@ function Contactform() {
                       sm:-mt-7 sm:ml- sm:text-3xl
           "
             />
+            
+            
           </div>
         </form>
       </div>
@@ -147,7 +158,10 @@ function Contactform() {
          <Links columnDirection={true}/>
          </div>
           
+          
       </div>
+      </div>
+      
     </div>
   );
 }

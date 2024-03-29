@@ -6,6 +6,7 @@ import Hamburger from "./Hamburger";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import "tailwind-scrollbar";
 import SlideMenu from "./SlideMenu";
+import heroSVG from "./nnnoise.svg";
 gsap.registerPlugin(ScrollTrigger);
 
 function Hero() {
@@ -109,8 +110,17 @@ function Hero() {
 
   return (
     <>
-      <div id="hero" className="main  w-[500px] xl:w-full sm:w-full sticky   h-screen bg-[#d6d6d0]">
-        <div id="navbar" ref={navbarRef}>
+
+
+    
+<div
+      id="hero"
+      className="main w-[500px] xl:w-full sm:w-full sticky h-screen bg-[#d6d6d0] "
+      style={{ backgroundImage: `url(${heroSVG})`, backgroundSize: "cover" }}
+    >
+        
+        
+        <div id="navbar" ref={navbarRef} style={{ backgroundImage: `url(${heroSVG})`, backgroundSize: "cover" }}>
           <Navbar />
         </div>
         <div id="hamburger" ref={hamburgerRef} className=" visible ">
@@ -123,7 +133,7 @@ function Hero() {
           id="heroHeading"
           className="hero
          sm:ml-28 text-[#3b3834]
-         xl:ml-10 xl:tracking-wide xl:pt-20"
+         xl:ml-10 xl:tracking-wide xl:pt-20 "
         >
           <h1
             ref={heroHeadingRef}

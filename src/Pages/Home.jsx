@@ -35,7 +35,7 @@ function Home() {
        
        
         <Resume />
-        <Connectfooter />
+        <Contactform/>
         
       </ReactLenis>
     </>

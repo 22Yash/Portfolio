@@ -1,6 +1,6 @@
 import React, { useEffect, useRef } from "react";
 import { HashLink as Link } from "react-router-hash-link";
-
+import heroSVG from "./nnnoise.svg"
 
 function Navbar() {
 
@@ -13,7 +13,8 @@ function Navbar() {
         className=" 
         hidden 
         xl:flex xl:justify-between 
-    z-44   xl:h-12 bg-[#d6d6d0]"
+    z-44   xl:h-12 bg-[#d6d6d0] "
+    style={{ backgroundImage: `url(${heroSVG})`, backgroundSize: "cover" }}
       >
         <div id="leftNav">
           <Link>

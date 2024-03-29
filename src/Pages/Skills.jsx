@@ -31,13 +31,15 @@ function Skills() {
       });
     }
   });
+
+  
   return (
     <>
       <div
-        id="skills"
-        className="
+        id="Skills"
+        className="skills
     w-[500px] h-[160vh] text-[#cecec5]
-    sm:w-[766px] lg:w-full
+    sm:w-[766px] lg:w-full xl:-translate-y-44
     xl:w-full xl:h-[130vh] grid xl:flex xl:justify-between"
       >
         <div id="col1" className="bg-black xl:w-[700px] ">
