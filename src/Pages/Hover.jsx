@@ -1,109 +1,58 @@
-import React, { useEffect, useState } from "react";
-import gsap from "gsap";
+import React, { useEffect } from 'react'
 import image1 from "./JavaScript.png";
 import image2 from "./html.png";
-import image3 from "./tailwind.png";
 
 function Hover() {
-  const [images] = useState([image1, image2, image3]);
 
   useEffect(() => {
-    const cursor = document.querySelector(".cursor");
-    const cursorMedias = document.querySelectorAll(".cursor__media");
-    const navLinks = document.querySelectorAll(".nav__link");
+    const link = document.querySelectorAll('.link');
+    const linkHoverReveal = document.querySelectorAll('.hover-reveal');
+    const linkImages = document.querySelectorAll('.hidden-img');
 
-    gsap.set(cursor, {
-      xPercent: -50,
-      yPercent: -50,
-      scale: 0
-    });
-
-    const setCursorX = gsap.quickTo(cursor, "x", {
-      duration: 0.6,
-      ease: "expo"
-    });
-
-    const setCursorY = gsap.quickTo(cursor, "y", {
-      duration: 0.6,
-      ease: "expo"
-    });
-
-    window.addEventListener("mousemove", (e) => {
-      setCursorX(e.pageX);
-      setCursorY(e.pageY);
-    });
-
-    const tl = gsap.timeline({
-      paused: true
-    });
-
-    tl.to(cursor, {
-      scale: 1,
-      opacity: 1,
-      duration: 0.5,
-      ease: "expo.inOut"
-    });
-
-    navLinks.forEach((navLink, i) => {
-      navLink.addEventListener("mouseover", () => {
-        cursorMedias[i].classList.add("active");
-        cursorMedias[i].parentElement.classList.add("hide-text");
-        gsap.to(cursorMedias[i], { opacity: 1, duration: 0.5 });
-        cursorMedias.forEach((media, index) => {
-          if (index !== i) {
-            gsap.to(media, { opacity: 0, duration: 0.5 });
-            media.parentElement.classList.remove("hide-text");
-          }
-        });
-        tl.play();
-      });
-    });
-
-    navLinks.forEach((navLink, i) => {
-      navLink.addEventListener("mouseout", () => {
-        tl.reverse();
-        cursorMedias[i].classList.remove("active");
-        cursorMedias[i].parentElement.classList.remove("hide-text");
-      });
-    });
-
-    return () => {
-      navLinks.forEach((navLink) => {
-        navLink.removeEventListener("mouseover", () => {});
-        navLink.removeEventListener("mouseout", () => {});
-      });
-    };
-  }, []);
-
+    for(let i = 0; i < link.length; i++) {
+      link[i].addEventListener('mousemove', (e) => {
+        linkHoverReveal[i].style.opacity = 1;
+        linkHoverReveal[i].style.transform = `translate(-100%, -50% ) rotate(5deg)`;
+        linkImages[i].style.transform = 'scale(1, 1)';
+        linkHoverReveal[i].style.left = e.clientX + "px";
+      })
+      
+      link[i].addEventListener('mouseleave', (e) => {
+        linkHoverReveal[i].style.opacity = 0;
+        linkHoverReveal[i].style.transform = `translate(-50%, -50%) rotate(-5deg)`;
+        linkImages[i].style.transform = 'scale(0.8, 0.8)';
+      })
+    }
+  })
   return (
     <>
-      <div className="fixed top-0 left-0 w-12 h-12 pointer-events-none opacity-0 cursor">
-        {images.map((image, index) => (
-          <img
-            key={index}
-            src={image}
-            className="absolute inset-0 object-cover w-full h-full cursor__media"
-            alt=""
-          />
-        ))}
-      </div>
+    <div id="hover" className='w-full h-screen bg-red-300 overflow-hidden p-20'>
+      <ul className='relative z-10 p-10'>
+        <li className='relative z-10 '>
+          <div className="link flex p-5 justify-between mix-blend-difference">
+            <span className='block relative text-8xl font-bold '>JavaScript</span>
+            <div className="hover-reveal absolute w-300 h-400 top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 pointer-events-none overflow-hidden opacity-0 scale-80 transition-all duration-500 ease-out">
+              <img src={image1} alt="" className='hidden-image w-full h-full object-cover relative transition-transform duration-400 ease-out' />
+            </div>
+          </div>
+        </li>
+        <li className='relative z-10 '>
+          <div className="link flex p-5 justify-between mix-blend-difference">
+            <span className='block relative text-8xl font-bold '>HTML</span>
+            <div className="hover-reveal absolute w-300 h-400 top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 pointer-events-none overflow-hidden opacity-0 scale-80 transition-all duration-500 ease-out">
+              <img src={image2} alt="" className='hidden-image w-full h-full object-cover relative transition-transform duration-400 ease-out' />
+            </div>
+          </div>
+        </li>
+      </ul>
 
-      <nav className="flex flex-col items-center gap-2.6rem">
-        <a href="#" className="relative text-2.6rem font-semibold text-gray-800 nav__link">
-          <span className="text">Studio</span>
-          <span className="absolute bottom-[-1.3rem] left-0 right-0 w-2 h-2 bg-gray-600 mx-auto"></span>
-        </a>
-        <a href="#" className="relative text-2.6rem font-semibold text-gray-800 nav__link">
-          <span className="text">Showcase</span>
-          <span className="absolute bottom-[-1.3rem] left-0 right-0 w-2 h-2 bg-gray-600 mx-auto"></span>
-        </a>
-        <a href="#" className="relative text-2.6rem font-semibold text-gray-800 nav__link">
-          <span className="text">Contact</span>
-          <span className="absolute bottom-[-1.3rem] left-0 right-0 w-2 h-2 bg-gray-600 mx-auto"></span>
-        </a>
-      </nav>
+
+
+
+    </div>
+    
     </>
-  );
+  )
 }
 
-export default Hover;
+export default Hover
