@@ -39,7 +39,7 @@ function Skills() {
       <div
         id="Skills"
         className="skills
-        w-[575px] h-[160vh] text-[#cecec5]
+        w-[500px] h-[160vh] text-[#cecec5]
     sm:w-[766px] lg:w-full xl:-translate-y-44
     xl:w-full xl:h-[130vh] grid xl:flex xl:justify-between"
     style={{ backgroundImage: `url(${skillSVG})`, backgroundSize: "cover" }}
@@ -68,7 +68,7 @@ function Skills() {
           ></div>
         </div>
 
-        <div id="col2" className="bg-[#0d0d0c] xl:w-[1000px]">
+        <div id="col2" className="bg-[#0d0d0c] w-[500px] xl:w-[1000px]">
           <div
             id="stack"
             className="
@@ -76,12 +76,12 @@ function Skills() {
         xl:text-[65px] xl:font-helvetica xl:font-semibold xl:p-10"
           >
             <ul className="relative z-10 p-10">
-              <div className="border-b-2 border-b-[#bebeb0]   p-3 w-[440px] 
+              <div className="border-b-2 border-b-[#bebeb0]   p-3 w-[400px] 
               sm:flex sm:justify-end sm:w-[700px] sm:gap-10 xl:h-[140px] xl:-mt-10 
              xl:w-full xl:flex xl:gap-28 xl:p-5">
                 <li className="relative z-10 ">
                   <div className="link flex p-5 justify-between mix-blend-difference">
-                    <span className="block relative xl:-mt-10 -ml-5 text-[#bdbdaf]">
+                    <span className="block relative xl:-mt-10 -ml-10 text-[#bdbdaf]">
                       JavaScript
                     </span>
                     <div className="hover-reveal absolute w-300 h-400 top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 pointer-events-none overflow-hidden opacity-0 scale-80 transition-all duration-500 ease-out">
@@ -93,19 +93,19 @@ function Skills() {
                     </div>
                   </div>
                 </li>
-                <h3 className="w-[420px] text-xl h-[100px] text-[#9d9995] p-1 xl:-ml-10 font-normal">
+                <h3 className="w-[420px] text-xl h-[100px] text-[#9d9995] p-1  -ml-5 xl:-ml-10 font-normal">
                   I bring a website to life with JavaScript, adding interactive
                   features and optimizing performance with clean and efficient
                   code.
                 </h3>
               </div>
               <div
-                className="border-b-2 border-b-[#bebeb0] p-3 w-[440px] xl:pt-5
+                className="border-b-2 border-b-[#bebeb0] p-3 w-[400px] xl:pt-5
                 xl:h-[144px] sm:flex sm:gap-32 sm:w-[720px] xl:p-5 xl:w-full xl:flex xl:gap-44"
               >
                 <li className="relative z-10 ">
                   <div className="link flex p-5 justify-between mix-blend-difference">
-                    <span className="block relative xl:-mt-10 -ml-5 text-[#bdbdaf]">
+                    <span className="block relative xl:-mt-10 -ml-10 text-[#bdbdaf]">
                       HTML
                     </span>
                     <div className="hover-reveal absolute w-300 h-400 top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 pointer-events-none overflow-hidden opacity-0 scale-80 transition-all duration-500 ease-out">
@@ -117,19 +117,19 @@ function Skills() {
                     </div>
                   </div>
                 </li>
-                <h3 className="  w-[400px] xl:w-[420px] xl:-mt-5 xl:ml-5 text-xl xl:h-[100px] text-[#9d9995] p-1 font-normal ">
+                <h3 className="  w-[400px] xl:w-[420px] xl:-mt-5 -ml-5 xl:ml-5 text-xl xl:h-[100px] text-[#9d9995] p-1 font-normal ">
                   I craft the foundation of web pages, structuring content in a
                   clear and logical manner to ensure accessibility and
                   compatibility across different devices and platforms.
                 </h3>
               </div>
               <div
-                className="border-b-2 border-b-[#bebeb0] xl:p-5 sm:flex sm:gap-32 sm:w-[720px] p-3 w-[440px] 
+                className="border-b-2 border-b-[#bebeb0] xl:p-5 sm:flex sm:gap-32 sm:w-[720px] p-3 w-[400px] 
                 xl:h-[160px] xl:w-full xl:flex xl:gap-4"
               >
                 <li className="relative z-10 ">
                   <div className="link flex p-5 justify-between mix-blend-difference">
-                    <span className="block relative xl:-mt-10 -ml-5 text-[#bdbdaf] ">
+                    <span className="block relative xl:-mt-10 -ml-10 text-[#bdbdaf] ">
                       TailwindCSS
                     </span>
                     <div className="hover-reveal absolute w-300 h-400 top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 pointer-events-none overflow-hidden opacity-0 scale-80 transition-all duration-500 ease-out">
@@ -141,20 +141,20 @@ function Skills() {
                     </div>
                   </div>
                 </li>
-                <h3 className=" w-[400px] xl:w-[480px] xl:pl-2 xl:ml-0 text-xl h-[100px] text-[#9d9995] p-1 font-normal ">
+                <h3 className=" w-[400px] xl:w-[480px] xl:pl-2 xl:ml-0 -ml-5 mb-4 text-xl h-[100px] text-[#9d9995] p-1 font-normal ">
                   I leverage a utility-first approach to rapidly style and
                   design web interfaces, facilitating responsive layouts and
                   consistent design systems with minimal CSS code
                 </h3>
               </div>
               <div
-                className="border-b-2 border-b-[#bebeb0] w-[440px]
+                className="border-b-2 border-b-[#bebeb0] w-[400px]
                 sm:flex sm:gap-32 sm:w-[720px] 
                 p-3 xl:h-[180px]  xl:w-full xl:flex xl:gap-32"
               >
                 <li className="relative z-10 ">
                   <div className="link flex p-5 justify-between mix-blend-difference">
-                    <span className="block relative  xl:-mt-10 -ml-5 text-[#bdbdaf] ">
+                    <span className="block relative  xl:-mt-10 -ml-10 text-[#bdbdaf] ">
                       GSAP
                     </span>
                     <div className="hover-reveal absolute w-300 h-400 top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 pointer-events-none overflow-hidden opacity-0 scale-80 transition-all duration-500 ease-out">
@@ -166,7 +166,7 @@ function Skills() {
                     </div>
                   </div>
                 </li>
-                <h3 className="w-[420px] xl:w-[480px] -mt-2 text-xl xl:pl-5 xl:ml-10 oapcity-90  text-[#9d9995] p-1 font-normal ">
+                <h3 className="w-[420px] xl:w-[480px] -mt-2 text-xl xl:pl-5 xl:ml-10 -ml-5 oapcity-90  text-[#9d9995] p-1 font-normal ">
                   I craft captivating animations and dynamic visual effects,
                   enhancing user experience and engagement on web pages by
                   seamlessly animating elements and creating immersive
@@ -174,14 +174,14 @@ function Skills() {
                 </h3>
               </div>
               <div
-                className="border-b-2 border-b-[#bebeb0] p-3 w-[440px] 
+                className="border-b-2 border-b-[#bebeb0] p-3 w-[400px] 
                 sm:flex sm:gap-32 sm:w-[720px] xl:-mt-2
                 lg:w-full
                 xl:h-[205px]  xl:w-full xl:flex xl:gap-20"
               >
                 <li className="relative z-10 ">
                   <div className="link flex p-5 justify-between mix-blend-difference">
-                    <span className="block relative  xl:-mt-10 -ml-5 text-[#bdbdaf] ">
+                    <span className="block relative  xl:-mt-10 -ml-10 text-[#bdbdaf] ">
                       ReactJs
                     </span>
                     <div className="hover-reveal absolute w-300 h-400 top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 pointer-events-none overflow-hidden opacity-0 scale-80 transition-all duration-500 ease-out">
@@ -193,7 +193,7 @@ function Skills() {
                     </div>
                   </div>
                 </li>
-                <h3 className="  w-[410px] xl:w-[480px] xl:pl-5 -mt-2 xl:ml-9  text-xl  text-[#9d9995] p-1 font-normal ">
+                <h3 className="  w-[410px] xl:w-[480px] xl:pl-5 -mt-2 xl:ml-9 -ml-5 text-xl  text-[#9d9995] p-1 font-normal ">
                   I architect dynamic and responsive user interfaces, leveraging
                   modular components and state management to build scalable and
                   interactive web applications, ensuring seamless navigation and

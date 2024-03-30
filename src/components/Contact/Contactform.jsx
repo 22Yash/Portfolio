@@ -30,7 +30,7 @@ function Contactform() {
   };
 
   return (
-    <div id="Contact" className=" ">
+    <div id="Contact" className="w-[500px] xl:w-full ">
 
       <div id="contactHeading" className="bg-[#d6d6d0]  w-[575px] xl:w-full " style={{ backgroundImage: `url(${heroSVG})`, backgroundSize: "cover" }}>
         <h1 className="xl:text-[85px] text-[70px] ml-20 font-helvetica  xl:flex xl:justify-center font-semibold xl:ml-20 xl:pt-5 xl:mt-0 mt-64 pt-10 ">Let's work together. </h1>

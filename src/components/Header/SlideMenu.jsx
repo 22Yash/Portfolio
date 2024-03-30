@@ -44,7 +44,7 @@ function SlideMenu() {
     <div className="fixed xl:top-20  top-0 right-0 z-50"
    >
       <button onClick={toggleMenu} className="xl:w-24   xl:h-24 xl:m-5  
-            ml-20 mt-5 mr-5 w-16 h-16 bg-[#5f5c57]  rounded-full "  >
+            -ml-28 mt-5 mr-5 w-16 h-16 bg-[#5f5c57]  rounded-full "  >
         {isOpen ? <FiX className="text-3xl xl:ml-8 ml-4 text-white" /> : <FiMenu className="text-3xl xl:ml-8 ml-4 text-black" />}
       </button>
       <div
