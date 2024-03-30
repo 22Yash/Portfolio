@@ -17,9 +17,10 @@ function Links({ columnDirection }) {
         li.addEventListener("mouseenter", () => {
           gsap.to(li, {
             borderBottomWidth: "3px",
-            borderColor: "#3A606E",
+            borderColor: "#3a3733",
             duration: 0.5,
             y: -10,
+            width:"120px"
           });
         });
   
@@ -59,7 +60,7 @@ function Links({ columnDirection }) {
 
   return (
     <>
-      <div id="links" className="translate-y-full mt-24 sm:-mt-16 xl:mt-0">
+      <div id="links" className="translate-y-full mt-24 sm:-mt-16 xl:mt-0 xl:-ml-8">
        
         <ul
           className={`flex gap-5 m-5 font-semibold mt-10   xl:mt-16 
@@ -69,15 +70,15 @@ function Links({ columnDirection }) {
             columnDirection ? "flex-col" : ""
           }`}
         >
-          <h4 className="opacity-50    ">Socials</h4>
+          <h4 className=" xl:text-[45px] p-2  border-b-2 border-black w-[200px] ">Socials</h4>
            
-          <li ref={(el) => (liRef.current[0] = el)}>
+          <li ref={(el) => (liRef.current[0] = el)} className="text-[#3a3733] xl:text-[22px] xl:ml-5">
            <Link > LinkedIn </Link></li>
 
-          <li ref={(el) => (liRef.current[1] = el)}>
+          <li ref={(el) => (liRef.current[1] = el)} className="text-[#3a3733] xl:text-[22px] xl:ml-5">
             <Link>Github</Link>
           </li>
-          <li ref={(el) => (liRef.current[2] = el)}>
+          <li ref={(el) => (liRef.current[2] = el)} className="text-[#3a3733] xl:text-[22px] xl:ml-5  ">
             <Link>Instagram</Link>
           </li>
         </ul>

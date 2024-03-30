@@ -5,6 +5,7 @@ import image3 from "./tailwind.png";
 import image4 from "./GSAP.png";
 import image5 from "./react.png";
 import gsap from "gsap";
+import skillSVG from "./skill.svg"
 
 function Skills() {
   useEffect(() => {
@@ -38,11 +39,12 @@ function Skills() {
       <div
         id="Skills"
         className="skills
-    w-[500px] h-[160vh] text-[#cecec5]
+        w-[575px] h-[160vh] text-[#cecec5]
     sm:w-[766px] lg:w-full xl:-translate-y-44
     xl:w-full xl:h-[130vh] grid xl:flex xl:justify-between"
+    style={{ backgroundImage: `url(${skillSVG})`, backgroundSize: "cover" }}
       >
-        <div id="col1" className="bg-black xl:w-[700px] ">
+        <div id="col1" className="bg-[#0d0d0c]  xl:w-[700px] ">
           <h2
             className="
            pt-10 pl-10 text-5xl font-semibold w-3/4
@@ -66,7 +68,7 @@ function Skills() {
           ></div>
         </div>
 
-        <div id="col2" className="bg-black xl:w-[1000px]">
+        <div id="col2" className="bg-[#0d0d0c] xl:w-[1000px]">
           <div
             id="stack"
             className="

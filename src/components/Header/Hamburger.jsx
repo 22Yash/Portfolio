@@ -4,6 +4,7 @@ import gsap from "gsap";
 import { FiX } from "react-icons/fi";
 import { NavLink } from "react-router-dom";
 import { HashLink as Link } from "react-router-hash-link";
+import hamburgerSVG from "./hamburger.svg"
 
 function Hamburger() {
   const menuRef = useRef(null);
@@ -68,13 +69,15 @@ function Hamburger() {
 
   return (
     <>
-      <div id="div" className="xl:w-full  xl:relative opacity-1  z-90 ">
+      <div id="div" className="xl:w-full  xl:relative opacity-1  z-90 
+      "
+      style={{ backgroundImage: `url(${hamburgerSVG})`, backgroundSize: "cover" }}>
         <div id="button" className=" mr-40 float-end">
           <button
             ref={buttonRef}
             onClick={openMenu}
             className=" xl:w-24   xl:h-24 xl:m-5  
-            ml-20 mt-5 w-16 h-16 bg-[#5f5c57]  fixed rounded-full"
+            ml-20 mt-5 w-16 h-16 bg-red-300  fixed rounded-full"
           >
             <div id="icon" className="text-3xl xl:ml-8 ml-4  text-white ">
               <FiAlignJustify />

@@ -6,6 +6,8 @@ import LocomotiveScroll from "locomotive-scroll";
 import Resume from "./Resume";
 import Hamburger from "../Header/Hamburger";
 import SlideMenu from "../Header/SlideMenu";
+import workSVG from "./work.svg"
+
 
 function Work() {
   const mousefollowerRef = useRef(null);
@@ -130,7 +132,7 @@ function Work() {
   return (
     <>
    <SlideMenu/>
-      <section id="Work" className="work  w-[500px] xl:w-full sm:w-full rounded-t-full">
+      <section id="Work" className="work   w-[575px] xl:w-full sm:w-full rounded-t-full">
         
         
         <div id="work" ref={workRef} className="overflow-x-hidden">
@@ -142,10 +144,12 @@ function Work() {
             view
           </div>
           <div id="projects" className="project w-full  ">
-            <div className="cont  h-[400vh] sm:h-[350vh] xl:h-[120vh] bg-[#0a0a09]">
+            <div className="cont  h-[400vh] sm:h-[350vh] xl:h-[120vh] bg-[#0d0d0c]"
+            >
               <div
                 className="slides grid  
-               xl:top-0 xl:left-0  xl:w-full xl:flex h-screen bg-[#0a0a09]"
+               xl:top-0 xl:left-0  xl:w-full xl:flex h-screen bg-[#0d0d0c]"
+               style={{ backgroundImage: `url(${workSVG})`, backgroundSize: "cover" }}
               >
                 
                 <div

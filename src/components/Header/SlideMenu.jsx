@@ -2,6 +2,7 @@ import React, { useState, useRef } from "react";
 import { FiMenu, FiX } from "react-icons/fi";
 import gsap from "gsap";
 import { HashLink as Link } from "react-router-hash-link";
+import hamburgerSVG from "./hamburger.svg"
 
 function SlideMenu() {
   const [isOpen, setIsOpen] = useState(false);
@@ -40,19 +41,21 @@ function SlideMenu() {
   };
 
   return (
-    <div className="fixed xl:top-20  top-0 right-0 z-50">
+    <div className="fixed xl:top-20  top-0 right-0 z-50"
+   >
       <button onClick={toggleMenu} className="xl:w-24   xl:h-24 xl:m-5  
-            ml-20 mt-5 mr-5 w-16 h-16 bg-[#5f5c57]  rounded-full ">
+            ml-20 mt-5 mr-5 w-16 h-16 bg-[#5f5c57]  rounded-full "  >
         {isOpen ? <FiX className="text-3xl xl:ml-8 ml-4 text-white" /> : <FiMenu className="text-3xl xl:ml-8 ml-4 text-black" />}
       </button>
       <div
         ref={menuRef}
         className="fixed top-0 right-0 h-full bg-[#3b3834] sm:w-4/12 xl:w-4/12 flex flex-col text-5xl justify-center"
-        style={{ transform: isOpen ? "translateX(0)" : "translateX(600px)" }}
+        style={{ transform: isOpen ? "translateX(0)" : "translateX(600px)" ,   backgroundImage: `url(${hamburgerSVG})`, backgroundSize: "cover" 
+        }}
       >
         {isOpen && (
           <button onClick={closeMenu} className="absolute mt-2  rounded-full w-16 h-16 xl:w-24 xl:h-24 bg-white top-4 right-4">
-            <FiX className="text-black xl:ml-5 ml-4 text-3xl xl:text-5xl" />
+            <FiX className="text-black xl:ml-5 ml-4 text-3xl xl:text-5xl " />
           </button>
         )}
         <ul className=" xl:flex-col p-10 xl:mt-4 xl:mr-10 text-white xl:text-white xl:text-7xl xl:ml-20 font-medium flex-col lg:flex-row lg:space-x-8 lg:mt-0">
