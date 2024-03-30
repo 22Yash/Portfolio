@@ -58,15 +58,15 @@ function Work() {
 
   const tlDesktop = useRef(null);
   const tlMobile = useRef(null);
+  const tlTablet = useRef(null);
   const el = hamburgerRef.current;
   
    
 
   useEffect(() => {
     
-    const isLaptopScreen = window.innerWidth > 768;
-
-    if (isLaptopScreen) {
+    const screenWidth = window.innerWidth;
+    if (screenWidth > 1024) {
       // Animation for desktop/laptop screens
       tlDesktop.current = gsap.timeline();
 
@@ -102,7 +102,28 @@ function Work() {
 
 
 
-    } else {
+    }else if (screenWidth <= 1024 && screenWidth > 768) {
+
+      
+      tlTablet.current = gsap.timeline();
+
+      tlTablet.current.to(".slide", {
+        scrollTrigger: {
+          trigger: ".project",
+          start: "-200 top ",
+          end: "0 top ",
+          scrub: 1,
+          markers: true,
+        },
+        xPercent: 0,
+        duration: 2,
+      });
+
+     
+
+      
+    } 
+    else {
       // Animation for mobile screens
       tlMobile.current = gsap.timeline();
 
