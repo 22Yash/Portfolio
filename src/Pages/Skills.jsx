@@ -38,7 +38,7 @@ function Skills() {
     <>
       <div
         id="Skills"
-        className="skills
+        className="skills -mt-[250px] xl:mt-0
         w-[500px] h-[160vh] text-[#cecec5]
     sm:w-[766px] lg:w-full xl:-translate-y-44
     xl:w-full xl:h-[130vh] grid xl:flex xl:justify-between"

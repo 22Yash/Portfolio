@@ -60,7 +60,7 @@ function Links({ columnDirection }) {
 
   return (
     <>
-      <div id="links" className="translate-y-full w-[540px] h-[0px] xl:w-full mt-24 sm:-mt-16 xl:mt-0 xl:-ml-8">
+      <div id="links" className="translate-y-full -ml-36 w-[500px] h-[0px] xl:w-full mt-24 sm:-mt-16 xl:mt-0 xl:-ml-8">
        
         <ul
           className={`flex gap-5 m-5 font-semibold mt-10   xl:mt-16 
@@ -70,16 +70,16 @@ function Links({ columnDirection }) {
             columnDirection ? "flex-col" : ""
           }`}
         >
-          <h4 className=" xl:text-[45px] p-2  border-b-2 border-black w-[540px] ">Socials</h4>
+          <h4 className=" xl:text-[45px] xl:mt-40 xl:ml-2   p-2 border-b-2 border-black opacity-0 xl:opacity-100 ">Socials</h4>
           <br />
            
-          <li ref={(el) => (liRef.current[0] = el)} className="text-[#3a3733] text-[10px] xl:text-[22px] xl:ml-5">
+          <li ref={(el) => (liRef.current[0] = el)} className="text-[#3a3733] text-[20px] xl:-mt-20 mt-0   xl:text-[22px] xl:ml-5">
            <Link > LinkedIn </Link></li>
 
-          <li ref={(el) => (liRef.current[1] = el)} className="text-[#3a3733] text-[10px] xl:text-[22px] xl:ml-5">
+          <li ref={(el) => (liRef.current[1] = el)} className="text-[#3a3733] text-[20px] xl:text-[22px] xl:ml-5">
             <Link>Github</Link>
           </li>
-          <li ref={(el) => (liRef.current[2] = el)} className="text-[#3a3733]  text-[10px] xl:text-[22px] xl:ml-5  ">
+          <li ref={(el) => (liRef.current[2] = el)} className="text-[#3a3733]  text-[20px] xl:text-[22px] xl:ml-5  ">
             <Link>Instagram</Link>
           </li>
         </ul>
