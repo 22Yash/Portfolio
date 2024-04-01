@@ -15,6 +15,7 @@ import Skills from "./Skills";
 import Mousefollower from "../components/Animation/Mousefollower";
 import Menu from "./Menu";
 import Hover from "./Hover";
+import BackToTopButton from "../components/Header/BackToTopButton";
 
 
 function Home() {
@@ -35,7 +36,8 @@ function Home() {
        
        
         <Resume />
-        {/* <Contactform/> */}
+        <Contactform/>
+        <BackToTopButton/>
         
         
       </ReactLenis>

@@ -8,33 +8,29 @@ function Links({ columnDirection }) {
   useEffect(() => {
     const liElements = liRef.current;
 
-    
-
-
-    if(window.innerWidth > 768){
-
+    if (window.innerWidth > 768) {
       liElements.forEach((li) => {
         li.addEventListener("mouseenter", () => {
           gsap.to(li, {
-            borderBottomWidth: "3px",
-            borderColor: "#3a3733",
+            borderBottomWidth: "0",
+            textDecoration: "underline",
+            textDecorationColor: "#3a3733",
             duration: 0.5,
             y: -10,
-            width:"120px"
+            width: "120px",
           });
         });
-  
+
         li.addEventListener("mouseleave", () => {
           gsap.to(li, {
             borderBottomWidth: "0",
+            textDecoration: "none",
             duration: 0.3,
             y: 0,
           });
         });
       });
-  
-
-    }else{
+    } else {
       liElements.forEach((li) => {
         li.addEventListener("mouseenter", () => {
           gsap.to(li, {
@@ -44,7 +40,7 @@ function Links({ columnDirection }) {
             y: -10,
           });
         });
-  
+
         li.addEventListener("mouseleave", () => {
           gsap.to(li, {
             borderBottomWidth: "0",
@@ -53,33 +49,44 @@ function Links({ columnDirection }) {
           });
         });
       });
-    
     }
   }, []);
-  
 
   return (
     <>
-      <div id="links" className="translate-y-full -ml-36 w-[500px] h-[0px] xl:w-full mt-24 sm:-mt-16 xl:mt-0 xl:-ml-8">
-       
+      <div
+        id="links"
+        className="translate-y-full -ml-36 w-[500px] h-[0px] xl:w-full mt-24 sm:-mt-[320px] sm:-ml-[40px] xl:mt-0 xl:-ml-8"
+      >
         <ul
-          className={`flex gap-5 m-5 font-semibold mt-10   xl:mt-16 
-          
-          sm:static sm:flex sm:justify-end sm:gap-10 sm:m-10 sm:mt-36 sm:font-semibold 
-         xl:${
-            columnDirection ? "flex-col" : ""
-          }`}
+          className={`flex gap-5 m-5 font-semibold mt-10 
+          sm:static sm:gap-10 sm:m-10 sm:mt-36 sm:font-semibold 
+          sm:flex sm:flex-col
+          ${!columnDirection ? "xl:flex xl:gap-5 xl:m-5 xl:mt-10 xl:font-semibold" : ""}
+        `}
         >
-          <h4 className=" xl:text-[45px] xl:mt-40 xl:ml-2   p-2 border-b-2 border-black opacity-0 xl:opacity-100 ">Socials</h4>
+          <h4 className=" xl:text-[45px] xl:mt-40 xl:ml-2 sm:mt-[80px] mt-[120px] sm:-ml-[0px]  p-2 underline underline-offset-[15px] opacity-0 sm:opacity-100 xl:opacity-100 ">
+            Socials
+          </h4>
           <br />
-           
-          <li ref={(el) => (liRef.current[0] = el)} className="text-[#3a3733] text-[20px] xl:-mt-20 mt-0   xl:text-[22px] xl:ml-5">
-           <Link > LinkedIn </Link></li>
 
-          <li ref={(el) => (liRef.current[1] = el)} className="text-[#3a3733] text-[20px] xl:text-[22px] xl:ml-5">
+          <li
+            ref={(el) => (liRef.current[0] = el)}
+            className="text-[#3a3733] text-[20px] xl:-mt-20 mt-0 sm:-mt-[80px]    xl:text-[22px] xl:ml-5"
+          >
+            <Link> LinkedIn </Link>
+          </li>
+
+          <li
+            ref={(el) => (liRef.current[1] = el)}
+            className="text-[#3a3733] text-[20px] xl:text-[22px] xl:ml-5"
+          >
             <Link>Github</Link>
           </li>
-          <li ref={(el) => (liRef.current[2] = el)} className="text-[#3a3733]  text-[20px] xl:text-[22px] xl:ml-5  ">
+          <li
+            ref={(el) => (liRef.current[2] = el)}
+            className="text-[#3a3733]  text-[20px] xl:text-[22px] xl:ml-5  "
+          >
             <Link>Instagram</Link>
           </li>
         </ul>
