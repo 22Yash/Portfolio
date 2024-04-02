@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 // Assuming you have some CSS for styling
 import heroSVG from "./nnnoise.svg";
+import { GoArrowUp } from "react-icons/go";
 
 const BackToTopButton = () => {
   const [isVisible, setIsVisible] = useState(false);
@@ -28,12 +29,16 @@ const BackToTopButton = () => {
   }, []);
 
   return (
-    <div className={`back-to-top ${isVisible ? 'visible' : ''} xl:w-full xl:bg-red-300 xl:h-[60px]`} onClick={scrollToTop}
+    <div className={`back-to-top ${isVisible ? 'visible' : ''}
+   w-[500px]
+    xl:w-full  xl:h-[60px]`} onClick={scrollToTop}
     style={{
         backgroundImage: `url(${heroSVG})`,
         backgroundSize: "cover",
       }}>
-      <span className='xl:right-0 xl:float-end xl:float xl:p-5 '>Back to Top</span>
+      <span className='
+      opacity-0 xl:opacity-100
+      xl:right-0 xl:float-end xl:float xl:mr-10  xl:-pt-5 font-helvetica text-[20px] xl:flex xl:gap-2 '> <GoArrowUp /> Back to Top</span>
     </div>
   );
 };

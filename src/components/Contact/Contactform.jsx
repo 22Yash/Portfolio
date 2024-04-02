@@ -193,7 +193,7 @@ function Contactform() {
             id="link"
             className="
          mt-40 text-3xl  h-28  xl:text-2xl sm:mt-[320px]
-         xl:w-1/4 xl:ml-20 xl:-mt-48"
+         xl:w-1/4 xl:ml-20 xl:-mt-[250px]"
           >
             <Links columnDirection={true} />
           </div>
