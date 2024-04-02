@@ -16,6 +16,8 @@ import Mousefollower from "../components/Animation/Mousefollower";
 import Menu from "./Menu";
 import Hover from "./Hover";
 import BackToTopButton from "../components/Header/BackToTopButton";
+import MovingCircle from "../components/Header/MovingCircle";
+import AnimatedText from "../components/Header/MovingCircle";
 
 
 function Home() {
@@ -28,7 +30,7 @@ function Home() {
     <>
       <ReactLenis root>
         {/* <Preloader /> */}
-        
+        <MovingCircle/>
           <Hero /> 
           <Work />
           <Skills/>

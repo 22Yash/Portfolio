@@ -29,17 +29,30 @@ const BackToTopButton = () => {
   }, []);
 
   return (
-    <div className={`back-to-top ${isVisible ? 'visible' : ''}
-   w-[500px]
-    xl:w-full  xl:h-[60px]`} onClick={scrollToTop}
+
+    <>
+    <div id="bottom"
     style={{
-        backgroundImage: `url(${heroSVG})`,
-        backgroundSize: "cover",
-      }}>
+      backgroundImage: `url(${heroSVG})`,
+      backgroundSize: "cover",
+    }}>
+      <div id="love" className='xl:flex xl:gap-[520px] xl:text-[20px] font-helvetica  '>
+      <div id="first" className='xl:ml-10 xl:mt-10 xl:pt-5 font-bold'>Yash Doke</div>
+      <div id="second" className='xl:mt-16'>Site designed and coded with ❤️‍🔥</div>
+      </div>
+      
+      <div className={`back-to-top ${isVisible ? 'visible' : ''}
+    w-[500px] h-[30px]
+    xl:w-full  xl:h-[60px]`} onClick={scrollToTop}
+    >
       <span className='
-      opacity-0 xl:opacity-100
-      xl:right-0 xl:float-end xl:float xl:mr-10  xl:-pt-5 font-helvetica text-[20px] xl:flex xl:gap-2 '> <GoArrowUp /> Back to Top</span>
+      flex  gap-5
+      xl:right-0 xl:float-end xl:float xl:mr-10 xl:-mt-5 xl:-pt-2 0 font-helvetica text-[20px] xl:flex xl:gap-2 '> <GoArrowUp /> Back to Top</span>
     </div>
+    </div>
+    
+    
+    </>
   );
 };
 

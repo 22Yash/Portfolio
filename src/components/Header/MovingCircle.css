@@ -1,0 +1,23 @@
+#text {
+    position: relative;
+    width: 200px; /* Adjust as needed */
+    height: 200px; /* Adjust as needed */
+    font-size: 20px;
+  }
+  
+  #text span {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform-origin: top left;
+  }
+  
+  @keyframes rotateText {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }
+  
