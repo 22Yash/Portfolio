@@ -1,5 +1,6 @@
 import React, { useEffect, useRef } from "react";
 import gsap from "gsap";
+import MovingCircle from "./MovingCircle";
 
 function Preloader() {
   const textRef = useRef(null);
@@ -113,10 +114,12 @@ function Preloader() {
      bg-black text-white font-semibold   "
       >
         <div className="first w-full h-[120px]   ">
+       
           <h1
             ref={textRef}
-            className="firsttext ml-20 mt-20 text-[50px] text-[#d0d0c6]   xl:text-[100px]  xl:mt-40  xl:flex  xl:flex-row   xl:justify-center xl:items-center"
+            className="firsttext  ml-20 mt-20 text-[50px] text-[#d0d0c6]   xl:text-[100px]  xl:mt-40  xl:flex  xl:flex-row   xl:justify-center xl:items-center"
           >
+            
             <span>U</span>
             <span>n</span>
             <span>v</span>

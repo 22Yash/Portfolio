@@ -1,5 +1,6 @@
 import React, { useEffect } from 'react';
 import './MovingCircle.css'; // Import the CSS file for animations
+import image1 from "./yash.png"
 
 const MovingCircle = () => {
   useEffect(() => {
@@ -24,9 +25,7 @@ const MovingCircle = () => {
   return (
     <div id="text" className='moving-circle'>
      Yash Doke  Yash Doke  <span></span>
-     <div id="img">
-      
-     </div>
+     
     </div>
   );
 };
