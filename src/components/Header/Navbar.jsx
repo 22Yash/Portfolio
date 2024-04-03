@@ -1,6 +1,7 @@
 import React, { useEffect, useRef } from "react";
 import { HashLink as Link } from "react-router-hash-link";
 import heroSVG from "./nnnoise.svg"
+import MovingCircle from "./MovingCircle";
 
 function Navbar() {
 
@@ -17,12 +18,7 @@ function Navbar() {
     style={{ backgroundImage: `url(${heroSVG})`, backgroundSize: "cover" }}
       >
         <div id="leftNav">
-          <Link>
-            <img
-              src="https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.freepik.com%2Fpremium-vector%2Fyd-logo-design_32973513.htm&psig=AOvVaw1ue4_sY1Oooh2Zs5wAxfBA&ust=1709466461636000&source=images&cd=vfe&opi=89978449&ved=0CBEQjRxqFwoTCLDJ1f7A1YQDFQAAAAAdAAAAABAD"
-              alt=""
-            />
-          </Link>
+         <MovingCircle/>
         </div>
         <div id="rightNav" className="
         xl:flex xl:gap-10 xl:mt-5  xl:h-12 xl:m-2 xl:text-white xl:rounded-l-full xl:rounded-r-full">

@@ -3,6 +3,9 @@
     width: 200px; /* Adjust as needed */
     height: 200px; /* Adjust as needed */
     font-size: 20px;
+    animation: rotateText 10s linear infinite;
+    font-family: Arial, Helvetica, sans-serif;
+
   }
   
   #text span {

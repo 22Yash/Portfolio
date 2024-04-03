@@ -30,7 +30,7 @@ function Home() {
     <>
       <ReactLenis root>
         {/* <Preloader /> */}
-        <MovingCircle/>
+        
           <Hero /> 
           <Work />
           <Skills/>

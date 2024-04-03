@@ -14,14 +14,19 @@ const MovingCircle = () => {
     characters.forEach((char, index) => {
       const span = document.createElement('span');
       span.textContent = char;
-      span.style.transform = `rotate(${angleStep * index}deg) translateY(-50px)`;
+      // Add an offset to the rotation angle to create space between the first and last characters
+      const rotationAngle = angleStep * index ;
+      span.style.transform = `rotate(${rotationAngle}deg) translateY(-70px)`;
       text.appendChild(span);
     });
   }, []);
 
   return (
     <div id="text" className='moving-circle'>
-      circular text effect
+     Yash Doke  Yash Doke  <span></span>
+     <div id="img">
+      
+     </div>
     </div>
   );
 };
