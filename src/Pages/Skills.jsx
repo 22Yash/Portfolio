@@ -33,10 +33,37 @@ function Skills() {
     }
   });
 
+  const marqueeRef = useRef(null);
+
+  useEffect(() => {
+    const marquee = marqueeRef.current;
+
+    const textWidth = marquee.offsetWidth;
+    const containerWidth = marquee.parentElement.offsetWidth;
+
+    // Calculate the duration based on the difference between text width and container width
+    const duration = (textWidth + containerWidth) / 50; // Adjust speed as needed
+
+    // GSAP animation
+    gsap.to(marquee, {
+      x: -textWidth,
+      duration: duration,
+      repeat: -1, // Infinite loop
+      ease: 'linear',
+    });
+  }, []);
+
   
   return (
     <>
-      <div
+    <div className="overflow-hidden  mt-[-50px]">
+      <div ref={marqueeRef} className="inline-block font-bold outline-4 whitespace-nowrap border border-red-400  text-[100px] ">
+        {/* Add your text content here */}
+        Contact Contact COntact Contact Contact Contact COntact Contact   
+      </div>
+    </div>
+    
+      {/* <div
         id="Skills"
         className="skills -mt-[250px] xl:mt-0
         w-[500px] h-[160vh] text-[#cecec5]
@@ -44,6 +71,7 @@ function Skills() {
     xl:w-full xl:h-[130vh] grid xl:flex xl:justify-between"
     style={{ backgroundImage: `url(${skillSVG})`, backgroundSize: "cover" }}
       >
+        
         <div id="col1" className="bg-[#0d0d0c] sm:w-[766px] xl:w-[700px] ">
           <h2
             className="
@@ -207,7 +235,7 @@ function Skills() {
             <div className="skiils"></div>
           </div>
         </div>
-      </div>
+      </div> */}
     </>
   );
 }

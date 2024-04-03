@@ -18,6 +18,7 @@ import Hover from "./Hover";
 import BackToTopButton from "../components/Header/BackToTopButton";
 import MovingCircle from "../components/Header/MovingCircle";
 import AnimatedText from "../components/Header/MovingCircle";
+import Marquee from "./Marquee";
 
 
 function Home() {
@@ -29,11 +30,12 @@ function Home() {
   return (
     <>
       <ReactLenis root>
-        <Preloader />
+        {/* <Preloader /> */}
         
           <Hero /> 
           <Work />
           <Skills/>
+          <Marquee/>
           
        
        
