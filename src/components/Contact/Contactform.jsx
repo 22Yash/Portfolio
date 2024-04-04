@@ -32,35 +32,12 @@ function Contactform() {
     e.target.reset();
   };
 
-  const marqueeRef = useRef(null);
 
-  useEffect(() => {
-    const marquee = marqueeRef.current;
-
-    const textWidth = marquee.offsetWidth;
-    const containerWidth = marquee.parentElement.offsetWidth;
-
-    // Calculate the duration based on the difference between text width and container width
-    const duration = (textWidth + containerWidth) / 50; // Adjust speed as needed
-
-    // GSAP animation
-    gsap.to(marquee, {
-      x: -textWidth,
-      duration: duration,
-      repeat: -1, // Infinite loop
-      ease: 'linear',
-    });
-  }, []);
 
   return (
     <div id="Contact" className="w-[500px] xl:w-full  "
     style={{ backgroundImage: `url(${heroSVG})`, backgroundSize: "cover" }}>
-      <div className="overflow-hidden  mt-[-50px]">
-      <div ref={marqueeRef} className="inline-block font-bold    outline-4 whitespace-nowrap   text-[100px] ">
-        {/* Add your text content here */}
-        Contact   Contact  Contact    Contact   Contact  Contact    Contact   Contact  Contact   
-      </div>
-    </div>
+      
       
       <div
         id="contactHeading"
