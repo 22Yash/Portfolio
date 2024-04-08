@@ -109,7 +109,7 @@ function Preloader() {
       <div
         id="preloader"
         ref={preloaderRef}
-        className="preloader w-full  fixed z-10 h-screen
+        className="preloader w-full  fixed z-10 h-[125vh] xl:h-screen
     rounded-b-3xl 
      bg-black text-white font-semibold   "
       >
@@ -117,7 +117,8 @@ function Preloader() {
        
           <h1
             ref={textRef}
-            className="firsttext  ml-20 mt-20 text-[50px] text-[#d0d0c6]   xl:text-[100px]  xl:mt-40  xl:flex  xl:flex-row   xl:justify-center xl:items-center"
+            className="firsttext  ml-12 mt-20 text-[40px] text-[#d0d0c6]   xl:text-[100px]  xl:mt-40  xl:flex  xl:flex-row   xl:justify-center xl:items-center"
+          
           >
             
             <span>U</span>
@@ -154,7 +155,7 @@ function Preloader() {
         <div id="third">
           <h2
             ref={thirdtext}
-            className="third text-[#bdbdb0] ml-28 -mt-20 xl:ml-0 text-[60px] xl:text-[100px] xl:flex xl:justify-center xl:mt-10 uppercase font-bold"
+            className="third text-[#bdbdb0] ml-[180px] -mt-20 xl:ml-0 text-[60px] xl:text-[100px] xl:flex xl:justify-center xl:mt-10 uppercase font-bold"
           >
             <span>y</span>
             <span>A</span>

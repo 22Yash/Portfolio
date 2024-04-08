@@ -18,7 +18,10 @@ function Navbar() {
     style={{ backgroundImage: `url(${heroSVG})`, backgroundSize: "cover" }}
       >
         <div id="leftNav">
-         <MovingCircle/>
+          <Link to="/">
+          <MovingCircle/>
+          </Link>
+         
         </div>
         <div id="rightNav" className="hidden
         xl:flex xl:gap-10 xl:mt-5  xl:h-12 xl:m-2 xl:text-white xl:rounded-l-full xl:rounded-r-full">

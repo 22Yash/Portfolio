@@ -30,7 +30,7 @@ function Home() {
   return (
     <>
       <ReactLenis root>
-        {/* <Preloader /> */}
+        <Preloader />
         
           <Hero /> 
           <Work />

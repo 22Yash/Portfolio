@@ -7,6 +7,7 @@ import hamburgerSVG from "./hamburger.svg"
 function SlideMenu() {
   const [isOpen, setIsOpen] = useState(false);
   const menuRef = useRef(null);
+  
 
   const toggleMenu = () => {
     setIsOpen(!isOpen);
@@ -35,10 +36,14 @@ function SlideMenu() {
       x: 600,
       duration: 0.5,
       ease: "power2.in",
+      borderBottomLeftRadius:"70px",
+      borderTopLeftRadius:"70px"
       
      
     });
   };
+
+  
 
   return (
     <div className="fixed xl:top-20  top-0 right-0 z-50"
@@ -58,15 +63,15 @@ function SlideMenu() {
             <FiX className="text-black xl:ml-5 ml-4 text-3xl xl:text-5xl " />
           </button>
         )}
-        <ul className=" xl:flex-col p-10 xl:mt-4 xl:mr-10 text-white xl:text-white xl:text-7xl xl:ml-20 font-medium flex-col lg:flex-row lg:space-x-8 lg:mt-0">
-                <li>
+        <ul className=" xl:flex-col  p-10 xl:mt-4 xl:mr-10 text-white xl:text-white xl:text-7xl xl:ml-20 font-medium flex-col lg:flex-row lg:space-x-8 lg:mt-0">
+                <li className="xl:ml-7">
                   <Link
                     to="/"
                     className={({ isActive }) =>
                       `block py-2 pr-4 pl-3 duration-200 ${
                         isActive ? "text-[#e1e1dc]" : "text-[#e1e1dc]"
                       } 
-                       hover:bg-gray-50  -ml-8 lg:hover:bg-transparent lg:border-0 hover:text-[#babaad] xl:-ml-10 lg:p-2 `
+                       hover:bg-gray-50  -ml-[10px] lg:hover:bg-transparent lg:border-0 hover:text-[#babaad] xl:-ml-10 lg:p-2 `
                     }
                   >
                     Home
