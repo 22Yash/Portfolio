@@ -153,7 +153,7 @@ function Work() {
   return (
     <>
    <SlideMenu/>
-      <section id="Work" className="work   w-[500px] xl:w-full sm:w-full rounded-t-full">
+      <section id="Work" className="work   w-[530px] xl:w-full sm:w-full rounded-t-full">
         
         
         <div id="work" ref={workRef} className="overflow-x-hidden">
@@ -164,7 +164,7 @@ function Work() {
           >
             view
           </div>
-          <div id="projects" className="project w-full  ">
+          <div id="projects" className="project w-full  " style={{ backgroundImage: `url(${workSVG})`, backgroundSize: "cover" }}>
             <div className="cont  h-[400vh] sm:h-[350vh] xl:h-[120vh] bg-[#0d0d0c]"
             >
               <div

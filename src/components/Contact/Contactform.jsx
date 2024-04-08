@@ -35,7 +35,7 @@ function Contactform() {
 
 
   return (
-    <div id="Contact" className="w-[500px] xl:w-full  "
+    <div id="Contact" className="w-[530px] xl:w-full  "
     style={{ backgroundImage: `url(${heroSVG})`, backgroundSize: "cover" }}>
       
       
@@ -172,7 +172,7 @@ function Contactform() {
         </div>
         <div
           id="second"
-          className=" bg-[#d6d6d0] w-[500px] xl:w-[620px] sm:h-[130vh]  xl:h-[130vh] sm:w-[350px] sm:pt-10 sm:ml-[300px] xl:col-span-1 xl:ml-32"
+          className=" bg-[#d6d6d0] w-[530px] xl:w-[620px] sm:h-[130vh]  xl:h-[130vh] sm:w-[350px] sm:pt-10 sm:ml-[300px] xl:col-span-1 xl:ml-32"
           style={{
             backgroundImage: `url(${heroSVG})`,
             backgroundSize: "cover",
