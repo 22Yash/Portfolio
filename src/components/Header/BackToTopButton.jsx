@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 // Assuming you have some CSS for styling
 import heroSVG from "./nnnoise.svg";
 import { GoArrowUp } from "react-icons/go";
+import VisitorCounter from '../Contact/VisitorCounter';
 
 const BackToTopButton = () => {
   const [isVisible, setIsVisible] = useState(false);
@@ -37,7 +38,7 @@ const BackToTopButton = () => {
       backgroundSize: "cover",
     }}>
       <div id="love" className='xl:flex xl:gap-[520px] xl:text-[20px] font-helvetica  '>
-      <div id="first" className='xl:ml-10 xl:mt-10 xl:pt-5 font-bold'>Yash Doke</div>
+      <div id="first" className='xl:ml-10 xl:mt-10 xl:pt-5 font-bold'><VisitorCounter/></div>
       <div id="second" className='xl:mt-16'>Site designed and coded with ❤️‍🔥</div>
       </div>
       

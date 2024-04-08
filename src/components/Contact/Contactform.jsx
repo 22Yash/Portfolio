@@ -163,10 +163,10 @@ function Contactform() {
               <input
                 type="submit"
                 value="send"
-                className=" pl-12 p-20 text-[35px] -mt-10 -ml-4
+                className=" pl-12 p-20 text-[45px] mt-3 ml-0 
                       sm:-mt-7 sm:ml- sm:text-3xl
           "
-              />
+              /> 
             </div>
           </form>
         </div>
