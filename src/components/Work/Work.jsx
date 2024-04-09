@@ -7,6 +7,7 @@ import Resume from "./Resume";
 import Hamburger from "../Header/Hamburger";
 import SlideMenu from "../Header/SlideMenu";
 import workSVG from "./work.svg"
+import project1 from "./images/project1.png"
 
 
 function Work() {
@@ -210,7 +211,7 @@ function Work() {
                       sm:w-[680px]
                   xl:w-6/12 xl:h-[400px] text-white xl:flex-shrink-0 bg-[#bebeb0] xl:p-20 xl:mt-32 xl:-ml-24 xl:rounded-3xl"
                     >
-                      project1
+                      <img src={project1} alt="" className=" cover" />
                     </div>
                     <div
                       id="project2"
