@@ -3,7 +3,13 @@ import { HashLink as Link } from "react-router-hash-link";
 import heroSVG from "./nnnoise.svg"
 import MovingCircle from "./MovingCircle";
 
+
 function Navbar() {
+  const navBar = useRef();
+
+  
+
+
 
 
 
@@ -29,8 +35,9 @@ function Navbar() {
             <li 
             
             className="
-            xl:ml-10 xl:bg-[#5f5c57] xl:w-20 xl:pt-1 xl:text-center xl:rounded-l-full xl:rounded-r-full" >
-              <Link to="#Work" >work</Link>
+            xl:ml-10 xl:bg-[#5f5c57] xl:w-20 xl:pt-1 xl:text-center xl:rounded-l-full xl:rounded-r-full" 
+            >
+              <Link to="#Work" className="">work</Link>
             </li>
             <li className="
             xl:ml-10 xl:bg-[#5f5c57] xl:w-20  xl:pt-1 xl:text-center xl:rounded-l-full xl:rounded-r-full"  >
