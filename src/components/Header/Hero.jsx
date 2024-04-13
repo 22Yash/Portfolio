@@ -16,97 +16,132 @@ function Hero() {
   const roleHeadingOnePartRef = useRef(null);
   const hamburgerRef = useRef(null);
   const navbarRef = useRef(null);
-  const tlDesktop = useRef(null);
-  const tlMobile = useRef(null);
+  
 
   const infoRef = useRef(null);
 
   const tl = gsap.timeline();
 
-  // useEffect(() => {
-  //   tl.fromTo(
-  //     heroHeadingRef.current,
-  //     {
-  //       y: 80,
-  //       opacity: 0,
-  //       duration: 1,
-  //     },
-  //     {
-  //       y: 10,
-  //       opacity: 1,
-  //       duration: 1,
-  //       repeat: 0,
-  //       delay: 10,
-  //     }
-  //   );
+  useEffect(() => {
+    // tl.fromTo(
+    //   heroHeadingRef.current,
+    //   {
+    //     y: 80,
+    //     opacity: 0,
+    //     duration: 1,
+    //   },
+    //   {
+    //     y: 10,
+    //     opacity: 1,
+    //     duration: 1,
+    //     repeat: 0,
+    //     delay: 10,
+    //   }
+    // );
 
-  //   tl.fromTo(
-  //     roleHeadingOneRef.current,
-  //     {
-  //       y: 80,
-  //       opacity: 0,
-  //       duration: 1,
-  //       stagger: 1,
-  //     },
-  //     {
-  //       y: -10,
-  //       opacity: 1,
-  //       duration: 1,
-  //       stagger: 1,
-  //     }
-  //   );
+    // tl.fromTo(
+    //   roleHeadingOneRef.current,
+    //   {
+    //     y: 80,
+    //     opacity: 0,
+    //     duration: 1,
+    //     stagger: 1,
+    //   },
+    //   {
+    //     y: -10,
+    //     opacity: 1,
+    //     duration: 1,
+    //     stagger: 1,
+    //   }
+    // );
 
-  //   tl.fromTo(
-  //     roleHeadingOnePartRef.current,
-  //     {
-  //       y: 80,
-  //       opacity: 0,
-  //       duration: 1,
-  //       stagger: 1,
-  //     },
-  //     {
-  //       y: 10,
-  //       opacity: 1,
-  //       duration: 1,
-  //       stagger: 1,
-  //     }
-  //   );
+    // tl.fromTo(
+    //   roleHeadingOnePartRef.current,
+    //   {
+    //     y: 80,
+    //     opacity: 0,
+    //     duration: 1,
+    //     stagger: 1,
+    //   },
+    //   {
+    //     y: 10,
+    //     opacity: 1,
+    //     duration: 1,
+    //     stagger: 1,
+    //   }
+    // );
 
-  //   tl.fromTo(
-  //     roleHeadingTwoRef.current,
-  //     {
-  //       y: 80,
-  //       opacity: 0,
-  //       duration: 1,
-  //       stagger: 1,
-  //     },
-  //     {
-  //       y: -10,
-  //       opacity: 1,
-  //       duration: 1,
-  //       stagger: 1,
-  //     }
-  //   );
+    // tl.fromTo(
+    //   roleHeadingTwoRef.current,
+    //   {
+    //     y: 80,
+    //     opacity: 0,
+    //     duration: 1,
+    //     stagger: 1,
+    //   },
+    //   {
+    //     y: -10,
+    //     opacity: 1,
+    //     duration: 1,
+    //     stagger: 1,
+    //   }
+    // );
 
-  //   tl.fromTo(
-  //     infoRef.current,
-  //     {
-  //       opacity: 0,
-  //       stagger: 1,
-  //     },
-  //     {
-  //       opacity: 1,
-  //       stagger: 1,
-  //     }
-  //   );
+    // tl.fromTo(
+    //   infoRef.current,
+    //   {
+    //     opacity: 0,
+    //     stagger: 1,
+    //   },
+    //   {
+    //     opacity: 1,
+    //     stagger: 1,
+    //   }
+    // );
 
-  //   const el = hamburgerRef.current;
-  //   const nr = navbarRef.current;
+    gsap.set(".hero",{scale:1})
 
-  //   // Check if the screen width is greater than the mobile breakpoint (e.g., 768px)
+    const screenWidth = window.innerWidth;
+    if (screenWidth > 1024) {
+      tl.to(".hero",{
+        scrollTrigger: {
+          trigger: ".herotext",
+          start: "20 top",
+          end:"60 top",
+          markers:"true",
+          scrub:1
+  
+         
+        },
+        scale:0.9
+  
+      })
+
+      
+
+    }else if (screenWidth <= 1024 && screenWidth > 768) {
+
+    }else{
+      tl.to(".hero",{
+        scrollTrigger: {
+          trigger: ".herotext",
+          start: "-120 top",
+          end:"60 top",
+          markers:"true",
+          scrub:1
+  
+         
+        },
+        scale:0.5
+  
+      })
+
+    }
+
+   
     
     
-  // });
+  });
 
   return (
     <>
@@ -123,7 +158,7 @@ function Hero() {
         <div id="navbar" ref={navbarRef} style={{ backgroundImage: `url(${heroSVG})`, backgroundSize: "cover" }}>
           <Navbar />
         </div>
-        <div id="hamburger" ref={hamburgerRef} className=" visible ">
+        <div id="hamburger" ref={hamburgerRef} className="slidemenu " >
           <SlideMenu/>
         </div>
 
@@ -131,7 +166,7 @@ function Hero() {
 
         <div
           id="heroHeading"
-          className="hero
+          className="herotext
          sm:ml-28 text-[#3b3834]
          xl:ml-10 xl:tracking-wide xl:pt-20 "
         >
