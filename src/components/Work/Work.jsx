@@ -192,7 +192,7 @@ function Work() {
                         className="
                     text-6xl w-[500px] font-bold p-8 text-left  
                     sm:w-[600px] sm:text-7xl sm:ml-28
-                    xl:text-7xl xl:m-10  xl:font-bold xl:w-76 xl:-ml-10 xl:text-center xl:p-10 text-[#bebeb0]"
+                    xl:text-7xl xl:m-10  xl:font-bold xl:w-76 xl:-ml-20 xl:text-center xl:p-10 text-[#bebeb0]"
                       >
                         My Work.
                       </h2>
@@ -206,6 +206,7 @@ function Work() {
                     </div>
 
                     <div
+                    
                       id="project1"
                       className=" slide  w-[400px]  h-[400px] ml-12 m-10   rounded-3xl 
                       sm:w-[680px]
