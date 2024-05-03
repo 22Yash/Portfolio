@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 import "./MovingCircle.css"; // Import the CSS file for animations
-import image1 from "./yash.png";
+
 
 const MovingCircle = () => {
   useEffect(() => {

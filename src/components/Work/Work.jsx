@@ -1,10 +1,9 @@
 import React, { useRef, useEffect } from "react";
 import gsap from "gsap";
 
-import Mousefollower from "../Animation/Mousefollower";
-import LocomotiveScroll from "locomotive-scroll";
+
 import Resume from "./Resume";
-import Hamburger from "../Header/Hamburger";
+
 import SlideMenu from "../Header/SlideMenu";
 import workSVG from "./work.svg"
 import project1 from "./images/project1.png"
@@ -18,7 +17,7 @@ function Work() {
 
   const projectRef = useRef(null);
   const tl = gsap.timeline();
-  const hamburgerRef = useRef(null);
+  
   const navbarRef = useRef(null);
 
   useEffect(() => {
@@ -60,7 +59,7 @@ function Work() {
   const tlDesktop = useRef(null);
   const tlMobile = useRef(null);
   const tlTablet = useRef(null);
-  const el = hamburgerRef.current;
+  
   
    
 

@@ -4,9 +4,7 @@ import { Routes, BrowserRouter, Route } from "react-router-dom";
 
 
 import Home from "./Pages/Home";
-import Skills from "./Pages/Skills";
-import Contact from "./Pages/Contact";
-import Work from "./components/Work/Work";
+
 import Contactform from "./components/Contact/Contactform";
 
 function App() {

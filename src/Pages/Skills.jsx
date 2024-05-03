@@ -1,11 +1,11 @@
 import React, { useEffect, useRef, useState } from "react";
-import image1 from "./JavaScript.png";
-import image2 from "./html.png";
-import image3 from "./tailwind.png";
-import image4 from "./GSAP.png";
-import image5 from "./react.png";
+import image1 from './images/JavaScript.png'
+import image2 from "./images/html.png";
+import image3 from "./images/tailwind.png";
+import image4 from "./images/GSAP.png";
+import image5 from "./images/react.png";
 import gsap from "gsap";
-import skillSVG from "./skill.svg"
+import skillSVG from "./images/skill.svg"
 
 function Skills() {
   useEffect(() => {
@@ -41,7 +41,7 @@ function Skills() {
       
     </div>
     
-      {/* <div
+      <div
         id="Skills"
         className="skills -mt-[250px] xl:mt-0
         w-[500px] h-[160vh] text-[#cecec5]
@@ -213,7 +213,7 @@ function Skills() {
             <div className="skiils"></div>
           </div>
         </div>
-      </div> */}
+      </div>
     </>
   );
 }

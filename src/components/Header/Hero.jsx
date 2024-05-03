@@ -1,7 +1,7 @@
 import React, { useEffect, useRef } from "react";
 import Navbar from "./Navbar";
 import gsap from "gsap";
-import Hamburger from "./Hamburger";
+
 
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import "tailwind-scrollbar";

@@ -1,8 +1,7 @@
 import React, { useRef, useEffect } from "react";
 import emailjs from "emailjs-com";
 import Links from "./Links";
-import Connectfooter from "./Connectfooter";
-import GetInTouch from "./GetInTouch";
+
 import heroSVG from "./nnnoise.svg";
 import { Link } from "react-router-dom";
 import BackToTopButton from "../Header/BackToTopButton";
@@ -31,6 +30,52 @@ function Contactform() {
       );
     e.target.reset();
   };
+
+  const circleRef = useRef(null);
+
+  useEffect(() => {
+    const circle = circleRef.current;
+
+    const enterMouse = (e) => {
+      const { clientX, clientY } = e;
+
+      const dx =
+        clientX - circle.getBoundingClientRect().left - circle.clientWidth / 2;
+      const dy =
+        clientY - circle.getBoundingClientRect().top - circle.clientHeight / 2;
+
+      gsap.to(circle, {
+        x: dx / 1.5, // Adjust the division factor for the strength of the effect
+        y: dy / 1.5,
+        ease: "power4.out",
+        duration: 0.3,
+        backgroundColor: "#28434d",
+      });
+    };
+
+    const leaveMouse = () => {
+      gsap.to(circle, {
+        x: 0,
+        y: 0,
+        ease: "power1.out",
+        duration: 0.3,
+        backgroundColor: "#3A606E",
+        color: "white",
+      });
+    };
+
+    if (circle) {
+      circle.addEventListener("mousemove", enterMouse);
+      circle.addEventListener("mouseleave", leaveMouse);
+    }
+
+    return () => {
+      if (circle) {
+        circle.removeEventListener("mousemove", enterMouse);
+        circle.removeEventListener("mouseleave", leaveMouse);
+      }
+    };
+  }, []);
 
 
 
@@ -152,6 +197,7 @@ function Contactform() {
 
             <div
               id="sendCircle"
+              ref={circleRef}
               className="
           w-36 h-36 ml-12 mt-20
           md:w-40 md:h-40 md:mt-32 md:ml-16 
