@@ -150,7 +150,7 @@ function Hero() {
     
 <div
       id="hero"
-      className="main  w-[530px]  xl:w-full sm:w-full sticky h-screen bg-[#d6d6d0] "
+      className="main  w-[530px]  xl:w-full md:w-full sticky h-[115vh]  bg-[#d6d6d0] "
       style={{ backgroundImage: `url(${heroSVG})`, backgroundSize: "cover" }}
     >
         
@@ -167,14 +167,14 @@ function Hero() {
         <div
           id="heroHeading"
           className="herotext 
-         sm:ml-28 text-[#3b3834]
+         md:ml-28 text-[#3b3834]
          xl:ml-10 xl:tracking-wide xl:pt-20 "
         >
           <h1
             ref={heroHeadingRef}
-            className="hero
+            className="hero 
           text-6xl font-bold  text-center  pt-20  selection:bg-[#6c665e] selection:text-[#3d3a36]
-          sm:text-8xl sm:font-bold sm:font-helvetica sm:text-left sm:-ml-10
+          md:text-8xl md:font-bold md:font-helvetica md:text-left md:-ml-10
           xl:text-9xl xl:font-bold xl:text-left xl:p-0 xl:ml-72 font-helvetica"
           >
             I'm Yash
@@ -184,7 +184,7 @@ function Hero() {
           <h1
             className="
           text-6xl font-bold  text-center font-helvetica p-20 flex flex-col selection:bg-[#6c665e] selection:text-[#3d3a36]
-          sm:text-8xl sm:w-5/6 sm:text-center sm:flex sm:p-0 sm:ml-20
+          md:text-8xl md:w-5/6 md:text-center md:flex md:p-0 md:ml-20
           xl:text-9xl xl:ml-52 xl:max-w-3/4   xl:flex xl:flex-col xl:p-0 xl:text-center xl:font-bold "
           >
             <div className="flex  flex-col xl:flex  xl:flex-row xl:gap-10 xl:w-3/4">
@@ -197,7 +197,7 @@ function Hero() {
             </div>
             <div
               ref={roleHeadingTwoRef}
-              className="h1 mt-3 sm:ml-5 sm:-mt-2 xl:-ml-2 selection:bg-[#6c665e] selection:text-[#3d3a36]"
+              className="h1 mt-3 md:ml-5 md:-mt-2 xl:-ml-2 selection:bg-[#6c665e] selection:text-[#3d3a36]"
             >
               Developer.
             </div>
@@ -206,15 +206,14 @@ function Hero() {
         <div
           id="info"
           className="hero
-        text-2sm -mt-16 w-2/3 text-center ml-16 font-medium
-        sm:mt-5 sm:ml-32 
+        text-2md -mt-16 w-2/3 text-center ml-16 font-medium
+        md:mt-5 md:ml-32 
         xl:text-2xl xl:ml-96 xl:mt-10 xl:font-medium xl:w-2/5 xl:text-center text-[#6e6760]"
         >
-          <h4 ref={infoRef} className=" -mt-16 sm:mt-10 xl:ml-44 xl:mt-16 selection:bg-[#6c665e] selection:text-[#3d3a36]">
+          <h4 ref={infoRef} className=" -mt-16  ml-10 md:mt-10 xl:ml-44 xl:mt-16 selection:bg-[#6c665e] selection:text-[#3d3a36]">
             I like to develop responsive, interactive, and animated websites.
           </h4>
         </div>
-        <h6 className="float-end font-helvetica font-medium text-[15px] mr-10 mt-5 text-[#6e6760] selection:bg-[#6c665e] selection:text-[#3d3a36]">( SCROLL FOR MORE ↓ )</h6>
       </div>
     </>
   );

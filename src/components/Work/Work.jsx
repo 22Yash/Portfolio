@@ -74,8 +74,8 @@ function Work() {
       tlDesktop.current.to(".slide", {
         scrollTrigger: {
           trigger: ".project",
-          start: "-200 top ",
-          end: "0 top ",
+          start: "-400 top ",
+          end: "-280 top ",
           scrub: 1,
           markers: true,
         },
@@ -86,15 +86,15 @@ function Work() {
       tlDesktop.current.to(".work", {
         scrollTrigger: {
           trigger: ".work",
-          start: "-580 top ",
+          start: "-680 top ",
           end: "-570 top ",
           scrub: 2,
           markers: true,
           pin: true,
         },
 
-        y: -150,
-        duration: 5,
+        y: -350,
+        duration: .5,
         borderRadius: "20px",
       });
 
@@ -125,20 +125,20 @@ function Work() {
       
     } 
     else {
-      // Animation for mobile screens
+      
       tlMobile.current = gsap.timeline();
 
       tlMobile.current.to(".work", {
         scrollTrigger: {
           trigger: ".work",
-          start: "-480 top ",
+          start: "-590 top ",
           end: "-570 top ",
           scrub: 2,
           markers: true,
           pin: true,
         },
 
-        y: -250,
+        y: -450,
         duration: 5,
         borderRadius: "20px",
       });
@@ -154,19 +154,19 @@ function Work() {
   return (
     <>
    <SlideMenu/>
-      <section id="Work" className="work   w-[530px] xl:w-full sm:w-full rounded-t-full">
+      <section id="Work" className="work   w-[530px] xl:w-full md:w-full rounded-t-full">
         
         
         <div id="work" ref={workRef} className="overflow-x-hidden">
           <div
             ref={mousefollowerRef}
             id="view"
-            className="w-12 h-12 justify-center  opacity-0 text-sm flex items-center absolute bg-black text-white rounded-full"
+            className="w-12 h-12 justify-center  opacity-0 text-md flex items-center absolute bg-black text-white rounded-full"
           >
             view
           </div>
           <div id="projects" className="project w-full  " style={{ backgroundImage: `url(${workSVG})`, backgroundSize: "cover" }}>
-            <div className="cont  h-[400vh] sm:h-[350vh] xl:h-[120vh] bg-[#0d0d0c]"
+            <div className="cont  h-[400vh] md:h-[350vh] xl:h-[120vh] bg-[#0d0d0c]"
             >
               <div
                 className="slides grid  
@@ -191,14 +191,14 @@ function Work() {
                       <h2
                         className="
                     text-6xl w-[500px] font-bold p-8 text-left  
-                    sm:w-[600px] sm:text-7xl sm:ml-28
+                    md:w-[600px] md:text-7xl md:ml-28
                     xl:text-7xl xl:m-10  xl:font-bold xl:w-76 xl:-ml-20 xl:text-center xl:p-10 text-[#bebeb0]"
                       >
                         My Work.
                       </h2>
                       <p
                         className="text-[#7b736a] text-2xl text-balance ml-5 font-semibold w-72
-                        sm:w-[800px] sm:-ml-24
+                        md:w-[800px] md:-ml-24
                   xl:m-10 xl:text-3xl xl:w-2/4 xl:text-center"
                       >
                         "Bringing ideas to life through creativity and code."
@@ -209,7 +209,7 @@ function Work() {
                     
                       id="project1"
                       className=" slide  w-[400px]  h-[400px] ml-12 m-10   rounded-3xl 
-                      sm:w-[680px]
+                      md:w-[680px]
                   xl:w-6/12 xl:h-[400px] text-white xl:flex-shrink-0 bg-[#bebeb0] xl:p-20 xl:mt-32 xl:-ml-24 xl:rounded-3xl"
                     >
                       <img src={project1} alt="" className=" cover" />
@@ -217,7 +217,7 @@ function Work() {
                     <div
                       id="project2"
                       className=" slide w-[400px]  h-[400px] ml-12 m-10 xl:mt-32 
-                      sm:w-[680px]   rounded-3xl
+                      md:w-[680px]   rounded-3xl
                   xl:w-6/12 xl:flex-shrink-0  bg-[#bebeb0] xl:rounded-3xl"
                     >
                       {" "}
@@ -226,7 +226,7 @@ function Work() {
                     <div
                       id="project3"
                       className=" slide w-[400px]  h-[400px] ml-12 m-10 xl:mt-32 
-                      sm:w-[680px] rounded-3xl
+                      md:w-[680px] rounded-3xl
                  xl:w-6/12  xl:flex-shrink-0  bg-[#bebeb0] xl:rounded-3xl"
                     >
                      
@@ -235,7 +235,7 @@ function Work() {
                     <div
                       id="project4"
                       className=" slide w-[400px]  h-[400px] ml-12 xl:mt-32  
-                      sm:w-[680px] rounded-3xl
+                      md:w-[680px] rounded-3xl
                 xl:w-6/12  xl:flex-shrink-0  bg-[#bebeb0] xl:rounded-3xl"
                     >
                       {" "}
