@@ -7,32 +7,43 @@ import hamburgerSVG from "./hamburger.svg"
 function SlideMenu() {
   const [isOpen, setIsOpen] = useState(false);
   const menuRef = useRef(null);
-  
+  const tl = gsap.timeline()
 
   const toggleMenu = () => {
     setIsOpen(!isOpen);
     const menu = menuRef.current;
 
     if (isOpen) {
-      gsap.to(menu, {
+      tl.to(menu, {
         x: -300,
-        duration: 0.5,
+        duration: 0.8,
         ease: "power2.out",
       });
     } else {
-      gsap.to(menu, {
+      tl.to(menu, {
         x: 0,
-        duration: 0.5,
+        duration: 0.8,
         ease: "power2.out",
         
       });
     }
+
+    tl.fromTo('li',{
+      x:20,
+     
+      opacity:0
+    },{
+      opacity:1,
+      x:-30,
+      stagger:.1  ,
+      duration:0.5
+    })
   };
 
   const closeMenu = () => {
     setIsOpen(false);
     const menu = menuRef.current;
-    gsap.to(menu, {
+    tl.to(menu, {
       x: 600,
       duration: 0.5,
       ease: "power2.in",
@@ -64,7 +75,7 @@ function SlideMenu() {
           </button>
         )}
         <ul className=" xl:flex-col  p-10 xl:mt-4 xl:mr-10 text-white xl:text-white xl:text-7xl xl:ml-20 font-medium flex-col lg:flex-row lg:space-x-8 lg:mt-0">
-                <li className="xl:ml-7">
+                <li className="xl:ml-7 ml-5" >
                   <Link
                     to="/"
                     className={({ isActive }) =>
@@ -77,7 +88,7 @@ function SlideMenu() {
                     Home
                   </Link>
                 </li>
-                <li>
+                <li className="ml-5 xl:ml-0">
                   <Link
                     to="#Work"
                     className={({ isActive }) =>
@@ -89,7 +100,7 @@ function SlideMenu() {
                     Work
                   </Link>
                 </li>
-                <li>
+                <li className="ml-5 xl:ml-0">
                   <Link
                     to="#Skills"
                     className={({ isActive }) =>
@@ -102,7 +113,7 @@ function SlideMenu() {
                   </Link>
                 </li>
 
-                <li>
+                <li className="ml-5 xl:ml-0">
                   <Link
                     to="#Resume"
                     className={({ isActive }) =>
@@ -114,7 +125,7 @@ function SlideMenu() {
                     Resume
                   </Link>
                 </li>
-                <li>
+                <li className="ml-5 xl:ml-0">
                   <Link
                     to="#Contact"
                     className={({ isActive }) =>

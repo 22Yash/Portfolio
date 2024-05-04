@@ -99,11 +99,11 @@ function Hero() {
     //   }
     // );
 
-    gsap.set(".hero",{scale:1})
+    gsap.set(".zoom",{scale:1})
 
     const screenWidth = window.innerWidth;
     if (screenWidth > 1024) {
-      tl.to(".hero",{
+      tl.to(".zoom",{
         scrollTrigger: {
           trigger: ".herotext",
           start: "20 top",
@@ -122,7 +122,7 @@ function Hero() {
     }else if (screenWidth <= 1024 && screenWidth > 768) {
 
     }else{
-      tl.to(".hero",{
+      tl.to(".zoom",{
         scrollTrigger: {
           trigger: ".herotext",
           start: "-120 top",
@@ -163,7 +163,7 @@ function Hero() {
         </div>
 
         
-
+       <section className="zoom">
         <div
           id="heroHeading"
           className="herotext 
@@ -214,6 +214,8 @@ function Hero() {
             I like to develop responsive, interactive, and animated websites.
           </h4>
         </div>
+       </section>
+        
       </div>
     </>
   );
