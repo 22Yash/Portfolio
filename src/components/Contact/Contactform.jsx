@@ -89,14 +89,14 @@ function Contactform() {
         className="bg-[#d6d6d0]  w-[500px] md:w-full xl:w-full   "
         style={{ backgroundImage: `url(${heroSVG})`, backgroundSize: "cover" }}
       >
-        <h1 className="xl:text-[85px] text-[40px] ml-20 font-helvetica underline md:underline-offset-[12px] xl:underline-offset-[30px]  xl:flex xl:justify-center font-semibold xl:ml-20 xl:pt-5 xl:mt-0 mt-0 pt-10 "
+        <h1 className="xl:text-[85px] text-5xl ml-16 font-helvetica underline  underline-offset-[18px] md:underline-offset-[12px] xl:underline-offset-[30px]  xl:flex xl:justify-center font-semibold xl:ml-20 xl:pt-5 xl:mt-0 mt-0 pt-10 "
         >
           Let's work together.{" "}
         </h1>
       </div>
       <div id="conactform" className="xl:grid xl:grid-cols-2 md:grid md:grid-cols-2  xl:gap-4  ">
         <div
-          className="xl:w-[900px] bg-[#d6d6d0] w-[500px] md:w-[550px] pt-14 text-[#3a3733] h-[200vh]
+          className="xl:w-[900px] bg-[#d6d6d0] w-[525px] md:w-[550px] pt-14 text-[#3a3733] h-[150vh]
       font-helvetica xl:col-span-1 xl:pl-32 md:h-[130vh]  md:pt-24
      xl:space-y-5  xl:h-[130vh]"
           style={{
@@ -199,7 +199,7 @@ function Contactform() {
               id="sendCircle"
               ref={circleRef}
               className="
-          w-36 h-36 ml-12 mt-20
+          w-[200px] h-[200px] ml-12 mt-20
           md:w-40 md:h-40 md:mt-32 md:ml-16 
           xl:w-44 xl:h-44 text-white   bg-black rounded-full
           justify-center items-center xl:mt-44
@@ -209,7 +209,7 @@ function Contactform() {
               <input
                 type="submit"
                 value="send"
-                className=" pl-12 p-20 text-[45px] mt-3 ml-0 
+                className=" pl-12 p-20 text-[45px] -mt-5 ml-0 
                       md:-mt-7 md:ml- md:text-3xl
           "
               /> 
@@ -218,7 +218,7 @@ function Contactform() {
         </div>
         <div
           id="second"
-          className=" bg-[#d6d6d0] w-[530px] xl:w-[620px] md:h-[130vh]  xl:h-[130vh] md:w-[350px] md:pt-10 md:ml-[300px] xl:col-span-1 xl:ml-32"
+          className=" bg-[#d6d6d0] w-[530px]  h-[10vh] xl:w-[620px] md:h-[130vh]  xl:h-[130vh] md:w-[350px] md:pt-10 md:ml-[300px] xl:col-span-1 xl:ml-32"
           style={{
             backgroundImage: `url(${heroSVG})`,
             backgroundSize: "cover",
@@ -230,7 +230,7 @@ function Contactform() {
          pt-[40px] ml-10 p-5 -mt-64 xl:-mt-20 md:pt-[350px]
          xl:ml-20 xl:pt-[220px] font-helvetica "
           >
-            <h3 className="  text-[35px] xl:text-[45px]  -mt-20 xl:-mt-20 font-semibold font-helvetica  border-b-2 border-black text-black w-[320px]">
+            <h3 className="  text-[35px] xl:text-[45px]  mt-[10px] xl:-mt-20 font-semibold font-helvetica  border-b-2 border-black text-black w-[320px]">
               Contact details
             </h3>
             <h3 className="xl:text-[22px] pt-5 text-[22px] xl:w-[350px] xl:h-[50px] xl:mt-5 xl:-ml-10  flex xl:justify-center xl:items-center">
@@ -239,16 +239,10 @@ function Contactform() {
             <h3 className="xl:text-[22px] text-[22px] mt-0 xl:w-[350px] xl:h-[50px] flex xl:-ml-16 xl:justify-center xl:items-center">
               +91 93247871464
             </h3>
+            
           </div>
 
-          <div
-            id="link"
-            className="
-         mt-40 text-3xl  h-28  xl:text-2xl md:mt-[320px]
-         xl:w-1/4 xl:ml-20 xl:-mt-[250px]"
-          >
-            <Links columnDirection={true} />
-          </div>
+          
         </div>
 
       </div>

@@ -27,7 +27,7 @@ function Home() {
 
         <Resume />
         <Contactform />
-        <BackToTopButton />
+        {/* <BackToTopButton /> */}
       </ReactLenis>
     </>
   );
