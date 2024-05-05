@@ -63,92 +63,92 @@ function Work() {
   
    
 
-  useEffect(() => {
+  // useEffect(() => {
     
-    const screenWidth = window.innerWidth;
-    if (screenWidth > 1024) {
-      // Animation for desktop/laptop screens
-      tlDesktop.current = gsap.timeline();
+  //   const screenWidth = window.innerWidth;
+  //   if (screenWidth > 1024) {
+  //     // Animation for desktop/laptop screens
+  //     tlDesktop.current = gsap.timeline();
 
-      tlDesktop.current.to(".slide", {
-        scrollTrigger: {
-          trigger: ".project",
-          start: "-400 top ",
-          end: "-280 top ",
-          scrub: 1,
-          markers: true,
-        },
-        xPercent: -100,
-        duration: 2,
-      });
+  //     tlDesktop.current.to(".slide", {
+  //       scrollTrigger: {
+  //         trigger: ".project",
+  //         start: "-400 top ",
+  //         end: "-280 top ",
+  //         scrub: 1,
+  //         markers: true,
+  //       },
+  //       xPercent: -100,
+  //       duration: 2,
+  //     });
 
-      tlDesktop.current.to(".work", {
-        scrollTrigger: {
-          trigger: ".work",
-          start: "-680 top ",
-          end: "-570 top ",
-          scrub: 2,
-          markers: true,
-          pin: true,
-        },
+  //     tlDesktop.current.to(".work", {
+  //       scrollTrigger: {
+  //         trigger: ".work",
+  //         start: "-680 top ",
+  //         end: "-570 top ",
+  //         scrub: 2,
+  //         markers: true,
+  //         pin: true,
+  //       },
 
-        y: -350,
-        duration: .5,
-        borderRadius: "20px",
-      });
+  //       y: -350,
+  //       duration: .5,
+  //       borderRadius: "20px",
+  //     });
 
 
       
 
 
 
-    }else if (screenWidth <= 1024 && screenWidth > 768) {
+  //   }else if (screenWidth <= 1024 && screenWidth > 768) {
 
       
-      tlTablet.current = gsap.timeline();
+  //     tlTablet.current = gsap.timeline();
 
-      tlTablet.current.to(".slide", {
-        scrollTrigger: {
-          trigger: ".project",
-          start: "-200 top ",
-          end: "0 top ",
-          scrub: 1,
-          markers: true,
-        },
-        xPercent: 0,
-        duration: 2,
-      });
+  //     tlTablet.current.to(".slide", {
+  //       scrollTrigger: {
+  //         trigger: ".project",
+  //         start: "-200 top ",
+  //         end: "0 top ",
+  //         scrub: 1,
+  //         markers: true,
+  //       },
+  //       xPercent: 0,
+  //       duration: 2,
+  //     });
 
      
 
       
-    } 
-    else {
+  //   } 
+  //   // else {
       
-      tlMobile.current = gsap.timeline();
+  //   //   tlMobile.current = gsap.timeline();
 
-      tlMobile.current.to(".work", {
-        scrollTrigger: {
-          trigger: ".work",
-          start: "-590 top ",
-          end: "-570 top ",
-          scrub: 2,
-          markers: true,
-          pin: true,
-        },
+  //   //   tlMobile.current.to(".work", {
+  //   //     scrollTrigger: {
+  //   //       trigger: ".work",
+  //   //       start: "-920 top ",
+  //   //       end: "-570 top ",
+  //   //       scrub: 2,
+  //   //       markers: true,
+  //   //       pin: true,
+  //   //     },
 
-        y: -450,
-        duration: 5,
-        borderRadius: "20px",
-      });
-    }
-
-    
+  //   //     y: -650,
+  //   //     duration: 5,
+  //   //     borderRadius: "20px",
+  //   //   });
+  //   // }
 
     
 
     
-  }, []);
+
+    
+  // }, []);
 
   return (
     <>
@@ -165,7 +165,7 @@ function Work() {
             view
           </div>
           <div id="projects" className="project w-full  " style={{ backgroundImage: `url(${workSVG})`, backgroundSize: "cover" }}>
-            <div className="cont  h-[400vh] md:h-[350vh] xl:h-[120vh] bg-[#0d0d0c]"
+            <div className="cont  h-[280vh] md:h-[350vh] xl:h-[120vh] bg-[#0d0d0c]"
             >
               <div
                 className="slides grid  
@@ -207,7 +207,7 @@ function Work() {
                     <div
                     
                       id="project1"
-                      className=" slide  w-[400px]  h-[400px] ml-12 m-10   rounded-3xl 
+                      className=" slide  w-[430px]  h-[400px] ml-12 m-10   rounded-3xl 
                       md:w-[680px]
                   xl:w-6/12 xl:h-[400px] text-white xl:flex-shrink-0 bg-[#bebeb0] xl:p-20 xl:mt-32 xl:-ml-24 xl:rounded-3xl"
                     >
@@ -215,7 +215,7 @@ function Work() {
                     </div>
                     <div
                       id="project2"
-                      className=" slide w-[400px]  h-[400px] ml-12 m-10 xl:mt-32 
+                      className=" slide w-[430px]  h-[400px] ml-12 m-10 xl:mt-32 
                       md:w-[680px]   rounded-3xl
                   xl:w-6/12 xl:flex-shrink-0  bg-[#bebeb0] xl:rounded-3xl"
                     >
@@ -224,7 +224,7 @@ function Work() {
                     </div>
                     <div
                       id="project3"
-                      className=" slide w-[400px]  h-[400px] ml-12 m-10 xl:mt-32 
+                      className=" slide w-[430px]  h-[400px] ml-12 m-10 xl:mt-32 
                       md:w-[680px] rounded-3xl
                  xl:w-6/12  xl:flex-shrink-0  bg-[#bebeb0] xl:rounded-3xl"
                     >
@@ -233,7 +233,7 @@ function Work() {
                     </div>
                     <div
                       id="project4"
-                      className=" slide w-[400px]  h-[400px] ml-12 xl:mt-32  
+                      className=" slide w-[430px]  h-[400px] ml-12 xl:mt-32  
                       md:w-[680px] rounded-3xl
                 xl:w-6/12  xl:flex-shrink-0  bg-[#bebeb0] xl:rounded-3xl"
                     >

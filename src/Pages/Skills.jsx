@@ -44,16 +44,16 @@ function Skills() {
       <div
         id="Skills"
         className="skills -mt-[250px] xl:mt-0
-        w-[500px] h-[160vh] text-[#cecec5]
+        w-[530px] h-[160vh] text-[#cecec5]
     sm:w-[766px]  xl:-translate-y-44 sm:mt-0
     xl:w-full xl:h-[130vh] grid xl:flex xl:justify-between"
     style={{ backgroundImage: `url(${skillSVG})`, backgroundSize: "cover" }}
       >
         
-        <div id="col1" className="bg-[#0d0d0c] sm:w-[766px] xl:w-[700px] ">
+        <div id="col1" className="bg-[#0d0d0c] w-[530px] sm:w-[766px] xl:w-[700px] ">
           <h2
             className="
-           pt-10 pl-10 text-5xl font-semibold w-3/4
+           pt-10 pl-20  p-10 text-5xl font-semibold w-4/5 text-left
            xl:pt-32 xl:pl-20 font-helvetica xl:text-7xl xl:font-semibold xl:w-3/4"
           >
             my digital tool box.
@@ -74,7 +74,7 @@ function Skills() {
           ></div>
         </div>
 
-        <div id="col2" className="bg-[#0d0d0c] w-[500px] sm:w-[766px] xl:w-[1000px]">
+        <div id="col2" className="bg-[#0d0d0c] w-[530px] sm:w-[766px] xl:w-[1000px]">
           <div
             id="stack"
             className="
