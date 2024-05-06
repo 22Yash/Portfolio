@@ -8,6 +8,7 @@ import Contactform from "../components/Contact/Contactform";
 import Skills from "./Skills";
 import Mousefollower from "../components/Animation/Mousefollower";
 import BackToTopButton from "../components/Header/BackToTopButton";
+import Error from './Error'
 
 function Home() {
   const lenis = useLenis(({ scroll }) => {
@@ -28,6 +29,7 @@ function Home() {
         <Resume />
         <Contactform />
         {/* <BackToTopButton /> */}
+        
       </ReactLenis>
     </>
   );
