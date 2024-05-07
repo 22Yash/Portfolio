@@ -28,5 +28,17 @@
     .bento{
       @apply  rounded-[40px] bg-red-300 p-[1px] hover:bg-gradient-to-br hover:from-red-200 hover:via-pink-200 hover:to-yellow-200
     }
+
+    .bentoMobile{
+      @apply w-[400px] lg:w-full -ml-2 xl:ml-0 
+    }
+
+    .innerContainer{
+      @apply rounded-full w-full h-full p-6 lg:flex lg:flex-row flex flex-col gap-12 group-hover:bg-gradient-to-br group-hover:from-red-50 group-hover:via-pink-50 group-hover:to-yellow-50
+    }
+
+    .techInfo{
+      @apply p-1 text-[20px] font-semibold lg:text-[18px] lg:font-normal text-center
+    }
   }
   
