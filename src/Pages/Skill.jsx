@@ -8,9 +8,18 @@ import tailwind from './images/tailwind.png';
 
 function Skill() {
   return (
-    <section className='w-[560px] xl:h-[145vh] xl:w-full bg-blue-200 mt-20'>
-        <div id="bentoGrid" className='px-[100px] -mt-[80px]         '>
-            <div id="gridContainer" className='flex flex-col gap-6 pt-20 lg:grid lg:grid-cols-3' style={{gridAutoRows:`126px`}}>
+    <section className='w-[560px] xl:h-[145vh] xl:w-full bg-zinc-800 mt-20'>
+        <div id="bentoGrid" className='px-[100px] -mt-[80px]        '>
+        <div className=" h-[100px] bento">
+                    <div className="rounded-full w-full h-full p-6 flex flex-col group-hover:bg-gradient-to-br group-hover:from-red-50 group-hover:via-pink-50 group-hover:to-yellow-50">
+                        <h3>my digital tool box.</h3>
+                        
+                    </div>
+
+                </div>
+            <div id="gridContainer" className='flex flex-col gap-6 pt-10 lg:grid lg:grid-cols-3' style={{gridAutoRows:`126px`}}>
+                
+           
                 <div className="row-start-1 row-end-4 w-[400px] lg:w-full bento">
                     <div className="rounded-full w-full h-full p-6 flex flex-col 
                     items-center 

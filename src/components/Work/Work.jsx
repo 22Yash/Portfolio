@@ -63,92 +63,92 @@ function Work() {
   
    
 
-  // useEffect(() => {
+  useEffect(() => {
     
-  //   const screenWidth = window.innerWidth;
-  //   if (screenWidth > 1024) {
-  //     // Animation for desktop/laptop screens
-  //     tlDesktop.current = gsap.timeline();
+    const screenWidth = window.innerWidth;
+    if (screenWidth > 1024) {
+      // Animation for desktop/laptop screens
+      tlDesktop.current = gsap.timeline();
 
-  //     tlDesktop.current.to(".slide", {
-  //       scrollTrigger: {
-  //         trigger: ".project",
-  //         start: "-400 top ",
-  //         end: "-280 top ",
-  //         scrub: 1,
-  //         markers: true,
-  //       },
-  //       xPercent: -100,
-  //       duration: 2,
-  //     });
+      tlDesktop.current.to(".slide", {
+        scrollTrigger: {
+          trigger: ".project",
+          start: "-400 top ",
+          end: "-280 top ",
+          scrub: 1,
+          markers: true,
+        },
+        xPercent: -100,
+        duration: 2,
+      });
 
-  //     tlDesktop.current.to(".work", {
-  //       scrollTrigger: {
-  //         trigger: ".work",
-  //         start: "-680 top ",
-  //         end: "-570 top ",
-  //         scrub: 2,
-  //         markers: true,
-  //         pin: true,
-  //       },
+      tlDesktop.current.to(".work", {
+        scrollTrigger: {
+          trigger: ".work",
+          start: "-680 top ",
+          end: "-570 top ",
+          scrub: 2,
+          markers: true,
+          pin: true,
+        },
 
-  //       y: -350,
-  //       duration: .5,
-  //       borderRadius: "20px",
-  //     });
+        y: -350,
+        duration: .5,
+        borderRadius: "20px",
+      });
 
 
       
 
 
 
-  //   }else if (screenWidth <= 1024 && screenWidth > 768) {
+    }else if (screenWidth <= 1024 && screenWidth > 768) {
 
       
-  //     tlTablet.current = gsap.timeline();
+      tlTablet.current = gsap.timeline();
 
-  //     tlTablet.current.to(".slide", {
-  //       scrollTrigger: {
-  //         trigger: ".project",
-  //         start: "-200 top ",
-  //         end: "0 top ",
-  //         scrub: 1,
-  //         markers: true,
-  //       },
-  //       xPercent: 0,
-  //       duration: 2,
-  //     });
+      tlTablet.current.to(".slide", {
+        scrollTrigger: {
+          trigger: ".project",
+          start: "-200 top ",
+          end: "0 top ",
+          scrub: 1,
+          markers: true,
+        },
+        xPercent: 0,
+        duration: 2,
+      });
 
      
 
       
-  //   } 
-  //   // else {
+    } 
+    else {
       
-  //   //   tlMobile.current = gsap.timeline();
+      tlMobile.current = gsap.timeline();
 
-  //   //   tlMobile.current.to(".work", {
-  //   //     scrollTrigger: {
-  //   //       trigger: ".work",
-  //   //       start: "-920 top ",
-  //   //       end: "-570 top ",
-  //   //       scrub: 2,
-  //   //       markers: true,
-  //   //       pin: true,
-  //   //     },
+      tlMobile.current.to(".work", {
+        scrollTrigger: {
+          trigger: ".work",
+          start: "-920 top ",
+          end: "-570 top ",
+          scrub: 2,
+          markers: true,
+          pin: true,
+        },
 
-  //   //     y: -650,
-  //   //     duration: 5,
-  //   //     borderRadius: "20px",
-  //   //   });
-  //   // }
-
-    
+        y: -650,
+        duration: 5,
+        borderRadius: "20px",
+      });
+    }
 
     
 
     
-  // }, []);
+
+    
+  }, []);
 
   return (
     <>
