@@ -25,7 +25,7 @@ function Home() {
 
         <Hero />
         <Work />
-        <Skills />
+       
         <Skill/>
 
         <Resume />

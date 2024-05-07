@@ -153,7 +153,7 @@ function Work() {
   return (
     <>
    <SlideMenu/>
-      <section id="Work" className="work   w-[530px] xl:w-full md:w-full rounded-t-full">
+      <section id="Work" className="work   w-[560px] xl:w-full md:w-full rounded-t-full">
         
         
         <div id="work" ref={workRef} className="overflow-x-hidden">
