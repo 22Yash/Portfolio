@@ -1,11 +1,31 @@
-import React from "react";
+import React, { useEffect } from "react";
 import image1 from "./images/html.png";
 import react from "./images/react.png";
 import javascript from "./images/JavaScript.png";
-import gsap from "./images/GSAP.png";
+import gsapIMG from "./images/GSAP.png";
 import tailwind from "./images/tailwind.png";
+import gsap from "gsap";
+import { Timeline } from "gsap/gsap-core";
 
 function Skill() {
+  
+  const tl = gsap.timeline;
+
+  useEffect(()=>{
+    gsap.set(".techImg",{scale:0.9})
+
+    const hoverFunction = () => {
+      tl.toString("#gridContainer",{
+        rotation:40,
+        transformOrigin:"center",
+        scale:1.2
+      })
+    }
+
+    
+
+
+  },[])
   return (
     <section className="w-[560px] h-[250vh] xl:h-[145vh] xl:w-full bg-zinc-800 mt-20">
       <div id="bentoGrid" className="px-[100px] -mt-[80px]        ">
@@ -16,7 +36,8 @@ function Skill() {
         </div>
         <div
           id="gridContainer"
-          className="flex flex-col gap-6 pt-10 lg:grid lg:grid-cols-3"
+          onMouseEnter={hoverFunction}
+          className="flex flex-col gap-6 pt-10 lg:grid lg:grid-cols-3 "
           style={{ gridAutoRows: `126px` }}
         >
           <div className="row-start-1 row-end-4  bentoMobile bento">
@@ -28,9 +49,9 @@ function Skill() {
               <h3 className=" text-[25px] font-bold">GSAP</h3>
  
               <img
-                src={gsap}
+                src={gsapIMG}
                 alt=""
-                className="w-[130px] h-[130px] rounded-xl"
+                className="w-[130px] h-[130px] rounded-xl techImg"
               />
               <p className="techInfo">
                 I craft captivating animations and dynamic visual effects,
