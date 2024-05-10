@@ -34,22 +34,20 @@ function Navbar() {
           <ul className="flex  mt-4 mr-10 xl:p-2 font-medium lg:flex-row lg:space-x-8 lg:mt-0">
             <li 
             
-            className="btn
+            className="button -mt-0
             " 
             >
-              <Link to="#Work" className="">work</Link>
+              <Link to="#Work" className="ml-5 text-[20px]">work</Link>
             </li>
-            <li className="
-            xl:ml-10 xl:bg-[#5f5c57] xl:w-20  xl:pt-1 xl:text-center xl:rounded-l-full xl:rounded-r-full"  >
-              <Link to="#Skills">Skills</Link>
+            <li className="button"
+           >
+              <Link to="#Skills" className="ml-6 text-[20px]">Skills</Link>
             </li>
-            <li className="
-            xl:ml-10 xl:bg-[#5f5c57] xl:w-24 xl:pt-1 xl:text-center xl:rounded-l-full xl:rounded-r-full" >
-              <Link to="#Resume">Resume</Link>
+            <li className="button" >
+              <Link to="#Resume" className="ml-5 text-[16px]">Resume</Link>
             </li>
-            <li className="
-            xl:ml-10 xl:bg-[#5f5c57] xl:w-24  xl:pt-1 xl:text-center xl:rounded-l-full xl:rounded-r-full" >
-              <Link to="#Contact">Contact</Link>
+            <li className="button" >
+              <Link to="#Contact" className="ml-5 text-[16px]">Contact</Link>
             </li>
           </ul>
         </div>
