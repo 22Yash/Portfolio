@@ -40,5 +40,46 @@
     .techInfo{
       @apply p-1 text-[20px] font-semibold lg:text-[18px] lg:font-normal text-center
     }
+
+   
+    .btn {
+      position: relative;
+      background-color: transparent;
+      border: 2px solid #3498db;
+      color: #3498db;
+      padding: 10px 20px;
+      font-size: 20px;
+      
+      cursor: pointer;
+      overflow: hidden; 
+      height: 40px;
+      border-radius: 50px;
+  }
+  
+  .btn::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%; 
+      height: 100px; 
+      background-color: #3498db;
+      z-index: -1;
+      transition: transform 0.3s; /* Use transform for smoother animation */
+      transform: scaleY(0); /* Initially scale to 0 vertically */
+      transform-origin: bottom; /* Scale from bottom to top */
+  }
+  
+  .btn:hover::before {
+      transform: scaleY(3); /* Scale to 100% vertically on hover */
+  }
+  
+  .btn:hover {
+      color: #fff;
+      
+  }
+  
+  
+    
   }
   

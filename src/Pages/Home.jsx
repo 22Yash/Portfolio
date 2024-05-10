@@ -22,6 +22,7 @@ function Home() {
       <ReactLenis root>
         {/* <Mousefollower />
         <Preloader /> */}
+        
 
         <Hero />
         <Work />

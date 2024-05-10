@@ -9,23 +9,41 @@ import { Timeline } from "gsap/gsap-core";
 
 function Skill() {
   
-  const tl = gsap.timeline;
+  
 
-  useEffect(()=>{
-    gsap.set(".techImg",{scale:0.9})
+ 
+    
 
-    const hoverFunction = () => {
-      tl.toString("#gridContainer",{
-        rotation:40,
-        transformOrigin:"center",
-        scale:1.2
-      })
+    const mouseIN = () => {
+      
+        gsap.set(".techImg",{scale:0.9,transformOrigin: "bottom"})
+        gsap.to(".techImg", {
+          rotation: 10, 
+          ease: "power2.inOut", 
+          scale:1
+        });
+          
     }
+
+    const mouseOut = () =>{
+      gsap.to(".techImg", {
+        rotation: 0, // Reset rotation to 0 degrees (straight)
+        ease: "power2.inOut", // Use ease for smoother animation
+      });
+
+    }
+
+
+
+    
+    
 
     
 
 
-  },[])
+  
+
+
   return (
     <section className="w-[560px] h-[250vh] xl:h-[145vh] xl:w-full bg-zinc-800 mt-20">
       <div id="bentoGrid" className="px-[100px] -mt-[80px]        ">
@@ -36,12 +54,14 @@ function Skill() {
         </div>
         <div
           id="gridContainer"
-          onMouseEnter={hoverFunction}
+          
           className="flex flex-col gap-6 pt-10 lg:grid lg:grid-cols-3 "
           style={{ gridAutoRows: `126px` }}
         >
           <div className="row-start-1 row-end-4  bentoMobile bento">
-            <div
+            <div id="techStack"
+            onMouseEnter={mouseIN}
+            onMouseLeave={mouseOut}
               className="rounded-full w-full h-full p-6 flex flex-col 
                     items-center 
                     group-hover:bg-gradient-to-br group-hover:from-red-50 group-hover:via-pink-50 group-hover:to-yellow-50"

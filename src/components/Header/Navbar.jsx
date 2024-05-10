@@ -34,8 +34,8 @@ function Navbar() {
           <ul className="flex  mt-4 mr-10 xl:p-2 font-medium lg:flex-row lg:space-x-8 lg:mt-0">
             <li 
             
-            className="
-            xl:ml-10 xl:bg-[#5f5c57] xl:w-20 xl:pt-1 xl:text-center xl:rounded-l-full xl:rounded-r-full" 
+            className="btn
+            " 
             >
               <Link to="#Work" className="">work</Link>
             </li>
