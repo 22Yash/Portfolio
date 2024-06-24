@@ -9,7 +9,7 @@ import Skills from "./Skills";
 import Mousefollower from "../components/Animation/Mousefollower";
 import BackToTopButton from "../components/Header/BackToTopButton";
 import Error from './Error'
-import Skill from "./Skill";
+
 
 function Home() {
   const lenis = useLenis(({ scroll }) => {
@@ -20,14 +20,14 @@ function Home() {
   return (
     <>
       <ReactLenis root>
-        {/* <Mousefollower />
-        <Preloader /> */}
+        {/* <Mousefollower /> */}
+        {/* <Preloader />  */}
         
 
         <Hero />
         <Work />
        
-        <Skill/>
+        <Skills/>
 
         <Resume />
         <Contactform />

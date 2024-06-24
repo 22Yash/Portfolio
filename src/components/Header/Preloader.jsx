@@ -3,7 +3,7 @@ import gsap from "gsap";
 import MovingCircle from "./MovingCircle";
 
 function Preloader() {
-  const textRef = useRef(null);
+  
   const thirdtext = useRef(null);
   const preloaderRef = useRef(null);
 
@@ -11,17 +11,17 @@ function Preloader() {
     const tl = gsap.timeline({ defaults: { ease: "power1.out" } });
 
     if (window.innerWidth > 768) {
-      tl.fromTo(
-        textRef.current.children,
-        { opacity: 0, y: "+=50" },
-        { delay: 0.5, opacity: 1, y: "0", stagger: 0.1 }
-      ).to(textRef.current, {
-        opacity: 0,
-        duration: 1,
-        onComplete: () => {
-          textRef.current.remove(); // Remove the preloader div from the DOM
-        },
-      });
+      // tl.fromTo(
+      //   textRef.current.children,
+      //   { opacity: 0, y: "+=50" },
+      //   { delay: 0.5, opacity: 1, y: "0", stagger: 0.1 }
+      // ).to(textRef.current, {
+      //   opacity: 0,
+      //   duration: 1,
+      //   onComplete: () => {
+      //     textRef.current.remove(); // Remove the preloader div from the DOM
+      //   },
+      // });
 
       tl.fromTo(
         ".second",
@@ -55,17 +55,17 @@ function Preloader() {
         },
       });
     } else {
-      tl.fromTo(
-        textRef.current.children,
-        { opacity: 0, y: "+=50" },
-        { delay: 0.5, opacity: 1, y: "-10", stagger: 0.1 }
-      ).to(textRef.current, {
-        opacity: 0,
-        duration: 1,
-        onComplete: () => {
-          textRef.current.remove(); // Remove the preloader div from the DOM
-        },
-      });
+      // tl.fromTo(
+      //   textRef.current.children,
+      //   { opacity: 0, y: "+=50" },
+      //   { delay: 0.5, opacity: 1, y: "-10", stagger: 0.1 }
+      // ).to(textRef.current, {
+      //   opacity: 0,
+      //   duration: 1,
+      //   onComplete: () => {
+      //     textRef.current.remove(); // Remove the preloader div from the DOM
+      //   },
+      // });
 
       tl.fromTo(
         ".second",
@@ -115,37 +115,7 @@ function Preloader() {
       >
         <div className="first w-full h-[120px]   ">
        
-          <h1
-            ref={textRef}
-            className="firsttext  ml-12 mt-20 text-[40px] text-[#d0d0c6]   xl:text-[100px]  xl:mt-40  xl:flex  xl:flex-row   xl:justify-center xl:items-center"
           
-          >
-            
-            <span>U</span>
-            <span>n</span>
-            <span>v</span>
-            <span>e</span>
-            <span>i</span>
-            <span>l</span>
-            <span>i</span>
-            <span>n</span>
-            <span>g</span>
-            <br className="hidden md:block" />{" "}
-            {/* Add line break for mobile screens */}
-            <span className=" ml-0 xl:ml-10">C</span>
-            <span>r</span>
-            <span>e</span>
-            <span>a</span>
-            <span>t</span>
-            <span>i</span>
-            <span>v</span>
-            <span>i</span>
-            <span>t</span>
-            <span>y</span>
-            <span>.</span>
-            <span>.</span>
-            <span>.</span>
-          </h1>
         </div>
         <div id="second" className=" h-[100px]">
           <h2 className="second text-[#cecec4]  ml-0 xl:ml-0 text-[50px] xl:text-[70px]  flex mt-10 items-center justify-center">
@@ -155,7 +125,10 @@ function Preloader() {
         <div id="third">
           <h2
             ref={thirdtext}
-            className="third text-[#bdbdb0] ml-[180px] -mt-20 xl:ml-0 text-[60px] xl:text-[100px] xl:flex xl:justify-center xl:mt-10 uppercase font-bold"
+            className="third text-[#bdbdb0] ml-[100px] 
+            md:ml-[300px] 
+            xl:ml-0 text-[60px] xl:text-[100px] xl:flex xl:justify-center 
+            xl:mt-10 uppercase font-bold"
           >
             <span>y</span>
             <span>A</span>
@@ -178,6 +151,7 @@ function Preloader() {
             <span>i</span>
 
             <span>o</span>
+            <span>.</span>
           </h2>
         </div>
       </div>

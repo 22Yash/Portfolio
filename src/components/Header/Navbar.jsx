@@ -37,17 +37,17 @@ function Navbar() {
             className="button -mt-0
             " 
             >
-              <Link to="#Work" className="ml-5 text-[20px]">work</Link>
+              <Link to="#Work" className="ml-7 text-[17px]">Work</Link>
             </li>
             <li className="button"
            >
-              <Link to="#Skills" className="ml-6 text-[20px]">Skills</Link>
+              <Link to="#Skills" className="ml-7 text-[17px]">Skills</Link>
             </li>
             <li className="button" >
-              <Link to="#Resume" className="ml-5 text-[16px]">Resume</Link>
+              <Link to="#Resume" className="ml-4 text-[17px]">Resume</Link>
             </li>
             <li className="button" >
-              <Link to="#Contact" className="ml-5 text-[16px]">Contact</Link>
+              <Link to="#Contact" className="ml-5 text-[17px]">Contact</Link>
             </li>
           </ul>
         </div>
