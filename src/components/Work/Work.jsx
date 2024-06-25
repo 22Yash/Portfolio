@@ -145,13 +145,41 @@ function Work() {
 
                     <div
                       id="project1"
-                      data-speed-1
+                      
                       className="slide w-[430px] h-[400px] ml-[60px] m-10 
                       rounded-3xl md:w-[680px] xl:w-6/12 xl:h-[400px] text-white md:grid md:grid-cols-2
-                       xl:flex-shrink-0 bg-[#bebeb0] xl:p-4 xl:mt-32 xl:-ml-24 xl:rounded-3xl"
+                       xl:flex-shrink-0 bg-[#bebeb0] xl:p-4 xl:mt-32 xl:-ml-24 xl:rounded-3xl
+                       hover:bg-[#98988C]"
                     >
-                      <div id="img" className="bg-red-400 w-[250px] mt-20"><img src={project1} alt="" className="h-[250px]" /></div>
-                      <div id="info" className="bg-red-900">I am build a clone of awwards website</div>
+                      <div id="img" className=" w-[250px] mt-20">
+                        <img src={project1} alt="" className="h-[250px]" />
+                      </div>
+                      <div id="info" className="flex flex-col gap-[40px] m-[20px] -ml-[0px]">
+                        <h4 className="text-black font-helvetica font-semibold  text-[20px] mt-[30px]">Cynthia Ugwu Clone</h4>
+                        <p className="text-[16px] -mt-[20px]">I made Awwwards winning webiste Cynthia Ugwu.
+                          It's a website with a lot og animation and interaction.
+
+                        </p>
+                        <h4 className=" text-white uppercase  text-center  flex gap-2 ">
+                          <span className="bg-gray-500 w-[80px] p-2 rounded-full ">HTML </span>
+                          <span className="bg-gray-500 w-[50px] p-2  rounded-full ">CSS </span>
+
+                          <span className="bg-gray-500 w-[120px] p-2 rounded-full ">JavaScript </span>
+                          
+
+
+
+                          </h4>
+                          <h4 className=" text-white uppercase  text-center flex gap-4  -mt-[30px]">
+                          
+                          <span className="bg-gray-500 w-[80px] p-2 rounded-full ">GSAP</span>
+                          <span className="bg-gray-500 w-[130px] p-2 rounded-full ">Locomotive </span>
+
+
+
+                          </h4>
+                          
+                      </div>
                     </div>
                     <div
                       id="project2"
