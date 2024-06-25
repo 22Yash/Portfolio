@@ -35,70 +35,70 @@ function Work() {
 
   
 
-  // useEffect(() => {
-  //   const screenWidth = window.innerWidth;
+  useEffect(() => {
+    const screenWidth = window.innerWidth;
 
-  //   if (screenWidth > 1024) {
-  //     // Animation for desktop/laptop screens
-  //     const tlDesktop = gsap.timeline();
+    if (screenWidth > 1024) {
+      // Animation for desktop/laptop screens
+      const tlDesktop = gsap.timeline();
 
-  //     tlDesktop.to(".slide", {
-  //       scrollTrigger: {
-  //         trigger: ".project",
-  //         start: "-400 top",
-  //         end: "-300 top",
-  //         scrub: 1,
-  //         markers: true,
-  //       },
-  //       xPercent: -100,
-  //       duration: 2,
-  //     });
+      tlDesktop.to(".slide", {
+        scrollTrigger: {
+          trigger: ".project",
+          start: "-400 top",
+          end: "-300 top",
+          scrub: 1,
+          markers: true,
+        },
+        xPercent: -100,
+        duration: 2,
+      });
 
-  //     tlDesktop.to(".work", {
-  //       scrollTrigger: {
-  //         trigger: ".work",
-  //         start: "-680 top",
-  //         end: "-570 top",
-  //         scrub: 2,
-  //         markers: true,
-  //         pin: true,
-  //       },
-  //       y: -350,
-  //       duration: 0.5,
-  //       borderRadius: "20px",
-  //     });
-  //   } else if (screenWidth <= 1024 && screenWidth > 768) {
-  //     const tlTablet = gsap.timeline();
+      tlDesktop.to(".work", {
+        scrollTrigger: {
+          trigger: ".work",
+          start: "-680 top",
+          end: "-570 top",
+          scrub: 2,
+          markers: true,
+          pin: true,
+        },
+        y: -350,
+        duration: 0.5,
+        borderRadius: "20px",
+      });
+    } else if (screenWidth <= 1024 && screenWidth > 768) {
+      const tlTablet = gsap.timeline();
 
-  //     tlTablet.to(".slide", {
-  //       scrollTrigger: {
-  //         trigger: ".project",
-  //         start: "-200 top",
-  //         end: "0 top",
-  //         scrub: 1,
-  //         markers: true,
-  //       },
-  //       xPercent: 0,
-  //       duration: 2,
-  //     });
-  //   } else {
-  //     const tlMobile = gsap.timeline();
+      tlTablet.to(".slide", {
+        scrollTrigger: {
+          trigger: ".project",
+          start: "-200 top",
+          end: "0 top",
+          scrub: 1,
+          markers: true,
+        },
+        xPercent: 0,
+        duration: 2,
+      });
+    } else {
+      const tlMobile = gsap.timeline();
 
-  //     tlMobile.to(".work", {
-  //       scrollTrigger: {
-  //         trigger: ".work",
-  //         start: "-920 top",
-  //         end: "-570 top",
-  //         scrub: 2,
-  //         markers: true,
-  //         pin: true,
-  //       },
-  //       y: -650,
-  //       duration: 5,
-  //       borderRadius: "20px",
-  //     });
-  //   }
-  // }, []);
+      tlMobile.to(".work", {
+        scrollTrigger: {
+          trigger: ".work",
+          start: "-920 top",
+          end: "-570 top",
+          scrub: 2,
+          markers: true,
+          pin: true,
+        },
+        y: -650,
+        duration: 5,
+        borderRadius: "20px",
+      });
+    }
+  }, []);
 
   return (
     <>
@@ -155,7 +155,7 @@ function Work() {
                         <img src={project1} alt="" className="h-[250px]" />
                       </div>
                       <div id="info" className="flex flex-col gap-[40px] m-[20px] -ml-[0px]">
-                        <h4 className="text-black font-helvetica font-semibold  text-[20px] mt-[30px]">Cynthia Ugwu Clone</h4>
+                        <h4 className="text-black  font-semibold  text-[20px] mt-[30px]">Cynthia Ugwu Clone</h4>
                         <p className="text-[16px] -mt-[20px]">I made Awwwards winning webiste Cynthia Ugwu.
                           It's a website with a lot og animation and interaction.
 

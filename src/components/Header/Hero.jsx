@@ -7,6 +7,8 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 import "tailwind-scrollbar";
 import SlideMenu from "./SlideMenu";
 import heroSVG from "./nnnoise.svg";
+import resume from "./YashDokeResume.pdf"
+
 gsap.registerPlugin(ScrollTrigger);
 
 function Hero() {
@@ -210,10 +212,17 @@ function Hero() {
         md:mt-5 md:ml-32 
         xl:text-2xl xl:ml-96 xl:mt-10 xl:font-medium xl:w-2/5 xl:text-center text-[#6e6760]"
         >
-          <h4 ref={infoRef} className=" mt-16 text-2xl  ml-10 md:mt-10 xl:ml-44 xl:mt-16 selection:bg-[#6c665e] selection:text-[#3d3a36]">
+          <h4 ref={infoRef} className=" mt-16 text-2xl  ml-10 md:mt-10 xl:ml-44 xl:mt-[20px] selection:bg-[#6c665e] selection:text-[#3d3a36]">
             I like to develop responsive, interactive, and animated websites.
           </h4>
+          
+          <div id="resume" className="flex  justify-center ml-[120px]">
+        <button className="bg-[#5f5c57] p-[9px] rounded-full text-[20px] text-white mt-[10px] ml-[40px]">
+          <a href={resume} download="">get my resume offline</a>
+        </button>
+       </div>
         </div>
+       
        </section>
         
       </div>
