@@ -33,86 +33,72 @@ function Work() {
     };
   }, []);
 
-  useEffect(() => {
-    const scroll = new LocomotiveScroll({
-      el: workRef.current,
-      smooth: true,
-      multiplier: 0.5, // Adjust this value to slow down the scroll speed
-    });
+  
 
-    scrollRef.current = scroll;
+  // useEffect(() => {
+  //   const screenWidth = window.innerWidth;
 
-    return () => {
-      if (scrollRef.current) {
-        scrollRef.current.destroy();
-      }
-    };
-  }, []);
+  //   if (screenWidth > 1024) {
+  //     // Animation for desktop/laptop screens
+  //     const tlDesktop = gsap.timeline();
 
-  useEffect(() => {
-    const screenWidth = window.innerWidth;
+  //     tlDesktop.to(".slide", {
+  //       scrollTrigger: {
+  //         trigger: ".project",
+  //         start: "-400 top",
+  //         end: "-300 top",
+  //         scrub: 1,
+  //         markers: true,
+  //       },
+  //       xPercent: -100,
+  //       duration: 2,
+  //     });
 
-    if (screenWidth > 1024) {
-      // Animation for desktop/laptop screens
-      const tlDesktop = gsap.timeline();
+  //     tlDesktop.to(".work", {
+  //       scrollTrigger: {
+  //         trigger: ".work",
+  //         start: "-680 top",
+  //         end: "-570 top",
+  //         scrub: 2,
+  //         markers: true,
+  //         pin: true,
+  //       },
+  //       y: -350,
+  //       duration: 0.5,
+  //       borderRadius: "20px",
+  //     });
+  //   } else if (screenWidth <= 1024 && screenWidth > 768) {
+  //     const tlTablet = gsap.timeline();
 
-      tlDesktop.to(".slide", {
-        scrollTrigger: {
-          trigger: ".project",
-          start: "-400 top",
-          end: "-300 top",
-          scrub: 1,
-          markers: true,
-        },
-        xPercent: -100,
-        duration: 2,
-      });
+  //     tlTablet.to(".slide", {
+  //       scrollTrigger: {
+  //         trigger: ".project",
+  //         start: "-200 top",
+  //         end: "0 top",
+  //         scrub: 1,
+  //         markers: true,
+  //       },
+  //       xPercent: 0,
+  //       duration: 2,
+  //     });
+  //   } else {
+  //     const tlMobile = gsap.timeline();
 
-      tlDesktop.to(".work", {
-        scrollTrigger: {
-          trigger: ".work",
-          start: "-680 top",
-          end: "-570 top",
-          scrub: 2,
-          markers: true,
-          pin: true,
-        },
-        y: -350,
-        duration: 0.5,
-        borderRadius: "20px",
-      });
-    } else if (screenWidth <= 1024 && screenWidth > 768) {
-      const tlTablet = gsap.timeline();
-
-      tlTablet.to(".slide", {
-        scrollTrigger: {
-          trigger: ".project",
-          start: "-200 top",
-          end: "0 top",
-          scrub: 1,
-          markers: true,
-        },
-        xPercent: 0,
-        duration: 2,
-      });
-    } else {
-      const tlMobile = gsap.timeline();
-
-      tlMobile.to(".work", {
-        scrollTrigger: {
-          trigger: ".work",
-          start: "-920 top",
-          end: "-570 top",
-          scrub: 2,
-          markers: true,
-          pin: true,
-        },
-        y: -650,
-        duration: 5,
-        borderRadius: "20px",
-      });
-    }
-  }, []);
+  //     tlMobile.to(".work", {
+  //       scrollTrigger: {
+  //         trigger: ".work",
+  //         start: "-920 top",
+  //         end: "-570 top",
+  //         scrub: 2,
+  //         markers: true,
+  //         pin: true,
+  //       },
+  //       y: -650,
+  //       duration: 5,
+  //       borderRadius: "20px",
+  //     });
+  //   }
+  // }, []);
 
   return (
     <>
@@ -160,9 +146,12 @@ function Work() {
                     <div
                       id="project1"
                       data-speed-1
-                      className="slide w-[430px] h-[400px] ml-[60px] m-10 rounded-3xl md:w-[680px] xl:w-6/12 xl:h-[400px] text-white xl:flex-shrink-0 bg-[#bebeb0] xl:p-20 xl:mt-32 xl:-ml-24 xl:rounded-3xl"
+                      className="slide w-[430px] h-[400px] ml-[60px] m-10 
+                      rounded-3xl md:w-[680px] xl:w-6/12 xl:h-[400px] text-white md:grid md:grid-cols-2
+                       xl:flex-shrink-0 bg-[#bebeb0] xl:p-4 xl:mt-32 xl:-ml-24 xl:rounded-3xl"
                     >
-                      <img src={project1} alt="" />
+                      <div id="img" className="bg-red-400 w-[250px] mt-20"><img src={project1} alt="" className="h-[250px]" /></div>
+                      <div id="info" className="bg-red-900">I am build a clone of awwards website</div>
                     </div>
                     <div
                       id="project2"

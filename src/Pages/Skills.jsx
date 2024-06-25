@@ -33,16 +33,16 @@ function Skills() {
       // Animation for desktop/laptop screens
       tlDesktop.current = gsap.timeline();
 
-      // tlDesktop.current.from(".box h4", {
-      //   opacity: 0,
-      //   scrollTrigger: {
-      //     trigger: ".box h4",
-      //     scroller: "#page3",
-      //     markers:true,
-      //     start: "-400 top"
-      //   },
-      //   stagger: 0.5
-      // })
+      tlDesktop.current.from(".box h4", {
+        opacity: 0,
+        scrollTrigger: {
+          trigger: ".box h4",
+        
+          markers:true,
+          start: "-400 top"
+        },
+        stagger: 0.5
+      })
 
 
       gsap.from(".dev-box img", {
@@ -52,7 +52,8 @@ function Skills() {
           
           markers:true,
           start: "-200 top",
-          end:"-150 top"
+          end:"-150 top",
+          scrub:1
           
 
         },
@@ -103,8 +104,8 @@ function Skills() {
   return (
     <>
     <div  id="page3">
-    <h3>Things I'm <span>good</span> at</h3>
-    <h5>skills, interests, passion and hobbies</h5>
+    <h3 className="font-bold text-white">Things I'm <span>good</span> at</h3>
+    <h5 className="font-bold text-white">skills, interests, passion and hobbies</h5>
     <div className="box dev-box">
         <h4>development</h4>
         <div className="elem-div flex ">
