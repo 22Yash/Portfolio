@@ -22,11 +22,41 @@ function Skills() {
   useEffect(() => {
     
 
-   
+    gsap.fromTo(".dev-box h4",{
+      opacity:0,
+      y: 40,
+      stagger: {
+        amount: 2
+      },
+    },
+     {
+      opacity: 1,
+      y:-40,
+      
+      stagger: {
+        amount: 2
+      },
+      scrollTrigger: {
+        trigger: ".dev-box h4 ",
+        
+        markers: true,
+        start: "-250 top",
+        end: "-200 top",
+        scrub: 1
+      }
+    });
 
-      gsap.from(".dev-box img", {
-        opacity: 0,
+      gsap.fromTo(".dev-box img",{
+        opacity:0,
         y: 20,
+        stagger: {
+          amount: 2
+        },
+      },
+       {
+        opacity: 1,
+        y:0,
+        
         stagger: {
           amount: 2
         },
@@ -35,7 +65,7 @@ function Skills() {
           
           markers: true,
           start: "-200 top",
-          end: "-150 top",
+          end: "-100 top",
           scrub: 1
         }
       });
@@ -43,7 +73,7 @@ function Skills() {
   }, []);
 
   return (
-    <section id="Skills">
+    <section id="Skills" className="  w-[560px] xl:-mt-32 sm:w-full xl:w-full">
       <div id="page3">
       <h3 className="font-bold text-white">Things I'm <span>good</span> at</h3>
       <h5 className="font-bold text-white">skills, interests, passion and hobbies</h5>

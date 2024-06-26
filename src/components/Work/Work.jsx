@@ -12,26 +12,7 @@ function Work() {
   const workRef = useRef(null);
   const scrollRef = useRef(null);
 
-  useEffect(() => {
-    const el = mousefollowerRef.current;
-    const work = workRef.current;
-
-    const handleMouseMove = (event) => {
-      const { clientX, clientY } = event;
-      gsap.to(el, {
-        x: clientX,
-        y: clientY,
-        duration: 0.1,
-        ease: "back.out",
-      });
-    };
-
-    work.addEventListener("mousemove", handleMouseMove);
-
-    return () => {
-      work.removeEventListener("mousemove", handleMouseMove);
-    };
-  }, []);
+ 
 
   
 
@@ -42,11 +23,12 @@ function Work() {
       // Animation for desktop/laptop screens
       const tlDesktop = gsap.timeline();
 
+      
       tlDesktop.to(".slide", {
         scrollTrigger: {
           trigger: ".project",
-          start: "-400 top",
-          end: "-300 top",
+          start: "100 top",
+          end: "250 top",
           scrub: 1,
           markers: true,
         },
@@ -54,19 +36,19 @@ function Work() {
         duration: 2,
       });
 
-      tlDesktop.to(".work", {
-        scrollTrigger: {
-          trigger: ".work",
-          start: "-680 top",
-          end: "-570 top",
-          scrub: 2,
-          markers: true,
-          pin: true,
-        },
-        y: -350,
-        duration: 0.5,
-        borderRadius: "20px",
-      });
+      // tlDesktop.to(".work", {
+      //   scrollTrigger: {
+      //     trigger: ".work",
+      //     start: "-680 top",
+      //     end: "-570 top",
+      //     scrub: 2,
+      //     markers: true,
+      //     pin: true,
+      //   },
+      //   y: -350,
+      //   duration: 0.5,
+      //   borderRadius: "20px",
+      // });
     } else if (screenWidth <= 1024 && screenWidth > 768) {
       const tlTablet = gsap.timeline();
 
@@ -84,21 +66,40 @@ function Work() {
     } else {
       const tlMobile = gsap.timeline();
 
-      tlMobile.to(".work", {
-        scrollTrigger: {
-          trigger: ".work",
-          start: "-920 top",
-          end: "-570 top",
-          scrub: 2,
-          markers: true,
-          pin: true,
-        },
-        y: -650,
-        duration: 5,
-        borderRadius: "20px",
-      });
+      // tlMobile.to(".work", {
+      //   scrollTrigger: {
+      //     trigger: ".work",
+      //     start: "-920 top",
+      //     end: "-570 top",
+      //     scrub: 2,
+      //     markers: true,
+      //     pin: true,
+      //   },
+      //   y: -650,
+      //   duration: 5,
+      //   borderRadius: "20px",
+      // });
     }
   }, []);
+
+  const mouseIN = () => {
+
+    gsap.set("#img",{scale:0.9,transformOrigin: "bottom"})
+    gsap.to("#img", {
+      rotation: -8, 
+      ease: "power2.inOut", 
+      scale:1
+    });
+
+}
+
+const mouseOut = () =>{
+  gsap.to("#img", {
+    rotation: 0, // Reset rotation to 0 degrees (straight)
+    ease: "power2.inOut", // Use ease for smoother animation
+  });
+
+}
 
   return (
     <>
@@ -130,7 +131,7 @@ function Work() {
                 <div className="grid-cols-1 w-1/12 h-screen xl:w-10/12 xl:h-screen xl:flex-shrink-0">
                   <div
                     id="project"
-                    className="slide col-span-1 xl:flex xl:m-10 xl:gap-10"
+                    className="slide col-span-1 xl:flex xl:m-10 xl:gap-10 xl:mt-[120px]"
                   >
                     <div
                       className="projecttext w-6/12 text-center ml-20 xl:ml-0 flex-none xl:w-6/12 xl:flex-shrink-0"
@@ -145,6 +146,8 @@ function Work() {
 
                     <div
                       id="project1"
+                      onMouseEnter={mouseIN}
+                      onMouseLeave={mouseOut}
                       
                       className="slide w-[430px] h-[400px] ml-[60px] m-10 
                       rounded-3xl md:w-[680px] xl:w-6/12 xl:h-[400px] text-white md:grid md:grid-cols-2
