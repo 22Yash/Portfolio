@@ -49,7 +49,7 @@ function Resume() {
   // }, []);
 
   return (
-    <div className='resume mt-[840px] h-[800px] w-[530px] xl:-mt-32 sm:w-full xl:w-full bg-yellow-300' id='Resume'>
+    <div className='resume  h-[800px] w-[700px] xl:-mt-32 sm:w-full xl:w-full bg-yellow-300' id='Resume'>
      
     </div>
   )

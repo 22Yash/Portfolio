@@ -80,13 +80,13 @@ function Contactform() {
 
 
   return (
-    <div id="Contact" className="w-[530px] xl:w-full  "
+    <div id="Contact" className=" w-[700px] xl:w-full  "
     style={{ backgroundImage: `url(${heroSVG})`, backgroundSize: "cover" }}>
       
       
       <div
         id="contactHeading"
-        className="bg-[#d6d6d0]  w-[550px] md:w-full xl:w-full   "
+        className="bg-[#d6d6d0]  w-full md:w-full xl:w-full   "
         style={{ backgroundImage: `url(${heroSVG})`, backgroundSize: "cover" }}
       >
         <h1 className="xl:text-[85px] text-5xl ml-16 font-helvetica underline  underline-offset-[18px] md:underline-offset-[12px] xl:underline-offset-[30px]  xl:flex xl:justify-center font-semibold xl:ml-20 xl:pt-5 xl:mt-0 mt-0 pt-10 "
@@ -96,7 +96,7 @@ function Contactform() {
       </div>
       <div id="conactform" className="xl:grid xl:grid-cols-2 md:grid md:grid-cols-2  xl:gap-4  ">
         <div
-          className="xl:w-[900px] bg-[#d6d6d0] w-[555px] md:w-[550px] pt-14 text-[#3a3733] h-[150vh]
+          className="xl:w-[900px] bg-[#d6d6d0] w-[530px] md:w-[550px] pt-14 text-[#3a3733] h-[150vh]
       font-helvetica xl:col-span-1 xl:pl-32 md:h-[130vh]  md:pt-24
      xl:space-y-5  xl:h-[130vh]"
           style={{

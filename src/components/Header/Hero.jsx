@@ -152,7 +152,7 @@ function Hero() {
     
 <div
       id="hero"
-      className="main  w-[560px]  xl:w-full md:w-full sticky h-[115vh]  bg-[#d6d6d0] "
+      className="main  w-[700px]  xl:w-full md:w-full sticky h-[115vh]  bg-[#d6d6d0] "
       style={{ backgroundImage: `url(${heroSVG})`, backgroundSize: "cover" }}
     >
         

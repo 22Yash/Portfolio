@@ -73,7 +73,7 @@ function Skills() {
   }, []);
 
   return (
-    <section id="Skills" className="  w-[560px] xl:-mt-32 sm:w-full xl:w-full">
+    <section id="Skills" className="  w-[700px] xl:-mt-32 sm:w-full xl:w-full">
       <div id="page3">
       <h3 className="font-bold text-white">Things I'm <span>good</span> at</h3>
       <h5 className="font-bold text-white">skills, interests, passion and hobbies</h5>

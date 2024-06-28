@@ -10,36 +10,7 @@
 /* index.css (or any global CSS file) */
 @layer base {
     /* Create a grain texture background */
-    .grain-background {
-      /* Set the size of the background */
-      width: 100vw;
-      height: 100vh;
-  
-      /* Apply the grain texture background */
-      background-image: url('./components/Header/graintexture.avif');
-      background-size: cover;
-      background-position: center;
-      background-repeat: repeat; /* or "no-repeat" if you don't want repetition */
-  
-      /* Adjust opacity of the grain texture */
-      opacity: 0.5; /* Adjust as needed */
-    }
-
-    .bento{
-      @apply  rounded-[40px] bg-red-300 p-[1px] hover:bg-gradient-to-br hover:from-red-200 hover:via-pink-200 hover:to-yellow-200
-    }
-
-    .bentoMobile{
-      @apply w-[400px] lg:w-full -ml-2 xl:ml-0 
-    }
-
-    .innerContainer{
-      @apply rounded-full w-full h-full p-6 lg:flex lg:flex-row flex flex-col gap-12 group-hover:bg-gradient-to-br group-hover:from-red-50 group-hover:via-pink-50 group-hover:to-yellow-50
-    }
-
-    .techInfo{
-      @apply p-1 text-[20px] font-semibold lg:text-[18px] lg:font-normal text-center
-    }
+   
 
    
     .button {
@@ -97,7 +68,7 @@
 }
 
 #page3>h3 {
-  font-size: 4.8vmax;
+  font-size: 4.9vmax;
   font-family: 'Helvetica';
   margin-bottom: 0vmax;
 }
@@ -143,6 +114,69 @@
 .des-box img {
   height: 6vmax;
   margin-right: 1.4vmax;
+}
+
+
+@media (max-width:600px) {
+
+
+  #page3 {
+      min-height: 67vh;
+      width: 100%;
+      background-color: #222;
+      padding: 5vh 5.1vw;
+      position: relative;
+  }
+
+  #page3>h3 {
+      font-size: 4.4vmax;
+      font-family: gilroy;
+      margin-bottom: 0vmax;
+  }
+
+  #page3>h3 span {
+      font-size: 4.4vmax;
+      font-family: gilroy;
+      color: #38cdfa;
+  }
+
+  #page3>h5 {
+      font-size: 2.2vmax;
+      font-family: gilroy;
+      font-weight: 500;
+      margin-bottom: 1.4vmax;
+
+  }
+
+  .box h4 {
+      font-size: 2.1vmax;
+      border: 2px solid white;
+      display: inline-block;
+      font-family: gilroy;
+      color: #fff;
+      font-weight: 500;
+      padding: 5px 9px;
+      border-radius: 7px;
+      margin-top: 4vmax;
+      margin-bottom: 2vmax;
+  }
+
+
+  .box img {
+      height: 5.8vmax;
+      margin-right: 5px;
+      background-color: #fff;
+      padding: 4px;
+      position: relative;
+      border-radius: 5px;
+  }
+
+  .des-box img {
+      height: 6.7vmax;
+      margin-right: 5px;
+  }
+
+
 }
 
 

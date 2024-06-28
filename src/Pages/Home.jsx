@@ -29,8 +29,8 @@ function Home() {
        
         <Skills/>
 
-        {/* <Resume />
-        <Contactform /> */}
+        <Resume />
+        <Contactform />
         {/* <BackToTopButton /> */}
         
       </ReactLenis>

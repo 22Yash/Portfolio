@@ -60,12 +60,12 @@ function SlideMenu() {
     <div className="fixed xl:top-20  top-0 right-0 z-50"
    >
       <button onClick={toggleMenu} className="xl:w-24   xl:h-24 xl:m-5  
-            -ml-28 mt-5 mr-5 w-16 h-16 bg-[#5f5c57]  rounded-full "  >
-        {isOpen ? <FiX className="text-3xl xl:ml-8 ml-4 text-white" /> : <FiMenu className="text-3xl xl:ml-8 ml-4 text-black" />}
+            -ml-[30px] mt-[30px] mr-5 w-[100px] h-[100px] bg-[#5f5c57]  rounded-full "  >
+        {isOpen ? <FiX className="text-[30px] l:ml-8 ml-4 text-white" /> : <FiMenu className="text-[50px] xl:ml-8 ml-[25px] text-black" />}
       </button>
       <div
         ref={menuRef}
-        className="fixed top-0 right-0 h-full bg-[#3b3834] sm:w-4/12 xl:w-4/12 flex flex-col text-5xl justify-center"
+        className="fixed top-0 right-0 h-full bg-[#3b3834] w-[400px] xl:w-4/12 flex flex-col text-5xl justify-center"
         style={{ transform: isOpen ? "translateX(0)" : "translateX(600px)" ,   backgroundImage: `url(${hamburgerSVG})`, backgroundSize: "cover" 
         }}
       >
@@ -85,7 +85,8 @@ function SlideMenu() {
                        hover:bg-gray-50  -ml-[10px] lg:hover:bg-transparent lg:border-0 hover:text-[#babaad] xl:-ml-10 lg:p-2 `
                     }
                   >
-                    Home
+                    <span className="text-[80px]">Home</span>
+                    
                   </Link>
                 </li>
                 <li className="ml-5 xl:ml-0">
@@ -97,7 +98,7 @@ function SlideMenu() {
                       }  hover:bg-gray-50 -ml-8 xl:-ml-16 lg:hover:bg-transparent lg:border-0 hover:text-[#babaad] lg:p-0`
                     }
                   >
-                    Work
+                    <span className="text-[80px]">Work</span>
                   </Link>
                 </li>
                 <li className="ml-5 xl:ml-0">
@@ -109,7 +110,7 @@ function SlideMenu() {
                       }  hover:bg-gray-50 -ml-8 xl:-ml-16 lg:hover:bg-transparent lg:border-0 hover:text-[#babaad] lg:p-0`
                     }
                   >
-                    Skills
+                   <span className="text-[80px]">Skills</span>
                   </Link>
                 </li>
 
@@ -122,7 +123,7 @@ function SlideMenu() {
                       }  hover:bg-gray-50 -ml-8 xl:-ml-16 lg:hover:bg-transparent lg:border-0 hover:text-[#babaad] lg:p-0`
                     }
                   >
-                    Resume
+                    <span className="text-[80px]">Resume</span>
                   </Link>
                 </li>
                 <li className="ml-5 xl:ml-0">
@@ -134,7 +135,7 @@ function SlideMenu() {
                       }  hover:bg-gray-50 -ml-8 xl:-ml-16 lg:hover:bg-transparent lg:border-0 hover:text-[#babaad] lg:p-0`
                     }
                   >
-                    Contact
+                   <span className="text-[80px]">Contact</span>
                   </Link>
                 </li>
               </ul>

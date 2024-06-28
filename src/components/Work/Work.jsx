@@ -106,20 +106,14 @@ const mouseOut = () =>{
       <SlideMenu />
       <section
         id="Work"
-        className="work w-[560px] xl:w-full md:w-full rounded-t-full"
+        className="work w-[700px] xl:w-full md:w-full rounded-t-full "
       >
         <div id="work" ref={workRef} className="overflow-x-hidden">
-          <div
-            ref={mousefollowerRef}
-            id="view"
-            className="w-12 h-12 justify-center opacity-0 text-md flex items-center absolute bg-black text-white rounded-full"
-          >
-            view
-          </div>
+          
           <div
             id="projects"
             
-            data-scroll-speed=".2"
+            
             className="project w-full"
             style={{ backgroundImage: `url(${workSVG})`, backgroundSize: "cover" }}
           >
@@ -136,10 +130,10 @@ const mouseOut = () =>{
                     <div
                       className="projecttext w-6/12 text-center ml-20 xl:ml-0 flex-none xl:w-6/12 xl:flex-shrink-0"
                     >
-                      <h2 className="text-6xl w-[500px] font-bold p-8 text-left md:w-[600px] md:text-7xl md:ml-28 xl:text-7xl xl:m-10 xl:font-bold xl:w-76 xl:-ml-20 xl:text-center xl:p-10 text-[#bebeb0]">
+                      <h2 className="text-[70px] w-[500px] ml-[80px] font-bold p-8 text-left md:w-[600px] md:text-7xl md:ml-28 xl:text-7xl xl:m-10 xl:font-bold xl:w-76 xl:-ml-20 xl:text-center xl:p-10 text-[#bebeb0]">
                         My Work.
                       </h2>
-                      <p className="text-[#7b736a] text-2xl text-balance ml-5 font-semibold w-72 md:w-[800px] md:-ml-24 xl:m-10 xl:text-5xl xl:w-2/4">
+                      <p className="text-[#7b736a] text-[40px] text-balance ml-5 font-semibold w-[490px] md:w-[800px] md:-ml-24 xl:m-10 xl:text-5xl xl:w-2/4">
                         "Bringing ideas to life through creativity and code."
                       </p>
                     </div>
@@ -149,7 +143,7 @@ const mouseOut = () =>{
                       onMouseEnter={mouseIN}
                       onMouseLeave={mouseOut}
                       
-                      className="slide w-[430px] h-[400px] ml-[60px] m-10 
+                      className="slide w-[600px] h-[450px] ml-[60px] m-10 grid grid-cols-2
                       rounded-3xl md:w-[680px] xl:w-6/12 xl:h-[400px] text-white md:grid md:grid-cols-2
                        xl:flex-shrink-0 bg-[#bebeb0] xl:p-4 xl:mt-32 xl:-ml-24 xl:rounded-3xl
                        hover:bg-[#98988C]"
@@ -157,13 +151,13 @@ const mouseOut = () =>{
                       <div id="img" className=" w-[250px] mt-20">
                         <img src={project1} alt="" className="h-[250px]" />
                       </div>
-                      <div id="info" className="flex flex-col gap-[40px] m-[20px] -ml-[0px]">
-                        <h4 className="text-black  font-semibold  text-[20px] mt-[30px]">Cynthia Ugwu Clone</h4>
-                        <p className="text-[16px] -mt-[20px]">I made Awwwards winning webiste Cynthia Ugwu.
+                      <div id="info" className="flex flex-col gap-[20px]  md:gap-[40px] m-[20px] -ml-[0px]">
+                        <h4 className="text-black  font-semibold text-[30px] text-center md:text-[20px] mt-[30px]">Cynthia Ugwu Clone</h4>
+                        <p className="text-[20px] md:text-[16px] -mt-[20px]">I made Awwwards winning webiste Cynthia Ugwu.
                           It's a website with a lot og animation and interaction.
 
                         </p>
-                        <h4 className=" text-white uppercase  text-center  flex gap-2 ">
+                        <h4 className=" text-white uppercase  text-center   flex gap-2 ">
                           <span className="bg-gray-500 w-[80px] p-2 rounded-full ">HTML </span>
                           <span className="bg-gray-500 w-[50px] p-2  rounded-full ">CSS </span>
 
@@ -173,7 +167,7 @@ const mouseOut = () =>{
 
 
                           </h4>
-                          <h4 className=" text-white uppercase  text-center flex gap-4  -mt-[30px]">
+                          <h4 className=" text-white uppercase  text-center flex gap-4  md:-mt-[30px]">
                           
                           <span className="bg-gray-500 w-[80px] p-2 rounded-full ">GSAP</span>
                           <span className="bg-gray-500 w-[130px] p-2 rounded-full ">Locomotive </span>
