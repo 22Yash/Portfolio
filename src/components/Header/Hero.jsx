@@ -208,7 +208,7 @@ function Hero() {
         <div
           id="info"
           className="hero
-        text-2md -mt-16 w-2/3 text-center ml-16 font-medium
+        text-2md -mt-16 w-2/3 text-center ml-[100px] font-medium
         md:mt-5 md:ml-32 
         xl:text-2xl xl:ml-96 xl:mt-10 xl:font-medium xl:w-2/5 xl:text-center text-[#6e6760]"
         >
@@ -217,7 +217,7 @@ function Hero() {
           </h4>
           
           <div id="resume" className="flex  justify-center ml-[120px]">
-        <button className="bg-[#5f5c57] p-[9px] rounded-full text-[20px] text-white mt-[10px] ml-[40px]">
+        <button className="bg-[#5f5c57] p-[9px] rounded-full text-[20px] text-white mt-[10px] -ml-[40px]">
           <a href={resume} download="">get my resume offline</a>
         </button>
        </div>

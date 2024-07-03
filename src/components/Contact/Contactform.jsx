@@ -94,9 +94,10 @@ function Contactform() {
           Let's work together.{" "}
         </h1>
       </div>
-      <div id="conactform" className="xl:grid xl:grid-cols-2 md:grid md:grid-cols-2  xl:gap-4  ">
+      <div id="conactform" className="xl:grid xl:grid-cols-2 md:grid md:grid-cols-2  xl:gap-4 flex flex-col  ">
         <div
-          className="xl:w-[900px] bg-[#d6d6d0] w-[530px] md:w-[550px] pt-14 text-[#3a3733] h-[150vh]
+          className="xl:w-[900px] bg-[#d6d6d0] w-[530px] md:w-[550px] 
+          pt-14 text-[#3a3733] h-[150vh] ml-[100px]
       font-helvetica xl:col-span-1 xl:pl-32 md:h-[130vh]  md:pt-24
      xl:space-y-5  xl:h-[130vh]"
           style={{
@@ -226,18 +227,18 @@ function Contactform() {
         >
           <div
             id="info"
-            className=" md:w-[330px] md:-ml-10
-         pt-[40px] ml-10 p-5 -mt-64 xl:-mt-20 md:pt-[350px]
+            className=" md:w-[330px] md:-ml-10 
+         pt-[40px] ml-[160px] p-5 -mt-[420px] xl:-mt-20 md:pt-[350px]
          xl:ml-20 xl:pt-[220px] font-helvetica "
           >
             <h3 className="  text-[35px] xl:text-[45px]  mt-[10px] xl:-mt-20 font-semibold font-helvetica  border-b-2 border-black text-black w-[320px]">
               Contact details
             </h3>
-            <h3 className="xl:text-[22px] pt-5 text-[22px] xl:w-[350px] xl:h-[50px] xl:mt-5 xl:-ml-10  flex xl:justify-center xl:items-center">
+            <h3 className="xl:text-[22px] pt-5 text-[28px] xl:w-[350px] xl:h-[50px] xl:mt-5 xl:-ml-10  flex xl:justify-center xl:items-center">
               yashadoke@gmail.com
             </h3>
-            <h3 className="xl:text-[22px] text-[22px] mt-0 xl:w-[350px] xl:h-[50px] flex xl:-ml-16 xl:justify-center xl:items-center">
-              +91 93247871464
+            <h3 className="xl:text-[22px] text-[28px] mt-0 xl:w-[350px] xl:h-[50px] flex xl:-ml-16 xl:justify-center xl:items-center">
+              +91-93247871464
             </h3>
             
           </div>

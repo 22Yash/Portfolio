@@ -20,35 +20,71 @@ gsap.registerPlugin(ScrollTrigger);
 function Skills() {
 
   useEffect(() => {
-    
+    const screenWidth = window.innerWidth;
 
-    gsap.fromTo(".dev-box h4",{
-      opacity:0,
-      y: 40,
-      stagger: {
-        amount: 2
-      },
-    },
-     {
-      opacity: 1,
-      y:-40,
+    if (screenWidth > 1024) {
+      // Animation for desktop/laptop screens
+      const tlDesktop = gsap.timeline();
+
       
-      stagger: {
-        amount: 2
-      },
-      scrollTrigger: {
-        trigger: ".dev-box h4 ",
-        
-        markers: true,
-        start: "-250 top",
-        end: "-200 top",
-        scrub: 1
-      }
-    });
-
-      gsap.fromTo(".dev-box img",{
+      tlDesktop.fromTo(".dev-box h4",{
         opacity:0,
-        y: 20,
+        y: 40,
+        stagger: {
+          amount: 2
+        },
+      },
+       {
+        opacity: 1,
+        y:-40,
+        
+        stagger: {
+          amount: 2
+        },
+        scrollTrigger: {
+          trigger: ".dev-box h4 ",
+          
+          markers: true,
+          start: "-250 top",
+          end: "-200 top",
+          scrub: 1
+        }
+      });
+  
+        tlDesktop.fromTo(".dev-box img",{
+          opacity:0,
+          y: 20,
+          stagger: {
+            amount: 2
+          },
+        },
+         {
+          opacity: 1,
+          y:0,
+          
+          stagger: {
+            amount: 2
+          },
+          scrollTrigger: {
+            trigger: ".dev-box img ",
+            
+            markers: true,
+            start: "-200 top",
+            end: "-100 top",
+            scrub: 1
+          }
+        });
+     
+    } else if (screenWidth <= 1024 && screenWidth > 768) {
+      const tlTablet = gsap.timeline();
+
+      
+    } else {
+      const tlMobile = gsap.timeline();
+
+      tlMobile.fromTo(".dev-box h4",{
+        opacity:0,
+        y: 40,
         stagger: {
           amount: 2
         },
@@ -61,16 +97,44 @@ function Skills() {
           amount: 2
         },
         scrollTrigger: {
-          trigger: ".dev-box img ",
+          trigger: ".dev-box h4 ",
           
           markers: true,
-          start: "-200 top",
-          end: "-100 top",
+          start: "-950 top",
+          end: "-700 top",
           scrub: 1
         }
       });
-    
+  
+        tlMobile.fromTo(".dev-box img",{
+          opacity:0,
+          y: 20,
+          stagger: {
+            amount: 2
+          },
+        },
+         {
+          opacity: 1,
+          y:0,
+          
+          stagger: {
+            amount: 2
+          },
+          scrollTrigger: {
+            trigger: ".dev-box img ",
+            
+            markers: true,
+            start: "-700 top",
+            end: "-300 top",
+            scrub: 1
+          }
+        });
+
+     
+    }
   }, []);
+
+ 
 
   return (
     <section id="Skills" className="  w-[700px] xl:-mt-32 sm:w-full xl:w-full">
@@ -79,7 +143,7 @@ function Skills() {
       <h5 className="font-bold text-white">skills, interests, passion and hobbies</h5>
       <div className="box dev-box">
         <h4>development</h4>
-        <div className="elem-div flex">
+        <div className="elem-div grid grid-cols-3 md:flex  ">
           <img src={image1} alt="React" />
           <img src={image2} alt="Java" />
           <img src={image3} alt="JavaScript" />
@@ -87,7 +151,7 @@ function Skills() {
           <img src={image5} alt="MongoDB" />
           <img src={image6} alt="MySQL" />
           <img src={image7} alt="GitHub" />
-          <img src={image8} alt="Barba.js" />
+          
           <img src={image9} alt="GSAP" />
           <img src={image10} alt="Download" />
           <img src={image11} alt="HTML" />
