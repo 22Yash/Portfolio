@@ -24,6 +24,9 @@ const MovingCircle = () => {
 
   return (
     <div id="circle" className="">
+      <div className="logo">
+        
+      </div>
       <div id="text" className="moving-circle">
         Yash Doke Yash Doke <span></span>
       </div>

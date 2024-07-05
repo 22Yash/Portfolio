@@ -11,17 +11,7 @@ function Preloader() {
     const tl = gsap.timeline({ defaults: { ease: "power1.out" } });
 
     if (window.innerWidth > 768) {
-      // tl.fromTo(
-      //   textRef.current.children,
-      //   { opacity: 0, y: "+=50" },
-      //   { delay: 0.5, opacity: 1, y: "0", stagger: 0.1 }
-      // ).to(textRef.current, {
-      //   opacity: 0,
-      //   duration: 1,
-      //   onComplete: () => {
-      //     textRef.current.remove(); // Remove the preloader div from the DOM
-      //   },
-      // });
+      
 
       tl.fromTo(
         ".second",
@@ -55,17 +45,7 @@ function Preloader() {
         },
       });
     } else {
-      // tl.fromTo(
-      //   textRef.current.children,
-      //   { opacity: 0, y: "+=50" },
-      //   { delay: 0.5, opacity: 1, y: "-10", stagger: 0.1 }
-      // ).to(textRef.current, {
-      //   opacity: 0,
-      //   duration: 1,
-      //   onComplete: () => {
-      //     textRef.current.remove(); // Remove the preloader div from the DOM
-      //   },
-      // });
+      
 
       tl.fromTo(
         ".second",
@@ -109,7 +89,7 @@ function Preloader() {
       <div
         id="preloader"
         ref={preloaderRef}
-        className="preloader w-full  fixed z-10 h-[125vh] xl:h-screen
+        className="preloader w-full  fixed z-10 h-[165vh] xl:h-screen
     rounded-b-3xl 
      bg-black text-white font-semibold   "
       >
@@ -117,6 +97,7 @@ function Preloader() {
        
           
         </div>
+        
         <div id="second" className=" h-[100px]">
           <h2 className="second text-[#cecec4]  ml-0 xl:ml-0 text-[50px] xl:text-[70px]  flex mt-10 items-center justify-center">
             Welcome to{" "}
@@ -125,7 +106,7 @@ function Preloader() {
         <div id="third">
           <h2
             ref={thirdtext}
-            className="third text-[#bdbdb0] ml-[100px] 
+            className="third text-[#bdbdb0] ml-[250px] 
             md:ml-[300px] 
             xl:ml-0 text-[60px] xl:text-[100px] xl:flex xl:justify-center 
             xl:mt-10 uppercase font-bold"

@@ -22,128 +22,258 @@ function Hero() {
 
   const infoRef = useRef(null);
 
-  const tl = gsap.timeline();
 
-  // useEffect(() => {
-  //   tl.fromTo(
-  //     heroHeadingRef.current,
-  //     {
-  //       y: 80,
-  //       opacity: 0,
-  //       duration: 1,
-  //     },
-  //     {
-  //       y: 10,
-  //       opacity: 1,
-  //       duration: 1,
-  //       repeat: 0,
-  //       delay: 10,
-  //     }
-  //   );
-
-  //   tl.fromTo(
-  //     roleHeadingOneRef.current,
-  //     {
-  //       y: 80,
-  //       opacity: 0,
-  //       duration: 1,
-  //       stagger: 1,
-  //     },
-  //     {
-  //       y: -10,
-  //       opacity: 1,
-  //       duration: 1,
-  //       stagger: 1,
-  //     }
-  //   );
-
-  //   tl.fromTo(
-  //     roleHeadingOnePartRef.current,
-  //     {
-  //       y: 80,
-  //       opacity: 0,
-  //       duration: 1,
-  //       stagger: 1,
-  //     },
-  //     {
-  //       y: 10,
-  //       opacity: 1,
-  //       duration: 1,
-  //       stagger: 1,
-  //     }
-  //   );
-
-  //   tl.fromTo(
-  //     roleHeadingTwoRef.current,
-  //     {
-  //       y: 80,
-  //       opacity: 0,
-  //       duration: 1,
-  //       stagger: 1,
-  //     },
-  //     {
-  //       y: -10,
-  //       opacity: 1,
-  //       duration: 1,
-  //       stagger: 1,
-  //     }
-  //   );
-
-  //   tl.fromTo(
-  //     infoRef.current,
-  //     {
-  //       opacity: 0,
-  //       stagger: 1,
-  //     },
-  //     {
-  //       opacity: 1,
-  //       stagger: 1,
-  //     }
-  //   );
-
-  //   gsap.set(".zoom",{scale:1})
-
-  //   const screenWidth = window.innerWidth;
-  //   if (screenWidth > 1024) {
-  //     tl.to(".zoom",{
-  //       scrollTrigger: {
-  //         trigger: ".herotext",
-  //         start: "20 top",
-  //         end:"60 top",
-  //         markers:"true",
-  //         scrub:1
+    useEffect(() => {
+      const screenWidth = window.innerWidth;
   
-         
-  //       },
-  //       scale:0.9
+      if (screenWidth > 1024) {
+        // Animation for desktop/laptop screens
+        const tlDesktop = gsap.timeline();
+
+
+
+       
   
-  //     })
-
-      
-
-  //   }else if (screenWidth <= 1024 && screenWidth > 768) {
-
-  //   }else{
-  //     tl.to(".zoom",{
-  //       scrollTrigger: {
-  //         trigger: ".herotext",
-  //         start: "-120 top",
-  //         end:"60 top",
-  //         markers:"true",
-  //         scrub:1
-  
-         
-  //       },
-  //       scale:0.5
-  
-  //     })
-
-  //   }
-
-   
+        
+        tlDesktop.fromTo(
+          heroHeadingRef.current,
+          {
+            y: 80,
+            opacity: 0,
+            duration: 1,
+          },
+          {
+            y: 10,
+            opacity: 1,
+            duration: 1,
+            repeat: 0,
+            delay: 10,
+          }
+        );
     
+        tlDesktop.fromTo(
+          roleHeadingOneRef.current,
+          {
+            y: 80,
+            opacity: 0,
+            duration: 1,
+            stagger: 1,
+          },
+          {
+            y: -10,
+            opacity: 1,
+            duration: 1,
+            stagger: 1,
+          }
+        );
     
-  // });
+        tlDesktop.fromTo(
+          roleHeadingOnePartRef.current,
+          {
+            y: 80,
+            opacity: 0,
+            duration: 1,
+            stagger: 1,
+          },
+          {
+            y: -10,
+            opacity: 1,
+            duration: 1,
+            stagger: 1,
+          }
+        );
+    
+        tlDesktop.fromTo(
+          roleHeadingTwoRef.current,
+          {
+            y: 80,
+            opacity: 0,
+            duration: 1,
+            stagger: 1,
+          },
+          {
+            y: -10,
+            opacity: 1,
+            duration: 1,
+            stagger: 1,
+          }
+        );
+    
+        tlDesktop.fromTo(
+          infoRef.current,
+          {
+            opacity: 0,
+            stagger: 1,
+          },
+          {
+            opacity: 1,
+            stagger: 1,
+          }
+        );
+        
+      } else if (screenWidth <= 1024 && screenWidth > 768) {
+        const tlTablet = gsap.timeline();
+  
+        tlTablet.fromTo(
+          heroHeadingRef.current,
+          {
+            y: 80,
+            opacity: 0,
+            duration: 1,
+          },
+          {
+            y: 10,
+            opacity: 1,
+            duration: 1,
+            repeat: 0,
+            delay: 10,
+          }
+        );
+    
+        tlTablet.fromTo(
+          roleHeadingOneRef.current,
+          {
+            y: 80,
+            opacity: 0,
+            duration: 1,
+            stagger: 1,
+          },
+          {
+            y: -10,
+            opacity: 1,
+            duration: 1,
+            stagger: 1,
+          }
+        );
+    
+        tlTablet.fromTo(
+          roleHeadingOnePartRef.current,
+          {
+            y: 80,
+            opacity: 0,
+            duration: 1,
+            stagger: 1,
+          },
+          {
+            y: 10,
+            opacity: 1,
+            duration: 1,
+            stagger: 1,
+          }
+        );
+    
+        tlTablet.fromTo(
+          roleHeadingTwoRef.current,
+          {
+            y: 80,
+            opacity: 0,
+            duration: 1,
+            stagger: 1,
+          },
+          {
+            y: -10,
+            opacity: 1,
+            duration: 1,
+            stagger: 1,
+          }
+        );
+    
+        tlTablet.fromTo(
+          infoRef.current,
+          {
+            opacity: 0,
+            stagger: 1,
+          },
+          {
+            opacity: 1,
+            stagger: 1,
+          }
+        );
+      } else {
+      //   const tlMobile = gsap.timeline();
+  
+      //   tlMobile.fromTo(
+      //     heroHeadingRef.current,
+      //     {
+      //       y: 80,
+      //       opacity: 0,
+      //       duration: 1,
+      //     },
+      //     {
+      //       y: 10,
+      //       opacity: 1,
+      //       duration: 1,
+      //       repeat: 0,
+      //       delay: 10,
+      //     }
+      //   );
+    
+      //   tlMobile.fromTo(
+      //     roleHeadingOneRef.current,
+      //     {
+      //       y: 80,
+      //       opacity: 0,
+      //       duration: 1,
+      //       stagger: 1,
+      //     },
+      //     {
+      //       y: -10,
+      //       opacity: 1,
+      //       duration: 1,
+      //       stagger: 1,
+      //     }
+      //   );
+    
+      //   tlMobile.fromTo(
+      //     roleHeadingOnePartRef.current,
+      //     {
+      //       y: 80,
+      //       opacity: 0,
+      //       duration: 1,
+      //       stagger: 1,
+      //     },
+      //     {
+      //       y: -10,
+      //       opacity: 1,
+      //       duration: 1,
+      //       stagger: 1,
+      //     }
+      //   );
+    
+      //   tlMobile.fromTo(
+      //     roleHeadingTwoRef.current,
+      //     {
+      //       y: 80,
+      //       opacity: 0,
+      //       duration: 1,
+      //       stagger: 1,
+      //     },
+      //     {
+      //       y: -10,
+      //       opacity: 1,
+      //       duration: 1,
+      //       stagger: 1,
+      //     }
+      //   );
+    
+      //   tlMobile.fromTo(
+      //     infoRef.current,
+      //     {
+      //       y:10,
+      //       opacity: 0,
+      //       stagger: 1,
+      //     },
+      //     {
+      //       y:-10,
+      //       opacity: 1,
+      //       stagger: 1,
+      //     }
+      //   );
+      }
+    }, []);
+
+    
+
 
   return (
     <>

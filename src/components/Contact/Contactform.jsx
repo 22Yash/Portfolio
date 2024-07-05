@@ -94,7 +94,8 @@ function Contactform() {
           Let's work together.{" "}
         </h1>
       </div>
-      <div id="conactform" className="xl:grid xl:grid-cols-2 md:grid md:grid-cols-2  xl:gap-4 flex flex-col  ">
+      <div id="conactform" className="xl:grid xl:grid-cols-2 md:grid md:grid-cols-2 mt-[20px]
+        xl:gap-4 flex flex-col  ">
         <div
           className="xl:w-[900px] bg-[#d6d6d0] w-[530px] md:w-[550px] 
           pt-14 text-[#3a3733] h-[150vh] ml-[100px]

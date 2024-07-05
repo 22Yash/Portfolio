@@ -23,7 +23,7 @@ function Navbar() {
     z-44   xl:h-12 bg-[#d6d6d0] "
     style={{ backgroundImage: `url(${heroSVG})`, backgroundSize: "cover" }}
       >
-        <div id="leftNav" className="ml-[20px] pt-[20px]">
+        <div id="leftNav" className="ml-[20px] pt-[20px] md:-mt-[20px] ">
           <Link to="/">
           <MovingCircle/>
           </Link>
