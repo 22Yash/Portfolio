@@ -47,7 +47,7 @@ function Hero() {
             opacity: 1,
             duration: 1,
             repeat: 0,
-            delay: 10,
+            delay: 6,
           }
         );
     
@@ -190,85 +190,101 @@ function Hero() {
           }
         );
       } else {
-      //   const tlMobile = gsap.timeline();
+        const tlMobile = gsap.timeline();
+
   
-      //   tlMobile.fromTo(
-      //     heroHeadingRef.current,
-      //     {
-      //       y: 80,
-      //       opacity: 0,
-      //       duration: 1,
-      //     },
-      //     {
-      //       y: 10,
-      //       opacity: 1,
-      //       duration: 1,
-      //       repeat: 0,
-      //       delay: 10,
-      //     }
-      //   );
+        tlMobile.fromTo(
+          heroHeadingRef.current,
+          {
+            y: 80,
+            opacity: 0,
+            duration: 1,
+          },
+          {
+            y: 10,
+            opacity: 1,
+            duration: 1,
+            repeat: 0,
+            delay: 13,
+          }
+        );
     
-      //   tlMobile.fromTo(
-      //     roleHeadingOneRef.current,
-      //     {
-      //       y: 80,
-      //       opacity: 0,
-      //       duration: 1,
-      //       stagger: 1,
-      //     },
-      //     {
-      //       y: -10,
-      //       opacity: 1,
-      //       duration: 1,
-      //       stagger: 1,
-      //     }
-      //   );
+        tlMobile.fromTo(
+          roleHeadingOneRef.current,
+          {
+            y: 80,
+            opacity: 0,
+            duration: 1,
+            stagger: 1,
+          },
+          {
+            y: -10,
+            opacity: 1,
+            duration: 1,
+            stagger: 1,
+          }
+        );
     
-      //   tlMobile.fromTo(
-      //     roleHeadingOnePartRef.current,
-      //     {
-      //       y: 80,
-      //       opacity: 0,
-      //       duration: 1,
-      //       stagger: 1,
-      //     },
-      //     {
-      //       y: -10,
-      //       opacity: 1,
-      //       duration: 1,
-      //       stagger: 1,
-      //     }
-      //   );
+        tlMobile.fromTo(
+          roleHeadingOnePartRef.current,
+          {
+            y: 80,
+            opacity: 0,
+            duration: 1,
+            stagger: 1,
+          },
+          {
+            y: -10,
+            opacity: 1,
+            duration: 1,
+            stagger: 1,
+          }
+        );
     
-      //   tlMobile.fromTo(
-      //     roleHeadingTwoRef.current,
-      //     {
-      //       y: 80,
-      //       opacity: 0,
-      //       duration: 1,
-      //       stagger: 1,
-      //     },
-      //     {
-      //       y: -10,
-      //       opacity: 1,
-      //       duration: 1,
-      //       stagger: 1,
-      //     }
-      //   );
+        tlMobile.fromTo(
+          roleHeadingTwoRef.current,
+          {
+            y: 80,
+            opacity: 0,
+            duration: 1,
+            stagger: 1,
+          },
+          {
+            y: -10,
+            opacity: 1,
+            duration: 1,
+            stagger: 1,
+          }
+        );
     
-      //   tlMobile.fromTo(
-      //     infoRef.current,
-      //     {
-      //       y:10,
-      //       opacity: 0,
-      //       stagger: 1,
-      //     },
-      //     {
-      //       y:-10,
-      //       opacity: 1,
-      //       stagger: 1,
-      //     }
-      //   );
+        tlMobile.fromTo(
+          infoRef.current,
+          {
+            y:10,
+            opacity: 0,
+            stagger: 1,
+          },
+          {
+            y:-10,
+            opacity: 1,
+            stagger: 1,
+          }
+        );
+
+
+      tlMobile.fromTo(
+            hamburgerRef.current,
+            {
+              y:10,
+              opacity: 0,
+              stagger: 1,
+            },
+            {
+              y:-10,
+              opacity: 1,
+              stagger: 1,
+            }
+          );
       }
     }, []);
 
@@ -290,9 +306,7 @@ function Hero() {
         <div id="navbar" ref={navbarRef} style={{ backgroundImage: `url(${heroSVG})`, backgroundSize: "cover" }}>
           <Navbar />
         </div>
-        <div id="hamburger" ref={hamburgerRef} className="slidemenu " >
-          <SlideMenu/>
-        </div>
+        
 
         
        <section className="zoom">
@@ -344,13 +358,14 @@ function Hero() {
         >
           <h4 ref={infoRef} className=" mt-16 text-2xl  ml-10 md:mt-10 xl:ml-44 xl:mt-[20px] selection:bg-[#6c665e] selection:text-[#3d3a36]">
             I like to develop responsive, interactive, and animated websites.
-          </h4>
-          
-          <div id="resume" className="flex  justify-center ml-[120px]">
-        <button className="bg-[#5f5c57] p-[9px] rounded-full text-[20px] text-white mt-[10px] -ml-[40px]">
+            <div id="resume" className="flex  justify-center ml-[120px]">
+        <button className="bg-[#5f5c57] p-[9px] rounded-full text-[20px] text-white mt-[10px] -ml-[90px]">
           <a href={resume} download="">get my resume offline</a>
         </button>
        </div>
+          </h4>
+          
+          
         </div>
        
        </section>

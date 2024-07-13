@@ -8,7 +8,6 @@ import image4 from "./images/node-min.png";
 import image5 from "./images/mongodb-min.webp";
 import image6 from "./images/MySQL-min.webp";
 import image7 from "./images/github-min.webp";
-import image8 from "./images/barba-min.webp";
 import image9 from "./images/gsap-min.webp";
 import image10 from "./images/download-min.webp";
 import image11 from "./images/html-min.webp";

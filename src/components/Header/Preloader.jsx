@@ -98,8 +98,8 @@ function Preloader() {
           
         </div>
         
-        <div id="second" className=" h-[100px]">
-          <h2 className="second text-[#cecec4]  ml-0 xl:ml-0 text-[50px] xl:text-[70px]  flex mt-10 items-center justify-center">
+        <div id="second" className=" h-[100px] mt-[300px] md:mt-0">
+          <h2 className="second text-[#cecec4]  ml-0 xl:ml-0 text-[80px] font-bold xl:text-[70px]  flex mt-10 items-center justify-center">
             Welcome to{" "}
           </h2>
         </div>
@@ -108,21 +108,21 @@ function Preloader() {
             ref={thirdtext}
             className="third text-[#bdbdb0] ml-[250px] 
             md:ml-[300px] 
-            xl:ml-0 text-[60px] xl:text-[100px] xl:flex xl:justify-center 
+            xl:ml-0 text-[90px] xl:text-[100px] xl:flex xl:justify-center 
             xl:mt-10 uppercase font-bold"
           >
-            <span>y</span>
+            <span className="-ml-[30px]  md:ml-0" >y</span>
             <span>A</span>
             <span>S</span>
             <span>h</span>
             <br className=" md:block" />
-            <span className=" ml-0 xl:ml-10">d</span>
+            <span className=" -ml-[30px] xl:ml-10">d</span>
             <span>o</span>
             <span>k</span>
             <span>e</span>
             <br className=" md:block" />
 
-            <span className=" -ml-20 xl:ml-10 ">p</span>
+            <span className=" -ml-[180px] xl:ml-10 ">p</span>
             <span>o</span>
             <span>r</span>
             <span>t</span>
