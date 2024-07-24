@@ -2,7 +2,7 @@ import React, { useRef, useEffect } from "react";
 import gsap from "gsap";
 import LocomotiveScroll from "locomotive-scroll";
 
-import Resume from "./Resume";
+import Resume from "./Experience";
 import SlideMenu from "../Header/SlideMenu";
 import workSVG from "./work.svg";
 import project1 from "./images/project1.png";
@@ -106,7 +106,7 @@ const mouseOut = () =>{
       <SlideMenu />
       <section
         id="Work"
-        className="work w-[700px] xl:w-full md:w-full rounded-t-full "
+        className="work w-[700px] xl:w-full md:w-full rounded-t-full z-2"
       >
         <div id="work" ref={workRef} className="overflow-x-hidden">
           
