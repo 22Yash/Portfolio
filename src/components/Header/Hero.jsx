@@ -298,7 +298,7 @@ function Hero() {
     
 <div
       id="hero"
-      className="main  w-[700px]  xl:w-full md:w-full sticky h-[150vh] xl:h-[100vh] bg-[#d6d6d0] z-1
+      className="main  w-[700px]  xl:w-full md:w-full sticky h-[150vh] xl:h-[100vh] bg-[#d6d6d0] z-3
       "
       style={{ backgroundImage: `url(${heroSVG})`, backgroundSize: "cover" }}
     >
@@ -356,7 +356,7 @@ function Hero() {
           className="hero
         text-2md -mt-[30px] w-2/3 text-center ml-[100px] font-medium
         md:mt-5 md:ml-32 
-        xl:text-2xl xl:ml-96 xl:mt-10 xl:font-medium xl:w-2/5 xl:text-center text-[#6e6760]"
+        xl:text-2xl xl:ml-96 xl:-mt-0 xl:font-medium xl:w-2/5 xl:text-center text-[#6e6760]"
         >
           <h4 ref={infoRef} className=" mt-16 text-[30px]  ml-10 md:mt-10 xl:ml-44 xl:mt-[20px] selection:bg-[#6c665e] selection:text-[#3d3a36]">
             I like to develop responsive, interactive, and animated websites.
