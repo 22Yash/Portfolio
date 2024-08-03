@@ -106,7 +106,7 @@ const mouseOut = () =>{
       <SlideMenu />
       <section
         id="Work"
-        className="work w-[700px] xl:w-full md:w-full rounded-t-full relative z-4"
+        className="work w-[700px]  xl:w-full md:w-full rounded-t-full relative z-4"
       >
         <div id="work" ref={workRef} className="overflow-x-hidden">
           

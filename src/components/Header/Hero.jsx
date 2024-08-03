@@ -326,7 +326,7 @@ function Hero() {
           >
             I'm Yash
           </h1>
-          <div id="img" className="w-[200px] h-[100px] bg-blue-300 ml-[250px]">efv</div>
+          {/* <div id="img" className="w-[200px] h-[100px] bg-blue-300 ml-[250px]">efv</div> */}
         </div>
         <div id="heroRole" className="hero xl:tracking-wide text-[#3b3834]">
           <h1
