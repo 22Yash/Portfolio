@@ -83,7 +83,7 @@ function Contactform() {
 
   return (
     <div id="Contact"
-     className=" w-[700px] xl:h-[150vh] h-[175vh]  md:w-full xl:w-full  md:min-h-screen p-[40px] "
+     className=" w-[700px] xl:h-[150vh] h-[175vh]  md:w-full xl:w-full  md:h-[170vh] p-[40px] "
      style={{ backgroundImage: `url(${heroSVG})`, backgroundSize: "cover" }}
     >
       
@@ -247,14 +247,15 @@ function Contactform() {
           <h3 className="  text-[35px] xl:text-[45px]  mt-[20px] xl:-mt-20 font-semibold font-helvetica  underline underline-offset-8 text-black w-[320px]">
         Contact details
       </h3>
-          <h3 className="xl:text-[20px] pt-5 text-[30px] xl:w-[350px] xl:h-[50px] xl:mt-5 xl:-ml-10  flex xl:justify-center xl:items-center">
-          <CgMail />  <span className="ml-[20px] font-helvetica -mt-[10px]"> - yashadoke@gmail.com</span>
+          <h3 className="xl:text-[20px] pt-5 text-[30px] xl:w-[350px] xl:h-[50px] xl:mt-5 xl:-ml-10  flex xl:justify-center xl:items-center
+          md:-mt-[40px]">
+          <CgMail />  <span className="ml-[20px] font-helvetica md:-mt-[10px] -mt-[10px]"> - yashadoke@gmail.com</span>
             </h3>
             <h3 className="xl:text-[20px] text-[28px] mt-2 xl:w-[350px] xl:h-[50px] flex xl:-ml-16 xl:justify-center xl:items-center">
             <FaPhoneAlt /> <span className="ml-[20px] font-helvetica -mt-[5px]">93247871464</span>
             </h3>
           </div>
-          <div id="links" className="ml-[80px]">
+          <div id="links" className="ml-[80px] md:mt-[40px] md:ml-[110px] xl:mt-[0px] xl:ml-[0px]">
           <Links columnDirection={true}/>
           </div>
           

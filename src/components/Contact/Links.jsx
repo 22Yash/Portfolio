@@ -62,17 +62,17 @@ function Links({ columnDirection }) {
     <>
       <div
         id="links"
-        className="translate-y-full h-[200px] xl:w-full  sm:-mt-[320px] sm:-ml-[40px]  xl:mr-[100px]"
+        className="translate-y-full h-[200px] xl:w-full  md:-mt-[320px] md:-ml-[40px]  xl:mr-[100px]"
       >
-        <h4 className=" xl:text-[45px] xl:mt-20 xl:ml-2 sm:mt-[80px] font-bold text-[32px]
-          -mt-[180px] opacity-100 sm:-ml-[0px]  p-2 underline underline-offset-8 
-           sm:opacity-100 xl:opacity-100 ">
+        <h4 className=" xl:text-[45px] xl:mt-20 xl:ml-2 md:mt-[80px] font-bold text-[32px]
+          -mt-[180px] opacity-100 md:-ml-[0px]  p-2 underline underline-offset-8 
+           md:opacity-100 xl:opacity-100 ">
             Socials
           </h4>
         <ul
           className={`flex justify-between -ml-[140px] font-semibold xl:ml-[0px]
-          sm:static sm:gap-10 sm:m-10 sm:mt-36 sm:font-semibold xl:-mt-[0px] 
-          sm:flex sm:flex-col
+          md:static md:gap-[30px] md:ml-[30px] md:mt-[20px] md:font-semibold xl:-mt-[0px] 
+          md:flex md:flex-col
           ${!columnDirection ? "" : ""}
         `}
         >
@@ -81,7 +81,7 @@ function Links({ columnDirection }) {
 
           <li
             ref={(el) => (liRef.current[0] = el)}
-            className="text-[#3a3733] text-[30px]  mt-0 sm:-mt-[80px] flex gap-2 xl:-mt-[40px]   xl:text-[22px] xl:ml-5"
+            className="text-[#3a3733] text-[30px]  mt-0 md:-mt-[80px] flex gap-2 xl:-mt-[40px]   xl:text-[22px] xl:ml-5"
           >
             <span className="mt-[5px]"><FaLinkedin /></span>
             <Link to="www.linkedin.com/in/yashdoke10"> LinkedIn </Link>
@@ -89,7 +89,7 @@ function Links({ columnDirection }) {
 
           <li
             ref={(el) => (liRef.current[1] = el)}
-            className="text-[#3a3733] text-[30px] mr-[70px] flex gap-[10px] xl:text-[22px] xl:ml-5 xl:-mt-[10px]"
+            className="text-[#3a3733] text-[30px] md:-mt-[20px] mr-[70px] flex gap-[10px] xl:text-[22px] xl:ml-5 xl:-mt-[10px]"
           >
             <span className="mt-[3px]"><FaSquareGithub />  </span>
             
