@@ -44,7 +44,7 @@ function Navbar() {
               <Link to="#Skills" className="ml-7 text-[17px]">Skills</Link>
             </li>
             <li className="button" >
-              <Link to="#Resume" className="ml-4 text-[17px]">Resume</Link>
+              <Link to="#experience" className="ml-3 text-[14px]">Experience</Link>
             </li>
             <li className="button" >
               <Link to="#Contact" className="ml-5 text-[17px]">Contact</Link>

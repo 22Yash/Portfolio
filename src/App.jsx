@@ -23,7 +23,7 @@ function App() {
           <Route path="/Expereince" element={<Experience />} />
 
           
-          <Route path="/contact" element={<Contactform />} />
+          <Route path="/Contact" element={<Contactform />} />
           <Route  path="*" element={<Error />} />
           
         </Routes>

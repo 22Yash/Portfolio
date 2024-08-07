@@ -6,7 +6,7 @@ function Experience() {
   
 
   return (
-    <div className='resume  h-[800px] w-[700px]  sm:w-full xl:w-full bg-[#333333]' id='Resume'>
+    <div className='experience  h-[800px] w-[700px]  sm:w-full xl:w-full bg-[#333333]' id='Resume'>
       <div id="title" className='text-white   font-helvetica  font-semibold
       text-[70px] ml-[40px] pt-[20px]
       xl:text-[90px] xl:ml-[100px] xl:pt-[40px]

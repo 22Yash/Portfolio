@@ -9,54 +9,7 @@ import { FaSquareGithub } from "react-icons/fa6";
 function Links({ columnDirection }) {
   const liRef = useRef([]);
 
-  useEffect(() => {
-    const liElements = liRef.current;
-
-    if (window.innerWidth > 768) {
-      liElements.forEach((li) => {
-        li.addEventListener("mouseenter", () => {
-          gsap.to(li, {
-            borderBottomWidth: "0",
-            textDecoration: "underline",
-            textDecorationColor: "#3a3733",
-            duration: 0.5,
-            y: -10,
-            width: "120px",
-          });
-        });
-
-        li.addEventListener("mouseleave", () => {
-          gsap.to(li, {
-            borderBottomWidth: "0",
-            textDecoration: "none",
-            duration: 0.3,
-            y: 0,
-          });
-        });
-      });
-    } else {
-      liElements.forEach((li) => {
-        li.addEventListener("mouseenter", () => {
-          gsap.to(li, {
-            borderBottomWidth: "0",
-            textDecoration: "underline",
-            textDecorationColor: "#3a3733",
-            duration: 0.5,
-            y: -10,
-          });
-        });
-
-        li.addEventListener("mouseleave", () => {
-          gsap.to(li, {
-            borderBottomWidth: "0",
-            textDecoration: "none",
-            duration: 0.3,
-            y: 0,
-          });
-        });
-      });
-    }
-  }, []);
+  
 
   return (
     <>
@@ -80,16 +33,14 @@ function Links({ columnDirection }) {
           <br />
 
           <li
-            ref={(el) => (liRef.current[0] = el)}
-            className="text-[#3a3733] text-[30px]  mt-0 md:-mt-[80px] flex gap-2 xl:-mt-[40px]   xl:text-[22px] xl:ml-5"
+            className="text-[#3a3733] hover:underline-offset-[8px] hover:underline text-[30px]  mt-0 md:-mt-[80px] flex gap-2 xl:-mt-[40px]   xl:text-[22px] xl:ml-5"
           >
             <span className="mt-[5px]"><FaLinkedin /></span>
             <Link to="www.linkedin.com/in/yashdoke10"> LinkedIn </Link>
           </li>
 
           <li
-            ref={(el) => (liRef.current[1] = el)}
-            className="text-[#3a3733] text-[30px] md:-mt-[20px] mr-[70px] flex gap-[10px] xl:text-[22px] xl:ml-5 xl:-mt-[10px]"
+            className="text-[#3a3733] hover:underline-offset-[8px] hover:underline  text-[30px] md:-mt-[20px] mr-[70px] flex gap-[10px] xl:text-[22px] xl:ml-5 xl:-mt-[10px]"
           >
             <span className="mt-[3px]"><FaSquareGithub />  </span>
             
