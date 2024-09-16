@@ -86,6 +86,7 @@ function Preloader() {
   }, []);
   return (
     <>
+    
       <div
         id="preloader"
         ref={preloaderRef}

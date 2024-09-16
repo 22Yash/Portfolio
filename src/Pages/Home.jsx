@@ -9,6 +9,7 @@ import Mousefollower from "../components/Animation/Mousefollower";
 import BackToTopButton from "../components/Header/BackToTopButton";
 import Error from './Error'
 import Experience from "../components/Work/Experience";
+import ParticleBackground from "../components/Animation/ParticleBackground";
 
 
 function Home() {
@@ -21,16 +22,17 @@ function Home() {
     <>
       <ReactLenis root>
         {/* <Mousefollower /> */}
+        <ParticleBackground/>
         <Preloader /> 
         
 
-        <Hero />
+        {/* <Hero />
         <Work />
        
         <Skills/>
 
         <Experience />
-        <Contactform />
+        <Contactform /> */}
       
         {/* <BackToTopButton /> */}
         
