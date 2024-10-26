@@ -12,11 +12,17 @@ import image9 from "./images/gsap-min.webp";
 import image10 from "./images/download-min.webp";
 import image11 from "./images/html-min.webp";
 import image12 from "./images/css-min.webp";
+// import skillBg from "../assets/resume-bg.svg"
+import skillBG from "../assets/skillBG (2).png"
+import resumeBG from "../assets/Untitled.png"
+
 
 
 gsap.registerPlugin(ScrollTrigger);
 
 function Skills() {
+
+  
 
   useEffect(() => {
     const screenWidth = window.innerWidth;
@@ -44,8 +50,8 @@ function Skills() {
           trigger: ".dev-box h4 ",
           
           markers: true,
-          start: "-250 top",
-          end: "-200 top",
+          start: "-450 top",
+          end: "-300 top",
           scrub: 1
         }
       });
@@ -68,7 +74,7 @@ function Skills() {
             trigger: ".dev-box img ",
             
             markers: true,
-            start: "-200 top",
+            start: "-300 top",
             end: "-100 top",
             scrub: 1
           }
@@ -133,11 +139,42 @@ function Skills() {
     }
   }, []);
 
+  const mouseIN = () => {
+
+    gsap.set("#card",{scale:0.9,transformOrigin: "bottom"})
+    gsap.to("#card", {
+      rotation: -8, 
+      ease: "power2.inOut", 
+      scale:1
+    });
+
+}
+
+const mouseOut = () =>{
+  gsap.to("#card", {
+    rotation: 0, // Reset rotation to 0 degrees (straight)
+    ease: "power2.inOut", // Use ease for smoother animation
+  });
+
+}
+
+
  
 
   return (
-    <section id="Skills" className="  w-[700px] xl:-mt-32 sm:w-full xl:w-full">
-      <div id="page3">
+    <section id="Skills" className="  w-[700px] xl:-mt-32 sm:w-full xl:w-full bg-black"
+    
+    >
+
+      
+      <div id="page3" className="w-full fixed"
+       style={{
+        background: `
+          url(${skillBG}) left bottom / 100% 100% no-repeat`,
+        backgroundPosition: '100px 200px', // Consistent positioning
+        backgroundAttachment: 'fixed', // Optional: use if you want a parallax effect
+      }}>
+
       <h3 className="font-bold text-white">Things I'm <span>good</span> at</h3>
       <h5 className="font-bold text-white">skills, interests, passion and hobbies</h5>
       <div className="box dev-box">
@@ -158,6 +195,54 @@ function Skills() {
         </div>
       </div>
     </div>
+
+    <div id="resume" className="w-full h-screen flex justify-center items-center" 
+    style={{
+      background: `
+        url(${resumeBG}) left bottom / 70% 150% no-repeat`,
+      backgroundPosition:'300px -400px', // Consistent positioning
+      backgroundAttachment: 'fixed',
+      opacity:100, // Optional: use if you want a parallax effect
+    }}>
+
+       
+      <div id="card" className="w-[400px] h-[530px] rounded-[30px] p-[30px] bg-white"
+      onMouseEnter={mouseIN}
+      onMouseLeave={mouseOut}>
+      <div 
+      className="relative z-0 p-12 rounded-2xl md:p-0 sm:p-6 group"
+    >
+      <div className="relative">
+        <div className="text-[30px] font-bold text-red-600  ">YASH DOKE</div>
+        <div className="text-lg text-black font-bold">Creative Frontend Developer</div>
+        <hr className="my-4 border-gray-500" />
+        <p className="text-base text-gray-400 font-semibold text-[20px]">
+          I am Yash, a 3rd year IT Engineering Student. 
+          Successfully building user-friendly websites with ReactJS. 
+          I pay attention to small details, enjoy technical problems, and work well in teams. 
+          I like learning new technologies and always aim to improve my skills.
+        </p>
+        <div className="mt-4 flex flex-col">
+          <a className="text-blue-400" target="_blank" href="mailto:yasin@yasingenc.net">yashadoke@gmail.com</a>
+          <span className="text-gray-400">Mumbai , India</span>
+        </div>
+        <hr className="my-4 border-gray-500" />
+        <div className="text-xl font-semibold text-black">WORK EXPERIENCE</div>
+        <p className="text-base text-gray-400 font-bold">
+          Junior Web Developer | Zummit Infolabs <br />
+         x
+        </p>
+      </div>
+
+     
+
+      
+
+      
+    </div>
+
+      </div>
+     </div>
 
     </section>
     

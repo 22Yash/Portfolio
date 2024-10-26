@@ -2,6 +2,7 @@ import React, { useEffect, useRef } from "react";
 import { HashLink as Link } from "react-router-hash-link";
 import heroSVG from "./nnnoise.svg"
 import MovingCircle from "./MovingCircle";
+import ParticlesComponent from "../Animation/ParticleBackground";
 
 
 function Navbar() {
@@ -20,8 +21,8 @@ function Navbar() {
         className=" 
         
         xl:flex xl:justify-between 
-    z-44   xl:h-12 bg-[#d6d6d0] "
-    style={{ backgroundImage: `url(${heroSVG})`, backgroundSize: "cover" }}
+    z-44   xl:h-12"
+    
       >
         <div id="leftNav" className="ml-[20px] pt-[20px] md:-mt-[20px] ">
           <Link to="/">
@@ -30,24 +31,27 @@ function Navbar() {
          
         </div>
         <div id="rightNav" className="hidden
+
         xl:flex xl:gap-10 xl:mt-5  xl:h-12 xl:m-2 xl:text-white xl:rounded-l-full xl:rounded-r-full">
-          <ul className="flex  mt-4 mr-10 xl:p-2 font-medium lg:flex-row lg:space-x-8 lg:mt-0">
+          <ul className="flex  mt-4 mr-10  h-[60px]
+          border-2 border-white xl:items-center rounded-[50px] 
+          xl:p-[20px] font-medium lg:flex-row lg:space-x-2 lg:mt-0">
             <li 
              
-            className="button -mt-0
+            className="button w-[100px] h-[50px]    flex justify-center items-center
             " 
             >
-              <Link to="#Work" className="ml-7 text-[17px]">Work</Link>
+              <Link to="#Work" className="  font-bold text-[20px]">Work</Link>
             </li>
-            <li className="button"
+            <li className="button w-[100px] -ml-[10px] h-[50px]    flex justify-center items-center"
            >
-              <Link to="#Skills" className="ml-7 text-[17px]">Skills</Link>
+              <Link to="#Skills" className=" text-[22px]">Skills</Link>
             </li>
-            <li className="button" >
-              <Link to="#experience" className="ml-3 text-[14px]">Experience</Link>
+            <li className="button w-[120px] h-[50px]    flex justify-center items-center" >
+              <Link to="#experience" className=" text-[20px]">Experience</Link>
             </li>
-            <li className="button" >
-              <Link to="#Contact" className="ml-5 text-[17px]">Contact</Link>
+            <li className="button w-[100px] h-[50px]    flex justify-center items-center" >
+              <Link to="#Contact" className=" text-[20px]">Contact</Link>
             </li>
           </ul>
         </div>

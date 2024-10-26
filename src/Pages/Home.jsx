@@ -22,17 +22,17 @@ function Home() {
     <>
       <ReactLenis root>
         {/* <Mousefollower /> */}
-        <ParticleBackground/>
+        
         <Preloader /> 
         
 
-        {/* <Hero />
+        <Hero />
         <Work />
        
         <Skills/>
 
         <Experience />
-        <Contactform /> */}
+        <Contactform />
       
         {/* <BackToTopButton /> */}
         

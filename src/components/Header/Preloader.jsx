@@ -101,29 +101,29 @@ function Preloader() {
         
         <div id="second" className=" h-[100px] mt-[300px] md:mt-0">
           <h2 className="second text-[#cecec4]  ml-0 xl:ml-0 text-[80px] font-bold xl:text-[70px]  flex mt-10 items-center justify-center">
-            Welcome to{" "}
+            <MovingCircle/>
           </h2>
         </div>
         <div id="third">
           <h2
             ref={thirdtext}
-            className="third text-[#bdbdb0] ml-[250px] 
+            className="third text-[#fff] ml-[250px] 
             md:ml-[300px] 
-            xl:ml-0 text-[90px] xl:text-[100px] xl:flex xl:justify-center 
-            xl:mt-10 uppercase font-bold"
+            xl:ml-0 text-[90px] xl:text-[60px] xl:flex xl:justify-center 
+            xl:mt-40  font-bold"
           >
-            <span className="-ml-[30px]  md:ml-0" >y</span>
-            <span>A</span>
-            <span>S</span>
+            <span className="-ml-[30px]  md:ml-0" >Y</span>
+            <span>a</span>
+            <span>s</span>
             <span>h</span>
             <br className=" md:block" />
-            <span className=" -ml-[30px] xl:ml-10">d</span>
+            <span className=" -ml-[30px] xl:ml-[20px]">D</span>
             <span>o</span>
             <span>k</span>
             <span>e</span>
             <br className=" md:block" />
 
-            <span className=" -ml-[180px] xl:ml-10 ">p</span>
+            <span className=" -ml-[180px] xl:ml-[20px] ">P</span>
             <span>o</span>
             <span>r</span>
             <span>t</span>

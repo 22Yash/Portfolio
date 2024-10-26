@@ -10,7 +10,7 @@ const ParticlesComponent = () => {
       particlesJS("particles-js", {
         "particles": {
           "number": {
-            "value": 200,  // Increased density of stars
+            "value": 300,  // Increased density of stars
             "density": { "enable": true, "value_area": 800 }
           },
           "color": { "value": "#ffffff" },
@@ -41,13 +41,14 @@ const ParticlesComponent = () => {
         "interactivity": {
           "detect_on": "canvas",
           "events": {
-            "onhover": { "enable": true, "mode": "grab" },  // Grab effect
-            "onclick": { "enable": true, "mode": "repulse" },  // Repulse on click
+            "onhover": { "enable": true, "mode": "bubble" }, // Bubble effect on hover
+            "onclick": { "enable": true, "mode": "repulse" }, // Repulse effect on click
+            "mousemove": { "enable": true }, // Enable particle movement on mouse move
             "resize": true
           },
           "modes": {
             "grab": { "distance": 400, "line_linked": { "opacity": 1 } },
-            "bubble": { "distance": 0, "size": 0 },  // Disable bubble effect
+            "bubble": { "distance": 250, "size": 0, "duration": 2, "opacity": 0, "speed": 3 },
             "repulse": { "distance": 400, "duration": 0.4 },
             "push": { "particles_nb": 4 },
             "remove": { "particles_nb": 2 }
@@ -58,10 +59,11 @@ const ParticlesComponent = () => {
     };
     document.body.appendChild(scriptParticles);
 
-    // Parallax Effect - Move the background based on mouse position
+
+
     const handleMouseMove = (e) => {
       const particles = document.getElementById('particles-js');
-      const moveX = (e.clientX / window.innerWidth) * 50;
+      const moveX = (e.clientX / window.innerWidth) * 10;
       const moveY = (e.clientY / window.innerHeight) * 50;
       particles.style.transform = `translate(${-moveX}px, ${-moveY}px)`;
     };
@@ -72,11 +74,15 @@ const ParticlesComponent = () => {
     return () => {
       window.removeEventListener('mousemove', handleMouseMove);
     };
+
+
   }, []);
 
   return (
     <>
-      <div id="particles-js"></div>
+      <div id="particles-js"
+      className='w-[700px]  h-[150vh] sm:w-full lg:w-full xl:w-full'
+      ></div>
       
     </>
   );

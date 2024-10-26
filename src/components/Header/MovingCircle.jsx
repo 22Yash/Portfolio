@@ -1,7 +1,6 @@
 import React, { useEffect } from "react";
 import "./MovingCircle.css"; // Import the CSS file for animations
 
-
 const MovingCircle = () => {
   useEffect(() => {
     const text = document.getElementById("text");
@@ -15,20 +14,21 @@ const MovingCircle = () => {
     characters.forEach((char, index) => {
       const span = document.createElement("span");
       span.textContent = char;
+
       // Add an offset to the rotation angle to create space between the first and last characters
       const rotationAngle = angleStep * index;
-      span.style.transform = `rotate(${rotationAngle}deg) translateY(-70px)`;
+      span.style.transform = `rotate(${rotationAngle}deg) translateY(-70px)`; // Adjust translateY value to change circle radius
       text.appendChild(span);
     });
   }, []);
 
   return (
-    <div id="circle" className="">
+    <div id="circle">
       <div className="logo">
         
       </div>
       <div id="text" className="moving-circle">
-        Yash Doke Yash Doke <span></span>
+        Yash Doke Yash Doke {/* Original text to be animated */}
       </div>
     </div>
   );

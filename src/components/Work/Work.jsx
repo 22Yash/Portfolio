@@ -4,7 +4,7 @@ import LocomotiveScroll from "locomotive-scroll";
 
 import Resume from "./Experience";
 import SlideMenu from "../Header/SlideMenu";
-import workSVG from "./work.svg";
+import workSVG from "./workBg.png"
 import project1 from "./images/project1.png";
 
 function Work() {
@@ -107,20 +107,32 @@ const mouseOut = () =>{
       <section
         id="Work"
         className="work w-[700px]  xl:w-full md:w-full rounded-t-full relative z-4"
+        
       >
-        <div id="work" ref={workRef} className="overflow-x-hidden">
+        <div id="work" ref={workRef} className="overflow-x-hidden"
+        >
           
           <div
             id="projects"
             
             
-            className="project w-full"
-            style={{ backgroundImage: `url(${workSVG})`, backgroundSize: "cover" }}
+            className="project w-full bg-[#0d0d0c]" style={{filter: 'blur(0px)',}}
+            
           >
-            <div className="cont h-[280vh] md:h-[350vh] xl:h-[120vh] bg-[#0d0d0c]">
+            
+            <div className="cont h-[280vh] md:h-[350vh] xl:h-[120vh] " 
+            style={{
+              background: `
+                url(${workSVG}) left bottom / 100% 150% no-repeat`,
+              backgroundPosition: '-100px 200px', // Consistent positioning
+              backgroundAttachment: 'fixed', // Optional: use if you want a parallax effect
+            }}
+            >
+              
+
               <div
-                className="slides grid xl:top-0 xl:left-0 xl:w-full xl:flex h-screen bg-[#0d0d0c]"
-                style={{ backgroundImage: `url(${workSVG})`, backgroundSize: "cover" }}
+                className="slides grid xl:top-0 xl:left-0 xl:w-full xl:flex h-screen  "
+               
               >
                 <div className="grid-cols-1 w-1/12 h-screen xl:w-10/12 xl:h-screen xl:flex-shrink-0">
                   <div

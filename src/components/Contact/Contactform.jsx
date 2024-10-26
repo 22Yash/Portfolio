@@ -83,7 +83,7 @@ function Contactform() {
 
   return (
     <div id="Contact"
-     className=" w-[700px] xl:h-[150vh] h-[175vh]  md:w-full xl:w-full  md:h-[170vh] p-[40px] "
+     className=" w-[700px] xl:h-[150vh] h-[175vh]  md:w-full xl:w-full  md:h-[170vh] p-[40px] flex flex-col justify-center items-center "
      style={{ backgroundImage: `url(${heroSVG})`, backgroundSize: "cover" }}
     >
       

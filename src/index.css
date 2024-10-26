@@ -14,19 +14,18 @@
 
    
     .button {
-      --color:  #353331;
+      --color:  #FFD500;
       font-family: inherit;
       display: inline-block;
-      width: 6em;
-      height: 2.6em;
+      
       line-height: 2.5em;
       overflow: hidden;
       cursor: pointer;
-      margin: 20px;
-      font-size: 17px;
+      
+      
       z-index: 1;
       color: #fff;
-      background-color: #5f5c57;
+      font-style: bold;
       margin-top: 0px;
       border-radius: 50px;
       position: relative;
@@ -62,7 +61,7 @@
 #page3 {
   min-height: 100vh;
   width: 100%;
-  background-color: #222;
+  background-color: #070707;
   padding: 7vh 5.1vw;
   position: relative;
 }
