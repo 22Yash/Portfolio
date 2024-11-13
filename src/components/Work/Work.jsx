@@ -142,10 +142,10 @@ const mouseOut = () =>{
                     <div
                       className="projecttext w-6/12 text-center ml-20 xl:ml-0 flex-none xl:w-6/12 xl:flex-shrink-0"
                     >
-                      <h2 className="text-[70px] w-[500px] ml-[80px] font-bold p-8 text-left md:w-[600px] md:text-7xl md:ml-28 xl:text-7xl xl:m-10 xl:font-bold xl:w-76 xl:-ml-20 xl:text-center xl:p-10 text-[#bebeb0]">
+                      <h2 className="text-[70px] w-[500px] ml-[80px] font-bold p-8 text-left md:w-[600px] md:text-7xl md:ml-28 xl:text-7xl xl:m-10 xl:font-bold xl:w-76 xl:-ml-20 xl:text-center xl:p-10 text-[#fff]">
                         My Work.
                       </h2>
-                      <p className="text-[#7b736a] text-[40px] text-balance ml-5 font-semibold w-[490px] md:w-[800px] md:-ml-24 xl:m-10 xl:text-5xl xl:w-2/4">
+                      <p className="text-[#cbcaca] text-[40px] text-balance ml-5 font-semibold w-[490px] md:w-[800px] md:-ml-24 xl:m-10 xl:text-5xl xl:w-2/4">
                         "Bringing ideas to life through creativity and code."
                       </p>
                     </div>
