@@ -28,270 +28,272 @@ function Hero() {
   const infoRef = useRef(null);
 
 
-    // useEffect(() => {
-    //   const screenWidth = window.innerWidth;
+    useEffect(() => {
+      const screenWidth = window.innerWidth;
   
-    //   if (screenWidth > 1024) {
-    //     // Animation for desktop/laptop screens
-    //     const tlDesktop = gsap.timeline();
+      if (screenWidth > 1024) {
+      
+        const tlDesktop = gsap.timeline();
 
 
 
        
   
         
-    //     tlDesktop.fromTo(
-    //       heroHeadingRef.current,
-    //       {
-    //         y: 80,
-    //         opacity: 0,
-    //         duration: 1,
-    //       },
-    //       {
-    //         y: 10,
-    //         opacity: 1,
-    //         duration: 1,
-    //         repeat: 0,
-    //         delay: 6,
-    //       }
-    //     );
+        tlDesktop.fromTo(
+          heroHeadingRef.current,
+          {
+            y: 80,
+            opacity: 0,
+            duration: 1,
+          },
+          {
+            y: 10,
+            opacity: 1,
+            duration: 1,
+            repeat: 0,
+            delay: 6,
+          }
+        );
     
-    //     tlDesktop.fromTo(
-    //       roleHeadingOneRef.current,
-    //       {
-    //         y: 80,
-    //         opacity: 0,
-    //         duration: 1,
-    //         stagger: 1,
-    //       },
-    //       {
-    //         y: -10,
-    //         opacity: 1,
-    //         duration: 1,
-    //         stagger: 1,
-    //       }
-    //     );
+        tlDesktop.fromTo(
+          roleHeadingOneRef.current,
+          {
+            y: 80,
+            opacity: 0,
+            duration: 1,
+            stagger: 1,
+          },
+          {
+            y: -10,
+            opacity: 1,
+            duration: 1,
+            stagger: 1,
+          }
+        );
     
-    //     tlDesktop.fromTo(
-    //       roleHeadingOnePartRef.current,
-    //       {
-    //         y: 80,
-    //         opacity: 0,
-    //         duration: 1,
-    //         stagger: 1,
-    //       },
-    //       {
-    //         y: -10,
-    //         opacity: 1,
-    //         duration: 1,
-    //         stagger: 1,
-    //       }
-    //     );
+        tlDesktop.fromTo(
+          roleHeadingOnePartRef.current,
+          {
+            y: 80,
+            opacity: 0,
+            duration: 1,
+            stagger: 1,
+          },
+          {
+            y: -10,
+            opacity: 1,
+            duration: 1,
+            stagger: 1,
+          }
+        );
     
-    //     tlDesktop.fromTo(
-    //       roleHeadingTwoRef.current,
-    //       {
-    //         y: 80,
-    //         opacity: 0,
-    //         duration: 1,
-    //         stagger: 1,
-    //       },
-    //       {
-    //         y: -10,
-    //         opacity: 1,
-    //         duration: 1,
-    //         stagger: 1,
-    //       }
-    //     );
+        tlDesktop.fromTo(
+          roleHeadingTwoRef.current,
+          {
+            y: 80,
+            opacity: 0,
+            duration: 1,
+            stagger: 1,
+          },
+          {
+            y: -10,
+            opacity: 1,
+            duration: 1,
+            stagger: 1,
+          }
+        );
     
-    //     tlDesktop.fromTo(
-    //       infoRef.current,
-    //       {
-    //         opacity: 0,
-    //         stagger: 1,
-    //       },
-    //       {
-    //         opacity: 1,
-    //         stagger: 1,
-    //       }
-    //     );
+        tlDesktop.fromTo(
+          infoRef.current,
+          {
+            opacity: 0,
+            stagger: 1,
+          },
+          {
+            opacity: 1,
+            stagger: 1,
+          }
+        );
+
+    
         
-    //   } else if (screenWidth <= 1024 && screenWidth > 768) {
-    //     const tlTablet = gsap.timeline();
+      } else if (screenWidth <= 1024 && screenWidth > 768) {
+        const tlTablet = gsap.timeline();
   
-    //     tlTablet.fromTo(
-    //       heroHeadingRef.current,
-    //       {
-    //         y: 80,
-    //         opacity: 0,
-    //         duration: 1,
-    //       },
-    //       {
-    //         y: 10,
-    //         opacity: 1,
-    //         duration: 1,
-    //         repeat: 0,
-    //         delay: 10,
-    //       }
-    //     );
+        tlTablet.fromTo(
+          heroHeadingRef.current,
+          {
+            y: 80,
+            opacity: 0,
+            duration: 1,
+          },
+          {
+            y: 10,
+            opacity: 1,
+            duration: 1,
+            repeat: 0,
+            delay: 10,
+          }
+        );
     
-    //     tlTablet.fromTo(
-    //       roleHeadingOneRef.current,
-    //       {
-    //         y: 80,
-    //         opacity: 0,
-    //         duration: 1,
-    //         stagger: 1,
-    //       },
-    //       {
-    //         y: -10,
-    //         opacity: 1,
-    //         duration: 1,
-    //         stagger: 1,
-    //       }
-    //     );
+        tlTablet.fromTo(
+          roleHeadingOneRef.current,
+          {
+            y: 80,
+            opacity: 0,
+            duration: 1,
+            stagger: 1,
+          },
+          {
+            y: -10,
+            opacity: 1,
+            duration: 1,
+            stagger: 1,
+          }
+        );
     
-    //     tlTablet.fromTo(
-    //       roleHeadingOnePartRef.current,
-    //       {
-    //         y: 80,
-    //         opacity: 0,
-    //         duration: 1,
-    //         stagger: 1,
-    //       },
-    //       {
-    //         y: 10,
-    //         opacity: 1,
-    //         duration: 1,
-    //         stagger: 1,
-    //       }
-    //     );
+        tlTablet.fromTo(
+          roleHeadingOnePartRef.current,
+          {
+            y: 80,
+            opacity: 0,
+            duration: 1,
+            stagger: 1,
+          },
+          {
+            y: 10,
+            opacity: 1,
+            duration: 1,
+            stagger: 1,
+          }
+        );
     
-    //     tlTablet.fromTo(
-    //       roleHeadingTwoRef.current,
-    //       {
-    //         y: 80,
-    //         opacity: 0,
-    //         duration: 1,
-    //         stagger: 1,
-    //       },
-    //       {
-    //         y: -10,
-    //         opacity: 1,
-    //         duration: 1,
-    //         stagger: 1,
-    //       }
-    //     );
+        tlTablet.fromTo(
+          roleHeadingTwoRef.current,
+          {
+            y: 80,
+            opacity: 0,
+            duration: 1,
+            stagger: 1,
+          },
+          {
+            y: -10,
+            opacity: 1,
+            duration: 1,
+            stagger: 1,
+          }
+        );
     
-    //     tlTablet.fromTo(
-    //       infoRef.current,
-    //       {
-    //         opacity: 0,
-    //         stagger: 1,
-    //       },
-    //       {
-    //         opacity: 1,
-    //         stagger: 1,
-    //       }
-    //     );
-    //   } else {
-    //     const tlMobile = gsap.timeline();
+        tlTablet.fromTo(
+          infoRef.current,
+          {
+            opacity: 0,
+            stagger: 1,
+          },
+          {
+            opacity: 1,
+            stagger: 1,
+          }
+        );
+      } else {
+        const tlMobile = gsap.timeline();
 
   
-    //     tlMobile.fromTo(
-    //       heroHeadingRef.current,
-    //       {
-    //         y: 80,
-    //         opacity: 0,
-    //         duration: 1,
-    //       },
-    //       {
-    //         y: 80,
-    //         opacity: 1,
-    //         duration: 1,
-    //         repeat: 0,
-    //         delay: 0,
-    //       }
-    //     );
+        tlMobile.fromTo(
+          heroHeadingRef.current,
+          {
+            y: 80,
+            opacity: 0,
+            duration: 1,
+          },
+          {
+            y: 80,
+            opacity: 1,
+            duration: 1,
+            repeat: 0,
+            delay: 0,
+          }
+        );
     
-    //     tlMobile.fromTo(
-    //       roleHeadingOneRef.current,
-    //       {
-    //         y: 80,
-    //         opacity: 0,
-    //         duration: 1,
-    //         stagger: 1,
-    //       },
-    //       {
-    //         y: -10,
-    //         opacity: 1,
-    //         duration: 1,
-    //         stagger: 1,
-    //       }
-    //     );
+        tlMobile.fromTo(
+          roleHeadingOneRef.current,
+          {
+            y: 80,
+            opacity: 0,
+            duration: 1,
+            stagger: 1,
+          },
+          {
+            y: -10,
+            opacity: 1,
+            duration: 1,
+            stagger: 1,
+          }
+        );
     
-    //     tlMobile.fromTo(
-    //       roleHeadingOnePartRef.current,
-    //       {
-    //         y: 80,
-    //         opacity: 0,
-    //         duration: 1,
-    //         stagger: 1,
-    //       },
-    //       {
-    //         y: -10,
-    //         opacity: 1,
-    //         duration: 1,
-    //         stagger: 1,
-    //       }
-    //     );
+        tlMobile.fromTo(
+          roleHeadingOnePartRef.current,
+          {
+            y: 80,
+            opacity: 0,
+            duration: 1,
+            stagger: 1,
+          },
+          {
+            y: -10,
+            opacity: 1,
+            duration: 1,
+            stagger: 1,
+          }
+        );
     
-    //     tlMobile.fromTo(
-    //       roleHeadingTwoRef.current,
-    //       {
-    //         y: 80,
-    //         opacity: 0,
-    //         duration: 1,
-    //         stagger: 1,
-    //       },
-    //       {
-    //         y: -10,
-    //         opacity: 1,
-    //         duration: 1,
-    //         stagger: 1,
-    //       }
-    //     );
+        tlMobile.fromTo(
+          roleHeadingTwoRef.current,
+          {
+            y: 80,
+            opacity: 0,
+            duration: 1,
+            stagger: 1,
+          },
+          {
+            y: -10,
+            opacity: 1,
+            duration: 1,
+            stagger: 1,
+          }
+        );
     
-    //     tlMobile.fromTo(
-    //       infoRef.current,
-    //       {
-    //         y:10,
-    //         opacity: 0,
-    //         stagger: 1,
-    //       },
-    //       {
-    //         y:-10,
-    //         opacity: 1,
-    //         stagger: 1,
-    //       }
-    //     );
+        tlMobile.fromTo(
+          infoRef.current,
+          {
+            y:10,
+            opacity: 0,
+            stagger: 1,
+          },
+          {
+            y:-10,
+            opacity: 1,
+            stagger: 1,
+          }
+        );
 
 
-    //   tlMobile.fromTo(
-    //         hamburgerRef.current,
-    //         {
-    //           y:10,
-    //           opacity: 0,
-    //           stagger: 1,
-    //         },
-    //         {
-    //           y:-10,
-    //           opacity: 1,
-    //           stagger: 1,
-    //         }
-    //       );
-    //   }
-    // }, []);
+      tlMobile.fromTo(
+            hamburgerRef.current,
+            {
+              y:10,
+              opacity: 0,
+              stagger: 1,
+            },
+            {
+              y:-10,
+              opacity: 1,
+              stagger: 1,
+            }
+          );
+      }
+    }, []);
 
     
 
@@ -346,20 +348,32 @@ function Hero() {
           xl:text-9xl xl:ml-52 xl:max-w-3/4   xl:flex xl:flex-col xl:p-0 xl:text-center xl:font-bold "
           >
             <div className="flex  flex-col xl:flex  xl:flex-row xl:gap-10 xl:w-[1200px]"
-            style={{ 
-              background: 'linear-gradient(hsl(var(--color-white)), hsl(200, 60%, 82%))',
-              WebkitBackgroundClip: 'text',
-              WebkitTextFillColor: 'transparent'
-          }}>
-              <div ref={roleHeadingOneRef} className="h1 -mt-[30px] xl:mt-3 selection:bg-[#FFD500] selection:text-[#000] ">
+          
+          >
+              <div ref={roleHeadingOneRef} 
+               style={{
+                background: 'linear-gradient(hsl(var(--color-white)), hsl(200, 60%, 82%))',  // Apply the gradient
+                backgroundClip: 'text',         // Clipping the background to the text
+                WebkitBackgroundClip: 'text',   // For WebKit browsers (Chrome, Safari)
+                WebkitTextFillColor: 'transparent', // Making the text color transparent to show the background
+              }}
+              className="h1 -mt-[30px] xl:mt-3 selection:bg-[#FFD500] selection:text-[#000] ">
                 Creative
               </div>
-              <div ref={roleHeadingOnePartRef} className="h1 -mt-[60px] xl:mt-4 selection:bg-[#FFD500] selection:text-[#000]">
+              <div ref={roleHeadingOnePartRef}
+              style={{
+                background: 'linear-gradient(hsl(var(--color-white)), hsl(200, 60%, 82%))',  // Apply the gradient
+                backgroundClip: 'text',         // Clipping the background to the text
+                WebkitBackgroundClip: 'text',   // For WebKit browsers (Chrome, Safari)
+                WebkitTextFillColor: 'transparent', // Making the text color transparent to show the background
+              }}
+              className="h1 -mt-[60px] xl:mt-4 selection:bg-[#FFD500] selection:text-[#000]">
                 Frontend
               </div>
             </div>
             <div
               ref={roleHeadingTwoRef}
+              
               className="h1 -mt-[60px] ml-4 md:ml-5 md:-mt-2 xl:-ml-[200px] text-white selection:bg-[#FFD500] selection:text-[#000]"
             >
               Developer.
@@ -374,8 +388,8 @@ function Hero() {
         xl:text-2xl xl:ml-96 xl:-mt-0 xl:font-medium xl:w-2/5 xl:text-center text-[#fff]"
         >
           <h4 ref={infoRef} className=" 
-          mt-16 text-[30px]  ml-10 md:mt-10  xl:mt-[50px] selection:bg-[#6c665e]
-           selection:text-[#3d3a36]  xl:w-[900px] text-center xl:ml-[-80px]">
+          mt-16 text-[30px]  ml-10 md:mt-10  xl:mt-[50px] selection:bg-[#FFD500] selection:text-[#000]
+            xl:w-[900px] text-center xl:ml-[-80px]">
             I like to develop responsive, interactive, and animated websites.
             <div id="resume" className="flex  justify-center ml-[120px]">
         <button className="bg-[#5f5c57] p-[9px] rounded-full text-[20px] text-white mt-[10px] -ml-[90px]">

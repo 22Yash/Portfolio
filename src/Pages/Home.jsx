@@ -18,9 +18,10 @@ function Home() {
   return (
     <>
       <ReactLenis root>
-        <Mousefollower />
-        
-        <Preloader /> 
+       
+       <div id="home" className="bg-black">
+         
+       <Preloader /> 
         
 
         <Hero />
@@ -30,6 +31,7 @@ function Home() {
 
         <Experience />
         <Contactform />
+       </div>
       
         {/* <BackToTopButton /> */}
         

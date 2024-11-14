@@ -1,3 +1,14 @@
+/* MovingCircle.css */
+.navbar .moving-circle {
+  position: absolute;
+  top: 0;
+  transform-origin: center;
+  width: fit-content;
+  animation: rotate 20s linear infinite;
+}
+
+
+
 #text {
     position: relative;
     width: 200px; /* Adjust as needed */

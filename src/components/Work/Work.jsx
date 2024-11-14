@@ -3,9 +3,9 @@ import gsap from "gsap";
 import LocomotiveScroll from "locomotive-scroll";
 
 import Resume from "./Experience";
-import SlideMenu from "../Header/SlideMenu";
 import workSVG from "./workBg.png"
 import project1 from "./images/project1.png";
+import SlideMenu from "../Header/SlideMenu";
 
 function Work() {
   const mousefollowerRef = useRef(null);
@@ -27,8 +27,8 @@ function Work() {
       tlDesktop.to(".slide", {
         scrollTrigger: {
           trigger: ".project",
-          start: "100 top",
-          end: "250 top",
+          start: "50 top",
+          end: "200 top",
           scrub: 1,
           markers: true,
         },
@@ -36,19 +36,19 @@ function Work() {
         duration: 2,
       });
 
-      // tlDesktop.to(".work", {
-      //   scrollTrigger: {
-      //     trigger: ".work",
-      //     start: "-680 top",
-      //     end: "-570 top",
-      //     scrub: 2,
-      //     markers: true,
-      //     pin: true,
-      //   },
-      //   y: -350,
-      //   duration: 0.5,
-      //   borderRadius: "20px",
-      // });
+      tlDesktop.to(".work", {
+        scrollTrigger: {
+          trigger: ".work",
+          start: "-630 top",
+          end: "-570 top",
+          scrub: 2,
+          markers: true,
+          pin: true,
+        },
+        y: -50,
+        duration: 0.5,
+        borderRadius: "20px",
+      });
     } else if (screenWidth <= 1024 && screenWidth > 768) {
       const tlTablet = gsap.timeline();
 
@@ -103,10 +103,17 @@ const mouseOut = () =>{
 
   return (
     <>
-      <SlideMenu />
+    <SlideMenu/>
+      
       <section
         id="Work"
         className="work w-[700px]  xl:w-full md:w-full rounded-t-full relative z-4"
+        style={{
+          background: `
+            url(${workSVG}) left bottom / 100% 150% no-repeat`,
+          backgroundPosition: '-100px 200px', // Consistent positioning
+          backgroundAttachment: 'fixed', // Optional: use if you want a parallax effect
+        }}
         
       >
         <div id="work" ref={workRef} className="overflow-x-hidden"
@@ -121,12 +128,7 @@ const mouseOut = () =>{
           >
             
             <div className="cont h-[280vh] md:h-[350vh] xl:h-[120vh] " 
-            style={{
-              background: `
-                url(${workSVG}) left bottom / 100% 150% no-repeat`,
-              backgroundPosition: '-100px 200px', // Consistent positioning
-              backgroundAttachment: 'fixed', // Optional: use if you want a parallax effect
-            }}
+            
             >
               
 
