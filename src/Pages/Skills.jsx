@@ -1,4 +1,5 @@
 import React, { useEffect, useRef } from "react";
+import { Link } from "react-router-dom";
 import gsap from "gsap";
 import ScrollTrigger from "gsap/ScrollTrigger";
 import image1 from "./images/react.png";
@@ -15,6 +16,8 @@ import image12 from "./images/css-min.webp";
 // import skillBg from "../assets/resume-bg.svg"
 import skillBG from "../assets/skillBG (2).png"
 import resumeBG from "../assets/Untitled.png"
+import { FaLinkedin } from "react-icons/fa6";
+import { FaSquareGithub } from "react-icons/fa6";
 
 
 
@@ -162,18 +165,14 @@ const mouseOut = () =>{
  
 
   return (
-    <section id="Skills" className="  w-[700px] xl:-mt-32 sm:w-full xl:w-full bg-black"
+    <section id="Skills" className="  w-[700px]   sm:w-full xl:w-full "
     
     >
-
+          
       
-      <div id="page3" className="w-full fixed"
-       style={{
-        background: `
-          url(${skillBG}) left bottom / 100% 100% no-repeat`,
-        backgroundPosition: '100px 200px', // Consistent positioning
-        backgroundAttachment: 'fixed', // Optional: use if you want a parallax effect
-      }}>
+      <div id="page3" className="w-full fixed "
+      
+      >
 
       <h3 className="font-bold text-white">Things I'm <span>good</span> at</h3>
       <h5 className="font-bold text-white">skills, interests, passion and hobbies</h5>
@@ -184,9 +183,9 @@ const mouseOut = () =>{
           <img src={image2} alt="Java" />
           <img src={image3} alt="JavaScript" />
           <img src={image4} alt="Node.js" />
-          <img src={image5} alt="MongoDB" />
-          <img src={image6} alt="MySQL" />
           <img src={image7} alt="GitHub" />
+          <img src={image6} alt="MySQL" />
+          <img src={image5} alt="MongoDB" />
           
           <img src={image9} alt="GSAP" />
           <img src={image10} alt="Download" />
@@ -196,14 +195,15 @@ const mouseOut = () =>{
       </div>
     </div>
 
-    <div id="resume" className="w-full h-screen flex justify-center items-center" 
+    <div id="resume" className="w-full h-screen flex justify-center items-center flex-col" 
     style={{
       background: `
         url(${resumeBG}) left bottom / 70% 150% no-repeat`,
       backgroundPosition:'300px -400px', // Consistent positioning
       backgroundAttachment: 'fixed',
       opacity:100, // Optional: use if you want a parallax effect
-    }}>
+    }}
+    >
 
        
       <div id="card" className="w-[400px] h-[530px] rounded-[30px] p-[30px] bg-white"
@@ -230,9 +230,10 @@ const mouseOut = () =>{
         <div className="text-xl font-semibold text-black">WORK EXPERIENCE</div>
         <p className="text-base text-gray-400 font-bold">
           Junior Web Developer | Zummit Infolabs <br />
-         x
+         
         </p>
       </div>
+     
 
      
 
@@ -240,8 +241,17 @@ const mouseOut = () =>{
 
       
     </div>
+   
 
       </div>
+      <div id="links" className="flex ">
+      <span className="mt-[5px] text-[60px]"><Link to="www.linkedin.com/in/yashdoke10"><FaLinkedin />  </Link></span>
+            
+            <span className="mt-[5px] text-[60px]"><Link to="https://github.com/22Yash"><FaSquareGithub /></Link>  </span>
+            
+      </div>
+      
+            
      </div>
 
     </section>

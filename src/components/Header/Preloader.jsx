@@ -108,22 +108,22 @@ function Preloader() {
           <h2
             ref={thirdtext}
             className="third text-[#fff] ml-[250px] 
-            md:ml-[300px] 
-            xl:ml-0 text-[90px] xl:text-[60px] xl:flex xl:justify-center 
+            md:ml-[250px] 
+            xl:ml-0 text-[30px] sm:text-[30px] xl:text-[30px] xl:flex xl:justify-center 
             xl:mt-40  font-bold"
           >
-            <span className="-ml-[30px]  md:ml-0" >Y</span>
-            <span>a</span>
-            <span>s</span>
-            <span>h</span>
-            <br className=" md:block" />
-            <span className=" -ml-[30px] xl:ml-[20px]">D</span>
+            <span className="-ml-[30px]  md:ml-0" >L</span>
             <span>o</span>
-            <span>k</span>
-            <span>e</span>
-            <br className=" md:block" />
+            <span>a</span>
+            <span>d</span>
+           
+            <span>i</span>
+            <span>n</span>
+            <span>g</span>
+            
+            
 
-            <span className=" -ml-[180px] xl:ml-[20px] ">P</span>
+            <span className=" ml-[20px] xl:ml-[20px] ">P</span>
             <span>o</span>
             <span>r</span>
             <span>t</span>

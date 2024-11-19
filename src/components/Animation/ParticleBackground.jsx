@@ -81,7 +81,7 @@ const ParticlesComponent = () => {
   return (
     <>
       <div id="particles-js"
-      className='w-[700px]  h-[150vh] sm:w-full lg:w-full xl:w-full'
+      className='w-[700px]  h-[180vh] sm:w-full lg:w-full xl:w-full'
       ></div>
       
     </>

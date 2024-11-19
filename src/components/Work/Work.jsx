@@ -6,6 +6,7 @@ import Resume from "./Experience";
 import workSVG from "./workBg.png"
 import project1 from "./images/project1.png";
 import SlideMenu from "../Header/SlideMenu";
+import Skills from "../../Pages/Skills";
 
 function Work() {
   const mousefollowerRef = useRef(null);
@@ -107,13 +108,8 @@ const mouseOut = () =>{
       
       <section
         id="Work"
-        className="work w-[700px]  xl:w-full md:w-full rounded-t-full relative z-4"
-        style={{
-          background: `
-            url(${workSVG}) left bottom / 100% 150% no-repeat`,
-          backgroundPosition: '-100px 200px', // Consistent positioning
-          backgroundAttachment: 'fixed', // Optional: use if you want a parallax effect
-        }}
+        className="work w-[700px]  h-[300vh]  xl:h-screen md:w-full rounded-t-full relative z-4"
+        
         
       >
         <div id="work" ref={workRef} className="overflow-x-hidden"
@@ -123,11 +119,11 @@ const mouseOut = () =>{
             id="projects"
             
             
-            className="project w-full bg-[#0d0d0c]" style={{filter: 'blur(0px)',}}
+            className="project w-full  bg-[#0d0d0c]" style={{filter: 'blur(0px)',}}
             
           >
             
-            <div className="cont h-[280vh] md:h-[350vh] xl:h-[120vh] " 
+            <div className="cont h-[300vh]  md:h-[350vh] xl:h-[120vh] " 
             
             >
               
@@ -136,7 +132,7 @@ const mouseOut = () =>{
                 className="slides grid xl:top-0 xl:left-0 xl:w-full xl:flex h-screen  "
                
               >
-                <div className="grid-cols-1 w-1/12 h-screen xl:w-10/12 xl:h-screen xl:flex-shrink-0">
+                <div className="grid-cols-1 w-1/12 h-[180vh] xl:w-10/12 xl:h-screen xl:flex-shrink-0">
                   <div
                     id="project"
                     className="slide col-span-1 xl:flex xl:m-10 xl:gap-10 xl:mt-[120px]"
@@ -144,7 +140,15 @@ const mouseOut = () =>{
                     <div
                       className="projecttext w-6/12 text-center ml-20 xl:ml-0 flex-none xl:w-6/12 xl:flex-shrink-0"
                     >
-                      <h2 className="text-[70px] w-[500px] ml-[80px] font-bold p-8 text-left md:w-[600px] md:text-7xl md:ml-28 xl:text-7xl xl:m-10 xl:font-bold xl:w-76 xl:-ml-20 xl:text-center xl:p-10 text-[#fff]">
+                      <h2 
+                      style={{
+                        background: 'linear-gradient(hsl(var(--color-white)), hsl(200, 60%, 82%))',  // Apply the gradient
+                        backgroundClip: 'text',         // Clipping the background to the text
+                        WebkitBackgroundClip: 'text',   // For WebKit browsers (Chrome, Safari)
+                        WebkitTextFillColor: 'transparent', // Making the text color transparent to show the background
+                        backgroundPosition:'fixed'
+                      }}
+                      className="text-[70px] w-[500px] ml-[80px] font-bold p-8 text-left md:w-[600px] md:text-7xl md:ml-28 xl:text-7xl xl:m-10 xl:font-bold xl:w-76 xl:-ml-20 xl:text-center xl:p-10 text-[#fff]">
                         My Work.
                       </h2>
                       <p className="text-[#cbcaca] text-[40px] text-balance ml-5 font-semibold w-[490px] md:w-[800px] md:-ml-24 xl:m-10 xl:text-5xl xl:w-2/4">
@@ -204,12 +208,7 @@ const mouseOut = () =>{
                     >
                       project3
                     </div>
-                    <div
-                      id="project4"
-                      className="slide w-[430px] h-[400px] ml-[60px] xl:mt-32 md:w-[680px] rounded-3xl xl:w-6/12 xl:flex-shrink-0 bg-[#bebeb0] xl:rounded-3xl"
-                    >
-                      project4
-                    </div>
+                    
                   </div>
                 </div>
               </div>
@@ -217,6 +216,7 @@ const mouseOut = () =>{
           </div>
         </div>
       </section>
+      
     </>
   );
 }
