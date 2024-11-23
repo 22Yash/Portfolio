@@ -24,6 +24,7 @@ import { FaSquareGithub } from "react-icons/fa6";
 gsap.registerPlugin(ScrollTrigger);
 
 function Skills() {
+  const isMobile = window.innerWidth <= 768;
 
   
 
@@ -197,16 +198,17 @@ const mouseOut = () =>{
 
     <div id="resume" className="w-full h-screen flex justify-center items-center flex-col" 
     style={{
-      background: `
-        url(${resumeBG}) left bottom / 70% 150% no-repeat`,
-      backgroundPosition:'300px -400px', // Consistent positioning
-      backgroundAttachment: 'fixed',
-      opacity:100, // Optional: use if you want a parallax effect
-    }}
+        background: isMobile
+          ? "none" // No background on mobile
+          : `url(${resumeBG}) left bottom / 100% 150% no-repeat`,
+        backgroundPosition: isMobile ? "none" : "300px -400px",
+        backgroundAttachment: isMobile ? "none" : "fixed",
+        opacity: isMobile ? 1 : 1,
+      }}
     >
 
-       
-      <div id="card" className="w-[400px] h-[530px] rounded-[30px] p-[30px] bg-white"
+      
+      <div id="card" className="w-[400px] h-[530px] rounded-[30px] p-[30px] bg-white shadow-2xl shadow-gray-500/90"
       onMouseEnter={mouseIN}
       onMouseLeave={mouseOut}>
       <div 
@@ -223,7 +225,7 @@ const mouseOut = () =>{
           I like learning new technologies and always aim to improve my skills.
         </p>
         <div className="mt-4 flex flex-col">
-          <a className="text-blue-400" target="_blank" href="mailto:yasin@yasingenc.net">yashadoke@gmail.com</a>
+          <a className="text-blue-400" target="_blank" href="yashadoke@gmail.com">yashadoke@gmail.com</a>
           <span className="text-gray-400">Mumbai , India</span>
         </div>
         <hr className="my-4 border-gray-500" />
@@ -244,10 +246,13 @@ const mouseOut = () =>{
    
 
       </div>
-      <div id="links" className="flex ">
-      <span className="mt-[5px] text-[60px]"><Link to="www.linkedin.com/in/yashdoke10"><FaLinkedin />  </Link></span>
+
+
+      <div id="links" className="flex gap-[20px] mt-[10px]">
+              <span className="mt-[5px] text-[60px]"><Link to="www.linkedin.com/in/yashdoke10"><FaLinkedin className="bg-slate-50"/>  </Link></span>
+        
             
-            <span className="mt-[5px] text-[60px]"><Link to="https://github.com/22Yash"><FaSquareGithub /></Link>  </span>
+            <span className="mt-[5px] text-[60px]"><Link to="https://github.com/22Yash"><FaSquareGithub className="bg-slate-50" /></Link>  </span>
             
       </div>
       
