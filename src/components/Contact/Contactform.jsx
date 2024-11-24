@@ -1,9 +1,9 @@
 import React, { useRef, useEffect } from "react";
 import emailjs from "emailjs-com";
 import Links from "./Links";
+import heroSVG from "../Header/background.png"
 
-import heroSVG from "./nnnoise.svg";
-import { Link } from "react-router-dom";
+import { HashLink as Link } from "react-router-hash-link";
 import BackToTopButton from "../Header/BackToTopButton";
 import gsap from "gsap";
 import { CgMail } from "react-icons/cg";
@@ -83,37 +83,57 @@ function Contactform() {
 
   return (
     <div id="Contact"
-     className=" w-[700px] xl:h-[150vh] h-[175vh]  md:w-full xl:w-full  md:h-[170vh] p-[40px] flex flex-col justify-center items-center "
-     style={{ backgroundImage: `url(${heroSVG})`, backgroundSize: "cover" }}
+     className=" w-[700px] xl:h-[150vh] h-[250vh]  
+     md:w-full xl:w-full xl:grid xl:grid-cols-2 
+     md:h-[170vh] p-[40px] flex flex-col justify-center items-center "
+     style={{
+      background: `
+        url(${heroSVG}) left bottom / 280% 200% no-repeat`,
+      backgroundPosition: 'left bottom', // Consistent positioning
+      backgroundAttachment: 'fixed', // Optional: use if you want a parallax effect
+    }}
+     
     >
       
-      
+      <div id="first" className=" w-[700px] mt-[20px] xl:mt-[0px] ">
       <div
-        id="contactHeading"
+        id="contactHeading" className="ml-[-240px]"
       
         
        
       >
-        <h1 className=" text-[60px] ml-[30px] flex justify-center font-helvetica underline   mt-0 pt-10 
-        underline-offset-[18px] md:underline-offset-[12px]
-         xl:underline-offset-[30px]  xl:text-[85px]
-         xl:flex xl:justify-center font-semibold xl:ml-20 xl:pt-5 xl:mt-0 "
+        <h1 className=" text-[60px] ml-[30px] flex justify-center font-helvetica    mt-0 pt-10 
+         xl:text-[85px] text-white opacity-50
+         xl:flex xl:justify-center font-semibold xl:ml-[-50px] xl:pt-5 xl:mt-0 "
         >
-          Let's work together.{" "}
+          Let's 
+          <br />  
+          
+        </h1>
+        <h1 className=" text-[60px] ml-[30px] flex justify-center font-helvetica    mt-0 pt-10 
+          xl:text-[85px] text-white 
+         xl:flex xl:justify-center font-semibold xl:ml-20 xl:pt-0 xl:mt-[-30px] "
+        >
+          Connect
+          <br />  
+          
         </h1>
       </div>
       <form ref={form} onSubmit={sendEmail}>
-      <div id="conactform" className=" h-[700px] p-[40px] rounded-[50px] mt-[40px] border-[1px] border-[#544f49] shadow-xl  md:w-full md:ml-[10px] md:mt-[60px] md:h-[480px] xl:w-[1200px] xl:ml-[140px]
-       xl:p-[20px] flex justify-around flex-col gap-[10px]  "
-       style={{ backgroundImage: `url(${heroSVG})`, backgroundSize: "cover" }}>
+      <div id="conactform" className=" h-[700px] p-[40px] rounded-[50px] mt-[40px] 
+      border-[1px] border-[#544f49] shadow-xl  text-white
+       md:w-[600px] md:ml-[10px] md:mt-[60px] md:h-[480px]  xl:ml-[20px]  xl:flex xl:flex-col
+       xl:p-[20px] xl:h-[600px] flex justify-around flex-col gap-[10px]  "
+        >
 
-        <div id="rowOne" className="flex flex-col justify-center xl:flex-row md:gap-[40px] xl:-mt-[280px] md:h-[300px]    h-[400px] xl:h-[250px]">
+        <div id="rowOne" className="flex flex-col justify-center xl:flex-col md:gap-[40px] 
+        xl:-mt-[180px] md:h-[300px]    h-[400px] xl:h-[350px]">
         <div
               id="name"
               className="
         w-full h-20  ml-8  mt-0 -pt-[80px]  text-[35px]
         md:w-5/6 md:h-10 md:-ml-12 md:text-3xl md:pt-0 md:-mt-[200px]
-        xl:w-full xl:h-15 xl:ml-0 xl:text-4xl xl:mt-[26px] xl:pt-0 "
+        xl:w-full xl:h-15 xl:ml-0 xl:text-4xl xl:mt-[px] xl:pt-0 "
             >
               <label
                 htmlFor="name"
@@ -144,7 +164,7 @@ function Contactform() {
               className="
         w-full  h-20  ml-8 text-[35px] mt-36
         md:w-5/6 md:h-10 md:ml-16 md:text-3xl md:mt-[100px]
-        xl:w-5/6 xl:h-15 xl:ml-16 xl:mt-[80px] xl:text-3xl"
+        xl:w-5/6 xl:h-15 xl:ml-0 xl:mt-[120px] xl:text-3xl"
             >
               <label
                 htmlFor="email"
@@ -218,7 +238,7 @@ function Contactform() {
           w-[160px] h-[90px] ml-[240px] mt-[40px]
           md:w-[160px] md:h-[90px] md:mt-[20px] md:ml-[260px]
           xl:w-[160px] xl:h-[90px] text-white rounded-[40px] bg-[#544f49]
-          justify-center items-center xl:mt-2 xl:ml-[640px]
+          justify-center items-center xl:mt-2 xl:ml-[-200px]
            
         "
             >
@@ -231,19 +251,37 @@ function Contactform() {
               /> 
             </div>
             </form>
-            <div id="border" className="border-[2px] border-[#544f49] mt-[20px]"></div>
-            <div
+        
+      </div>
+     
+           
+      <div
           id="second"
-          className="  w-full
-           h-[100px] xl:w-full md:h-[100px] xl:mt-[40px] xl:h-[200px] md:w-[350px] flex   flex-col xl:flex-row xl:justify-between
+          className=" w-[600px]   h-screen flex  mt-[40px] xl:mt-[330px]  flex-col xl:flex-col xl:justify-between
             "
           
         >
           
+
+          <div id="two" 
+          className="flex gap-[30px] flex-col xl:flex-row " 
+          >
+          <div id="skills" className="  xl:w-[900px] p-[10px] ">
+          <Link to="#Skills" className=" text-[22px] text-white">Skills</Link>
+            <h3 className="text-[20px] text-white opacity-60">Check out the things I'm good at, from building websites to design and more.</h3>
+          </div>
+            <div id="experience" className=" xl:w-[900px] p-[10px]">
+            <Link to="#experience" className=" text-[20px] text-white">Experience</Link>
+            <h3 className="text-[20px] text-white opacity-60">Check out the things I'm good at, from building websites to design and more.</h3>
+            </div>
+            
+          </div>
+
+
           
             
 
-          <div id="div" className="flex  ml-[80px] justify-center flex-col md:flex md:flex-col">
+          {/* <div id="div" className="flex  ml-[80px] justify-center flex-col md:flex md:flex-col">
           <h3 className="  text-[35px] xl:text-[45px]  mt-[20px] xl:-mt-20 font-semibold font-helvetica  underline underline-offset-8 text-black w-[320px]">
         Contact details
       </h3>
@@ -257,14 +295,13 @@ function Contactform() {
           </div>
           <div id="links" className="ml-[80px] md:mt-[40px] md:ml-[110px] xl:mt-[0px] xl:ml-[0px]">
           <Links columnDirection={true}/>
-          </div>
+          </div> */}
           
             
           
 
           
         </div>
-        {/* <h4 className="xl:ml-[700px]">CRAFTED WITH ❤️</h4> */}
       
       
     </div>

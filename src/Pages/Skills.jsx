@@ -84,11 +84,7 @@ function Skills() {
           }
         });
      
-    } else if (screenWidth <= 1024 && screenWidth > 768) {
-      const tlTablet = gsap.timeline();
-
-      
-    } else {
+    }  else {
       const tlMobile = gsap.timeline();
 
       tlMobile.fromTo(".dev-box h4",{
@@ -201,7 +197,7 @@ const mouseOut = () =>{
         background: isMobile
           ? "none" // No background on mobile
           : `url(${resumeBG}) left bottom / 100% 150% no-repeat`,
-        backgroundPosition: isMobile ? "none" : "300px -400px",
+        backgroundPosition: isMobile ? "none" : "0px -400px",
         backgroundAttachment: isMobile ? "none" : "fixed",
         opacity: isMobile ? 1 : 1,
       }}
