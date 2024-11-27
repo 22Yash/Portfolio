@@ -51,7 +51,8 @@ function Contactform() {
         y: dy / 1.5,
         ease: "power4.out",
         duration: 0.3,
-        backgroundColor: "#544f49",
+        backgroundColor: "#FFD500",
+        opacity:"100"
       });
     };
 
@@ -83,12 +84,12 @@ function Contactform() {
 
   return (
     <div id="Contact"
-     className=" w-[700px] xl:h-[150vh] h-[250vh]  
+     className=" w-[700px] xl:h-[170vh] h-[180vh]  
      md:w-full xl:w-full xl:grid xl:grid-cols-2 
      md:h-[170vh] p-[40px] flex flex-col justify-center items-center "
      style={{
       background: `
-        url(${heroSVG}) left bottom / 280% 200% no-repeat`,
+        url(${heroSVG}) left bottom / 180% 100% no-repeat`,
       backgroundPosition: 'left bottom', // Consistent positioning
       backgroundAttachment: 'fixed', // Optional: use if you want a parallax effect
     }}
@@ -97,7 +98,7 @@ function Contactform() {
       
       <div id="first" className=" w-[700px] mt-[20px] xl:mt-[0px] ">
       <div
-        id="contactHeading" className="ml-[-240px]"
+        id="contactHeading" className="flex  flex-row sm:flex-col ml-[30px] xl:ml-[-240px]"
       
         
        
@@ -114,20 +115,20 @@ function Contactform() {
           xl:text-[85px] text-white 
          xl:flex xl:justify-center font-semibold xl:ml-20 xl:pt-0 xl:mt-[-30px] "
         >
-          Connect
+          Connect.
           <br />  
           
         </h1>
       </div>
       <form ref={form} onSubmit={sendEmail}>
-      <div id="conactform" className=" h-[700px] p-[40px] rounded-[50px] mt-[40px] 
-      border-[1px] border-[#544f49] shadow-xl  text-white
+      <div id="conactform" className=" h-[600px] p-[40px] rounded-[50px] mt-[40px] w-[600px] pt-[0px]
+      border-[2px] border-[#544f49]  shadow-white shadow-inner  text-white ml-[40px] sm:ml-[0px] 
        md:w-[600px] md:ml-[10px] md:mt-[60px] md:h-[480px]  xl:ml-[20px]  xl:flex xl:flex-col
        xl:p-[20px] xl:h-[600px] flex justify-around flex-col gap-[10px]  "
         >
 
         <div id="rowOne" className="flex flex-col justify-center xl:flex-col md:gap-[40px] 
-        xl:-mt-[180px] md:h-[300px]    h-[400px] xl:h-[350px]">
+        xl:-mt-[180px] md:h-[300px] mt-[-40px]    h-[400px] xl:h-[350px]">
         <div
               id="name"
               className="
@@ -149,13 +150,10 @@ function Contactform() {
                 type="text"
                 name="user_name"
                 className="
-          w-[400px] ml-2 focus:outline-none bg-[#e6e6e1] border-2 rounded-l-full rounded-r-full border-[#989893] pt-10 mt-5 pb-8 pl-10 h-1/4
+          w-[400px] ml- focus:outline-none bg-white opacity-50 border-2 rounded-[20px] border-[#989893] pt-10 mt-5 pb-8 pl-10 h-1/4
           md:w-[400px] md:h-10 md:ml-28 md:text-3xl  md:mt-4 
-           xl:w-[520px]  xl:ml-0 xl:mt-12  xl:focus:outline-none xl:bg-[#d6d6d0]"
-                style={{
-                  backgroundImage: `url(${heroSVG})`,
-                  backgroundSize: "cover",
-                }}
+           xl:w-[520px]  xl:ml-0 xl:mt-12  xl:focus:outline-none "
+                
               />
             </div>
 
@@ -179,9 +177,9 @@ function Contactform() {
                 type="email"
                 name="user_name"
                 className="w-[400px]
-            ml-2 focus:outline-none mt-0 pt-8  border-2 rounded-l-full rounded-r-full bg-[#e6e6e1] border-[#989893] pb-8 pl-10  h-10 xl:h-[20px]
+            ml-2 focus:outline-none mt-0 pt-8  border-2 rounded-[20px] bg-white opacity-50 border-[#989893] pb-8 pl-10  h-10 xl:h-[20px]
             md:w-5/6 md:h-10 md:ml-2 md:text-3xl  md:mt-4 xl:w-[520px]
-             xl:mt-8  xl:ml-2 xl:focus:outline-none xl:bg-[#d6d6d0]"
+             xl:mt-8  xl:ml-2 xl:focus:outline-none "
                 style={{
                   backgroundImage: `url(${heroSVG})`,
                   backgroundSize: "cover",
@@ -209,9 +207,9 @@ function Contactform() {
               <textarea
                 name="message"
                 className="
-          w-[400px] ml-4 h-20 mt-3 focus:outline-none border-2  rounded-[40px] bg-[#e6e6e1] border-[#989893]
+          w-[400px] ml-4 h-20 mt-3 focus:outline-none border-2  rounded-[20px] bg-white opacity-50 border-[#989893]
           md:w-5/6 md:h-[100px] md:ml-2 md:text-3xl  md:mt-4
-           xl:w-full  xl:-ml-16 xl:focus:outline-none xl:h-[120px] xl:bg-[#d6d6d0]"
+           xl:w-full  xl:-ml-16 xl:focus:outline-none xl:h-[120px] "
                 style={{
                   backgroundImage: `url(${heroSVG})`,
                   backgroundSize: "cover",
@@ -237,14 +235,14 @@ function Contactform() {
               className="
           w-[160px] h-[90px] ml-[240px] mt-[40px]
           md:w-[160px] md:h-[90px] md:mt-[20px] md:ml-[260px]
-          xl:w-[160px] xl:h-[90px] text-white rounded-[40px] bg-[#544f49]
-          justify-center items-center xl:mt-2 xl:ml-[-200px]
+          xl:w-[160px] xl:h-[90px] text-black font-semibold rounded-[40px] bg-white opacity-50
+          justify-center items-center xl:mt-2 xl:ml-[240px]
            
         "
             >
               <input
                 type="submit"
-                value="send"
+                value="Send"
                 className=" text-center ml-[40px] text-[35px]  mt-[20px] xl:text-[35px] 
                       xl:mt-[20px] md:ml- md:text-3xl
           "
@@ -264,14 +262,14 @@ function Contactform() {
           
 
           <div id="two" 
-          className="flex gap-[30px] flex-col xl:flex-row " 
+          className="flex gap-[30px] xl:flex-row " 
           >
           <div id="skills" className="  xl:w-[900px] p-[10px] ">
-          <Link to="#Skills" className=" text-[22px] text-white">Skills</Link>
-            <h3 className="text-[20px] text-white opacity-60">Check out the things I'm good at, from building websites to design and more.</h3>
+          <Link to="#Skills" className=" text-[35px] xl:text-[22px] text-white">Skills</Link>
+            <h3 className="text-[20px] xl:text-[20px] text-white opacity-60">Check out the things I'm good at, from building websites to design and more.</h3>
           </div>
             <div id="experience" className=" xl:w-[900px] p-[10px]">
-            <Link to="#experience" className=" text-[20px] text-white">Experience</Link>
+            <Link to="#experience" className=" text-[35px] xl:text-[22px] text-white">Experience</Link>
             <h3 className="text-[20px] text-white opacity-60">Check out the things I'm good at, from building websites to design and more.</h3>
             </div>
             
@@ -281,21 +279,10 @@ function Contactform() {
           
             
 
-          {/* <div id="div" className="flex  ml-[80px] justify-center flex-col md:flex md:flex-col">
-          <h3 className="  text-[35px] xl:text-[45px]  mt-[20px] xl:-mt-20 font-semibold font-helvetica  underline underline-offset-8 text-black w-[320px]">
-        Contact details
-      </h3>
-          <h3 className="xl:text-[20px] pt-5 text-[30px] xl:w-[350px] xl:h-[50px] xl:mt-5 xl:-ml-10  flex xl:justify-center xl:items-center
-          md:-mt-[40px]">
-          <CgMail />  <span className="ml-[20px] font-helvetica md:-mt-[10px] -mt-[10px]"> - yashadoke@gmail.com</span>
-            </h3>
-            <h3 className="xl:text-[20px] text-[28px] mt-2 xl:w-[350px] xl:h-[50px] flex xl:-ml-16 xl:justify-center xl:items-center">
-            <FaPhoneAlt /> <span className="ml-[20px] font-helvetica -mt-[5px]">93247871464</span>
-            </h3>
-          </div>
-          <div id="links" className="ml-[80px] md:mt-[40px] md:ml-[110px] xl:mt-[0px] xl:ml-[0px]">
+          
+          <div id="links" className="ml-[0px] mt-[50px] md:mt-[40px] md:ml-[110px] xl:mt-[-240px] xl:ml-[0px]">
           <Links columnDirection={true}/>
-          </div> */}
+          </div>
           
             
           

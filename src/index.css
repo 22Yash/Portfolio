@@ -122,25 +122,25 @@
   #page3 {
       min-height: 67vh;
       width: 100%;
-      background-color: #222;
+      background-color: #070707;
       padding: 5vh 5.1vw;
       position: relative;
   }
 
   #page3>h3 {
-      font-size: 4.4vmax;
+      font-size: 6vmax;
       font-family: gilroy;
       margin-bottom: 0vmax;
   }
 
   #page3>h3 span {
-      font-size: 4.4vmax;
+      font-size: 6vmax;
       font-family: gilroy;
       color: #38cdfa;
   }
 
   #page3>h5 {
-      font-size: 2.2vmax;
+      font-size: 3vmax;
       
       font-weight: 500;
       margin-bottom: 1.4vmax;
@@ -148,7 +148,7 @@
   }
 
   .box h4 {
-      font-size: 2.1vmax;
+      font-size: 3vmax;
       border: 2px solid white;
       display: inline-block;
       font-family: gilroy;

@@ -32,14 +32,14 @@ function Navbar() {
          
         </div>
         <div id="rightNav" className="hidden
-
-        xl:flex xl:gap-10   xl:h-12 xl:m-2 xl:text-white xl:mt-[50px] xl:rounded-l-full xl:rounded-r-full">
+             
+        xl:flex xl:gap-10   xl:h-12 xl:m-1 xl:text-white xl:mt-[50px] xl:rounded-l-full xl:rounded-r-full">
           <ul className="flex  mt-4 mr-10  h-[70px]
           border-2 border-white xl:items-center rounded-[50px] 
           xl:p-[20px]   font-medium lg:flex-row lg:space-x-2 lg:mt-0">
             <li 
              
-            className="button w-[100px] h-[50px]    flex justify-center items-center
+            className="button w-[100px] h-[50px] ml-[30px]   flex justify-center items-center
             " 
             >
               <Link to="#Work" className="  font-bold text-[20px]">Work</Link>

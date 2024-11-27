@@ -171,7 +171,7 @@ const mouseOut = () =>{
       
       >
 
-      <h3 className="font-bold text-white">Things I'm <span>good</span> at</h3>
+      <h3 className="font-bold text-white ">Things I'm <span>good</span> at</h3>
       <h5 className="font-bold text-white">skills, interests, passion and hobbies</h5>
       <div className="box dev-box">
         <h4>development</h4>
@@ -204,7 +204,8 @@ const mouseOut = () =>{
     >
 
       
-      <div id="card" className="w-[400px] h-[530px] rounded-[30px] p-[30px] bg-white shadow-2xl shadow-gray-500/90"
+      <div id="card" className="w-[400px] h-[530px] rounded-[30px] 
+      xl:p-[30px] bg-white shadow-2xl shadow-gray-500/90"
       onMouseEnter={mouseIN}
       onMouseLeave={mouseOut}>
       <div 

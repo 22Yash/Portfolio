@@ -12,6 +12,8 @@ function SlideMenu() {
 
 
   const toggleMenu = () => {
+    const tl = gsap.timeline();
+
     setIsOpen(!isOpen);
     const menu = menuRef.current;
 
@@ -89,13 +91,13 @@ function SlideMenu() {
     <div className=" fixed xl:top-20  top-0 right-0 z-50 md:opacity-0 " 
    >
       <button onClick={toggleMenu} ref={hamburgerRef} className=" xl:w-24   xl:h-24 xl:m-5  
-            -ml-[30px] mt-[30px] mr-5 w-[100px] h-[100px] bg-[#5f5c57]  rounded-full "  >
+            -ml-[30px] mt-[30px] mr-5 w-[100px] h-[100px] bg-white opacity-50  rounded-full "  >
         {isOpen ? <FiX className="text-[30px] l:ml-8 ml-4 text-white" /> : <FiMenu className="text-[50px] xl:ml-8 ml-[25px] text-black" />}
       </button>
       <div
         ref={menuRef}
-        className=" fixed top-0 right-0 h-full bg-[#3b3834] w-[400px] xl:w-4/12 flex flex-col text-5xl justify-center"
-        style={{ transform: isOpen ? "translateX(0)" : "translateX(600px)" ,   backgroundImage: `url(${hamburgerSVG})`, backgroundSize: "cover" 
+        className=" fixed top-0 right-0 h-full bg-[#818181] w-[400px] xl:w-4/12 flex flex-col text-5xl justify-center"
+        style={{ transform: isOpen ? "translateX(0)" : "translateX(600px)"  
         }}
       >
         {isOpen && (

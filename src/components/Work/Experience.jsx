@@ -39,7 +39,7 @@ function Experience() {
   return (
     <div
       className="experience h-[800px] w-[700px] sm:w-full xl:w-full"
-      id="Resume"
+      id="experience"
     >
       <div
         id="title"
