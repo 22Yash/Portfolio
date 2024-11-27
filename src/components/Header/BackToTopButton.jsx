@@ -33,10 +33,7 @@ const BackToTopButton = () => {
 
     <>
     <div id="bottom"
-    style={{
-      backgroundImage: `url(${heroSVG})`,
-      backgroundSize: "cover",
-    }}>
+    className='bg-red-400 text-white mt-[-300px]'>
       <div id="love" className='xl:flex xl:gap-[520px] xl:text-[20px] font-helvetica  '>
       <div id="first" className='xl:ml-10 xl:mt-10 xl:pt-5 font-bold'><VisitorCounter/></div>
       <div id="second" className='xl:mt-16'>Site designed and coded with ❤️‍🔥</div>

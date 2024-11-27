@@ -4,10 +4,10 @@ import Links from "./Links";
 import heroSVG from "../Header/background.png"
 
 import { HashLink as Link } from "react-router-hash-link";
-import BackToTopButton from "../Header/BackToTopButton";
+
 import gsap from "gsap";
-import { CgMail } from "react-icons/cg";
-import { FaPhoneAlt } from "react-icons/fa";
+import BackToTopButton from "../Header/BackToTopButton";
+;
 
 function Contactform() {
   const form = useRef();

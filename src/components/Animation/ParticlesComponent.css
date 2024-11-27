@@ -19,33 +19,7 @@ body {
     background-color: #020206;
 }
 
-/* Create left pseudo-element for the background */
-/* #particles-js::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 50%; 
-    height: 100%;
-    background: url("../Header/background.png") no-repeat center center / cover;
-    background-color: #000022; 
-    filter: blur(18px); 
-    z-index: -1; 
-} */
 
-/* Create right pseudo-element for the background */
-/* #particles-js::after {
-    content: '';
-    position: absolute;
-    top: 0;
-    right: 0; 
-    width: 50%; 
-    height: 100%;
-    background: url("../Header/background.png") no-repeat center center / cover;
-    background-color: #000022; 
-    filter: blur(18px);
-    z-index: -1; 
-} */
 
 
   
@@ -64,6 +38,7 @@ body {
     padding-bottom: 2px;
     font-family: Helvetica, Arial, sans-serif;
     font-weight: bold;
+    border-radius: 0 0 3px 3px;
   }
   
   .js-count-particles {
@@ -81,7 +56,5 @@ body {
     overflow: hidden;
   }
   
-  .count-particles {
-    border-radius: 0 0 3px 3px;
-  }
+  
   
