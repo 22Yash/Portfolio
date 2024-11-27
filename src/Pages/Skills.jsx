@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from "react";
+import React, { useEffect } from "react";
 import { Link } from "react-router-dom";
 import gsap from "gsap";
 import ScrollTrigger from "gsap/ScrollTrigger";
@@ -13,11 +13,11 @@ import image9 from "./images/gsap-min.webp";
 import image10 from "./images/download-min.webp";
 import image11 from "./images/html-min.webp";
 import image12 from "./images/css-min.webp";
-// import skillBg from "../assets/resume-bg.svg"
+
 import skillBG from "../assets/skillBG (2).png"
 import resumeBG from "../assets/Untitled.png"
-import { FaLinkedin } from "react-icons/fa6";
-import { FaSquareGithub } from "react-icons/fa6";
+import { FaLinkedin ,FaSquareGithub  } from "react-icons/fa6";
+
 
 
 
@@ -199,7 +199,7 @@ const mouseOut = () =>{
           : `url(${resumeBG}) left bottom / 100% 150% no-repeat`,
         backgroundPosition: isMobile ? "none" : "0px -400px",
         backgroundAttachment: isMobile ? "none" : "fixed",
-        opacity: isMobile ? 1 : 1,
+        
       }}
     >
 
