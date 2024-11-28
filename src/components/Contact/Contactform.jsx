@@ -84,8 +84,8 @@ function Contactform() {
 
   return (
     <div id="Contact"
-     className=" w-[700px] xl:h-[170vh] h-[180vh]  
-     md:w-full xl:w-full xl:grid xl:grid-cols-2 
+     className=" w-[700px] xl:h-[170vh] h-[180vh]  sm:h-[150vh]
+     sm:w-full sm:grid sm:grid-cols-1  xl:w-full xl:grid xl:grid-cols-2 
      md:h-[170vh] p-[40px] flex flex-col justify-center items-center "
      style={{
       background: `
@@ -96,7 +96,7 @@ function Contactform() {
      
     >
       
-      <div id="first" className=" w-[700px] mt-[20px] xl:mt-[0px] ">
+      <div id="first" className=" w-[700px] mt-[150px] sm:mt-[-30px] xl:mt-[0px] ">
       <div
         id="contactHeading" className="flex  flex-row sm:flex-col ml-[30px] xl:ml-[-240px]"
       
@@ -104,7 +104,7 @@ function Contactform() {
        
       >
         <h1 className=" text-[60px] ml-[30px] flex justify-center font-helvetica    mt-0 pt-10 
-         xl:text-[85px] text-white opacity-50
+         xl:text-[85px] text-white opacity-50 sm:ml-[-530px]
          xl:flex xl:justify-center font-semibold xl:ml-[-50px] xl:pt-5 xl:mt-0 "
         >
           Let's 
@@ -112,7 +112,7 @@ function Contactform() {
           
         </h1>
         <h1 className=" text-[60px] ml-[30px] flex justify-center font-helvetica    mt-0 pt-10 
-          xl:text-[85px] text-white 
+          xl:text-[85px] text-white sm:ml-[-420px] sm:mt-[-50px]
          xl:flex xl:justify-center font-semibold xl:ml-20 xl:pt-0 xl:mt-[-30px] "
         >
           Connect.
@@ -150,7 +150,7 @@ function Contactform() {
                 type="text"
                 name="user_name"
                 className="
-          w-[400px] ml- focus:outline-none bg-white opacity-50 border-2 rounded-[20px] border-[#989893] pt-10 mt-5 pb-8 pl-10 h-1/4
+          w-[400px] ml- focus:outline-none bg-white opacity-60 border-2 rounded-[20px] border-[#989893] pt-10 mt-5 pb-8 pl-10 h-1/4
           md:w-[400px] md:h-10 md:ml-28 md:text-3xl  md:mt-4 
            xl:w-[520px]  xl:ml-0 xl:mt-12  xl:focus:outline-none "
                 
@@ -177,7 +177,7 @@ function Contactform() {
                 type="email"
                 name="user_name"
                 className="w-[400px]
-            ml-2 focus:outline-none mt-0 pt-8  border-2 rounded-[20px] bg-white opacity-50 border-[#989893] pb-8 pl-10  h-10 xl:h-[20px]
+            ml-2 focus:outline-none mt-0 pt-8  border-2 rounded-[20px] bg-white opacity-60 border-[#989893] pb-8 pl-10  h-10 xl:h-[20px]
             md:w-5/6 md:h-10 md:ml-2 md:text-3xl  md:mt-4 xl:w-[520px]
              xl:mt-8  xl:ml-2 xl:focus:outline-none "
                 style={{
@@ -207,7 +207,7 @@ function Contactform() {
               <textarea
                 name="message"
                 className="
-          w-[400px] ml-4 h-20 mt-3 focus:outline-none border-2  rounded-[20px] bg-white opacity-50 border-[#989893]
+          w-[400px] ml-4 h-20 mt-3 focus:outline-none border-2  rounded-[20px] bg-white opacity-60 border-[#989893]
           md:w-5/6 md:h-[100px] md:ml-2 md:text-3xl  md:mt-4
            xl:w-full  xl:-ml-16 xl:focus:outline-none xl:h-[120px] "
                 style={{
@@ -255,7 +255,8 @@ function Contactform() {
            
       <div
           id="second"
-          className=" w-[600px]   h-screen flex  mt-[40px] xl:mt-[330px]  flex-col xl:flex-col xl:justify-between
+          className=" w-[600px]   h-screen sm:h-screen bg-red-400
+           flex  mt-[40px] xl:mt-[330px]  flex-col xl:flex-col xl:justify-between
             "
           
         >

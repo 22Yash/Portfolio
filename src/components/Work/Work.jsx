@@ -108,7 +108,7 @@ const mouseOut = () =>{
       
       <section
         id="Work"
-        className="work w-[700px]  h-[240vh]  xl:h-screen md:w-full rounded-t-full relative z-4"
+        className="work w-[700px]  h-[240vh] sm:h-[280vh] xl:h-screen md:w-full rounded-t-full relative z-4"
         
         
       >

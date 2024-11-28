@@ -19,266 +19,253 @@ function Hero() {
   const roleHeadingOneRef = useRef(null);
   const roleHeadingTwoRef = useRef(null);
   const roleHeadingOnePartRef = useRef(null);
-  const hamburgerRef = useRef(null);
   const navbarRef = useRef(null);
 
   const infoRef = useRef(null);
 
-  useEffect(() => {
-    const screenWidth = window.innerWidth;
+  // useEffect(() => {
+  //   const screenWidth = window.innerWidth;
 
-    if (screenWidth > 1024) {
-      const tlDesktop = gsap.timeline();
+  //   if (screenWidth > 1024) {
+  //     const tlDesktop = gsap.timeline();
 
-      tlDesktop.fromTo(
-        heroHeadingRef.current,
-        {
-          y: 80,
-          opacity: 0,
-          duration: 1,
-        },
-        {
-          y: 10,
-          opacity: 1,
-          duration: 1,
-          repeat: 0,
-          delay: 6,
-        }
-      );
+  //     tlDesktop.fromTo(
+  //       heroHeadingRef.current,
+  //       {
+  //         y: 80,
+  //         opacity: 0,
+  //         duration: 1,
+  //       },
+  //       {
+  //         y: 10,
+  //         opacity: 1,
+  //         duration: 1,
+  //         repeat: 0,
+  //         delay: 6,
+  //       }
+  //     );
 
-      tlDesktop.fromTo(
-        roleHeadingOneRef.current,
-        {
-          y: 80,
-          opacity: 0,
-          duration: 1,
-          stagger: 1,
-        },
-        {
-          y: -10,
-          opacity: 1,
-          duration: 1,
-          stagger: 1,
-        }
-      );
+  //     tlDesktop.fromTo(
+  //       roleHeadingOneRef.current,
+  //       {
+  //         y: 80,
+  //         opacity: 0,
+  //         duration: 1,
+  //         stagger: 1,
+  //       },
+  //       {
+  //         y: -10,
+  //         opacity: 1,
+  //         duration: 1,
+  //         stagger: 1,
+  //       }
+  //     );
 
-      tlDesktop.fromTo(
-        roleHeadingOnePartRef.current,
-        {
-          y: 80,
-          opacity: 0,
-          duration: 1,
-          stagger: 1,
-        },
-        {
-          y: -10,
-          opacity: 1,
-          duration: 1,
-          stagger: 1,
-        }
-      );
+  //     tlDesktop.fromTo(
+  //       roleHeadingOnePartRef.current,
+  //       {
+  //         y: 80,
+  //         opacity: 0,
+  //         duration: 1,
+  //         stagger: 1,
+  //       },
+  //       {
+  //         y: -10,
+  //         opacity: 1,
+  //         duration: 1,
+  //         stagger: 1,
+  //       }
+  //     );
 
-      tlDesktop.fromTo(
-        roleHeadingTwoRef.current,
-        {
-          y: 80,
-          opacity: 0,
-          duration: 1,
-          stagger: 1,
-        },
-        {
-          y: -10,
-          opacity: 1,
-          duration: 1,
-          stagger: 1,
-        }
-      );
+  //     tlDesktop.fromTo(
+  //       roleHeadingTwoRef.current,
+  //       {
+  //         y: 80,
+  //         opacity: 0,
+  //         duration: 1,
+  //         stagger: 1,
+  //       },
+  //       {
+  //         y: -10,
+  //         opacity: 1,
+  //         duration: 1,
+  //         stagger: 1,
+  //       }
+  //     );
 
-      tlDesktop.fromTo(
-        infoRef.current,
-        {
-          opacity: 0,
-          stagger: 1,
-        },
-        {
-          opacity: 1,
-          stagger: 1,
-        }
-      );
-    } else if (screenWidth <= 1024 && screenWidth > 768) {
-      const tlTablet = gsap.timeline();
+  //     tlDesktop.fromTo(
+  //       infoRef.current,
+  //       {
+  //         opacity: 0,
+  //         stagger: 1,
+  //       },
+  //       {
+  //         opacity: 1,
+  //         stagger: 1,
+  //       }
+  //     );
+  //   } else if (screenWidth <= 1024 && screenWidth > 768) {
+  //     const tlTablet = gsap.timeline();
 
-      tlTablet.fromTo(
-        heroHeadingRef.current,
-        {
-          y: 80,
-          opacity: 0,
-          duration: 1,
-        },
-        {
-          y: 100,
-          opacity: 1,
-          duration: 1,
-          repeat: 0,
-          delay: 10,
-        }
-      );
+  //     tlTablet.fromTo(
+  //       heroHeadingRef.current,
+  //       {
+  //         y: 80,
+  //         opacity: 0,
+  //         duration: 1,
+  //       },
+  //       {
+  //         y: 100,
+  //         opacity: 1,
+  //         duration: 1,
+  //         repeat: 0,
+  //         delay: 10,
+  //       }
+  //     );
 
-      tlTablet.fromTo(
-        roleHeadingOneRef.current,
-        {
-          y: 80,
-          opacity: 0,
-          duration: 1,
-          stagger: 1,
-        },
-        {
-          y: 0,
-          opacity: 1,
-          duration: 1,
-          stagger: 1,
-        }
-      );
+  //     tlTablet.fromTo(
+  //       roleHeadingOneRef.current,
+  //       {
+  //         y: 80,
+  //         opacity: 0,
+  //         duration: 1,
+  //         stagger: 1,
+  //       },
+  //       {
+  //         y: 0,
+  //         opacity: 1,
+  //         duration: 1,
+  //         stagger: 1,
+  //       }
+  //     );
 
-      tlTablet.fromTo(
-        roleHeadingOnePartRef.current,
-        {
-          y: 80,
-          opacity: 0,
-          duration: 1,
-          stagger: 1,
-        },
-        {
-          y: 10,
-          opacity: 1,
-          duration: 1,
-          stagger: 1,
-        }
-      );
+  //     tlTablet.fromTo(
+  //       roleHeadingOnePartRef.current,
+  //       {
+  //         y: 80,
+  //         opacity: 0,
+  //         duration: 1,
+  //         stagger: 1,
+  //       },
+  //       {
+  //         y: 10,
+  //         opacity: 1,
+  //         duration: 1,
+  //         stagger: 1,
+  //       }
+  //     );
 
-      tlTablet.fromTo(
-        roleHeadingTwoRef.current,
-        {
-          y: 80,
-          opacity: 0,
-          duration: 1,
-          stagger: 1,
-        },
-        {
-          y: -10,
-          opacity: 1,
-          duration: 1,
-          stagger: 1,
-        }
-      );
+  //     tlTablet.fromTo(
+  //       roleHeadingTwoRef.current,
+  //       {
+  //         y: 80,
+  //         opacity: 0,
+  //         duration: 1,
+  //         stagger: 1,
+  //       },
+  //       {
+  //         y: -10,
+  //         opacity: 1,
+  //         duration: 1,
+  //         stagger: 1,
+  //       }
+  //     );
 
-      tlTablet.fromTo(
-        infoRef.current,
-        {
-          opacity: 0,
-          stagger: 1,
-        },
-        {
-          opacity: 1,
-          stagger: 1,
-        }
-      );
-    } else {
-      const tlMobile = gsap.timeline();
+  //     tlTablet.fromTo(
+  //       infoRef.current,
+  //       {
+  //         opacity: 0,
+  //         stagger: 1,
+  //       },
+  //       {
+  //         opacity: 1,
+  //         stagger: 1,
+  //       }
+  //     );
+  //   } else {
+  //     const tlMobile = gsap.timeline();
 
-      tlMobile.fromTo(
-        heroHeadingRef.current,
-        {
-          y: 80,
-          opacity: 0,
-          duration: 1,
-        },
-        {
-          y: 50,
-          opacity: 1,
-          duration: 1,
-          repeat: 0,
-          delay: 10,
-        }
-      );
+  //     tlMobile.fromTo(
+  //       heroHeadingRef.current,
+  //       {
+  //         y: 80,
+  //         opacity: 0,
+  //         duration: 1,
+  //       },
+  //       {
+  //         y: 50,
+  //         opacity: 1,
+  //         duration: 1,
+  //         repeat: 0,
+  //         delay: 10,
+  //       }
+  //     );
 
-      tlMobile.fromTo(
-        roleHeadingOneRef.current,
-        {
-          y: 80,
-          opacity: 0,
-          duration: 1,
-          stagger: 1,
-        },
-        {
-          y: -10,
-          opacity: 1,
-          duration: 1,
-          stagger: 1,
-        }
-      );
+  //     tlMobile.fromTo(
+  //       roleHeadingOneRef.current,
+  //       {
+  //         y: 80,
+  //         opacity: 0,
+  //         duration: 1,
+  //         stagger: 1,
+  //       },
+  //       {
+  //         y: -10,
+  //         opacity: 1,
+  //         duration: 1,
+  //         stagger: 1,
+  //       }
+  //     );
 
-      tlMobile.fromTo(
-        roleHeadingOnePartRef.current,
-        {
-          y: 80,
-          opacity: 0,
-          duration: 1,
-          stagger: 1,
-        },
-        {
-          y: -10,
-          opacity: 1,
-          duration: 1,
-          stagger: 1,
-        }
-      );
+  //     tlMobile.fromTo(
+  //       roleHeadingOnePartRef.current,
+  //       {
+  //         y: 80,
+  //         opacity: 0,
+  //         duration: 1,
+  //         stagger: 1,
+  //       },
+  //       {
+  //         y: -10,
+  //         opacity: 1,
+  //         duration: 1,
+  //         stagger: 1,
+  //       }
+  //     );
 
-      tlMobile.fromTo(
-        roleHeadingTwoRef.current,
-        {
-          y: 80,
-          opacity: 0,
-          duration: 1,
-          stagger: 1,
-        },
-        {
-          y: -10,
-          opacity: 1,
-          duration: 1,
-          stagger: 1,
-        }
-      );
+  //     tlMobile.fromTo(
+  //       roleHeadingTwoRef.current,
+  //       {
+  //         y: 80,
+  //         opacity: 0,
+  //         duration: 1,
+  //         stagger: 1,
+  //       },
+  //       {
+  //         y: -10,
+  //         opacity: 1,
+  //         duration: 1,
+  //         stagger: 1,
+  //       }
+  //     );
 
-      tlMobile.fromTo(
-        infoRef.current,
-        {
-          y: 10,
-          opacity: 0,
-          stagger: 1,
-        },
-        {
-          y: -10,
-          opacity: 1,
-          stagger: 1,
-        }
-      );
+  //     tlMobile.fromTo(
+  //       infoRef.current,
+  //       {
+  //         y: 10,
+  //         opacity: 0,
+  //         stagger: 1,
+  //       },
+  //       {
+  //         y: -10,
+  //         opacity: 1,
+  //         stagger: 1,
+  //       }
+  //     );
 
-      tlMobile.fromTo(
-        hamburgerRef.current,
-        {
-          y: 10,
-          opacity: 0,
-          stagger: 1,
-        },
-        {
-          y: -10,
-          opacity: 1,
-          stagger: 1,
-        }
-      );
-    }
-  }, []);
+      
+  //   }
+  // }, []);
 
   return (
     <>
@@ -286,7 +273,7 @@ function Hero() {
 
       <div
         id="hero"
-        className="main w-[700px] xl:w-full md:w-full h-[180vh] xl:h-[100vh] z-3 relative"
+        className="main w-[700px] xl:w-full md:w-full h-[180vh] sm:h-screen xl:h-[100vh] z-3 relative"
         style={{
           background: `
       url(${heroSVG}) left bottom / 280% 200% no-repeat`,
@@ -309,8 +296,8 @@ function Hero() {
               ref={heroHeadingRef}
               className="hero 
           text-[120px] font-bold  text-center mt-[-40px]   selection:bg-[#FFD500] selection:text-[#000]
-          md:text-[80px] md:font-bold md:font-helvetica md:text-left md:ml-[20px] md:mt-[-40px]
-          xl:text-9xl xl:font-bold xl:text-left  xl:mt-[30px] xl:p-0 xl:ml-72 font-helvetica"
+          md:text-[80px] md:font-bold md:font-helvetica md:text-left md:ml-[20px] md:mt-[-0px] sm:w-[900px] sm:bg-red-400
+          xl:text-9xl  xl:w-[500px] xl:font-bold xl:text-left  xl:mt-[30px] xl:p-0 xl:ml-72 font-helvetica"
             >
               I'm Yash
             </h1>
@@ -325,7 +312,7 @@ function Hero() {
             <h1
               className="
           text-[120px] font-bold  text-center font-helvetica pt-[10px] flex flex-col mt-[0px]
-          md:text-8xl md:w-5/6 md:text-center md:flex md:p-0 md:ml-20 md:mt-[40px] xl:mt-[0px]
+          md:text-8xl md:w-5/6 md:text-center md:flex md:p-0 md:ml-20 md:mt-[0px] xl:mt-[0px]
           xl:text-9xl xl:ml-52 xl:max-w-3/4   xl:flex xl:flex-col xl:p-0 xl:text-center xl:font-bold "
             >
               <div className="flex  flex-col sm:flex sm:flex-row xl:flex  xl:flex-row xl:gap-10 xl:w-[1200px]">

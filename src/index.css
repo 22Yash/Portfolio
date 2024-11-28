@@ -107,12 +107,74 @@
   padding: 5px;
   position: relative;
   border-radius: 8px;
+  aspect-ratio: 3/2;
+  object-fit: contain;
   
 }
 
 .des-box img {
   height: 6vmax;
   margin-right: 1.4vmax;
+}
+
+
+@media (min-width: 601px) and (max-width: 1024px) {
+
+  #page3 {
+      min-height: 70vh;
+      width: 100%;
+      background-color: #070707;
+      padding: 6vh 5vw;
+      position: relative;
+  }
+
+  #page3 > h3 {
+      font-size: 5vmax;
+      font-family: gilroy;
+      margin-bottom: 1vmax;
+  }
+
+  #page3 > h3 span {
+      font-size: 5vmax;
+      font-family: gilroy;
+      color: #38cdfa;
+  }
+
+  #page3 > h5 {
+      font-size: 2.5vmax;
+      font-weight: 500;
+      margin-bottom: 1.8vmax;
+  }
+
+  .box h4 {
+      font-size: 2.5vmax;
+      border: 2px solid white;
+      display: inline-block;
+      font-family: gilroy;
+      color: #fff;
+      font-weight: 500;
+      padding: 7px 12px;
+      border-radius: 7px;
+      margin-top: 3vmax;
+      margin-bottom: 1.5vmax;
+  }
+
+  .box img {
+      height: 120px;
+      margin-right: 10px;
+      background-color: #fff;
+      padding: 12px;
+      margin-top: 15px;
+      margin-left: 15px;
+      position: relative;
+      border-radius: 5px;
+  }
+
+  .des-box img {
+      height: 7vmax;
+      margin-right: 7px;
+  }
+
 }
 
 

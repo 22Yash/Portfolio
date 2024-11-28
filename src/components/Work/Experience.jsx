@@ -43,7 +43,9 @@ function Experience() {
     >
       <div
         id="title"
-        className="text-white font-helvetica font-bold text-[70px] ml-[40px] pt-[20px] xl:text-[70px] xl:ml-[100px] xl:pt-[40px]"
+        className="text-white font-helvetica font-bold text-[70px] ml-[40px] pt-[20px] 
+        
+        xl:text-[70px] xl:ml-[100px] xl:pt-[40px]"
       >
         <h3 className="opacity-60">Experience</h3>
         <h3>History</h3>
@@ -53,12 +55,16 @@ function Experience() {
         <div
           ref={firstBlockRef}
           id="first"
-          className="group w-full h-[210px] flex flex-col mt-[40px] sm:flex-row justify-between xl:mt-[60px] xl:w-full xl:h-[130px] xl:flex xl:justify-between text-[#bdbeb0] xl:p-[10px] font-helvetica font-medium xl:pl-[40px]"
+          className="group w-full h-[210px] flex flex-col mt-[40px] sm:flex-col justify-between 
+          xl:mt-[60px] xl:w-full xl:h-[130px] xl:flex xl:flex-row xl:justify-between text-[#bdbeb0] 
+          xl:p-[10px] font-helvetica font-medium xl:pl-[40px]"
           onMouseEnter={() => handleMouseEnter(firstBlockRef.current)}
           onMouseLeave={() => handleMouseLeave(firstBlockRef.current)}
         >
           <div id="name">
-            <h3 className="text-[55px] flex flex-col gap-[10px] xl:gap-[30px] pl-[40px] xl:text-[40px] xl:ml-[20px]">
+            <h3 className="text-[55px] flex flex-col gap-[10px] 
+            sm:flex sm:text-[50px]
+            xl:gap-[30px] pl-[40px] xl:text-[40px] xl:ml-[20px]">
               <div className="title relative overflow-hidden">
                 <h1 className="relative inline-block">
                   <span className="base-text block text-[hsla(var(--color-white),0.6)]">
@@ -70,7 +76,7 @@ function Experience() {
                 </h1>
               </div>
             </h3>
-            <h5 className="text-[30px] pl-[40px] xl:ml-[20px]">
+            <h5 className="text-[30px] pl-[40px]  xl:ml-[20px]">
               Zummit Infolabs
             </h5>
           </div>
@@ -92,12 +98,14 @@ function Experience() {
         <div
           ref={secondBlockRef}
           id="second"
-          className="group w-full h-[210px] flex flex-col mt-[40px] sm:flex-row justify-between xl:mt-[60px] xl:w-full xl:h-[130px] xl:flex xl:justify-between text-[#bdbeb0] xl:p-[10px] font-helvetica font-medium xl:pl-[40px]"
+          className="group w-full h-[210px] flex flex-col mt-[40px] sm:flex-col 
+           justify-between xl:mt-[60px] xl:w-full xl:h-[130px] xl:flex xl:flex-row
+            xl:justify-between text-[#bdbeb0] xl:p-[10px] font-helvetica font-medium xl:pl-[40px]"
           onMouseEnter={() => handleMouseEnter(secondBlockRef.current)}
           onMouseLeave={() => handleMouseLeave(secondBlockRef.current)}
         >
           <div id="name">
-            <h3 className="text-[30px] flex gap-[10px] xl:gap-[30px] pl-[40px] xl:text-[50px] xl:ml-[20px]">
+            <h3 className="text-[55px] flex gap-[10px] xl:gap-[30px] sm:text-[50px] pl-[40px] xl:text-[50px] xl:ml-[20px]">
               <div className="title relative overflow-hidden">
                 <h1 className="relative inline-block">
                   <span className="base-text block text-[hsla(var(--color-white),0.6)]">

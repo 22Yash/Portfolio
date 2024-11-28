@@ -13,8 +13,6 @@ import image9 from "./images/gsap-min.webp";
 import image10 from "./images/download-min.webp";
 import image11 from "./images/html-min.webp";
 import image12 from "./images/css-min.webp";
-
-import skillBG from "../assets/skillBG (2).png"
 import resumeBG from "../assets/Untitled.png"
 import { FaLinkedin ,FaSquareGithub  } from "react-icons/fa6";
 
@@ -175,7 +173,7 @@ const mouseOut = () =>{
       <h5 className="font-bold text-white">skills, interests, passion and hobbies</h5>
       <div className="box dev-box">
         <h4>development</h4>
-        <div className="elem-div grid grid-cols-3 md:flex  ">
+        <div className="elem-div grid grid-cols-3 sm:grid sm:grid-cols-3 xl:flex  ">
           <img src={image1} alt="React" />
           <img src={image2} alt="Java" />
           <img src={image3} alt="JavaScript" />
@@ -204,7 +202,7 @@ const mouseOut = () =>{
     >
 
       
-      <div id="card" className="w-[400px] h-[530px] rounded-[30px] 
+      <div id="card" className="w-[400px] h-[530px] rounded-[30px] sm:p-[30px]
       xl:p-[30px] bg-white shadow-2xl shadow-gray-500/90"
       onMouseEnter={mouseIN}
       onMouseLeave={mouseOut}>

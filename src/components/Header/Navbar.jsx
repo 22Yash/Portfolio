@@ -39,7 +39,7 @@ function Navbar() {
           xl:p-[20px]   font-medium lg:flex-row lg:space-x-2 lg:mt-0">
             <li 
              
-            className="button w-[100px] h-[50px] ml-[30px]   flex justify-center items-center
+            className="button w-[100px] h-[50px] ml-[10px]   flex justify-center items-center
             " 
             >
               <Link to="#Work" className="  font-bold text-[20px]">Work</Link>
