@@ -84,9 +84,9 @@ function Contactform() {
 
   return (
     <div id="Contact"
-     className=" w-[700px] xl:h-[170vh] h-[180vh]  sm:h-[150vh]
+     className=" w-[700px] xl:h-[160vh] h-[180vh]  sm:h-[240vh]
      sm:w-full sm:grid sm:grid-cols-1  xl:w-full xl:grid xl:grid-cols-2 
-     md:h-[170vh] p-[40px] flex flex-col justify-center items-center "
+      p-[40px] flex flex-col justify-center items-center "
      style={{
       background: `
         url(${heroSVG}) left bottom / 180% 100% no-repeat`,
@@ -128,7 +128,7 @@ function Contactform() {
         >
 
         <div id="rowOne" className="flex flex-col justify-center xl:flex-col md:gap-[40px] 
-        xl:-mt-[180px] md:h-[300px] mt-[-40px]    h-[400px] xl:h-[350px]">
+        xl:-mt-[180px] md:h-[300px] mt-[-40px] sm:mt-[30px]    h-[400px] xl:h-[350px]">
         <div
               id="name"
               className="
@@ -255,7 +255,7 @@ function Contactform() {
            
       <div
           id="second"
-          className=" w-[600px]   h-screen sm:h-screen bg-red-400
+          className=" w-[600px]   h-screen sm:h-[100px] sm:mt-[-250px] 
            flex  mt-[40px] xl:mt-[330px]  flex-col xl:flex-col xl:justify-between
             "
           
@@ -263,7 +263,7 @@ function Contactform() {
           
 
           <div id="two" 
-          className="flex gap-[30px] xl:flex-row " 
+          className="flex gap-[30px] xl:flex-row xl:mt-[-300px]" 
           >
           <div id="skills" className="  xl:w-[900px] p-[10px] ">
           <Link to="#Skills" className=" text-[35px] xl:text-[22px] text-white">Skills</Link>
@@ -281,7 +281,8 @@ function Contactform() {
             
 
           
-          <div id="links" className="ml-[0px] mt-[50px] md:mt-[40px] md:ml-[110px] xl:mt-[-240px] xl:ml-[0px]">
+          <div id="links" className="ml-[0px] mt-[50px] md:mt-[40px] 
+           md:ml-[110px] xl:mt-[-240px] xl:ml-[0px]">
           <Links columnDirection={true}/>
           </div>
           

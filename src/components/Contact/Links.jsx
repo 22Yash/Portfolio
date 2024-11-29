@@ -63,7 +63,7 @@ function Links({ columnDirection }) {
     <>
       <div
         id="links"
-        className=" h-[200px] sm:h-[100px] xl:w-full   md:-ml-[40px]  xl:ml-[0px] xl:mt-[-500px]  "
+        className=" h-[200px] sm:h-[100px]  xl:w-full   md:-ml-[40px]  xl:ml-[0px] xl:mt-[-200px]  "
       >
         
         <ul

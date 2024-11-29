@@ -51,7 +51,7 @@ function Skills() {
         scrollTrigger: {
           trigger: ".dev-box h4 ",
           
-          markers: true,
+          // markers: true,
           start: "-450 top",
           end: "-300 top",
           scrub: 1
@@ -75,7 +75,7 @@ function Skills() {
           scrollTrigger: {
             trigger: ".dev-box img ",
             
-            markers: true,
+            // markers: true,
             start: "-300 top",
             end: "-100 top",
             scrub: 1
@@ -102,7 +102,7 @@ function Skills() {
         scrollTrigger: {
           trigger: ".dev-box h4 ",
           
-          markers: true,
+          // markers: true,
           start: "-950 top",
           end: "-700 top",
           scrub: 1
@@ -126,7 +126,7 @@ function Skills() {
           scrollTrigger: {
             trigger: ".dev-box img ",
             
-            markers: true,
+            // markers: true,
             start: "-700 top",
             end: "-300 top",
             scrub: 1

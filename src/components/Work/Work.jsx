@@ -1,21 +1,12 @@
 import React, { useRef, useEffect } from "react";
 import gsap from "gsap";
-import LocomotiveScroll from "locomotive-scroll";
-
-import Resume from "./Experience";
-import workSVG from "./workBg.png"
 import project1 from "./images/project1.png";
 import SlideMenu from "../Header/SlideMenu";
-import Skills from "../../Pages/Skills";
+
 
 function Work() {
-  const mousefollowerRef = useRef(null);
   const workRef = useRef(null);
   const scrollRef = useRef(null);
-
- 
-
-  
 
   useEffect(() => {
     const screenWidth = window.innerWidth;
@@ -31,7 +22,7 @@ function Work() {
           start: "50 top",
           end: "200 top",
           scrub: 1,
-          markers: true,
+          // markers: true,
         },
         xPercent: -100,
         duration: 2,
@@ -43,7 +34,7 @@ function Work() {
           start: "-630 top",
           end: "-570 top",
           scrub: 2,
-          markers: true,
+          // markers: true,
           pin: true,
         },
         y: -50,
@@ -59,7 +50,7 @@ function Work() {
           start: "-200 top",
           end: "0 top",
           scrub: 1,
-          markers: true,
+          // markers: true,
         },
         xPercent: 0,
         duration: 2,
@@ -117,17 +108,14 @@ const mouseOut = () =>{
           
           <div
             id="projects"
-            
-            
             className="project w-full  bg-[#0d0d0c]" style={{filter: 'blur(0px)',}}
-            
+
           >
             
             <div className="cont h-[300vh]  md:h-[350vh] xl:h-[120vh] " 
             
             >
               
-
               <div
                 className="slides grid xl:top-0 xl:left-0 xl:w-full xl:flex h-screen  "
                

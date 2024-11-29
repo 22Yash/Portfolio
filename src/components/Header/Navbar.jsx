@@ -20,21 +20,21 @@ function Navbar() {
       <div
         id="navBar"
         className=" 
-        
+        sm:flex sm:justify-between
         xl:flex xl:justify-between 
     z-44   xl:h-12"
     
       >
-        <div id="leftNav" className="ml-[20px] pt-[20px] md:-mt-[20px] ">
+        <div id="leftNav" className="ml-[20px] pt-[20px] sm:ml-[-10px] md:-mt-[20px] ">
           <Link to="/">
           <img src={logo2} alt="" className="xl:h-[200px] h-[180px] " />
           </Link>
          
         </div>
-        <div id="rightNav" className="hidden
-             
+        <div id="rightNav" className="hidden sm:flex 
+             sm:mt-[40px]
         xl:flex xl:gap-10   xl:h-12 xl:m-1 xl:text-white xl:mt-[50px] xl:rounded-l-full xl:rounded-r-full">
-          <ul className="flex  mt-4 mr-10  h-[70px]
+          <ul className="flex  mt-4 mr-10  h-[70px] sm:p-[10px]
           border-2 border-white xl:items-center rounded-[50px] 
           xl:p-[20px]   font-medium lg:flex-row lg:space-x-2 lg:mt-0">
             <li 
