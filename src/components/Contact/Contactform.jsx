@@ -149,8 +149,8 @@ function Contactform() {
               <input
                 type="text"
                 name="user_name"
-                className="
-          w-[400px] ml- focus:outline-none bg-white opacity-60 border-2 rounded-[20px] border-[#989893] pt-10 mt-5 pb-8 pl-10 h-1/4
+                className=" text-black
+          w-[400px] ml- focus:outline-none bg-white  opacity-60 border-2 rounded-[20px] border-[#989893] pt-10 mt-5 pb-8 pl-10 h-1/4
           md:w-[400px] md:h-10 md:ml-28 md:text-3xl  md:mt-4 
            xl:w-[520px]  xl:ml-0 xl:mt-12  xl:focus:outline-none "
                 
@@ -177,13 +177,11 @@ function Contactform() {
                 type="email"
                 name="user_name"
                 className="w-[400px]
-            ml-2 focus:outline-none mt-0 pt-8  border-2 rounded-[20px] bg-white opacity-60 border-[#989893] pb-8 pl-10  h-10 xl:h-[20px]
+            ml-2 focus:outline-none mt-0 pt-8  border-2 rounded-[20px] bg-white opacity-60 border-[#989893]
+             pb-8 pl-10  h-10 xl:h-[20px] text-black
             md:w-5/6 md:h-10 md:ml-2 md:text-3xl  md:mt-4 xl:w-[520px]
              xl:mt-8  xl:ml-2 xl:focus:outline-none "
-                style={{
-                  backgroundImage: `url(${heroSVG})`,
-                  backgroundSize: "cover",
-                }}
+                
               />
             </div>
         </div>
@@ -208,7 +206,7 @@ function Contactform() {
                 name="message"
                 className="
           w-[400px] ml-4 h-20 mt-3 focus:outline-none border-2  rounded-[20px] bg-white opacity-60 border-[#989893]
-          md:w-5/6 md:h-[100px] md:ml-2 md:text-3xl  md:mt-4
+          md:w-5/6 md:h-[100px] md:ml-2 md:text-3xl  md:mt-4 text-black
            xl:w-full  xl:-ml-16 xl:focus:outline-none xl:h-[120px] "
                 style={{
                   backgroundImage: `url(${heroSVG})`,

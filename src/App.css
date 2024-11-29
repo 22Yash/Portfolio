@@ -1,4 +1,10 @@
 :root {
     --color-white: 0, 0%, 100%; /* Example value for white */
   }
-  
+
+  html {
+    
+    width: 100%;
+    overflow-x: hidden;
+    box-sizing: border-box;
+  }
