@@ -169,7 +169,7 @@ const mouseOut = () =>{
       
       >
 
-      <h3 className="font-bold text-white ">Things I'm <span>good</span> at</h3>
+      <h3 className="font-bold text-white  ">Things I'm <span>good</span> at</h3>
       <h5 className="font-bold text-white">skills, interests, passion and hobbies</h5>
       <div className="box dev-box">
         <h4>development</h4>

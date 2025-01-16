@@ -190,19 +190,19 @@
   }
 
   #page3>h3 {
-      font-size: 6vmax;
-      font-family: gilroy;
+      font-size: 10vmax;
+      font-family: 'Helvetica';
       margin-bottom: 0vmax;
   }
 
   #page3>h3 span {
-      font-size: 6vmax;
-      font-family: gilroy;
+      font-size: 10vmax;
+      font-family: 'Helvetica';
       color: #38cdfa;
   }
 
   #page3>h5 {
-      font-size: 3vmax;
+      font-size: 5vmax;
       
       font-weight: 500;
       margin-bottom: 1.4vmax;
@@ -210,10 +210,10 @@
   }
 
   .box h4 {
-      font-size: 3vmax;
+      font-size: 5vmax;
       border: 2px solid white;
       display: inline-block;
-      font-family: gilroy;
+      font-family: 'Helvetica';
       color: #fff;
       font-weight: 500;
       padding: 5px 9px;

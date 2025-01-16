@@ -84,7 +84,7 @@ function Contactform() {
 
   return (
     <div id="Contact"
-     className=" w-[700px] xl:h-[160vh] h-[180vh]  sm:h-[240vh]
+     className=" w-[700px] xl:h-[160vh] h-[220vh]  sm:h-[240vh]
      sm:w-full sm:grid sm:grid-cols-1  xl:w-full xl:grid xl:grid-cols-2 
       p-[40px] flex flex-col justify-center items-center "
      style={{

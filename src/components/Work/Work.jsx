@@ -1,6 +1,7 @@
 import React, { useRef, useEffect } from "react";
 import gsap from "gsap";
 import project1 from "./images/project1.png";
+import project2 from "./images/project2.png";
 import SlideMenu from "../Header/SlideMenu";
 
 
@@ -99,7 +100,7 @@ const mouseOut = () =>{
       
       <section
         id="Work"
-        className="work w-[700px]  h-[240vh] sm:h-[280vh] xl:h-screen md:w-full rounded-t-full relative z-4"
+        className="work w-[700px]  h-[300vh] sm:h-[280vh] xl:h-screen md:w-full rounded-t-full relative z-4"
         
         
       >
@@ -158,7 +159,10 @@ const mouseOut = () =>{
                         <img src={project1} alt="" className="h-[250px]" />
                       </div>
                       <div id="info" className="flex flex-col gap-[20px]  md:gap-[40px] m-[20px] -ml-[0px]">
-                        <h4 className="text-black  font-semibold text-[30px] text-center md:text-[20px] mt-[30px]">Cynthia Ugwu Clone</h4>
+                        <h4 className="text-black  font-semibold text-[30px] text-center md:text-[20px] mt-[30px]">
+                          <a href="https://22yash.github.io/Cynthia_Ugwu-Awwwards-Website--Clone/">Cynthia Ugwu Clone</a>
+                          
+                          </h4>
                         <p className="text-[20px] md:text-[16px] -mt-[20px]">I made Awwwards winning webiste Cynthia Ugwu.
                           It's a website with a lot og animation and interaction.
 
@@ -186,9 +190,43 @@ const mouseOut = () =>{
                     </div>
                     <div
                       id="project2"
+                      onMouseEnter={mouseIN}
+                      onMouseLeave={mouseOut}
                       className="slide w-[430px] h-[400px] ml-[60px] m-10 xl:mt-32 md:w-[680px] rounded-3xl xl:w-6/12 xl:flex-shrink-0 bg-[#bebeb0] xl:rounded-3xl"
                     >
-                      project2
+                       <div id="img" className=" w-[250px] mt-20 ml-[30px]">
+                        <img src={project2} alt="" className="h-[250px]" />
+                      </div>
+                      <div id="info" className="flex flex-col gap-[20px]  md:gap-[40px] m-[20px] -ml-[0px]">
+                        <h4 className="text-black  font-semibold text-[30px] text-center md:text-[20px] xl:mt-[-290px] xl:ml-[340px] mt-[30px]">
+                          <a href="https://22yash.github.io/Rejouice-Clone/">Rejouice Clone</a>
+                          
+                          </h4>
+                          <p className="text-[20px] md:text-[16px]  xl:w-[250px] text-white xl:ml-[320px] -mt-[20px]">I made Awwwards winning webiste Cynthia Ugwu.
+                          It's a website with a lot og animation and interaction.
+
+                        </p>
+                        <h4 className=" text-white uppercase  text-center xl:ml-[320px]  flex gap-2 ">
+                          <span className="bg-gray-500 w-[80px] p-2 rounded-full ">HTML </span>
+                          <span className="bg-gray-500 w-[50px] p-2  rounded-full ">CSS </span>
+
+                          <span className="bg-gray-500 w-[120px] p-2 rounded-full ">JavaScript </span>
+                          
+
+
+
+                          </h4>
+                          <h4 className=" text-white uppercase  text-center flex gap-4 xl:ml-[320px]  md:-mt-[30px]">
+                          
+                          <span className="bg-gray-500 w-[80px] p-2 rounded-full ">GSAP</span>
+                          <span className="bg-gray-500 w-[130px] p-2 rounded-full ">Locomotive </span>
+
+
+
+                          </h4>
+                          
+                        
+                      </div>
                     </div>
                     <div
                       id="project3"
