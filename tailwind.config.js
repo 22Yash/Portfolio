@@ -1,4 +1,6 @@
 /** @type {import('tailwindcss').Config} */
+import tailwindScrollbar from 'tailwind-scrollbar';
+
 export default {
   content: [
     "./index.html",
@@ -9,15 +11,11 @@ export default {
       fontFamily: {
         sans: ['Montserrat', 'sans-serif'],
         helvetica: ['Helvetica'],
-         
       },
-      scrollbar: ['rounded']
-      
+      scrollbar: ['rounded'],
     },
-    
   },
   plugins: [
-    require('tailwind-scrollbar')
+    tailwindScrollbar,
   ],
-}
-
+};
