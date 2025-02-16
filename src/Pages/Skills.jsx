@@ -12,7 +12,7 @@ import image7 from "./images/github-min.webp";
 import image9 from "./images/gsap-min.webp";
 import image10 from "./images/download-min.webp";
 import image11 from "./images/html-min.webp";
-import image12 from "./images/css-min.webp";
+import image12 from "./images/css.webp";
 import resumeBG from "../assets/Untitled.png"
 import { FaLinkedin ,FaSquareGithub  } from "react-icons/fa6";
 

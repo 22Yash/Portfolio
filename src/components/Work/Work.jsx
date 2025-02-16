@@ -192,7 +192,9 @@ const mouseOut = () =>{
                       id="project2"
                       onMouseEnter={mouseIN}
                       onMouseLeave={mouseOut}
-                      className="slide w-[430px] h-[400px] ml-[60px] m-10 xl:mt-32 md:w-[680px] rounded-3xl xl:w-6/12 xl:flex-shrink-0 bg-[#bebeb0] xl:rounded-3xl"
+                      className="slide w-[600px] h-[450px] ml-[60px] m-10 grid grid-cols-2
+                       xl:mt-32  xl:h-[400px] text-white md:grid md:grid-cols-2 
+                      md:w-[680px] rounded-3xl xl:w-6/12 xl:flex-shrink-0 bg-[#bebeb0] xl:rounded-3xl"
                     >
                        <div id="img" className=" w-[250px] mt-20 ml-[30px]">
                         <img src={project2} alt="" className="h-[250px]" />
