@@ -199,16 +199,16 @@ const mouseOut = () =>{
                        <div id="img" className=" w-[250px] mt-20 ml-[30px]">
                         <img src={project2} alt="" className="h-[250px]" />
                       </div>
-                      <div id="info" className="flex flex-col gap-[20px]  md:gap-[40px] m-[20px] -ml-[0px]">
-                        <h4 className="text-black  font-semibold text-[30px] text-center md:text-[20px] xl:mt-[-290px] xl:ml-[340px] mt-[30px]">
+                      <div id="info" className="flex flex-col gap-[20px]  md:gap-[40px] m-[20px] -ml-[0px] ">
+                        <h4 className="text-black  font-semibold text-[30px] text-center md:text-[20px] xl:mt-[50px] xl:ml-[-9px] mt-[30px]">
                           <a href="https://22yash.github.io/Rejouice-Clone/">Rejouice Clone</a>
                           
                           </h4>
-                          <p className="text-[20px] md:text-[16px]  xl:w-[250px] text-white xl:ml-[320px] -mt-[20px]">I made Awwwards winning webiste Cynthia Ugwu.
+                          <p className="text-[20px] md:text-[16px]  xl:w-[250px] text-white xl:ml-[20px] -mt-[20px]">I made Awwwards winning webiste Cynthia Ugwu.
                           It's a website with a lot og animation and interaction.
 
                         </p>
-                        <h4 className=" text-white uppercase  text-center xl:ml-[320px]  flex gap-2 ">
+                        <h4 className=" text-white uppercase  text-center xl:ml-[20px]  flex gap-2 ">
                           <span className="bg-gray-500 w-[80px] p-2 rounded-full ">HTML </span>
                           <span className="bg-gray-500 w-[50px] p-2  rounded-full ">CSS </span>
 
@@ -218,7 +218,7 @@ const mouseOut = () =>{
 
 
                           </h4>
-                          <h4 className=" text-white uppercase  text-center flex gap-4 xl:ml-[320px]  md:-mt-[30px]">
+                          <h4 className=" text-white uppercase  text-center flex gap-4 xl:ml-[20px]  md:-mt-[30px]">
                           
                           <span className="bg-gray-500 w-[80px] p-2 rounded-full ">GSAP</span>
                           <span className="bg-gray-500 w-[130px] p-2 rounded-full ">Locomotive </span>
