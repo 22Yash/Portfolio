@@ -1,0 +1,21 @@
+/* ParticlesComponent.module.css */
+.particlesContainer {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 700px;
+    height: 180vh;
+    z-index: 0;
+  }
+  
+  @media (min-width: 640px) {
+    .particlesContainer {
+      width: 100%;
+    }
+  }
+  
+  @media (min-width: 1024px) {
+    .particlesContainer {
+      height: 100vh;
+    }
+  }
