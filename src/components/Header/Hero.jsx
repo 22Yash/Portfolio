@@ -6,6 +6,7 @@
   import "tailwind-scrollbar";
   import resume from "./Yash Doke Resume.pdf";
   import ParticlesComponent from "../Animation/ParticleBackground";
+import Particles from "../Animation/Particles";
 
   gsap.registerPlugin(ScrollTrigger);
 
@@ -263,7 +264,8 @@
 
     return (
       <>
-        <ParticlesComponent />
+        {/* <ParticlesComponent /> */}
+        <Particles/>
 
         <div
           id="hero"
