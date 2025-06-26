@@ -9,6 +9,13 @@ import logo2 from '../Header/download (1).png'
 function Navbar() {
   const navBar = useRef();
 
+  const scrollToSection = (sectionId) => {
+    const element = document.getElementById(sectionId);
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+  };
+
   
 
 
@@ -42,17 +49,24 @@ function Navbar() {
             className="button w-[100px] h-[50px] ml-[10px]   flex justify-center items-center
             " 
             >
-              <Link to="#Work" className="  font-bold text-[20px]">Work</Link>
+              {/* <Link to="#Work" className="  font-bold text-[20px]">Work</Link> */}
+              <button onClick={() => scrollToSection('work')} className="  font-bold text-[20px]">work</button>
             </li>
             <li className="button w-[100px] -ml-[10px] h-[50px]    flex justify-center items-center"
            >
-              <Link to="#Skills" className=" text-[22px]">Skills</Link>
+              {/* <Link to="#Skills" className=" text-[22px]">Skills</Link> */}
+              <button onClick={() => scrollToSection('Skills')} className="  font-bold text-[20px]">Skills</button>
+
             </li>
             <li className="button w-[120px] h-[50px]    flex justify-center items-center" >
-              <Link to="#experience" className=" text-[20px]">Experience</Link>
+              {/* <Link to="#experience" className=" text-[20px]">Experience</Link> */}
+              <button onClick={() => scrollToSection('experience')} className="  font-bold text-[20px]">Experience</button>
+
             </li>
             <li className="button w-[100px] h-[50px]    flex justify-center items-center" >
-              <Link to="#Contact" className=" text-[20px]">Contact</Link>
+              {/* <Link to="#Contact" className=" text-[20px]">Contact</Link> */}
+              <button onClick={() => scrollToSection('Contact')} className="  font-bold text-[20px]">Contact</button>
+
             </li>
           </ul>
         </div>
