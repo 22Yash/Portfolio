@@ -82,7 +82,7 @@ function Links({ columnDirection }) {
             className="text-[#fffdfb] hover:underline-offset-[8px] w-[140px] hover:underline text-[30px]  mt-0 md:-mt-[80px] flex gap-2 xl:-mt-[40px]   xl:text-[22px] xl:ml-5"
           >
             <span className="mt-[5px]"><FaLinkedin className="text-[40px]" /></span>
-            <Link to="www.linkedin.com/in/yashdoke10" className="mt-[10px]"> LinkedIn </Link>
+            <Link to="https://www.linkedin.com/in/yashdoke10/" className="mt-[10px]"> LinkedIn </Link>
           </li>
 
           <li
