@@ -5,8 +5,7 @@
   import { ScrollTrigger } from "gsap/ScrollTrigger";
   import "tailwind-scrollbar";
   import resume from "./Yash Doke Resume.pdf";
-  import ParticlesComponent from "../Animation/ParticleBackground";
-import Particles from "../Animation/Particles";
+  import Particles from "../Animation/Particles";
 
   gsap.registerPlugin(ScrollTrigger);
 

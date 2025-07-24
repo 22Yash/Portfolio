@@ -1,7 +1,7 @@
 import React, { useRef, useEffect } from "react";
 import gsap from "gsap";
 import project1 from "./images/project1.png";
-import project2 from "./images/project2.png";
+import project2 from "./images/image.png";
 import SlideMenu from "../Header/SlideMenu";
 import project3 from "./images/project3.png";
 
@@ -134,7 +134,7 @@ function Work() {
                       </div>
                     </div>
 
-                    {/* Rejouice Project */}
+                    {/* CodeGraph */}
                     <div
                       id="project3"
                       onMouseEnter={(e) => mouseIN(e.currentTarget.querySelector(".img"))}
@@ -146,19 +146,18 @@ function Work() {
                       </div>
                       <div className="flex flex-col gap-[20px] md:gap-[40px] m-[20px] -ml-[0px]">
                         <h4 className="text-black font-semibold text-[30px] text-center md:text-[20px] xl:mt-[50px] xl:ml-[-9px] mt-[30px]">
-                          <a href="https://22yash.github.io/Rejouice-Clone/">Rejouice Clone</a>
+                          <a href="https://code-graph-phi.vercel.app/">CodeGraph</a>
                         </h4>
                         <p className="text-[20px] md:text-[16px] xl:w-[250px] text-white xl:ml-[20px] -mt-[20px]">
-                          I made Awwwards winning webiste Cynthia Ugwu. It's a website with a lot of animation and interaction.
-                        </p>
-                        <h4 className="text-white uppercase text-center xl:ml-[20px] flex gap-2">
-                          <span className="bg-gray-500 w-[80px] p-2 rounded-full">HTML</span>
-                          <span className="bg-gray-500 w-[50px] p-2 rounded-full">CSS</span>
-                          <span className="bg-gray-500 w-[120px] p-2 rounded-full">JavaScript</span>
+                        I built a full-stack web app to visualize and analyze GitHub repository dependencies using interactive graph visualization                        </p>
+                        <h4 className="text-white uppercase text-center xl:ml-[20px] xl:mt-[-10px] flex gap-2">
+                          <span className="bg-gray-500 w-[80px] p-2 rounded-full">React</span>
+                          <span className="bg-gray-500 w-[80px] p-2 rounded-full">NodeJs</span>
+                          <span className="bg-gray-500 w-[120px] p-2 rounded-full">MongoDB</span>
                         </h4>
                         <h4 className="text-white uppercase text-center flex gap-4 xl:ml-[20px] md:-mt-[30px]">
-                          <span className="bg-gray-500 w-[80px] p-2 rounded-full">GSAP</span>
-                          <span className="bg-gray-500 w-[130px] p-2 rounded-full">Locomotive</span>
+                          <span className="bg-gray-500 w-[80px] p-2 rounded-full">Oauth</span>
+                          <span className="bg-gray-500 w-[50px] p-2 rounded-full">JWT</span>
                         </h4>
                       </div>
                     </div>

@@ -214,7 +214,7 @@ const mouseOut = () =>{
         <div className="text-lg text-black font-bold">Creative Frontend Developer</div>
         <hr className="my-4 border-gray-500" />
         <p className="text-base text-gray-400 font-semibold text-[20px]">
-          I am Yash, a 3rd year IT Engineering Student. 
+          I am Yash, a 4th year IT Engineering Student. 
           Successfully building user-friendly websites with ReactJS. 
           I pay attention to small details, enjoy technical problems, and work well in teams. 
           I like learning new technologies and always aim to improve my skills.
